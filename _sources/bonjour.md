@@ -1,0 +1,142 @@
+<!-- #region -->
+(ch:bonjour)=
+# Bienvenu en Algo-Prog !
+
+**Ce support est en évolution tout au long du semestre.**
+
+Mis à jour : {sub-ref}`today`, lecture : {sub-ref}`wordcount-minutes` minutes minimum, PhL.
+
+Ceci est le premier point d'entrée de l'UE Algo-Prog en complément de l'[espace moodle de cette UE](https://cours.univ-perp.fr/course/view.php?id=925).
+
+
+:::{important} Rappels des dates importantes
+- semaine 10, (6-10 mars 2023), séance de TD : CC sur ordinateur 20 min
+- semaine 11 : 16 mars 2023, 14h-16h (2h) : CC2 écrit
+- semaine 12 : 24 mars 2023, 14h-16h (2h) : CC1 sur ordinateur (TP1) 
+:::
+
+:::{note}
+- Les numéros des semaines sont celles du calendrier. 
+La première séance de CM a eu lieu en semaine 3.
+- les items indiqués d'une ($\star$) correspondent aux activités _objectif 20_
+:::
+
+ 
+## Semaine 16 : dernière semaine
+
+- Avant le CM de jeudi : lire le chapitre "Trier"
+- Avant le CM de vendredi : lire le chapitre "Affectation et appels de fonction : aspects avancés" et "ES : aspects avancés"
+- Travail personnel :
+    - finir le TP anagrammes
+
+ 
+## Semaine 15
+
+- Avant le CM : relire les chapitres "Rechercher" et "Modules utiles"
+- Travail personnel :
+    - TD : finir la feuille 5 (récursivité)
+    - TP anagrammes
+
+## Semaine 14
+
+- Attention : pas de séance de CM cette semaine mais du travail personnel sur un chapitre de cours
+- Travail personnel :
+    - re-lire de façon approfondie le chapitre "Récursivité"
+    - étudier chapitre "Rechercher", toutes les sections avec algorithmes récursifs
+    - lire le chapitre "Modules utiles" 
+    - TD : feuille 5 (récursivité)
+
+## Semaine 13
+
+- Attention : 2 séances de CM (rattrapage CM de la semaine 11)
+- Travail personnel : finir TP structures de données
+- Avant le CM de *mercredi* : 
+    - re-lire le chapitre "entrées-sorties simples" (partie Programmation), sections 4.1 et 4.2.
+    - lire chapitre "Récursivité" jusqu'à section 2.3 inclus
+
+ 
+## Semaine 12
+
+- CC1 sur machine, durée 2h15, tous les chapitres vus à ce jour
+- Compétences : "Types composés"
+- Travail personnel  
+    - étudier chapitre "types composés" (partie Programmation) en entier
+    - TP structures de données (à finir)
+- Avant le CM : 
+    - re-lire le chapitre "entrées-sorties simples" (partie Programmation), sections 4.1 et 4.2.
+    - lire chapitre "Récursivité" jusqu'à section 2.3 inclus
+
+
+## Semaine 11
+
+- CC2 écrit, durée 2h30, tous les chapitres vus à ce jour
+- Attention : pas de séance de CM
+- Travail personnel 
+    - feuille 4
+    - étudier chapitre "types composés" (partie Programmation) en entier
+    
+## Semaine 10 
+
+- CC exercice court sur machine, durée 0h30, tous les chapitres vus à ce jour
+- Compétences : "Complexités"
+- Travail personnel : 
+    - feuille 4
+    - étudier chapitre "Rechercher", toutes les sections avec algorithmes itératifs
+- Avant le CM : lire le chapitre "types composés" (partie Programmation) en entier.
+
+
+## Semaine 9 (vacances)
+
+- Compétences : "Fonctions", "Rechercher" et "Complexités"
+- Travail personnel :
+    - Finir feuilles 1, 2 et 3  selon ses objectifs
+    - Feuille 4 
+    - TP puissance 4 (pas de remise demandée)
+    - Etudier le chapitre "types composés" (partie Programmation) jusqu'à la section 1.4 inclus.
+
+## Semaine 8
+
+- QCM sur moodle : complexité
+- Travail personnel : 
+    - TD **feuille 3** selon vos objectifs
+    - reprendre le chapitre "rechercher" (partie Algorithmique) jusqu'à la section 3.4 inclus et **sans** les parties sur les solutions récursives.
+- Avant le CM : lire
+    - chapitre "types composés" (partie Programmation) jusqu'à la section 1.4 inclus.
+
+## Semaine 7
+
+- Compétences : "Complexités"
+- Acquisition : reprendre chapitre "Complexités" jusqu'à section 1.5 inclus
+- QCM sur moodle : complexité
+- TD travail personnel : 
+    - finir feuille 2 selon vos objectifs
+    - _moodle_ : analyser les corrections de la feuille 1, objectifs 10 et 20
+- TD semaine : feuille 3, objectif 10
+- Avant le CM : lire le chapitre "Complexités" sections 1.6 et 1.7 inclus.
+
+ 
+## Semaine 6
+
+- Compétences : "Fonctions" des chapitres 1 et 2 (sauf 2.3) et diapos associées.
+- QCM sur moodle : fonctions
+- TD travail personnel : finir feuille 1 selon vos objectifs.
+- TD semaine : feuille 2, objectif 10. 
+- Avant le CM : lire le chapitre "Complexités" jusqu'à section 1.5 inclus.
+
+## Semaine 5
+
+- Compétences : Fonctions.
+- Acquisition : reprendre chapitre "Fonctions" en entier et diapos associées.
+- Avant le CM : lire les sections **2-1 et 2-2** du chapitre "Fonctions et tableaux".
+- QCM sur moodle : fonctions.
+- TD : feuille 1, objectif 10.
+
+## Semaine 4
+
+- Avant le CM : lire les sections **1-1, 1-2 et 1-3** du chapitre "Fonctions"
+- Compétences : Savoir faire et pré-requis technique
+- TD : installer le notebook jupyter sur sa machine personnelle, à défaut savoir utiliser une solution en ligne.
+
+
+
+<!-- #endregion -->
