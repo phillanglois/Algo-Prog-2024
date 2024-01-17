@@ -1,5 +1,5 @@
 (ch:intro)=
-# Algorithmique et Programmation en 2023
+# Algo Prog en 2024
 
 Mis à jour : {sub-ref}`today`, lecture : {sub-ref}`wordcount-minutes` minutes minimum, PhL.
 
@@ -9,34 +9,37 @@ Mis à jour : {sub-ref}`today`, lecture : {sub-ref}`wordcount-minutes` minutes m
 - Comment me rencontrer : sur RDV _DEMANDÉ PAR E-MAIL_  
 - Où me rencontrer : au bâtiment B, étage 1, à gauche (laboratoire DALI).
 
-## Algo-Prog : version 2023
+## Algo-Prog : version 2024
 
 
-- Les [supports du CM](https://phillanglois.github.io/Algo-Prog-2023/bonjour.html) régulièrement mis à jour.
+- Les [supports du CM](https://phillanglois.github.io/Algo-Prog-2024/bonjour.html) régulièrement mis à jour.
 - Les autres ressources sont sur l'espace moodle de cet enseignement.
 
-### Version 2023
+### Version 2024
 
-- nouvelle offre de formation 2021-2025 : algo + prog = 1 UE
-- 12 séances de CM : 3h/semaine 
-- 12 séances de TD-TP : 3h/semaine 
-- chargés de TD : Ph. Langlois (2), Vincent Zucca (2)
-- Démarrage : CM en semaine 3 (`sd`=s3), TD en s4, vacances en s9, s17-s18
+- évolution vs. 2023-2024
+- 12 séances de CM : **2h/semaine** 
+- 12 **+7** séances de TD-TP : 3h/semaine **+1.5h "leçons" sur 7 semaines**  
+- chargés de TD : David Parello (TD1),, Ph. Langlois (TD2 et TD3), Vincent Zucca (TD4)
+- Démarrage : CM en semaine 3 (`sd`=s3), TD en s4, vacances en s8, s15-s16
 
 
 ### Contrôle de connaissances et dates importantes
 
 CC : contrôle "dit" continu, CT contrôle "dit" terminal
 
-
 ```{Warning}
 **Note UE = CC1/2 + CC2/4 + CT/4**
 ```
+
 - CC1 sur ordinateur : 0.5 * TP1 + 0.5 * TP2
-    - mi-semestre : TP1 individuel, en temps limité (2h ou plus selon possibilité edt) .
-    - fin de semestre : TP2 individuel, en temps limité (3h), sur machine UPVD pendant semaine examen
-- CC2 surtout algorithmique : écrit, mi-semestre, 2h.
-- CT surtout algorithmique : écrit de fin de semestre, 2h pendant semaine examen.   
+  - mi-semestre : TP1 individuel, en temps limité (2h ou plus selon possibilité edt)
+  - fin de semestre, semaine examen : TP2 individuel, en temps limité (3h) sur machine UPVD 
+- CC2 : 0.5 * leçons + 0.5 écrit
+  - leçons : évaluation randomisée du travail déposé après les 7 séances "leçons"
+  - mi-semestre : écrit surtout algorithmique, 2h.
+- CT :
+  - fin de semestre, semaine examen : écrit de 2h surtout algorithmique
 
 **Dates.** Les dates de ces évaluations sont annoncées en début de [la page d'accueil du cours](ch:bonjour).
 
@@ -47,10 +50,10 @@ CC : contrôle "dit" continu, CT contrôle "dit" terminal
 - 11 chapitres, 11 semaines, 11 séances de CM, 11 séances de TD ou TP
 - "12ème séance" : écrit mi-parcours, TP de fin de semestre
 - Chaque chapitre :
-    - explicitation des compétences : savoirs, savoir-faires
-    - un quizz d'aide à la compréhension et la mémorisation de ces compétences
-    - _l'enseignant_ ... présente et explique des exercices détaillés en CM
-    - _vous_ ... travaillez sur des exercices de TD et de TP, les contrôles des années précédentes, ...
+  - explicitation des compétences : savoirs, savoirs-faire
+  - un quizz d'aide à la compréhension et la mémorisation de ces compétences
+  - _l'enseignant_ ... présente et explique des exercices détaillés en CM
+  - _vous_ ... travaillez sur des exercices de TD et de TP, les contrôles des années précédentes, ...
 
 ### CM
 
@@ -84,52 +87,50 @@ Alternance de séquence pour séance de 3 heures :
 - séance de 1h25
 - par groupe de 2 à __4__
 - **objectif 10** ou **objectif 20**  
-    - feuilles de TD en 2 parties
-    - objectif 10 : 
-        - applications basiques du cours, démarche guidée
-        - pour celles et ceux qui ne veulent pas continuer en informatique au delà du L2 math-info  
-    - objectif 20 : 
-        - applications plus avancées du cours, démarche plus autonome
-        - pour celles et ceux qui **veulent continuer** en licence et master informatique, CAPES  informatique (nouveau !), ...
-    - comment choisir son niveau d'objectif ?
-        - note algo semestre 1 < 10 --> objectif 10
-        - le choix n'est pas définitif
-        - méthodologie : __chaque (groupe) d'étudiants__ définit __son rythme__ en suivant le parcours proposé par le chargé de TD.  
+  - feuilles de TD en 2 parties
+  - objectif 10 : 
+    - applications basiques du cours, démarche guidée
+    - pour celles et ceux qui ne veulent pas continuer en informatique au delà du L2 math-info  
+  - objectif 20 : 
+    - applications plus avancées du cours, démarche plus autonome
+    - pour celles et ceux qui **veulent continuer** en licence et master informatique, CAPES  informatique (nouveau !), ...
+  - comment choisir son niveau d'objectif ?
+    - note algo semestre 1 < 10 --> objectif 10
+    - le choix n'est pas définitif
+    - méthodologie : __chaque (groupe) d'étudiants__ définit __son rythme__ en suivant le parcours proposé par le chargé de TD.  
 
-### Les TP pour maîtriser les notions et acquérir du savoir-faire personnel  
+### Les TP pour maitriser les notions et acquérir du savoir-faire personnel  
 
-- 1 TP = un _notebook jupyter_   
+- 1 TP = un _notebook jupyter_
 
 - codage, expérimentation et approfondissement :
-    - des TD d'algo 
-    - du CM de Programmation  
+  - des TD d'algo 
+  - du CM de Programmation  
 
 - exemples de TP avec dead-line (pour l'évaluation de CC) :  
-    - mini base de données  
-    - traitement d'images  
-    - cryptographie   
-
-
+  - mini base de données  
+  - traitement d'images  
+  - cryptographie
 
 ### Les outils pour mieux comprendre, mieux retenir
 
 ```{tip}
-**Pratiquer pour maîtriser**
+**Pratiquer pour maitriser**
 ```
 
 - un environnement python qui fonctionne
 
 - les [notebook jupyter](https://jupyter.org/try)
-    - sur votre machine : _la solution à privilégier_
-    - en ligne : [google colab](https://colab.research.google.com), [cocalc](https://cocalc.com)
-    - _Débuter avec les notebooks_. De Denis Pinsard et disponible sur moodle
-    - première séance  de TD
+  - sur votre machine : _la solution à privilégier_
+  - en ligne : [google colab](https://colab.research.google.com), [cocalc](https://cocalc.com)
+  - _Débuter avec les notebooks_. De Denis Pinsard et disponible sur moodle
+  - première séance  de TD
 
 - [python tutor](http://pythontutor.com) 
-    - permet de visualiser l'effet des instruactions d'un petit code  
-    - très utile au début pour comprendre des _effets de programmation_, pas d'algorithmique
-    - complément de l'idle python
-    - demo 
+  - permet de visualiser l'effet des instruactions d'un petit code  
+  - très utile au début pour comprendre des _effets de programmation_, pas d'algorithmique
+  - complément de l'idle python
+  - demo 
 
 - les quizz en ligne (moodle)
 
@@ -143,131 +144,129 @@ Alternance de séquence pour séance de 3 heures :
 ### Acquis du semestre 1 et prérequis 
 
 - Savoir différencier les _types_ de données :  
-    - type scalaire : booléen, entier, réels, caractères  
-    - type composés : chaîne de caractères, vecteur, matrice, ...  
+  - type scalaire : booléen, entier, réels, caractères  
+  - type composés : chaîne de caractères, vecteur, matrice, ...  
 
 - Connaître leur _représentation_ dans un langage informatique donné  
-    - `bool`, `int`, `float`, `str`, `list`  
-    - et les changement de types associés : `int()`, `float()`, ...  
-    - (python) : un rappel sur le "type" `bool`est proposé en [annexe du cours](./a1-booleens.ipynb).
+  - `bool`, `int`, `float`, `str`, `list`  
+  - et les changement de types associés : `int()`, `float()`, ...  
+  - (python) : un rappel sur le "type" `bool`est proposé en [annexe du cours](./a1-booleens.ipynb).
 
 - Bien différencier _valeur_ vs. _variable_ vs. _constante_  
-    - _évaluation_   
-    - et comprendre comment le modèle d'exécution en modifie l'état  
-    - _affectation_ : `=`  
+  - _évaluation_   
+  - et comprendre comment le modèle d'exécution en modifie l'état  
+  - _affectation_ : `=`  
 
 - Bien comprendre le modèle _séquentiel_ de l'exécution d'un algorithme   
-    - _instruction_   
-    - _expression_ ("formule")   
+  - _instruction_   
+  - _expression_ ("formule")   
 
 - Comprendre que les structures de contrôle permettent de _casser_ la séquentialité de l'exécution d'un algorithme  
-    - branchement conditionnel  : _choisir_   
-        - `if ...:`, `elif ...:`,  `else:`  
-    - répétitions : _répéter_  
-        - `while`  
-        - `for . in ...`, (`break`, `continue`)   
-    
+  - branchement conditionnel  : _choisir_   
+      - `if ...:`, `elif ...:`,  `else:`  
+  - répétitions : _répéter_  
+      - `while`  
+      - `for . in ...`, (`break`, `continue`)   
+  
 
 - Distinguer : les _entrées_ vs. le _traitement_ vs. la _sortie_  
-    - `input()`, `print()`  
+  - `input()`, `print()`  
 
 - Spécificités python  
-    - _indentation_  
-    - typage dynamique  
+  - _indentation_  
+  - typage dynamique  
 
 ## Programme détaillé : aspects plutôt algorithmique
 
 - (Acquis du semestre 1) Utilisation avancée de boucles et de tableaux
-    - boucles imbriquées, indépendantes ou non
-    - traitements divers avec des tableaux 1D ou plus 
-    - premières estimations de complexité 
+  - boucles imbriquées, indépendantes ou non
+  - traitements divers avec des tableaux 1D ou plus 
+  - premières estimations de complexité 
 
 - Complexité
-    - combien _coûte_ un algorithme pour résoudre un pb donné ?  
-    - combien de temps ? combien de place mémoire ?  
-    - tous les problèmes coûtent pareils ?  
-    - notions : complexité en temps, pire cas, complexité asymptotique  
-    - exemples d'algos plutôt numériques et leurs complexités
-        - différentes évaluations de polynômes 
+  - combien _coûte_ un algorithme pour résoudre un pb donné ?  
+  - combien de temps ? combien de place mémoire ?  
+  - tous les problèmes coûtent pareils ?  
+  - notions : complexité en temps, pire cas, complexité asymptotique  
+  - exemples d'algos plutôt numériques et leurs complexités
+      - différentes évaluations de polynômes 
 
 - Récursivité : 
-    - **la notion centrale du semestre**
-    - principes 
-    - applications 
-    - notions : itératif vs. récursif, pile/arbre des appels, complexité
+  - **la notion centrale du semestre**
+  - principes 
+  - applications 
+  - notions : itératif vs. récursif, pile/arbre des appels, complexité
 
 ```{note} 
 La récursion s'appuie sur la notion de _fonction_ présentée dans les aspects plutôt programmation.
 ```
 
 - Rechercher 
-    - recherche séquentielle
-    - recherche dichotomique 
-    - notions : les algos, leurs complexités, (les preuves)   
-    - versions itératives ou récursives de ces algorithmes 
-    
-
+  - recherche séquentielle
+  - recherche dichotomique 
+  - notions : les algos, leurs complexités, (les preuves)   
+  - versions itératives ou récursives de ces algorithmes 
+  
 - Trier 
-    - des algorithmes de tris dits naïfs  : algos, complexité, (preuve)   
-    - des algorithmes de tris dits rapides : : algos, complexité, (preuve)
-    - versions itératives ou récursives de ces algorithmes 
+  - des algorithmes de tris dits naïfs  : algos, complexité, (preuve)   
+  - des algorithmes de tris dits rapides : : algos, complexité, (preuve)
+  - versions itératives ou récursives de ces algorithmes 
 
 - Compléments si assez de temps : prouver la terminaison et la correction d'un algorithme
-    - l'algo fournit la/les solution/s en un temps fini
-    - l'algo résout bien le pb
-    - notions : invariant de boucle, preuve de terminaison
+  - l'algo fournit la/les solution/s en un temps fini
+  - l'algo résout bien le pb
+  - notions : invariant de boucle, preuve de terminaison
 
 ## Programme détaillé : aspects plus programmation 
 
 - Types de donnnées scalaires
-    - rappels 
-    - approfondissement : introspection  
+  - rappels 
+  - approfondissement : introspection  
 
 - Fonctions **une notion centrale** 
-    - fonctions prédéfinies ou existantes
-    - en-tête, corps, appel, paramètres formels et effectifs. 
-    - portée, visibilité, variables locales vs. paramètres  
-    - mode de passage des paramètres
-    - exemples du cours : doubler, permuter  
+  - fonctions prédéfinies ou existantes
+  - en-tête, corps, appel, paramètres formels et effectifs. 
+  - portée, visibilité, variables locales vs. paramètres  
+  - mode de passage des paramètres
+  - exemples du cours : doubler, permuter  
 
 - Tableaux 1D :
-    - rappel : avec des listes python (`lst`)
-    - exemples du cours : Lire, stocker, moyenne/min/max d'un tableau (valeurs, indices)
-    - applications : les vecteurs, les chaînes de caractères 
+  - rappel : avec des listes python (`lst`)
+  - exemples du cours : Lire, stocker, moyenne/min/max d'un tableau (valeurs, indices)
+  - applications : les vecteurs, les chaînes de caractères 
 
 - Tableaux 2D, 3D ; application au traitement d'images
-    - avec des listes (de listes) python  
-    - images et matrices  
-    - boucles imbriquées  
-    - exemples du cours : 
-        - traitement d'images : initialisation niveaux de gris, transformations d'images (miroir, contraste, contours, ...) 
-        - algorithmes sur les matrices : vérification (identité, symétrie), calcul (produit de matrices,...) , génération de formes particulières (transposée, ...)
-        
-
+  - avec des listes (de listes) python  
+  - images et matrices  
+  - boucles imbriquées  
+  - exemples du cours : 
+    - traitement d'images : initialisation niveaux de gris, transformations d'images (miroir, contraste, contours, ...) 
+    - algorithmes sur les matrices : vérification (identité, symétrie), calcul (produit de matrices,...) , génération de formes particulières (transposée, ...
+  
 ```{note}
 Par manque de temps, les `ndarray` de `numpy`, ne sont pas abordés en séance bien que très utiles en pratique.
 Ces ressources pourront être découvertes de façon autome et utilisées par les étudiants (objectif 20) qui le souhaitent.
 ```
 
 - Autres types de données composés
-    - listes (`lst`) : fonctions et méthodes
-    - n-uplets (`tuple`), ensembles (`set`), dictionnaires (`dict`)
+  - listes (`lst`) : fonctions et méthodes
+  - n-uplets (`tuple`), ensembles (`set`), dictionnaires (`dict`)
 
 - Entrées/sorties et fichiers
-    - Très pratique pour tester ses développements : 
-    ```{important}
-    **Bannir les entrées au clavier !** 
-    Plus d'`input()` à tours de bras SVP !!!
-    ```
-    - Chapître traité assez tôt dans le semestre
+  - Très pratique pour tester ses développements : 
+  ```{important}
+  **Bannir les entrées au clavier !** 
+  Plus d'`input()` à tours de bras SVP !!!
+  ```
+  - Chapitre traité assez tôt dans le semestre
 
 - Modules
-    - utilisation de modules existants 
-    - exemple d'outils :`numpy`, `scipy`, `matplotlib`, `time` 
-    - définition de ses modules
+  - utilisation de modules existants 
+  - exemple d'outils :`numpy`, `scipy`, `matplotlib`, `time` 
+  - définition de ses modules
 
 - Exceptions
-    - En annexe par manque de temps
+  - En annexe par manque de temps
 
 ## Supports de cours
 
@@ -275,13 +274,13 @@ Ces ressources pourront être découvertes de façon autome et utilisées par le
 Excepté les supports de cours cette année, toutes les autres ressources sont sur moodle et sont mises à jour **très** régulièrement
 ```
 
-
 - CM : notebook python (version pdf, html) 
 - TD : feuilles d'exercices (pdf) 
 - TP : notebook python (versions ipynb, pdf, html)  
 - sujets et correction des CC et CT des années précédentes
 
 Au fur et à mesure du semestre :
+
 - TD : corrections des exercices objectif 10 
 
 

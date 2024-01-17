@@ -67,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'bonjour';</script>
     <link rel="index" title="Index" href="genindex.html" />
     <link rel="search" title="Search" href="search.html" />
-    <link rel="next" title="1. Algorithmique et Programmation en 2023" href="cm/0-presentation-2024.html" />
+    <link rel="next" title="1. Algo Prog en 2024" href="cm/0-presentation-2024.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -157,8 +157,14 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Algo-Prog 2024 - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Algo-Prog 2024 - Home"/>`);</script>
   
-    <p class="title logo__title">Algo-Prog 2024</p>
   
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
@@ -173,8 +179,26 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Présentation</span></p>
 <ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="cm/0-presentation-2024.html">1. Algorithmique et Programmation en 2023</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cm/0-presentation-2024.html">1. Algo Prog en 2024</a></li>
 <li class="toctree-l1"><a class="reference internal" href="cm/competences.html">2. Compétences</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Les bases</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="cm/1-fonctions.html">1. Fonctions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Annexes</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="cm/a0-boucles-avancees.html">1. Boucles et tableaux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cm/a1-booleens.html">2. Annexe : les booléens en python (&gt;3.6)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cm/a2-ndarray.html">3. Les ‘ndarray’ : de vrais tableaux en python</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">TD</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="td/prealable-td.html">1. Préalables</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">(Intervenants) suivi des séances</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="suivi_seances.html">1. (Intervenant) Suivi des séances</a></li>
 </ul>
 
     </div>
@@ -338,19 +362,21 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-16-derniere-semaine">Semaine 16 : dernière semaine</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-15">Semaine 15</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-14">Semaine 14</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-13">Semaine 13</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-12">Semaine 12</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-11">Semaine 11</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-10">Semaine 10</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-9-vacances">Semaine 9 (vacances)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-8">Semaine 8</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-7">Semaine 7</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-6">Semaine 6</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-5">Semaine 5</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-3">Semaine 3</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-4">Semaine 4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-5">Semaine 5</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-6">Semaine 6</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-7">Semaine 7</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-8"><em>Semaine 8</em></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-9">Semaine 9</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-10">Semaine 10</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-11">Semaine 11</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-12">Semaine 12</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-13">Semaine 13</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-14">Semaine 14</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaines-15-et-16"><em>Semaines 15 et 16</em></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-17">Semaine 17</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-18">Semaine 18</a></li>
 </ul>
             </nav>
         </div>
@@ -366,15 +392,13 @@ document.write(`
 <section class="tex2jax_ignore mathjax_ignore" id="bienvenu-en-algo-prog">
 <span id="ch-bonjour"></span><h1>Bienvenu en Algo-Prog !<a class="headerlink" href="#bienvenu-en-algo-prog" title="Permalink to this heading">#</a></h1>
 <p><strong>Ce support est en évolution tout au long du semestre.</strong></p>
-<p>Mis à jour : Jan 16, 2024, lecture : 3 minutes minimum, PhL.</p>
+<p>Mis à jour : Jan 17, 2024, lecture : 0 minutes minimum, PhL.</p>
 <p>Ceci est le premier point d’entrée de l’UE Algo-Prog en complément de l’<a class="reference external" href="https://cours.univ-perp.fr/course/view.php?id=925">espace moodle de cette UE</a>.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
 <p>Rappels des dates importantes</p>
 <ul class="simple">
-<li><p>semaine 10, (6-10 mars 2023), séance de TD : CC sur ordinateur 20 min</p></li>
-<li><p>semaine 11 : 16 mars 2023, 14h-16h (2h) : CC2 écrit</p></li>
-<li><p>semaine 12 : 24 mars 2023, 14h-16h (2h) : CC1 sur ordinateur (TP1)</p></li>
+<li><p>Rien à ce jour</p></li>
 </ul>
 </div>
 <div class="admonition note">
@@ -385,179 +409,66 @@ La première séance de CM a eu lieu en semaine 3.</p></li>
 <li><p>les items indiqués d’une (<span class="math notranslate nohighlight">\(\star\)</span>) correspondent aux activités <em>objectif 20</em></p></li>
 </ul>
 </div>
-<section id="semaine-16-derniere-semaine">
-<h2>Semaine 16 : dernière semaine<a class="headerlink" href="#semaine-16-derniere-semaine" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Avant le CM de jeudi : lire le chapitre “Trier”</p></li>
-<li><p>Avant le CM de vendredi : lire le chapitre “Affectation et appels de fonction : aspects avancés” et “ES : aspects avancés”</p></li>
-<li><p>Travail personnel :</p>
-<ul>
-<li><p>finir le TP anagrammes</p></li>
-</ul>
-</li>
-</ul>
-</section>
-<section id="semaine-15">
-<h2>Semaine 15<a class="headerlink" href="#semaine-15" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Avant le CM : relire les chapitres “Rechercher” et “Modules utiles”</p></li>
-<li><p>Travail personnel :</p>
-<ul>
-<li><p>TD : finir la feuille 5 (récursivité)</p></li>
-<li><p>TP anagrammes</p></li>
-</ul>
-</li>
-</ul>
-</section>
-<section id="semaine-14">
-<h2>Semaine 14<a class="headerlink" href="#semaine-14" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Attention : pas de séance de CM cette semaine mais du travail personnel sur un chapitre de cours</p></li>
-<li><p>Travail personnel :</p>
-<ul>
-<li><p>re-lire de façon approfondie le chapitre “Récursivité”</p></li>
-<li><p>étudier chapitre “Rechercher”, toutes les sections avec algorithmes récursifs</p></li>
-<li><p>lire le chapitre “Modules utiles”</p></li>
-<li><p>TD : feuille 5 (récursivité)</p></li>
-</ul>
-</li>
-</ul>
-</section>
-<section id="semaine-13">
-<h2>Semaine 13<a class="headerlink" href="#semaine-13" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Attention : 2 séances de CM (rattrapage CM de la semaine 11)</p></li>
-<li><p>Travail personnel : finir TP structures de données</p></li>
-<li><p>Avant le CM de <em>mercredi</em> :</p>
-<ul>
-<li><p>re-lire le chapitre “entrées-sorties simples” (partie Programmation), sections 4.1 et 4.2.</p></li>
-<li><p>lire chapitre “Récursivité” jusqu’à section 2.3 inclus</p></li>
-</ul>
-</li>
-</ul>
-</section>
-<section id="semaine-12">
-<h2>Semaine 12<a class="headerlink" href="#semaine-12" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p>CC1 sur machine, durée 2h15, tous les chapitres vus à ce jour</p></li>
-<li><p>Compétences : “Types composés”</p></li>
-<li><p>Travail personnel</p>
-<ul>
-<li><p>étudier chapitre “types composés” (partie Programmation) en entier</p></li>
-<li><p>TP structures de données (à finir)</p></li>
-</ul>
-</li>
-<li><p>Avant le CM :</p>
-<ul>
-<li><p>re-lire le chapitre “entrées-sorties simples” (partie Programmation), sections 4.1 et 4.2.</p></li>
-<li><p>lire chapitre “Récursivité” jusqu’à section 2.3 inclus</p></li>
-</ul>
-</li>
-</ul>
-</section>
-<section id="semaine-11">
-<h2>Semaine 11<a class="headerlink" href="#semaine-11" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p>CC2 écrit, durée 2h30, tous les chapitres vus à ce jour</p></li>
-<li><p>Attention : pas de séance de CM</p></li>
-<li><p>Travail personnel</p>
-<ul>
-<li><p>feuille 4</p></li>
-<li><p>étudier chapitre “types composés” (partie Programmation) en entier</p></li>
-</ul>
-</li>
-</ul>
-</section>
-<section id="semaine-10">
-<h2>Semaine 10<a class="headerlink" href="#semaine-10" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p>CC exercice court sur machine, durée 0h30, tous les chapitres vus à ce jour</p></li>
-<li><p>Compétences : “Complexités”</p></li>
-<li><p>Travail personnel :</p>
-<ul>
-<li><p>feuille 4</p></li>
-<li><p>étudier chapitre “Rechercher”, toutes les sections avec algorithmes itératifs</p></li>
-</ul>
-</li>
-<li><p>Avant le CM : lire le chapitre “types composés” (partie Programmation) en entier.</p></li>
-</ul>
-</section>
-<section id="semaine-9-vacances">
-<h2>Semaine 9 (vacances)<a class="headerlink" href="#semaine-9-vacances" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Compétences : “Fonctions”, “Rechercher” et “Complexités”</p></li>
-<li><p>Travail personnel :</p>
-<ul>
-<li><p>Finir feuilles 1, 2 et 3  selon ses objectifs</p></li>
-<li><p>Feuille 4</p></li>
-<li><p>TP puissance 4 (pas de remise demandée)</p></li>
-<li><p>Etudier le chapitre “types composés” (partie Programmation) jusqu’à la section 1.4 inclus.</p></li>
-</ul>
-</li>
-</ul>
-</section>
-<section id="semaine-8">
-<h2>Semaine 8<a class="headerlink" href="#semaine-8" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p>QCM sur moodle : complexité</p></li>
-<li><p>Travail personnel :</p>
-<ul>
-<li><p>TD <strong>feuille 3</strong> selon vos objectifs</p></li>
-<li><p>reprendre le chapitre “rechercher” (partie Algorithmique) jusqu’à la section 3.4 inclus et <strong>sans</strong> les parties sur les solutions récursives.</p></li>
-</ul>
-</li>
-<li><p>Avant le CM : lire</p>
-<ul>
-<li><p>chapitre “types composés” (partie Programmation) jusqu’à la section 1.4 inclus.</p></li>
-</ul>
-</li>
-</ul>
-</section>
-<section id="semaine-7">
-<h2>Semaine 7<a class="headerlink" href="#semaine-7" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Compétences : “Complexités”</p></li>
-<li><p>Acquisition : reprendre chapitre “Complexités” jusqu’à section 1.5 inclus</p></li>
-<li><p>QCM sur moodle : complexité</p></li>
-<li><p>TD travail personnel :</p>
-<ul>
-<li><p>finir feuille 2 selon vos objectifs</p></li>
-<li><p><em>moodle</em> : analyser les corrections de la feuille 1, objectifs 10 et 20</p></li>
-</ul>
-</li>
-<li><p>TD semaine : feuille 3, objectif 10</p></li>
-<li><p>Avant le CM : lire le chapitre “Complexités” sections 1.6 et 1.7 inclus.</p></li>
-</ul>
-</section>
-<section id="semaine-6">
-<h2>Semaine 6<a class="headerlink" href="#semaine-6" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Compétences : “Fonctions” des chapitres 1 et 2 (sauf 2.3) et diapos associées.</p></li>
-<li><p>QCM sur moodle : fonctions</p></li>
-<li><p>TD travail personnel : finir feuille 1 selon vos objectifs.</p></li>
-<li><p>TD semaine : feuille 2, objectif 10.</p></li>
-<li><p>Avant le CM : lire le chapitre “Complexités” jusqu’à section 1.5 inclus.</p></li>
-</ul>
-</section>
-<section id="semaine-5">
-<h2>Semaine 5<a class="headerlink" href="#semaine-5" title="Permalink to this heading">#</a></h2>
-<ul class="simple">
-<li><p>Compétences : Fonctions.</p></li>
-<li><p>Acquisition : reprendre chapitre “Fonctions” en entier et diapos associées.</p></li>
-<li><p>Avant le CM : lire les sections <strong>2-1 et 2-2</strong> du chapitre “Fonctions et tableaux”.</p></li>
-<li><p>QCM sur moodle : fonctions.</p></li>
-<li><p>TD : feuille 1, objectif 10.</p></li>
-</ul>
+<section id="semaine-3">
+<h2>Semaine 3<a class="headerlink" href="#semaine-3" title="Permalink to this heading">#</a></h2>
 </section>
 <section id="semaine-4">
 <h2>Semaine 4<a class="headerlink" href="#semaine-4" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="semaine-5">
+<h2>Semaine 5<a class="headerlink" href="#semaine-5" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="semaine-6">
+<h2>Semaine 6<a class="headerlink" href="#semaine-6" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="semaine-7">
+<h2>Semaine 7<a class="headerlink" href="#semaine-7" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="semaine-8">
+<h2><em>Semaine 8</em><a class="headerlink" href="#semaine-8" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
-<li><p>Avant le CM : lire les sections <strong>1-1, 1-2 et 1-3</strong> du chapitre “Fonctions”</p></li>
-<li><p>Compétences : Savoir faire et pré-requis technique</p></li>
-<li><p>TD : installer le notebook jupyter sur sa machine personnelle, à défaut savoir utiliser une solution en ligne.</p></li>
+<li><p>Vacances d’hiver</p></li>
 </ul>
+</section>
+<section id="semaine-9">
+<h2>Semaine 9<a class="headerlink" href="#semaine-9" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="semaine-10">
+<h2>Semaine 10<a class="headerlink" href="#semaine-10" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="semaine-11">
+<h2>Semaine 11<a class="headerlink" href="#semaine-11" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="semaine-12">
+<h2>Semaine 12<a class="headerlink" href="#semaine-12" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="semaine-13">
+<h2>Semaine 13<a class="headerlink" href="#semaine-13" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="semaine-14">
+<h2>Semaine 14<a class="headerlink" href="#semaine-14" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="semaines-15-et-16">
+<h2><em>Semaines 15 et 16</em><a class="headerlink" href="#semaines-15-et-16" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Vacances de printemps</p></li>
+</ul>
+</section>
+<section id="semaine-17">
+<h2>Semaine 17<a class="headerlink" href="#semaine-17" title="Permalink to this heading">#</a></h2>
+</section>
+<section id="semaine-18">
+<h2>Semaine 18<a class="headerlink" href="#semaine-18" title="Permalink to this heading">#</a></h2>
 <!-- #endregion -->
 </section>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
 <div class="toctree-wrapper compound">
 </div>
 </section>
@@ -597,7 +508,7 @@ La première séance de CM a eu lieu en semaine 3.</p></li>
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1. </span>Algorithmique et Programmation en 2023</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Algo Prog en 2024</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -617,19 +528,21 @@ La première séance de CM a eu lieu en semaine 3.</p></li>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-16-derniere-semaine">Semaine 16 : dernière semaine</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-15">Semaine 15</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-14">Semaine 14</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-13">Semaine 13</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-12">Semaine 12</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-11">Semaine 11</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-10">Semaine 10</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-9-vacances">Semaine 9 (vacances)</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-8">Semaine 8</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-7">Semaine 7</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-6">Semaine 6</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-5">Semaine 5</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-3">Semaine 3</a></li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-4">Semaine 4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-5">Semaine 5</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-6">Semaine 6</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-7">Semaine 7</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-8"><em>Semaine 8</em></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-9">Semaine 9</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-10">Semaine 10</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-11">Semaine 11</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-12">Semaine 12</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-13">Semaine 13</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-14">Semaine 14</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaines-15-et-16"><em>Semaines 15 et 16</em></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-17">Semaine 17</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-18">Semaine 18</a></li>
 </ul>
   </nav></div>
 

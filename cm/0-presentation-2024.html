@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>1. Algorithmique et Programmation en 2023 &#8212; Algo-Prog 2024</title>
+    <title>1. Algo Prog en 2024 &#8212; Algo-Prog 2024</title>
   
   
   
@@ -158,8 +158,14 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Algo-Prog 2024 - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Algo-Prog 2024 - Home"/>`);</script>
   
-    <p class="title logo__title">Algo-Prog 2024</p>
   
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
@@ -174,8 +180,26 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Présentation</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">1. Algorithmique et Programmation en 2023</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">1. Algo Prog en 2024</a></li>
 <li class="toctree-l1"><a class="reference internal" href="competences.html">2. Compétences</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Les bases</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1-fonctions.html">1. Fonctions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Annexes</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="a0-boucles-avancees.html">1. Boucles et tableaux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="a1-booleens.html">2. Annexe : les booléens en python (&gt;3.6)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="a2-ndarray.html">3. Les ‘ndarray’ : de vrais tableaux en python</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">TD</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../td/prealable-td.html">1. Préalables</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">(Intervenants) suivi des séances</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../suivi_seances.html">1. (Intervenant) Suivi des séances</a></li>
 </ul>
 
     </div>
@@ -329,7 +353,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Algorithmique et Programmation en 2023</h1>
+    <h1>Algo Prog en 2024</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -339,8 +363,8 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algo-prog-version-2023">1.1. Algo-Prog : version 2023</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#version-2023">1.1.1. Version 2023</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algo-prog-version-2024">1.1. Algo-Prog : version 2024</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#version-2024">1.1.1. Version 2024</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#controle-de-connaissances-et-dates-importantes">1.1.2. Contrôle de connaissances et dates importantes</a></li>
 </ul>
 </li>
@@ -349,7 +373,7 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cm">1.2.2. CM</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#la-tres-grande-importance-des-cm">1.2.3. La très grande importance des CM</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-td-pour-reflechir-et-travailler-en-petit-groupe">1.2.4. Les TD pour réfléchir et travailler en petit groupe</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-tp-pour-maitriser-les-notions-et-acquerir-du-savoir-faire-personnel">1.2.5. Les TP pour maîtriser les notions et acquérir du savoir-faire personnel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-tp-pour-maitriser-les-notions-et-acquerir-du-savoir-faire-personnel">1.2.5. Les TP pour maitriser les notions et acquérir du savoir-faire personnel</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-outils-pour-mieux-comprendre-mieux-retenir">1.2.6. Les outils pour mieux comprendre, mieux retenir</a></li>
 </ul>
 </li>
@@ -394,9 +418,9 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="algorithmique-et-programmation-en-2023">
-<span id="ch-intro"></span><h1><span class="section-number">1. </span>Algorithmique et Programmation en 2023<a class="headerlink" href="#algorithmique-et-programmation-en-2023" title="Permalink to this heading">#</a></h1>
-<p>Mis à jour : Jan 16, 2024, lecture : 10 minutes minimum, PhL.</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="algo-prog-en-2024">
+<span id="ch-intro"></span><h1><span class="section-number">1. </span>Algo Prog en 2024<a class="headerlink" href="#algo-prog-en-2024" title="Permalink to this heading">#</a></h1>
+<p>Mis à jour : Jan 17, 2024, lecture : 10 minutes minimum, PhL.</p>
 <ul class="simple">
 <li><p>Vous : <strong>L1 math-info</strong></p></li>
 <li><p>Moi : <strong>Philippe Langlois</strong></p></li>
@@ -404,20 +428,20 @@ document.write(`
 <li><p>Comment me rencontrer : sur RDV <em>DEMANDÉ PAR E-MAIL</em></p></li>
 <li><p>Où me rencontrer : au bâtiment B, étage 1, à gauche (laboratoire DALI).</p></li>
 </ul>
-<section id="algo-prog-version-2023">
-<h2><span class="section-number">1.1. </span>Algo-Prog : version 2023<a class="headerlink" href="#algo-prog-version-2023" title="Permalink to this heading">#</a></h2>
+<section id="algo-prog-version-2024">
+<h2><span class="section-number">1.1. </span>Algo-Prog : version 2024<a class="headerlink" href="#algo-prog-version-2024" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
-<li><p>Les <a class="reference external" href="https://phillanglois.github.io/Algo-Prog-2023/bonjour.html">supports du CM</a> régulièrement mis à jour.</p></li>
+<li><p>Les <a class="reference external" href="https://phillanglois.github.io/Algo-Prog-2024/bonjour.html">supports du CM</a> régulièrement mis à jour.</p></li>
 <li><p>Les autres ressources sont sur l’espace moodle de cet enseignement.</p></li>
 </ul>
-<section id="version-2023">
-<h3><span class="section-number">1.1.1. </span>Version 2023<a class="headerlink" href="#version-2023" title="Permalink to this heading">#</a></h3>
+<section id="version-2024">
+<h3><span class="section-number">1.1.1. </span>Version 2024<a class="headerlink" href="#version-2024" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p>nouvelle offre de formation 2021-2025 : algo + prog = 1 UE</p></li>
-<li><p>12 séances de CM : 3h/semaine</p></li>
-<li><p>12 séances de TD-TP : 3h/semaine</p></li>
-<li><p>chargés de TD : Ph. Langlois (2), Vincent Zucca (2)</p></li>
-<li><p>Démarrage : CM en semaine 3 (<code class="docutils literal notranslate"><span class="pre">sd</span></code>=s3), TD en s4, vacances en s9, s17-s18</p></li>
+<li><p>évolution vs. 2023-2024</p></li>
+<li><p>12 séances de CM : <strong>2h/semaine</strong></p></li>
+<li><p>12 <strong>+7</strong> séances de TD-TP : 3h/semaine <strong>+1.5h “leçons” sur 7 semaines</strong></p></li>
+<li><p>chargés de TD : David Parello (TD1),, Ph. Langlois (TD2 et TD3), Vincent Zucca (TD4)</p></li>
+<li><p>Démarrage : CM en semaine 3 (<code class="docutils literal notranslate"><span class="pre">sd</span></code>=s3), TD en s4, vacances en s8, s15-s16</p></li>
 </ul>
 </section>
 <section id="controle-de-connaissances-et-dates-importantes">
@@ -430,12 +454,21 @@ document.write(`
 <ul class="simple">
 <li><p>CC1 sur ordinateur : 0.5 * TP1 + 0.5 * TP2</p>
 <ul>
-<li><p>mi-semestre : TP1 individuel, en temps limité (2h ou plus selon possibilité edt) .</p></li>
-<li><p>fin de semestre : TP2 individuel, en temps limité (3h), sur machine UPVD pendant semaine examen</p></li>
+<li><p>mi-semestre : TP1 individuel, en temps limité (2h ou plus selon possibilité edt)</p></li>
+<li><p>fin de semestre, semaine examen : TP2 individuel, en temps limité (3h) sur machine UPVD</p></li>
 </ul>
 </li>
-<li><p>CC2 surtout algorithmique : écrit, mi-semestre, 2h.</p></li>
-<li><p>CT surtout algorithmique : écrit de fin de semestre, 2h pendant semaine examen.</p></li>
+<li><p>CC2 : 0.5 * leçons + 0.5 écrit</p>
+<ul>
+<li><p>leçons : évaluation randomisée du travail déposé après les 7 séances “leçons”</p></li>
+<li><p>mi-semestre : écrit surtout algorithmique, 2h.</p></li>
+</ul>
+</li>
+<li><p>CT :</p>
+<ul>
+<li><p>fin de semestre, semaine examen : écrit de 2h surtout algorithmique</p></li>
+</ul>
+</li>
 </ul>
 <p><strong>Dates.</strong> Les dates de ces évaluations sont annoncées en début de <a class="reference internal" href="../bonjour.html#ch-bonjour"><span class="std std-ref">la page d’accueil du cours</span></a>.</p>
 </section>
@@ -449,7 +482,7 @@ document.write(`
 <li><p>“12ème séance” : écrit mi-parcours, TP de fin de semestre</p></li>
 <li><p>Chaque chapitre :</p>
 <ul>
-<li><p>explicitation des compétences : savoirs, savoir-faires</p></li>
+<li><p>explicitation des compétences : savoirs, savoirs-faire</p></li>
 <li><p>un quizz d’aide à la compréhension et la mémorisation de ces compétences</p></li>
 <li><p><em>l’enseignant</em> … présente et explique des exercices détaillés en CM</p></li>
 <li><p><em>vous</em> … travaillez sur des exercices de TD et de TP, les contrôles des années précédentes, …</p></li>
@@ -525,7 +558,7 @@ document.write(`
 </ul>
 </section>
 <section id="les-tp-pour-maitriser-les-notions-et-acquerir-du-savoir-faire-personnel">
-<h3><span class="section-number">1.2.5. </span>Les TP pour maîtriser les notions et acquérir du savoir-faire personnel<a class="headerlink" href="#les-tp-pour-maitriser-les-notions-et-acquerir-du-savoir-faire-personnel" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.2.5. </span>Les TP pour maitriser les notions et acquérir du savoir-faire personnel<a class="headerlink" href="#les-tp-pour-maitriser-les-notions-et-acquerir-du-savoir-faire-personnel" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>1 TP = un <em>notebook jupyter</em></p></li>
 <li><p>codage, expérimentation et approfondissement :</p>
@@ -547,7 +580,7 @@ document.write(`
 <h3><span class="section-number">1.2.6. </span>Les outils pour mieux comprendre, mieux retenir<a class="headerlink" href="#les-outils-pour-mieux-comprendre-mieux-retenir" title="Permalink to this heading">#</a></h3>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
-<p><strong>Pratiquer pour maîtriser</strong></p>
+<p><strong>Pratiquer pour maitriser</strong></p>
 </div>
 <ul class="simple">
 <li><p>un environnement python qui fonctionne</p></li>
@@ -592,7 +625,7 @@ document.write(`
 <ul>
 <li><p><code class="docutils literal notranslate"><span class="pre">bool</span></code>, <code class="docutils literal notranslate"><span class="pre">int</span></code>, <code class="docutils literal notranslate"><span class="pre">float</span></code>, <code class="docutils literal notranslate"><span class="pre">str</span></code>, <code class="docutils literal notranslate"><span class="pre">list</span></code></p></li>
 <li><p>et les changement de types associés : <code class="docutils literal notranslate"><span class="pre">int()</span></code>, <code class="docutils literal notranslate"><span class="pre">float()</span></code>, …</p></li>
-<li><p>(python) : un rappel sur le “type” <code class="docutils literal notranslate"><span class="pre">bool</span></code>est proposé en <span class="xref myst">annexe du cours</span>.</p></li>
+<li><p>(python) : un rappel sur le “type” <code class="docutils literal notranslate"><span class="pre">bool</span></code>est proposé en <a class="reference internal" href="a1-booleens.html"><span class="doc std std-doc">annexe du cours</span></a>.</p></li>
 </ul>
 </li>
 <li><p>Bien différencier <em>valeur</em> vs. <em>variable</em> vs. <em>constante</em></p>
@@ -731,7 +764,7 @@ document.write(`
 <li><p>exemples du cours :</p>
 <ul>
 <li><p>traitement d’images : initialisation niveaux de gris, transformations d’images (miroir, contraste, contours, …)</p></li>
-<li><p>algorithmes sur les matrices : vérification (identité, symétrie), calcul (produit de matrices,…) , génération de formes particulières (transposée, …)</p></li>
+<li><p>algorithmes sur les matrices : vérification (identité, symétrie), calcul (produit de matrices,…) , génération de formes particulières (transposée, …</p></li>
 </ul>
 </li>
 </ul>
@@ -759,7 +792,7 @@ Ces ressources pourront être découvertes de façon autome et utilisées par le
 Plus d’<code class="docutils literal notranslate"><span class="pre">input()</span></code> à tours de bras SVP !!!</p>
 </div>
 <ul class="simple">
-<li><p>Chapître traité assez tôt dans le semestre</p></li>
+<li><p>Chapitre traité assez tôt dans le semestre</p></li>
 </ul>
 </li>
 <li><p>Modules</p>
@@ -1082,8 +1115,8 @@ ISBN : 2091574651 (Première),  2091575437  (Terminale)</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algo-prog-version-2023">1.1. Algo-Prog : version 2023</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#version-2023">1.1.1. Version 2023</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algo-prog-version-2024">1.1. Algo-Prog : version 2024</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#version-2024">1.1.1. Version 2024</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#controle-de-connaissances-et-dates-importantes">1.1.2. Contrôle de connaissances et dates importantes</a></li>
 </ul>
 </li>
@@ -1092,7 +1125,7 @@ ISBN : 2091574651 (Première),  2091575437  (Terminale)</p>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cm">1.2.2. CM</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#la-tres-grande-importance-des-cm">1.2.3. La très grande importance des CM</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-td-pour-reflechir-et-travailler-en-petit-groupe">1.2.4. Les TD pour réfléchir et travailler en petit groupe</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-tp-pour-maitriser-les-notions-et-acquerir-du-savoir-faire-personnel">1.2.5. Les TP pour maîtriser les notions et acquérir du savoir-faire personnel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-tp-pour-maitriser-les-notions-et-acquerir-du-savoir-faire-personnel">1.2.5. Les TP pour maitriser les notions et acquérir du savoir-faire personnel</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-outils-pour-mieux-comprendre-mieux-retenir">1.2.6. Les outils pour mieux comprendre, mieux retenir</a></li>
 </ul>
 </li>

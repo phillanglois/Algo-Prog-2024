@@ -67,7 +67,8 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'cm/competences';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="prev" title="1. Algorithmique et Programmation en 2023" href="0-presentation-2024.html" />
+    <link rel="next" title="1. Fonctions" href="1-fonctions.html" />
+    <link rel="prev" title="1. Algo Prog en 2024" href="0-presentation-2024.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -157,8 +158,14 @@ const thebe_selector_output = ".output, .cell_output"
   
   
   
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Algo-Prog 2024 - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Algo-Prog 2024 - Home"/>`);</script>
   
-    <p class="title logo__title">Algo-Prog 2024</p>
   
 </a></div>
         <div class="sidebar-primary-item"><nav class="bd-links" id="bd-docs-nav" aria-label="Main">
@@ -173,8 +180,26 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Présentation</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="0-presentation-2024.html">1. Algorithmique et Programmation en 2023</a></li>
+<li class="toctree-l1"><a class="reference internal" href="0-presentation-2024.html">1. Algo Prog en 2024</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">2. Compétences</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Les bases</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1-fonctions.html">1. Fonctions</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Annexes</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="a0-boucles-avancees.html">1. Boucles et tableaux</a></li>
+<li class="toctree-l1"><a class="reference internal" href="a1-booleens.html">2. Annexe : les booléens en python (&gt;3.6)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="a2-ndarray.html">3. Les ‘ndarray’ : de vrais tableaux en python</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">TD</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../td/prealable-td.html">1. Préalables</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">(Intervenants) suivi des séances</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../suivi_seances.html">1. (Intervenant) Suivi des séances</a></li>
 </ul>
 
     </div>
@@ -339,62 +364,57 @@ document.write(`
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#savoir-faire-et-pre-requis-technique">2.1. Savoir faire et pré-requis technique</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#boucles-aspects-avances-du-semestre-1">2.2. Boucles : aspects avancés du semestre 1</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fonctions">2.2. Fonctions</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#avoir-les-idees-claires">2.2.1. Avoir les idées claires</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ce-qu-il-faut-savoir-faire">2.2.2. Ce qu’il faut savoir faire</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fonctions">2.3. Fonctions</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recursivite">2.3. Récursivité</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">2.3.1. Avoir les idées claires</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">2.3.2. Ce qu’il faut savoir faire</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#savoir-faire">2.3.2. Savoir-faire</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#entrees-sorties-simples-avec-des-fichiers">2.4. Entrées-Sorties simples avec des fichiers</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">2.4.1. Avoir les idées claires</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#savoir-faire">2.4.2. Savoir-faire</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complexite">2.4. Complexité</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">2.4.1. Avoir les idées claires</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">2.4.2. Savoir-faire</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complexite">2.5. Complexité</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rechercher">2.5. Rechercher</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">2.5.1. Avoir les idées claires</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">2.5.2. Savoir-faire</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recursivite">2.6. Récursivité</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trier">2.6. Trier</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">2.6.1. Avoir les idées claires</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">2.6.2. Savoir-faire</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rechercher">2.7. Rechercher</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#types-composes">2.7. Types composés</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">2.7.1. Avoir les idées claires</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">2.7.2. Savoir-faire</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">2.7.2. Savoir faire</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trier">2.8. Trier</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modules-utiles">2.8. Modules utiles</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">2.8.1. Avoir les idées claires</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">2.8.2. Savoir-faire</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#types-composes">2.9. Types composés</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#entrees-sorties-simples-avec-des-fichiers">2.9. Entrées-Sorties simples avec des fichiers</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">2.9.1. Avoir les idées claires</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">2.9.2. Savoir faire</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">2.9.2. Savoir-faire</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sous-programmes-et-affectations-aspects-avances">2.10. Sous programmes et affectations : aspects avancés</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#star-sous-programmes-et-affectations-aspects-avances">2.10. (<span class="math notranslate nohighlight">\(\star \)</span>) Sous programmes et affectations : aspects avancés</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">2.10.1. Avoir les idées claires</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#savoir-faire-en-python">2.10.2. Savoir-faire en python</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#entrees-sorties-aspects-avances">2.11. Entrées-Sorties : aspects avancés</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#star-entrees-sorties-aspects-avances">2.11. (<span class="math notranslate nohighlight">\(\star \)</span>) Entrées-Sorties : aspects avancés</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">2.11.1. Avoir les idées claires</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">2.11.2. Savoir-faire</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modules-utiles">2.12. Modules utiles</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">2.12.1. Avoir les idées claires</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">2.12.2. Savoir-faire</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#des-qcm-et-autres-sites-a-exploiter">2.13. Des QCM et autres sites à exploiter</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#des-qcm-et-autres-sites-a-exploiter">2.12. Des QCM et autres sites à exploiter</a></li>
 </ul>
             </nav>
         </div>
@@ -408,15 +428,15 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="competences">
 <h1><span class="section-number">2. </span>Compétences<a class="headerlink" href="#competences" title="Permalink to this heading">#</a></h1>
-<p>Mis à jour : Jan 16, 2024, lecture : 6
+<p>Mis à jour : Jan 17, 2024, lecture : 5
 minutes minimum, PhL.</p>
 <div class="admonition important">
 <p class="admonition-title">Important</p>
-<p>Les compétences de cet enseignement sont rassemblées dans ce fichier pour vous aider à contrôler votre apprentissage au long du semestre.</p>
+<p>Les compétences de cet enseignement sont rassemblées pour vous aider à contrôler votre apprentissage au long du semestre.</p>
 </div>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
-<p>Les aspects signalés avec une (<span class="math notranslate nohighlight">\(\star\)</span>) correspondent à l’objectif (d’apprentissage niveau) 20.</p>
+<p>Les (<span class="math notranslate nohighlight">\(\star\)</span>) correspondent à l’objectif d’apprentissage niveau 20.</p>
 </div>
 <section id="savoir-faire-et-pre-requis-technique">
 <h2><span class="section-number">2.1. </span>Savoir faire et pré-requis technique<a class="headerlink" href="#savoir-faire-et-pre-requis-technique" title="Permalink to this heading">#</a></h2>
@@ -426,35 +446,10 @@ minutes minimum, PhL.</p>
 <li><p>savoir documenter cette programmation (énoncés, descriptions, …) avec markdown</p></li>
 </ul>
 </section>
-<section id="boucles-aspects-avances-du-semestre-1">
-<h2><span class="section-number">2.2. </span>Boucles : aspects avancés du semestre 1<a class="headerlink" href="#boucles-aspects-avances-du-semestre-1" title="Permalink to this heading">#</a></h2>
+<section id="fonctions">
+<h2><span class="section-number">2.2. </span>Fonctions<a class="headerlink" href="#fonctions" title="Permalink to this heading">#</a></h2>
 <section id="avoir-les-idees-claires">
 <h3><span class="section-number">2.2.1. </span>Avoir les idées claires<a class="headerlink" href="#avoir-les-idees-claires" title="Permalink to this heading">#</a></h3>
-<ul class="simple">
-<li><p>Structure de données : représentation d’un tableau multidimensionnel comme une liste de listes</p></li>
-<li><p>Structure de contrôle de type boucles imbriquées indépendantes et dépendantes :</p>
-<ul>
-<li><p>intérêt et exemples simples,</p></li>
-<li><p>dénombrer les itérations de ces constructions.</p></li>
-</ul>
-</li>
-</ul>
-</section>
-<section id="ce-qu-il-faut-savoir-faire">
-<h3><span class="section-number">2.2.2. </span>Ce qu’il faut savoir faire<a class="headerlink" href="#ce-qu-il-faut-savoir-faire" title="Permalink to this heading">#</a></h3>
-<p><strong>Cadre</strong> : en/pour python</p>
-<ul class="simple">
-<li><p>Définir et écrire un traitement classique de tableau multidimensionnel  : parcours simple, parcours conditionnel</p></li>
-<li><p>Ecrire une initialisation de tableau multidimensionnel en python (représenté par des listes)</p></li>
-<li><p>Définir et écrire une spécification de fonction avec des paramètres de type tableau</p></li>
-<li><p>Identifier les cas particuliers liés à la structure de tableau : tableau de dimension 0, tableau vide</p></li>
-</ul>
-</section>
-</section>
-<section id="fonctions">
-<h2><span class="section-number">2.3. </span>Fonctions<a class="headerlink" href="#fonctions" title="Permalink to this heading">#</a></h2>
-<section id="id1">
-<h3><span class="section-number">2.3.1. </span>Avoir les idées claires<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>reconnaitre et utiliser une fonction prédéfinie ou existante</p></li>
 <li><p>reconnaitre et distinguer :</p>
@@ -483,8 +478,8 @@ minutes minimum, PhL.</p>
 <li><p>se souvenir que l’effet de bord est indésirable</p></li>
 </ul>
 </section>
-<section id="id2">
-<h3><span class="section-number">2.3.2. </span>Ce qu’il faut savoir faire<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<section id="ce-qu-il-faut-savoir-faire">
+<h3><span class="section-number">2.2.2. </span>Ce qu’il faut savoir faire<a class="headerlink" href="#ce-qu-il-faut-savoir-faire" title="Permalink to this heading">#</a></h3>
 <p><strong>Cadre</strong> : en/pour python</p>
 <ul class="simple">
 <li><p>utiliser une fonction prédéfinie ou existante</p></li>
@@ -494,72 +489,53 @@ minutes minimum, PhL.</p>
 </ul>
 </section>
 </section>
-<section id="entrees-sorties-simples-avec-des-fichiers">
-<h2><span class="section-number">2.4. </span>Entrées-Sorties simples avec des fichiers<a class="headerlink" href="#entrees-sorties-simples-avec-des-fichiers" title="Permalink to this heading">#</a></h2>
-<section id="id3">
-<h3><span class="section-number">2.4.1. </span>Avoir les idées claires<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
-<ul class="simple">
-<li><p>Distinguer fichier logique <em>vs.</em> physique, texte <em>vs.</em> binaire, mode lecture <em>vs.</em> écriture (<em>vs.</em> lecture-écriture)</p></li>
-<li><p>Connaître les 4 étapes de manipulation d’un fichier : association/ouverture/lecture-écriture/fermeture</p></li>
-<li><p>Distinguer représentation textuelle et valeur (numérique)</p></li>
-</ul>
-</section>
-<section id="savoir-faire">
-<h3><span class="section-number">2.4.2. </span>Savoir-faire<a class="headerlink" href="#savoir-faire" title="Permalink to this heading">#</a></h3>
-<ul class="simple">
-<li><p>Savoir écrire les lectures-écritures simples de fichier texte avec <code class="docutils literal notranslate"><span class="pre">.readline()</span></code>, <code class="docutils literal notranslate"><span class="pre">.read()</span></code> et <code class="docutils literal notranslate"><span class="pre">.write()</span></code></p></li>
-<li><p>Comprendre et gérer l’effet des caractères spéciaux</p></li>
-<li><p>(<span class="math notranslate nohighlight">\(\star \)</span>) Savoir écrire les lectures-écritures de fichiers texte avec les instructions python adaptées</p></li>
-</ul>
-</section>
-</section>
-<section id="complexite">
-<h2><span class="section-number">2.5. </span>Complexité<a class="headerlink" href="#complexite" title="Permalink to this heading">#</a></h2>
-<section id="id4">
-<h3><span class="section-number">2.5.1. </span>Avoir les idées claires<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
-<ul class="simple">
-<li><p>Connaître le principes de l’analyse de la complexité en temps : modèle de calcul, mesure et paramètre de la complexité, meilleur et pire cas</p></li>
-<li><p>Savoir exprimer et exploiter une complexité asymptotique : notations de Landau, principales classes de complexité des algorithmes, interprétation pratique de ces classes</p></li>
-<li><p>Savoir établir la complexité d’algorithmes itératifs simples ou récursifs terminaux (algorithmes étudiés en cours)</p></li>
-</ul>
-</section>
-<section id="id5">
-<h3><span class="section-number">2.5.2. </span>Savoir-faire<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
-<ul class="simple">
-<li><p>Connaître des exemples significatifs d’algorithmes de complexité polynomiale et logarithmique (complexité, pires et meilleurs cas)</p></li>
-<li><p>Savoir identifier (sans nécessairement le prouver) la complexité, les meilleur-pire cas d’un algorithme</p></li>
-</ul>
-</section>
-</section>
 <section id="recursivite">
-<h2><span class="section-number">2.6. </span>Récursivité<a class="headerlink" href="#recursivite" title="Permalink to this heading">#</a></h2>
-<section id="id6">
-<h3><span class="section-number">2.6.1. </span>Avoir les idées claires<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
+<h2><span class="section-number">2.3. </span>Récursivité<a class="headerlink" href="#recursivite" title="Permalink to this heading">#</a></h2>
+<section id="id1">
+<h3><span class="section-number">2.3.1. </span>Avoir les idées claires<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Savoir conduire une approche diviser pour régner et en déduire une solution récursive : application à des exemples calculatoires simples (factorielles, exponentiation entière, exponentiation rapide)</p></li>
 <li><p>Savoir identifier la (ou les) terminaison, la récursion et l’initialisation d’un traitement avec un algorithme récursif : application à des exemples simples (factorielles, exponentiation entière, exponentiation rapide)</p></li>
 </ul>
 </section>
-<section id="id7">
-<h3><span class="section-number">2.6.2. </span>Savoir-faire<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h3>
+<section id="savoir-faire">
+<h3><span class="section-number">2.3.2. </span>Savoir-faire<a class="headerlink" href="#savoir-faire" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Savoir écrire sous la forme d’une fonction de même signature les versions itérative et récursive d’un traitement calculatoire simple</p></li>
 <li><p>Construire la pile des appels et son évolution lors d’un traitement récursif</p></li>
 </ul>
 </section>
 </section>
-<section id="rechercher">
-<h2><span class="section-number">2.7. </span>Rechercher<a class="headerlink" href="#rechercher" title="Permalink to this heading">#</a></h2>
-<section id="id8">
-<h3><span class="section-number">2.7.1. </span>Avoir les idées claires<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h3>
+<section id="complexite">
+<h2><span class="section-number">2.4. </span>Complexité<a class="headerlink" href="#complexite" title="Permalink to this heading">#</a></h2>
+<section id="id2">
+<h3><span class="section-number">2.4.1. </span>Avoir les idées claires<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Connaître les principes des formes itératives et récursives des algorithmes de recherche fondamentaux : recherche séquentielle, recherche dichotomique.</p></li>
+<li><p>Connaitre le principes de l’analyse de la complexité en temps : modèle de calcul, mesure et paramètre de la complexité, meilleur et pire cas</p></li>
+<li><p>Savoir exprimer et exploiter une complexité asymptotique : notations de Landau, principales classes de complexité des algorithmes, interprétation pratique de ces classes</p></li>
+<li><p>Savoir établir la complexité d’algorithmes itératifs simples ou récursifs terminaux (algorithmes étudiés en cours)</p></li>
+</ul>
+</section>
+<section id="id3">
+<h3><span class="section-number">2.4.2. </span>Savoir-faire<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Connaitre des exemples significatifs d’algorithmes de complexité polynomiale et logarithmique (complexité, pires et meilleurs cas)</p></li>
+<li><p>Savoir identifier (sans nécessairement le prouver) la complexité, les meilleur-pire cas d’un algorithme</p></li>
+</ul>
+</section>
+</section>
+<section id="rechercher">
+<h2><span class="section-number">2.5. </span>Rechercher<a class="headerlink" href="#rechercher" title="Permalink to this heading">#</a></h2>
+<section id="id4">
+<h3><span class="section-number">2.5.1. </span>Avoir les idées claires<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Connaitre les principes des formes itératives et récursives des algorithmes de recherche fondamentaux : recherche séquentielle, recherche dichotomique.</p></li>
 <li><p>Savoir conduire une approche diviser pour régner et en déduire une solution récursive pour le problème de la recherche d’une valeur dans un ensemble ou des problèmes similaires.</p></li>
 <li><p>Savoir identifier la (ou les) terminaison, la récursion et l’initialisation d’une recherche de valeur (ou problème similaire) avec un algorithme récursif</p></li>
 </ul>
 </section>
-<section id="id9">
-<h3><span class="section-number">2.7.2. </span>Savoir-faire<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h3>
+<section id="id5">
+<h3><span class="section-number">2.5.2. </span>Savoir-faire<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Savoir écrire sous la forme d’une fonction de même signature les versions itérative et récursive d’un algorithme de recherche de valeur dans un ensemble</p></li>
 <li><p>Savoir écrire des tests unitaires pertinents pour ces traitements</p></li>
@@ -567,17 +543,17 @@ minutes minimum, PhL.</p>
 </section>
 </section>
 <section id="trier">
-<h2><span class="section-number">2.8. </span>Trier<a class="headerlink" href="#trier" title="Permalink to this heading">#</a></h2>
-<section id="id10">
-<h3><span class="section-number">2.8.1. </span>Avoir les idées claires<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h3>
+<h2><span class="section-number">2.6. </span>Trier<a class="headerlink" href="#trier" title="Permalink to this heading">#</a></h2>
+<section id="id6">
+<h3><span class="section-number">2.6.1. </span>Avoir les idées claires<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Connaître, reconnaître et savoir classifier les algorithmes de tri selon leurs caractéristiques (tris en place, par comparaisons, quadratiques/rapides/linéaires)</p></li>
+<li><p>Connaitre, reconnaitre et savoir classifier les algorithmes de tri selon leurs caractéristiques (tris en place, par comparaisons, quadratiques/rapides/linéaires)</p></li>
 <li><p>Comprendre les algorithmes de tri insertion, <em>quicksort</em> et fusion grâce à leur invariant</p></li>
 <li><p>Savoir identifier les pires et meilleurs cas des tris insertion, <em>quicksort</em> et fusion</p></li>
 </ul>
 </section>
-<section id="id11">
-<h3><span class="section-number">2.8.2. </span>Savoir-faire<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h3>
+<section id="id7">
+<h3><span class="section-number">2.6.2. </span>Savoir-faire<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Savoir écrire des traitements récursifs en place de tableaux (indices <span class="math notranslate nohighlight">\([g, d[\)</span>)</p></li>
 <li><p>Savoir écrire les tris insertion, <em>quicksort</em> et fusion sous une forme simple (itérative vs. récursive)</p></li>
@@ -586,28 +562,66 @@ minutes minimum, PhL.</p>
 </section>
 </section>
 <section id="types-composes">
-<h2><span class="section-number">2.9. </span>Types composés<a class="headerlink" href="#types-composes" title="Permalink to this heading">#</a></h2>
-<section id="id12">
-<h3><span class="section-number">2.9.1. </span>Avoir les idées claires<a class="headerlink" href="#id12" title="Permalink to this heading">#</a></h3>
-<p>Distinguer les  caractéristiques des structures de données (SD) <em>tuple</em>, <em>liste</em>, <em>dictionnaire</em>, <em>ensemble</em> et <em>chaîne de caractères</em> – aussi appelés type composé ou conteneur en python</p>
+<h2><span class="section-number">2.7. </span>Types composés<a class="headerlink" href="#types-composes" title="Permalink to this heading">#</a></h2>
+<section id="id8">
+<h3><span class="section-number">2.7.1. </span>Avoir les idées claires<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h3>
+<p>Distinguer les  caractéristiques des structures de données (SD) <em>tuple</em>, <em>liste</em>, <em>dictionnaire</em>, <em>ensemble</em> et <em>chaine de caractères</em> – aussi appelés type composé ou conteneur en python</p>
 <ul class="simple">
 <li><p>pour représenter, stocker les données et effectuer les traitements adaptés au problème</p></li>
 <li><p>pour effectuer l’accès aux valeurs, le parcours (séquences, itérateur), et la modification ou la copie (mutabilité) de ces SD.</p></li>
-<li><p>(<span class="math notranslate nohighlight">\(\star\)</span>) Connaître les complexités de ces traitements</p></li>
+<li><p>(<span class="math notranslate nohighlight">\(\star\)</span>) Connaitre les complexités de ces traitements</p></li>
 </ul>
 </section>
-<section id="id13">
-<h3><span class="section-number">2.9.2. </span>Savoir faire<a class="headerlink" href="#id13" title="Permalink to this heading">#</a></h3>
+<section id="id9">
+<h3><span class="section-number">2.7.2. </span>Savoir faire<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Connaître la syntaxe python de définition et manipulation de ces SD</p></li>
+<li><p>Connaitre la syntaxe python de définition et manipulation de ces SD</p></li>
 <li><p>Créer des listes et dictionnaires en compréhension</p></li>
-<li><p>Connaître les méthodes (prédéfinies) utiles au traitement, en particulier des chaînes de caractères</p></li>
+<li><p>Connaitre les méthodes (prédéfinies) utiles au traitement, en particulier des chaines de caractères</p></li>
 <li><p>Définir des spécifications de fonctions avec un ou des paramètres de type composé</p></li>
 </ul>
 </section>
 </section>
-<section id="sous-programmes-et-affectations-aspects-avances">
-<h2><span class="section-number">2.10. </span>Sous programmes et affectations : aspects avancés<a class="headerlink" href="#sous-programmes-et-affectations-aspects-avances" title="Permalink to this heading">#</a></h2>
+<section id="modules-utiles">
+<h2><span class="section-number">2.8. </span>Modules utiles<a class="headerlink" href="#modules-utiles" title="Permalink to this heading">#</a></h2>
+<section id="id10">
+<h3><span class="section-number">2.8.1. </span>Avoir les idées claires<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Pouvoir définir une stratégie de tests avec un part d’aléatoire bien choisie</p></li>
+<li><p>Pouvoir définir une stratégie de mesure des temps de traitements, être conscient de la difficulté de la fiabilité de ce type de mesures</p></li>
+</ul>
+</section>
+<section id="id11">
+<h3><span class="section-number">2.8.2. </span>Savoir-faire<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Savoir générer de l’aléa avec le module <code class="docutils literal notranslate"><span class="pre">random</span></code></p></li>
+<li><p>Savoir utiliser le module <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> pour créer des tracés graphiques pertinents</p></li>
+<li><p>Savoir mesurer des temps d’exécution à l’aide du module  <code class="docutils literal notranslate"><span class="pre">time</span></code></p></li>
+<li><p>Savoir rechercher et (re)trouver dans la documentation de ces modules</p></li>
+</ul>
+</section>
+</section>
+<section id="entrees-sorties-simples-avec-des-fichiers">
+<h2><span class="section-number">2.9. </span>Entrées-Sorties simples avec des fichiers<a class="headerlink" href="#entrees-sorties-simples-avec-des-fichiers" title="Permalink to this heading">#</a></h2>
+<section id="id12">
+<h3><span class="section-number">2.9.1. </span>Avoir les idées claires<a class="headerlink" href="#id12" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Distinguer fichier logique <em>vs.</em> physique, texte <em>vs.</em> binaire, mode lecture <em>vs.</em> écriture (<em>vs.</em> lecture-écriture)</p></li>
+<li><p>Connaitre les 4 étapes de manipulation d’un fichier : association/ouverture/lecture-écriture/fermeture</p></li>
+<li><p>Distinguer représentation textuelle et valeur (numérique)</p></li>
+</ul>
+</section>
+<section id="id13">
+<h3><span class="section-number">2.9.2. </span>Savoir-faire<a class="headerlink" href="#id13" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Savoir écrire les lectures-écritures simples de fichier texte avec <code class="docutils literal notranslate"><span class="pre">.readline()</span></code>, <code class="docutils literal notranslate"><span class="pre">.read()</span></code> et <code class="docutils literal notranslate"><span class="pre">.write()</span></code></p></li>
+<li><p>Comprendre et gérer l’effet des caractères spéciaux</p></li>
+<li><p>Savoir écrire les lectures-écritures de fichiers texte avec les instructions python adaptées</p></li>
+</ul>
+</section>
+</section>
+<section id="star-sous-programmes-et-affectations-aspects-avances">
+<h2><span class="section-number">2.10. </span>(<span class="math notranslate nohighlight">\(\star \)</span>) Sous programmes et affectations : aspects avancés<a class="headerlink" href="#star-sous-programmes-et-affectations-aspects-avances" title="Permalink to this heading">#</a></h2>
 <section id="id14">
 <h3><span class="section-number">2.10.1. </span>Avoir les idées claires<a class="headerlink" href="#id14" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
@@ -636,7 +650,7 @@ minutes minimum, PhL.</p>
 <h3><span class="section-number">2.10.2. </span>Savoir-faire en python<a class="headerlink" href="#savoir-faire-en-python" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Fonctions avec arguments nommés, avec paramètres par défaut.</p></li>
-<li><p>(<span class="math notranslate nohighlight">\(\star\)</span>) Affectation en python</p>
+<li><p>Affectation en python</p>
 <ul>
 <li><p>non-mutables : (référence à) la valeur</p></li>
 <li><p>mutables : (référence à) l’adresse</p></li>
@@ -645,21 +659,21 @@ modification partielles <em>vs.</em> duplication (par <code class="docutils lite
 <li><p>penser “objet” aide pour le comportement des mutables</p></li>
 </ul>
 </li>
-<li><p>(<span class="math notranslate nohighlight">\(\star\)</span>) Fonction et passage d’argument appelant/appelé en python :</p>
+<li><p>Fonction et passage d’argument appelant/appelé en python :</p>
 <ul>
 <li><p>similaire à l’affectation : distinguer mutable <em>vs.</em> non mutable</p></li>
 </ul>
 </li>
-<li><p>(<span class="math notranslate nohighlight">\(\star\)</span>) Savoir effectuer des introspections (fonction <code class="docutils literal notranslate"><span class="pre">id()</span></code>)</p></li>
+<li><p>Savoir effectuer des introspections (fonction <code class="docutils literal notranslate"><span class="pre">id()</span></code>)</p></li>
 </ul>
 </section>
 </section>
-<section id="entrees-sorties-aspects-avances">
-<h2><span class="section-number">2.11. </span>Entrées-Sorties : aspects avancés<a class="headerlink" href="#entrees-sorties-aspects-avances" title="Permalink to this heading">#</a></h2>
+<section id="star-entrees-sorties-aspects-avances">
+<h2><span class="section-number">2.11. </span>(<span class="math notranslate nohighlight">\(\star \)</span>) Entrées-Sorties : aspects avancés<a class="headerlink" href="#star-entrees-sorties-aspects-avances" title="Permalink to this heading">#</a></h2>
 <section id="id15">
 <h3><span class="section-number">2.11.1. </span>Avoir les idées claires<a class="headerlink" href="#id15" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
-<li><p>Connaître les principes du formatage des données pour pouvoir retrouver rapidement dans la documentation (de cours ou de référence) les commandes pour effectuer ce traitement.</p></li>
+<li><p>Connaitre les principes du formatage des données pour pouvoir retrouver rapidement dans la documentation (de cours ou de référence) les commandes pour effectuer ce traitement.</p></li>
 </ul>
 </section>
 <section id="id16">
@@ -670,27 +684,8 @@ modification partielles <em>vs.</em> duplication (par <code class="docutils lite
 </ul>
 </section>
 </section>
-<section id="modules-utiles">
-<h2><span class="section-number">2.12. </span>Modules utiles<a class="headerlink" href="#modules-utiles" title="Permalink to this heading">#</a></h2>
-<section id="id17">
-<h3><span class="section-number">2.12.1. </span>Avoir les idées claires<a class="headerlink" href="#id17" title="Permalink to this heading">#</a></h3>
-<ul class="simple">
-<li><p>Pouvoir définir une stratégie de tests avec un part d’aléatoire bien choisie</p></li>
-<li><p>Pouvoir définir une stratégie de mesure des temps de traitements, être conscient de la difficulté de la fiabilité de ce type de mesures</p></li>
-</ul>
-</section>
-<section id="id18">
-<h3><span class="section-number">2.12.2. </span>Savoir-faire<a class="headerlink" href="#id18" title="Permalink to this heading">#</a></h3>
-<ul class="simple">
-<li><p>Savoir générer de l’aléa avec le module <code class="docutils literal notranslate"><span class="pre">random</span></code></p></li>
-<li><p>Savoir utiliser le module <code class="docutils literal notranslate"><span class="pre">matplotlib</span></code> pour créer des tracés graphiques pertinents</p></li>
-<li><p>Savoir mesurer des temps d’exécution à l’aide du module  <code class="docutils literal notranslate"><span class="pre">time</span></code></p></li>
-<li><p>Savoir rechercher et (re)trouver dans la documentation de ces modules</p></li>
-</ul>
-</section>
-</section>
 <section id="des-qcm-et-autres-sites-a-exploiter">
-<h2><span class="section-number">2.13. </span>Des QCM et autres sites à exploiter<a class="headerlink" href="#des-qcm-et-autres-sites-a-exploiter" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">2.12. </span>Des QCM et autres sites à exploiter<a class="headerlink" href="#des-qcm-et-autres-sites-a-exploiter" title="Permalink to this heading">#</a></h2>
 <p>Le net est riche de ressources à exploiter.
 En voici quelques-unes sélectionnées et à exploiter en plus de ceux proposés à chaque fin de chapitre.</p>
 <ul class="simple">
@@ -738,8 +733,17 @@ En voici quelques-unes sélectionnées et à exploiter en plus de ceux proposés
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">1. </span>Algorithmique et Programmation en 2023</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Algo Prog en 2024</p>
       </div>
+    </a>
+    <a class="right-next"
+       href="1-fonctions.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Fonctions</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
     </a>
 </div>
                 </footer>
@@ -758,62 +762,57 @@ En voici quelques-unes sélectionnées et à exploiter en plus de ceux proposés
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#savoir-faire-et-pre-requis-technique">2.1. Savoir faire et pré-requis technique</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#boucles-aspects-avances-du-semestre-1">2.2. Boucles : aspects avancés du semestre 1</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fonctions">2.2. Fonctions</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#avoir-les-idees-claires">2.2.1. Avoir les idées claires</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ce-qu-il-faut-savoir-faire">2.2.2. Ce qu’il faut savoir faire</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fonctions">2.3. Fonctions</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recursivite">2.3. Récursivité</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">2.3.1. Avoir les idées claires</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">2.3.2. Ce qu’il faut savoir faire</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#savoir-faire">2.3.2. Savoir-faire</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#entrees-sorties-simples-avec-des-fichiers">2.4. Entrées-Sorties simples avec des fichiers</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">2.4.1. Avoir les idées claires</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#savoir-faire">2.4.2. Savoir-faire</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complexite">2.4. Complexité</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">2.4.1. Avoir les idées claires</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">2.4.2. Savoir-faire</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complexite">2.5. Complexité</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rechercher">2.5. Rechercher</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">2.5.1. Avoir les idées claires</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">2.5.2. Savoir-faire</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recursivite">2.6. Récursivité</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trier">2.6. Trier</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">2.6.1. Avoir les idées claires</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">2.6.2. Savoir-faire</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rechercher">2.7. Rechercher</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#types-composes">2.7. Types composés</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">2.7.1. Avoir les idées claires</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">2.7.2. Savoir-faire</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">2.7.2. Savoir faire</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#trier">2.8. Trier</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modules-utiles">2.8. Modules utiles</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">2.8.1. Avoir les idées claires</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">2.8.2. Savoir-faire</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#types-composes">2.9. Types composés</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#entrees-sorties-simples-avec-des-fichiers">2.9. Entrées-Sorties simples avec des fichiers</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id12">2.9.1. Avoir les idées claires</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">2.9.2. Savoir faire</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id13">2.9.2. Savoir-faire</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#sous-programmes-et-affectations-aspects-avances">2.10. Sous programmes et affectations : aspects avancés</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#star-sous-programmes-et-affectations-aspects-avances">2.10. (<span class="math notranslate nohighlight">\(\star \)</span>) Sous programmes et affectations : aspects avancés</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id14">2.10.1. Avoir les idées claires</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#savoir-faire-en-python">2.10.2. Savoir-faire en python</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#entrees-sorties-aspects-avances">2.11. Entrées-Sorties : aspects avancés</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#star-entrees-sorties-aspects-avances">2.11. (<span class="math notranslate nohighlight">\(\star \)</span>) Entrées-Sorties : aspects avancés</a><ul class="nav section-nav flex-column">
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">2.11.1. Avoir les idées claires</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id16">2.11.2. Savoir-faire</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#modules-utiles">2.12. Modules utiles</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id17">2.12.1. Avoir les idées claires</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id18">2.12.2. Savoir-faire</a></li>
-</ul>
-</li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#des-qcm-et-autres-sites-a-exploiter">2.13. Des QCM et autres sites à exploiter</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#des-qcm-et-autres-sites-a-exploiter">2.12. Des QCM et autres sites à exploiter</a></li>
 </ul>
   </nav></div>
 
