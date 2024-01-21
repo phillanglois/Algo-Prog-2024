@@ -458,18 +458,27 @@ document.write(`
 <p>Ce premier chapitre présente des rappels et quelques compléments sur les fonctions.</p>
 <section id="rappels">
 <h2><span class="section-number">1.1. </span>Rappels<a class="headerlink" href="#rappels" title="Permalink to this heading">#</a></h2>
-<p>Une fonction est <em>un traitement</em> que l’on nomme de façon synthétique par un symbole ou un nom.
-Par exemple en mathématiques, une fonction <span class="math notranslate nohighlight">\(f\)</span> ou les fonctions trigonométriques <span class="math notranslate nohighlight">\(\cos, \sin\)</span>, …</p>
-<p>Le <em>traitement</em> est une suite d’instructions qui effectue un calcul ou une action.</p>
-<p>Il peut <em>dépendre d’aucun, d’un ou de  plusieurs paramètres</em>. Par exemple en mathématiques, le calcul de <span class="math notranslate nohighlight">\(f(x)\)</span> dépend du paramètre <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<p>Une <em>fonction</em> est une suite d’instructions qui effectue un calcul ou réalise une action.</p>
+<p>Une fonction est désignée par son nom, comme par exemple en mathématiques la fonction <span class="math notranslate nohighlight">\(f\)</span> ou les fonctions trigonométriques <span class="math notranslate nohighlight">\(\cos, \sin\)</span>, …</p>
+<p>Le calcul ou l’action réalisé par une fonction peut <em>dépendre d’aucun, d’un ou de  plusieurs paramètres</em>.
+Par exemple en mathématiques, le calcul de <span class="math notranslate nohighlight">\(f(x)\)</span> dépend de la valeur du paramètre <span class="math notranslate nohighlight">\(x\)</span>.</p>
 <ol class="arabic simple">
-<li><p><strong>Définir.</strong> Une fonction doit d’abord être <em>définie</em> avant de pouvoir être utilisée.</p></li>
-<li><p><strong>Appeler.</strong> <em>Appeler une fonction</em> veut dire utiliser une fonction pour effectuer un calcul ou une action.</p></li>
+<li><p><strong>Définir.</strong> Une fonction doit d’abord être <em>définie</em> avant de pouvoir être utilisée.</p>
+<ul class="simple">
+<li><p>la fonction <span class="math notranslate nohighlight">\(f(x)\)</span> doit être définie avant de pouvoir calculer <span class="math notranslate nohighlight">\(f(3)\)</span> par exemple.</p></li>
+</ul>
+</li>
+<li><p><strong>Appeler.</strong> <em>Appeler une fonction</em> veut dire utiliser une fonction pour effectuer un calcul ou une action.</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(f(3)\)</span> est l’appel de la fonction <span class="math notranslate nohighlight">\(f(x)\)</span> pour <span class="math notranslate nohighlight">\(x = 3\)</span>.</p></li>
+</ul>
+</li>
 </ol>
 <section id="utiliser-une-fonction-existante">
 <h3><span class="section-number">1.1.1. </span>Utiliser une fonction existante<a class="headerlink" href="#utiliser-une-fonction-existante" title="Permalink to this heading">#</a></h3>
 <p>Les fonctions mathématiques  comme les fonctions trigonométriques, logarithmes, exponentielles, puissances … sont “fournies” avec le langage de programmation.
-Elle sont définies et regroupées sous la forme de <em>bibliothèques</em> de fonctions aussi appelées <em>modules</em> en python.</p>
+Elle sont définies et donc <em>appelables</em>.</p>
+<p>Techniquement, elles sont regroupées sous la forme de <em>bibliothèques</em> de fonctions aussi appelées <em>modules</em> en python.</p>
 <p>L’exemple suivant illustre l’appel de la fonction <code class="docutils literal notranslate"><span class="pre">cos()</span></code>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -498,9 +507,14 @@ Elle sont définies et regroupées sous la forme de <em>bibliothèques</em> de f
 <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">module</span> <span class="pre">import</span> <span class="pre">fonction1,</span> <span class="pre">fonction2</span></code>
 permet d’utiliser les fonctions <code class="docutils literal notranslate"><span class="pre">fonction1</span></code> et <code class="docutils literal notranslate"><span class="pre">fonction2</span></code> définies dans la bibliothèque <code class="docutils literal notranslate"><span class="pre">module</span></code></p>
 </div><ol class="arabic simple" start="3">
-<li><p><strong>Retourner un résultat.</strong> Dans cet exemple, l’appel de la fonction <code class="docutils literal notranslate"><span class="pre">cos()</span></code> effectue un calcul (que je ne connais pas) et <em>retourne un résultat</em> : ici 0.5000000000000001.</p></li>
+<li><p><strong>Retourner un résultat.</strong> Dans cet exemple, l’appel de la fonction <code class="docutils literal notranslate"><span class="pre">cos()</span></code> effectue un calcul et <em>retourne un résultat</em> : ici 0.5000000000000001.</p></li>
 </ol>
-<p><strong>Remarque.</strong> Une fonction peut ne pas retourner de résultat.</p>
+<p><strong>Remarques.</strong></p>
+<ul class="simple">
+<li><p>Une fonction peut ne pas retourner de résultat.</p></li>
+<li><p>Je ne connais pas (nécessairement) comment la fonction calcule son résultat.</p></li>
+<li><p>En revanche, je connais le résultat attendu par l’eppel de la fonction pour certains paramètres.</p></li>
+</ul>
 <p><strong>Exemple important à comprendre.</strong> Dans le code précédent :</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">print(c)</span></code> est l’appel à la fonction <code class="docutils literal notranslate"><span class="pre">print()</span></code></p></li>
@@ -732,14 +746,14 @@ Morale : “Pas de nouvelle, bonne nouvelle !”</p>
 1.0
 1.0
 1.0
+1.0
+1.0
+1.0
+1.0
 0.9999999999999999
 1.0
 1.0
 1.0
-0.9999999999999999
-1.0
-0.9999999999999999
-0.9999999999999999
 1.0
 1.0
 1.0
