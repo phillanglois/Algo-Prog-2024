@@ -23,6 +23,9 @@ La première séance de CM a eu lieu en semaine 3.
 
 ## Semaine 3
 
+- Lire la présentation _Algo Prog 2024_
+- S'assurer que son environnement de travail python est conforme à la section 1.7. Vérifier en particulier que _jupyter lab_ ou à défaut _jupyter notebook_ est opérationnel pour du python en version $ge$ 3.10.
+
 ## Semaine 4
 
 ## Semaine 5
