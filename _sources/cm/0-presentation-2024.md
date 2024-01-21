@@ -17,11 +17,12 @@ Mis à jour : {sub-ref}`today`, lecture : {sub-ref}`wordcount-minutes` minutes m
 
 ### Version 2024
 
-- évolution vs. 2023-2024
-- 12 séances de CM : **2h/semaine** 
-- 12 **+7** séances de TD-TP : 3h/semaine **+1.5h "leçons" sur 7 semaines**  
+- **évolutions** vs. 2023-2024
+- 12 séances de CM : **2h/semaine**
+- 10.5 séances _distancielles_ (dites de "leçons") : 1h/semaines (**nouveau en 2024**) 
+- 12 séances de TD-TP : 3h/semaine 
 - chargés de TD : David Parello (TD1),, Ph. Langlois (TD2 et TD3), Vincent Zucca (TD4)
-- Démarrage : CM en semaine 3 (`sd`=s3), TD en s4, vacances en s8, s15-s16
+- Démarrage : CM en semaine 3 (`sd`=s3), leçons en s5, TD en s4, vacances en s8, s15-s16
 
 
 ### Contrôle de connaissances et dates importantes
@@ -47,13 +48,14 @@ CC : contrôle "dit" continu, CT contrôle "dit" terminal
 
 ### Organisation
 
-- 11 chapitres, 11 semaines, 11 séances de CM, 11 séances de TD ou TP
+- 10 chapitres, 12 semaines, 11 séances de CM, 12 séances de TD ou TP
 - "12ème séance" : écrit mi-parcours, TP de fin de semestre
-- Chaque chapitre :
-  - explicitation des compétences : savoirs, savoirs-faire
-  - un quizz d'aide à la compréhension et la mémorisation de ces compétences
-  - _l'enseignant_ ... présente et explique des exercices détaillés en CM
-  - _vous_ ... travaillez sur des exercices de TD et de TP, les contrôles des années précédentes, ...
+- Pour chaque chapitre  
+  - explicitation des compétences visées : savoirs, savoirs-faire
+  - leçon d'accompagnement à l'appropriations des compétences
+  - quizz d'aide à la compréhension et la mémorisation de ces compétences
+  - présentation et explication d'exercices détaillés en CM
+  - _vous_ travaillez sur des exercices de TD et de TP, les contrôles des années précédentes, ...
 
 ### CM
 
@@ -61,7 +63,7 @@ CC : contrôle "dit" continu, CT contrôle "dit" terminal
 Le CM est **essentiel** à la compréhension globale de l'UE issue de l'articulation de toutes les notions traitées.
 ```
 
-Alternance de séquence pour séance de 3 heures :
+Alternance de séquences d'1h pour séance de 2 heures :
 
 - "matière de cours" : nouvelles notions (40 min)
 - d'exercices dirigés et d'interactions : quizz, questions/réponses, ... (10 min)
@@ -70,17 +72,38 @@ Alternance de séquence pour séance de 3 heures :
 ### La très grande importance des CM
 
 - **Tout** ce qui est nécessaire à votre compréhension est présenté en cours avec des explications orales adaptées, les répétitions nécessaires des points importants, les mises en garde sur les notions difficiles,  ce qui est essentiel _vs._ ce qui est plus secondaire, les compétences à acquérir : savoir, savoir faire et savoir être, ce qui est attendu pour le contrôle de connaissance, ce qui relève de l'objectif 10 _vs._ de l'objectif 20, ...
-    - les 2/3 du travail de compréhension/mémorisation reposent sur les CM 
-    
+  
+  - les 2/3 du travail de compréhension/mémorisation reposent sur les CM 
 
 - **Morale** : ne manquer aucun CM, être attentif, prendre des notes, poser des questions, **se poser** des questions, demander des pauses pour reprendre une attention maximale  
+
     - les notes de cours fournies sont trompeuses : comme un film sans le son
 
-- **Méthodologie** : 
-    - relire le cours le soir de l'amphi (15-20 min) 
-    - le reprendre en détail 4-5 jours après en préparant  des exercices de TD ou de TP -- en groupe : ça aide !
-    - faire une auto-évaluation de ce que _vous_ en avez retenu la veille du cours suivant : le chapitre compétences est utile. 
-    - identifier les questions à poser en séance de TD ou en CM
+- **Méthodologie de travail du CM** : 
+    1. relire le cours le soir de l'amphi (15-20 min) 
+    2. le reprendre en détail 4-5 jours après en "leçon" et en préparant des exercices de TD ou de TP -- en groupe : ça aide !
+    3. faire une auto-évaluation de ce que _vous_ en avez retenu la veille du cours suivant : le chapitre compétences est utile. 
+    4. identifier les questions à poser en séance de TD ou en CM
+
+### Les séances de "leçons" (nouveau en 2024) 
+
+**Il est faux de croire** que :
+
+> l'exercice posé en examen n'a pas été traité en cours ni en td !  
+
+Cette impression traduit une _compréhension insuffisamment approfondie_ du cours. 
+Ces séances "de leçon" vous accompagnent dans les étapes 2-3-4 de la méthodologie décrite au paragraphe précédent.
+Deux résultats sont visés. D'abord une véritable _appropriation personnelle_ du cours. 
+Ensuite, à terme, _votre autonomie_ dans cette démarche d'appropriation, autonomie indispensable à la réussite à l'université. 
+
+- Ces séances sont organisées de façon  _distancielle et synchrone_ (cad. au même moment dans l'emploi du temps pour tous les groupes de TD).
+- Elles sont obligatoires au même titre que les TD présentiels (présence renseignée, justification d'absences, interdiction d'examen au delà de 25% d'absences non justifiées).
+- Un programme de travail d'une heure (au moins) est proposé. 
+- Les ressources sont disponibles sous moodle.
+- Le travail demandé fait l'objet d'un dépôt moodle individuel en fin de séance. **Attention** : une heure limite fermera la possibilité de déposer votre travail. 
+- Ce travail sera évalué et un retour individuel sera effectué. 
+- Cette évaluation représente la part "leçons" du CC2. 
+
 
 ### Les TD pour réfléchir et travailler en petit groupe
 
@@ -127,7 +150,7 @@ Alternance de séquence pour séance de 3 heures :
   - première séance  de TD
 
 - [python tutor](http://pythontutor.com) 
-  - permet de visualiser l'effet des instruactions d'un petit code  
+  - permet de visualiser l'effet des instructions d'un petit code  
   - très utile au début pour comprendre des _effets de programmation_, pas d'algorithmique
   - complément de l'idle python
   - demo 
@@ -136,18 +159,22 @@ Alternance de séquence pour séance de 3 heures :
 
 ## Savoirs, savoir faire, savoir être
 
-- Des connaissances à connaître :)
+- Des connaissances à connaitre :)
 - Des techniques à savoir mettre en oeuvre
 - Des outils à savoir utiliser
 - Des ressources à savoir mobiliser
 
 ### Acquis du semestre 1 et prérequis 
 
+```{warning}
+Vérifiez vos acquisitions en début de semestre 2 !
+```
+
 - Savoir différencier les _types_ de données :  
   - type scalaire : booléen, entier, réels, caractères  
-  - type composés : chaîne de caractères, vecteur, matrice, ...  
+  - type composés : chaine de caractères, vecteur, matrice, ...  
 
-- Connaître leur _représentation_ dans un langage informatique donné  
+- Connaitre leur _représentation_ dans un langage informatique donné  
   - `bool`, `int`, `float`, `str`, `list`  
   - et les changement de types associés : `int()`, `float()`, ...  
   - (python) : un rappel sur le "type" `bool`est proposé en [annexe du cours](./a1-booleens.ipynb).
@@ -168,7 +195,11 @@ Alternance de séquence pour séance de 3 heures :
       - `while`  
       - `for . in ...`, (`break`, `continue`)   
   
-
+- Utilisation avancée de boucles et de tableaux
+  - boucles imbriquées, indépendantes ou non
+  - traitements divers avec des tableaux 1D ou plus
+  - _[un chapitre en annexe](ann:boucles) du support de cours du semestre 2 rappelle ces aspects_  
+  
 - Distinguer : les _entrées_ vs. le _traitement_ vs. la _sortie_  
   - `input()`, `print()`  
 
@@ -178,18 +209,6 @@ Alternance de séquence pour séance de 3 heures :
 
 ## Programme détaillé : aspects plutôt algorithmique
 
-- (Acquis du semestre 1) Utilisation avancée de boucles et de tableaux
-  - boucles imbriquées, indépendantes ou non
-  - traitements divers avec des tableaux 1D ou plus 
-  - premières estimations de complexité 
-
-- Complexité
-  - combien _coûte_ un algorithme pour résoudre un pb donné ?  
-  - combien de temps ? combien de place mémoire ?  
-  - tous les problèmes coûtent pareils ?  
-  - notions : complexité en temps, pire cas, complexité asymptotique  
-  - exemples d'algos plutôt numériques et leurs complexités
-      - différentes évaluations de polynômes 
 
 - Récursivité : 
   - **la notion centrale du semestre**
@@ -212,6 +231,14 @@ La récursion s'appuie sur la notion de _fonction_ présentée dans les aspects 
   - des algorithmes de tris dits rapides : : algos, complexité, (preuve)
   - versions itératives ou récursives de ces algorithmes 
 
+- Complexité
+  - combien _coûte_ un algorithme pour résoudre un pb donné ?  
+  - combien de temps ? combien de place mémoire ?  
+  - tous les problèmes coûtent pareils ?  
+  - notions : complexité en temps, pire cas, complexité asymptotique  
+  - exemples d'algos plutôt numériques et leurs complexités
+      - différentes évaluations de polynômes 
+
 - Compléments si assez de temps : prouver la terminaison et la correction d'un algorithme
   - l'algo fournit la/les solution/s en un temps fini
   - l'algo résout bien le pb
@@ -219,21 +246,12 @@ La récursion s'appuie sur la notion de _fonction_ présentée dans les aspects 
 
 ## Programme détaillé : aspects plus programmation 
 
-- Types de donnnées scalaires
-  - rappels 
-  - approfondissement : introspection  
-
-- Fonctions **une notion centrale** 
-  - fonctions prédéfinies ou existantes
-  - en-tête, corps, appel, paramètres formels et effectifs. 
-  - portée, visibilité, variables locales vs. paramètres  
-  - mode de passage des paramètres
-  - exemples du cours : doubler, permuter  
+### Rappels du semestre 1
 
 - Tableaux 1D :
   - rappel : avec des listes python (`lst`)
-  - exemples du cours : Lire, stocker, moyenne/min/max d'un tableau (valeurs, indices)
-  - applications : les vecteurs, les chaînes de caractères 
+  - exemples du cours : lire, stocker, moyenne/min/max d'un tableau (valeurs, indices)
+  - applications : les vecteurs, les chaines de caractères 
 
 - Tableaux 2D, 3D ; application au traitement d'images
   - avec des listes (de listes) python  
@@ -242,15 +260,23 @@ La récursion s'appuie sur la notion de _fonction_ présentée dans les aspects 
   - exemples du cours : 
     - traitement d'images : initialisation niveaux de gris, transformations d'images (miroir, contraste, contours, ...) 
     - algorithmes sur les matrices : vérification (identité, symétrie), calcul (produit de matrices,...) , génération de formes particulières (transposée, ...
-  
-```{note}
-Par manque de temps, les `ndarray` de `numpy`, ne sont pas abordés en séance bien que très utiles en pratique.
-Ces ressources pourront être découvertes de façon autome et utilisées par les étudiants (objectif 20) qui le souhaitent.
-```
 
-- Autres types de données composés
-  - listes (`lst`) : fonctions et méthodes
-  - n-uplets (`tuple`), ensembles (`set`), dictionnaires (`dict`)
+- Fonctions **une notion centrale** 
+  - fonctions prédéfinies ou existantes
+  - en-tête, corps, appel, paramètres formels et effectifs. 
+  - portée, visibilité, variables locales vs. paramètres  
+
+### Notions du semestre 2
+
+- Fonctions 
+  - mode de passage des paramètres
+  - exemples du cours : doubler, permuter  
+
+- Types de données scalaires et composés
+  - approfondissement : introspection  
+  - autres types de données composés
+    - listes (`lst`) : fonctions et méthodes
+    - n-uplets (`tuple`), ensembles (`set`), dictionnaires (`dict`)
 
 - Entrées/sorties et fichiers
   - Très pratique pour tester ses développements : 
@@ -258,15 +284,21 @@ Ces ressources pourront être découvertes de façon autome et utilisées par le
   **Bannir les entrées au clavier !** 
   Plus d'`input()` à tours de bras SVP !!!
   ```
-  - Chapitre traité assez tôt dans le semestre
 
 - Modules
   - utilisation de modules existants 
   - exemple d'outils :`numpy`, `scipy`, `matplotlib`, `time` 
   - définition de ses modules
 
-- Exceptions
-  - En annexe par manque de temps
+-   
+```{note}
+Par manque de temps, les notions suivantes ne sont pas abordés en séance bien que très utiles en pratique.
+Des ressources présentées en annexe du support de cours pourront être exploitées de façon autonome par les étudiants (objectif 20) qui le souhaitent.
+
+- `ndarray` de `numpy`
+- les exceptions en python
+```
+
 
 ## Supports de cours
 
@@ -307,7 +339,7 @@ Elle peut sembler longue mais en pratique, ces composants "arrivent" d'un seul c
     - éditeur, interpréteur, débugger utilisé en TP au semestre 1
 
 - `jupyter notebook`  
-    - pour intégrer dans _un unique fichier_ du texte, des maths ($\LaTeX\ $) et du code python qui s'exécute, les résultats de ces éxecutions (valeurs, courbes, images, ...) et exporter tout ça en `html`ou `pdf` ou en `slide`  
+    - pour intégrer dans _un unique fichier_ du texte, des maths ($\LaTeX$) et du code python qui s'exécute, les résultats de ces executions (valeurs, courbes, images, ...) et exporter tout ça en `html`ou `pdf` ou en `slide`  
     - très utile pour les exercices 
     - _utilisé pour les TP de programmation à rendre_
     - utilisable dans toutes les matières ou presque    
@@ -321,17 +353,17 @@ Elle peut sembler longue mais en pratique, ces composants "arrivent" d'un seul c
         - `pip` : pareil `list`, `update`, `install`  
 
 - modules indispensables 
-    - `numpy ` : fournit des _vrais_ tableaux multi-dimentionnels et des tas de fonctions et types numériques pour effectuer du calcul
-    - `matplotlib`: pour le traitement graphique de données, et en particulier :
+    - `numpy` : fournit des _vrais_ tableaux multi-dimentionnels et des tas de fonctions et types numériques pour effectuer du calcul
+    - `matplotlib` : pour le traitement graphique de données, et en particulier :
         -  `matplotlib.pyplot` pour des affichages élaborés
         -  `matplotlib.image`  pour le traitement d'images
     - `tkinter` : pour réaliser des interfaces graphiques  
     
 - modules utiles mais optionnels cette année  
-    - `scipy `: scientific python qui rassemble des modules de calcul scientifiques (dont `numpy`) 
+    - `scipy` : scientific python qui rassemble des modules de calcul scientifiques (dont `numpy`) 
 
 **Pièges**
-- Ne pas confondre `python 2` et `python 3` 
+- Ne pas confondre ~~`python 2`~~ et `python 3` 
 
 **Conseil**
 - Choisir une distribution la plus complète possible dès le début.   
@@ -340,7 +372,10 @@ Elle peut sembler longue mais en pratique, ces composants "arrivent" d'un seul c
 
 #### Installer un environnement python
 
-On conseille d'installer la distribution Anaconda.  
+```{Important}
+On conseille d'installer une distribution récente [Anaconda](https://www.anaconda.com/products/individual)  (python $\ge$ 3.10).  
+```
+
 Dans ce cadre, on peut s'aider des  liens ci-après.
 Le web est bien sûr plein de tutos et autres sites explicatifs ...
 
@@ -357,35 +392,12 @@ On télécharge, on installe, on travaille !
 - [Pyzo](http://www.pyzo.org)
 - [SAGEMATH](http://sagemath.org/)  : bcp plus général qu'un simple environnement python. A conseiller pour ceux qui veulent continuer en ... mathématiques.
 
-#### Environnement de travail en autonomie pour machine étudiant 
 
-- [edupython](https://edupython.tuxfamily.org) issu d'AmiensPython mais **[pour windows](http://edupython.tuxfamily.org/documentation/index.php?title=Installation_et_Configuration)**
-    - Moteur Python : version 3.7.6
-    - Editeur : PyScripteur (version 3.6.3)
-    - Administration de base de données : SQLite Database Browser (version 3.11.2)
-    - **Jupiter notebook préinstallé** 
-    - Module lycée
-    - Calcul numérique: Numpy (version 1.18.3) et Scipy (version 1.4.1)
-    - Sorties graphiques: Matplotlib (version 3.1.3)
-    - Calcul formel: Sympy (version 1.5.1)
-    - Traitement d'images: PIL (Pillow 7.0.0) et Open CV (Version 4.2.0)
-    - Liaison série: Serial (version 2.7)
-    - Base de données: SQLite3 (version standard) et mysql (version 8.0.13)
-    - Traitement de données: Pandas (version 1.0 3)
-    - Réalisation de jeux: Pygame (version 1.9.4)
-    - Autres: pyknon (musique), Nanpy (Arduino), Follium (cartes), scikit-learn (IA)... 
- 
- 
+### Que faire en cas de problème avec sa configuration python ....
 
-### Monsieur ....
-
-**Non : je ne sais pas pourquoi "_ça ne marche pas quand ..._" !**
-
-```{note}
-Quand ma voiture/moto est en panne, je m'adresse à un garagiste.  
-Pourtant je sais la conduire.
-Pourtant j'ai fait des études qui me permett(rai)ent de participer à sa conception, sa construction, sa mise au point, sa diffusion, ... 
-```
+1. En parler en TD : solution sans garantie de succès tant les configurations de vos ordinateurs peuvent être variées
+2. Utiliser le forum moodle de cet UE pour solliciter les autres étudiants de votre promotion : il est probable que vous partagiez une configuration commune
+3. **L'unique fois où ce conseil est donné dans ce cours.** Chercher sur les (bons) forums sur internet  (linux, hardware, stack overflow, python.org, ...) 
 
 ## Références bibliographiques
 
