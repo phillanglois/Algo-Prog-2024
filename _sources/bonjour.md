@@ -31,7 +31,7 @@ Vacances en s8, s15-s16
 ## Semaine 4
 
 - Avant le CM de jeudi : lire le chapitre _Fonctions_ en entier
-- Avant la séance de TD : se rafrichir la mémoire en lisant le chapitre _Boucles et tableaux_ en annexe
+- Avant la séance de TD : se rafrichir la mémoire en lisant le chapitre _Tableaux et boucles_ en annexe
 
 ## Semaine 5
 
