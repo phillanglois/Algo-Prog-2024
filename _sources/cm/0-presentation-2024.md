@@ -326,7 +326,7 @@ Il est indispensable :
 
 Il y a déjà 3 choix d'OS possibles : windows, linux et mac os ; les 2 premiers étant disponibles sur les ordinateurs de l'UPVD.    
 
-Ensuite, les [distributions python](#En%20pratique) sont assez variées, et peuvent différer selon les OS .
+Ensuite, les [distributions python](#En-pratique) sont assez variées, et peuvent différer selon les OS .
 
 Il est aisé _pour chacun_ de trouver ce qui correspond à ses contraintes matérielles et ses envies.  
 
