@@ -431,7 +431,8 @@ document.write(`
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fonction-locale">1.5.7. Fonction locale</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pas-d-effet-de-bord-pas-de-global">1.5.8. Pas d’effet de bord ! Pas de <code class="docutils literal notranslate"><span class="pre">global</span></code> !</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-sur-les-annotations-de-fonctions">1.5.9. <span class="math notranslate nohighlight">\(\star\)</span> Sur les annotations de fonctions</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-venir">1.5.10. A venir</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-statique-vs-dynamique-trace-d-execution">1.5.10. <span class="math notranslate nohighlight">\(\star\)</span> Statique <em>vs.</em> dynamique, trace d’exécution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-venir">1.5.11. A venir</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercices-en-demonstration">1.6. Exercices en démonstration</a><ul class="nav section-nav flex-column">
@@ -452,7 +453,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="fonctions">
 <span id="ch-fonctions"></span><h1><span class="section-number">1. </span>Fonctions<a class="headerlink" href="#fonctions" title="Permalink to this heading">#</a></h1>
-<p>Mis à jour : Jan 22, 2024, lecture : 17 minutes minimum, PhL.</p>
+<p>Mis à jour : Jan 22, 2024, lecture : 18 minutes minimum, PhL.</p>
 <p>Ce premier chapitre présente des rappels et quelques compléments sur les fonctions.</p>
 <section id="rappels">
 <h2><span class="section-number">1.1. </span>Rappels<a class="headerlink" href="#rappels" title="Permalink to this heading">#</a></h2>
@@ -510,14 +511,14 @@ permet d’utiliser les fonctions <code class="docutils literal notranslate"><sp
 <p><strong>Remarques.</strong></p>
 <ul class="simple">
 <li><p>Une fonction peut ne pas retourner de résultat.</p></li>
-<li><p>Je ne connais pas (nécessairement) comment la fonction calcule son résultat.</p></li>
+<li><p>Je ne connais pas nécessairement <em>comment</em> la fonction calcule son résultat.</p></li>
 <li><p>En revanche, je connais le résultat attendu par l’appel de la fonction pour certains paramètres.</p></li>
 </ul>
 <p><strong>Exemple important à comprendre.</strong> Dans le code précédent :</p>
 <ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">print(c)</span></code> est l’appel à la fonction <code class="docutils literal notranslate"><span class="pre">print()</span></code></p></li>
 <li><p>cet appel réalise une action : afficher la valeur de <code class="docutils literal notranslate"><span class="pre">c</span></code></p></li>
-<li><p>cet appel ne retourne aucun résultat (*), et surtout pas la valeur de <code class="docutils literal notranslate"><span class="pre">c</span></code> !</p></li>
+<li><p>cet appel ne retourne aucun résultat (voir * ci-dessous), et surtout pas la valeur de <code class="docutils literal notranslate"><span class="pre">c</span></code> !</p></li>
 </ul>
 <p>(*) Pour être exact, le <code class="docutils literal notranslate"><span class="pre">print()</span></code> de python retourne la valeur <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
 <div class="cell docutils container">
@@ -733,8 +734,8 @@ Morale : “Pas de nouvelle, bonne nouvelle !”</p>
 Dans ces cas, les tests unitaires déclancheront une erreur. Par exemple :</p>
 <p><code class="docutils literal notranslate"><span class="pre">assert</span> <span class="pre">cos(pi/2.)</span> <span class="pre">==</span> <span class="pre">0.0</span></code></p>
 <p>provoquera l’affichage suivant :</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">---------------------------------------------------------------------------</span>
-<span class="ne">AssertionError</span>                            <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">)</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ne">AssertionError</span>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">)</span>
 <span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">12</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
 <span class="o">----&gt;</span> <span class="mi">1</span> <span class="k">assert</span> <span class="n">cos</span><span class="p">(</span><span class="n">pi</span><span class="o">/</span><span class="mf">2.</span><span class="p">)</span> <span class="o">==</span> <span class="mf">0.0</span>
 
@@ -758,24 +759,24 @@ Il en est de même pour <span class="math notranslate nohighlight">\(\pi/2\)</sp
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.9999999999999999
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.0
+1.0
 1.0
 1.0000000000000002
-0.9999999999999999
-1.0
-1.0
-1.0
-0.9999999999999999
 1.0
 1.0
 1.0
 1.0
 1.0
 1.0
-0.9999999999999999
 1.0
 1.0
 1.0
+1.0
+1.0
+1.0
+1.0
+1.0000000000000002
 1.0
 1.0
 </pre></div>
@@ -921,22 +922,36 @@ Ce traitement comporte en général une valeur de sortie retournée par l’inst
 <section id="methodologie-d-ecriture-des-fonctions-pour-ce-semestre">
 <h3><span class="section-number">1.2.5. </span>Méthodologie d’écriture des fonctions pour ce semestre<a class="headerlink" href="#methodologie-d-ecriture-des-fonctions-pour-ce-semestre" title="Permalink to this heading">#</a></h3>
 <p>En pratique, vous respecterez <strong>l’ordre d’écriture</strong> suivant.</p>
+<div class='alert alert-block alert-info'>
 <ol class="arabic simple">
-<li><p>écriture de la signature de la fonction</p></li>
+<li><p>écriture de la signature de la fonction</p>
+<ul class="simple">
+<li><p><em>docstring</em> compris</p></li>
+</ul>
+</li>
 <li><p>écriture d’appels simples, de tests unitaires</p>
 <ul class="simple">
-<li><p>rappel : appels sur des valeurs de tests, cad. dont on connaît le résultat attendu de la fonction</p></li>
+<li><p>rappel : appels sur des valeurs de tests, cad. dont on connait le résultat attendu de la fonction</p></li>
+<li><p>et correction de l’étape 1 si besoin</p></li>
 </ul>
 </li>
 <li><p>écriture du corps</p></li>
-<li><p>exécution des test unitaires (et correction de l’étape précédente si besoin)</p></li>
+<li><p><strong>exécution</strong> des tests unitaires</p>
+<ul class="simple">
+<li><p>et correction de l’étape 2 si besoin</p></li>
+</ul>
+</li>
 <li><p>écriture des appels voulus</p></li>
-<li><p>exécution des appels voulus</p></li>
+<li><p><strong>exécution</strong> des appels voulus</p></li>
 </ol>
-<div class='alert alert-block alert-warning'>
+</div><div class='alert alert-block alert-warning'>
 <p>CONSIGNE PEDAGOGIQUE : L’écriture de l’appel (simple ou test unitaire) est effectuée avant celle du corps, <em>ie.</em> en se basant uniquement sur la signature.</p>
 </div>
-<p>Ainsi, il n’est pas possible d’exécuter cet appel avant d’avoir fini l’écriture du corps.</p>
+<p>Ainsi :</p>
+<ul class="simple">
+<li><p>une erreur de spécification peut être détectée : absence ou excès de paramètre, ordre des paramètres mal choisi, …</p></li>
+<li><p>il n’est pas possible d’exécuter cet appel avant d’avoir fini l’écriture du corps.</p></li>
+</ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># définition de 3 fonctions</span>
@@ -1105,7 +1120,7 @@ de plusieurs <code class="docutils literal notranslate"><span class="pre">return
 <span class="c1"># affichage</span>
 <span class="nb">print</span><span class="p">(</span><span class="n">a_x</span><span class="p">,</span> <span class="n">a_y</span><span class="p">)</span>
 
-<span class="c1"># intérêt du doc-string</span>
+<span class="c1"># intérêt du docstring</span>
 <span class="n">help</span><span class="p">(</span><span class="n">abs0</span><span class="p">)</span>
 <span class="n">help</span><span class="p">(</span><span class="n">abs2</span><span class="p">)</span>
 </pre></div>
@@ -1709,8 +1724,24 @@ appel tetu 1
 </div>
 </div>
 </section>
+<section id="star-statique-vs-dynamique-trace-d-execution">
+<h3><span class="section-number">1.5.10. </span><span class="math notranslate nohighlight">\(\star\)</span> Statique <em>vs.</em> dynamique, trace d’exécution<a class="headerlink" href="#star-statique-vs-dynamique-trace-d-execution" title="Permalink to this heading">#</a></h3>
+<p>Selon les langages de programmation, la signature peut-être séparée, voire compilée, indépendamment du corps de la fonction.
+Ainsi connue du compilateur, cette signature peut lui servir pour <em>vérifier automatiquement la correction</em> de l’implémentation de la fonction et aussi des appels à cette fonction : nombre de paramètres effectifs, type de ces paramètres, type du résultat retourné, …
+Ces vérifications sont possibles lors de la <em>compilation</em> , cad. <em>avant toute exécution</em> du programme. Ce type de vérification diminue le risque d’erreur lors de l’exécution.</p>
+<p>On parle d’analyse <em>statique</em> (ou de vérification statique) pour ces <em>traitements effectués lors de la compilation</em>.</p>
+<p>De façon complémentaire, on parle d’analyse <em>dynamique</em> (ou de vérification dynamique) pour les traitements effectués lors de <em>l’exécution</em> du programme.</p>
+<div class="alert alert-info">
+<p>Par extention, le <em>statique</em> caractérise ce qui relève du code source tandis que le <em>dynamique</em> traduit ce qui est propre à l’exécution de ce code.</p>
+</div><p>A code source constant, les instructions exécutées dépendent des paramètres de l’exécution.
+On appelle <em>trace d’exécution</em> l’ensemble des valeurs et des états produits par <em>une</em> exécution.
+Ainsi, le même code <em>statique</em> engendrera des <em>traces d’exécutions</em> différentes.
+On a déjà remarqué que la séquentialité des instructions écrites dans le code source et une trace de leur exécution sont différentes.
+La trace est une notion <em>dynamique</em>.</p>
+<p><strong>Remarque.</strong> Oui : un compilateur est un programme qui s’exécute ! Il “prend en entrée” un code (dit) source et produit en sortie un code (dit) exécutable. Ce traitement comporte plusieurs étapes dont celle de vérification mentionnée qui s’effectue lors de l’étape (dite) d’analyse syntaxique – ne pas confondre les termes “syntaxique” et “statique”.</p>
+</section>
 <section id="a-venir">
-<h3><span class="section-number">1.5.10. </span>A venir<a class="headerlink" href="#a-venir" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.5.11. </span>A venir<a class="headerlink" href="#a-venir" title="Permalink to this heading">#</a></h3>
 <p>Un point important a été passé sous silence dans ce chapitre :</p>
 <ul class="simple">
 <li><p>comment s’effectue le passage de paramètres lors de l’appel ?</p></li>
@@ -2049,7 +2080,8 @@ Foix est la préfecture du département 09
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fonction-locale">1.5.7. Fonction locale</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pas-d-effet-de-bord-pas-de-global">1.5.8. Pas d’effet de bord ! Pas de <code class="docutils literal notranslate"><span class="pre">global</span></code> !</a></li>
 <li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-sur-les-annotations-de-fonctions">1.5.9. <span class="math notranslate nohighlight">\(\star\)</span> Sur les annotations de fonctions</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-venir">1.5.10. A venir</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-statique-vs-dynamique-trace-d-execution">1.5.10. <span class="math notranslate nohighlight">\(\star\)</span> Statique <em>vs.</em> dynamique, trace d’exécution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-venir">1.5.11. A venir</a></li>
 </ul>
 </li>
 <li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercices-en-demonstration">1.6. Exercices en démonstration</a><ul class="nav section-nav flex-column">

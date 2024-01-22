@@ -28,7 +28,7 @@ Dans/avec un notebook jupyter :
   - spécification, en-tête, signature : spécifier pour utiliser, pour vérifier  _vs._ corps : implémentation du traitement  
 - comprendre que appel = changement de contexte  
   - trace de l'exécution _vs._ séquentialité des instructions écrites 
-  - dynamique vs. statique  
+  - $\star$ dynamique vs. statique  
 - distinguer appelant _vs._ appelé : 
   - le rôle de l'appel, 
   - le rôle du `return` 
