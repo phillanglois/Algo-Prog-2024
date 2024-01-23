@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>2. Feuille 1 &#8212; Algo-Prog 2024</title>
+    <title>1. Feuille 1 : fonctions &#8212; Algo-Prog 2024</title>
   
   
   
@@ -68,7 +68,7 @@ const thebe_selector_output = ".output, .cell_output"
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
     <link rel="next" title="1. (Intervenant) Suivi des séances" href="../suivi_seances.html" />
-    <link rel="prev" title="1. Préalables" href="prealable-td.html" />
+    <link rel="prev" title="3. Les ‘ndarray’ : de vrais tableaux en python" href="../cm/a2-ndarray.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -195,8 +195,7 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">TD</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="prealable-td.html">1. Préalables</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">2. Feuille 1</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">1. Feuille 1 : fonctions</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">(Intervenants) suivi des séances</span></p>
 <ul class="nav bd-sidenav">
@@ -385,7 +384,7 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Feuille 1</h1>
+    <h1>Feuille 1 : fonctions</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
@@ -395,35 +394,35 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectif-10">2.1. Objectif 10</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blacksquare-exercice">2.1.1. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice">2.1.2. Exercice</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exo-fact">2.1.3. Exercice</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-codage-ascii">2.1.4. Exercice (Codage ASCII)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">2.1.5. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exo-tablst">2.1.6. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blacksquare-exercice-extrait-d-examen-2017-sans-machine">2.1.7. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice (extrait d’examen 2017 sans machine)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">2.1.8. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">2.1.9. Exercice</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectif-10">1.1. Objectif 10</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blacksquare-exercice">1.1.1. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice">1.1.2. Exercice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exo-fact">1.1.3. Exercice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-codage-ascii">1.1.4. Exercice (Codage ASCII)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">1.1.5. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exo-tablst">1.1.6. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blacksquare-exercice-extrait-d-examen-2017-sans-machine">1.1.7. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice (extrait d’examen 2017 sans machine)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">1.1.8. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">1.1.9. Exercice</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectif-20">2.2. Objectif 20</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">2.2.1. Exercice</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">2.2.2. Exercice</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">2.2.3. Exercice</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-star-exercice">2.2.4. (<span class="math notranslate nohighlight">\(\star\star\)</span>) Exercice</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-exercice-algorithme-de-type-monte-carlo">2.2.5. (<span class="math notranslate nohighlight">\(\star\)</span>) Exercice (Algorithme de type Monte-Carlo)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">2.2.6. Exercice</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">2.2.7. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">2.2.8. Exercice</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exo-verif">2.2.9. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exo-imnb">2.2.10. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectif-20">1.2. Objectif 20</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">1.2.1. Exercice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">1.2.2. Exercice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">1.2.3. Exercice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-star-exercice">1.2.4. (<span class="math notranslate nohighlight">\(\star\star\)</span>) Exercice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-exercice-algorithme-de-type-monte-carlo">1.2.5. (<span class="math notranslate nohighlight">\(\star\)</span>) Exercice (Algorithme de type Monte-Carlo)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">1.2.6. Exercice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">1.2.7. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">1.2.8. Exercice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exo-verif">1.2.9. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exo-imnb">1.2.10. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#premieres-transformations-d-images-3-times-4">Premières transformations d’images 3 <span class="math notranslate nohighlight">\(\times\)</span> 4.</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fonctions-et-transformation-d-image-de-taille-arbitraire">Fonctions et transformation d’image de taille arbitraire.</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#analyse-d-une-image-de-taille-arbitraire">Analyse d’une image de taille arbitraire.</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">2.2.11. Exercice.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">1.2.11. Exercice.</a></li>
 </ul>
 </li>
 </ul>
@@ -437,8 +436,8 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="feuille-1">
-<span id="td-td1"></span><h1><span class="section-number">2. </span>Feuille 1<a class="headerlink" href="#feuille-1" title="Permalink to this heading">#</a></h1>
+  <section class="tex2jax_ignore mathjax_ignore" id="feuille-1-fonctions">
+<span id="td-td1"></span><h1><span class="section-number">1. </span>Feuille 1 : fonctions<a class="headerlink" href="#feuille-1-fonctions" title="Permalink to this heading">#</a></h1>
 <ul class="simple">
 <li><p>Le symbole <span class="math notranslate nohighlight">\(\blacksquare\)</span> indique les exercices ou questions obligatoires. Commencez pas ceux-là.</p></li>
 <li><p>Les symboles <span class="math notranslate nohighlight">\(\star\)</span> et <span class="math notranslate nohighlight">\(\star\star\)</span> indiquent les exercices ou questions de difficulté relative plus importante.</p></li>
@@ -469,9 +468,9 @@ document.write(`
 <li><p>Utiliser des identifiants différents pour les paramètres formels et effectifs, respectivement dans la définition et les appels.</p></li>
 </ul>
 <section id="objectif-10">
-<h2><span class="section-number">2.1. </span>Objectif 10<a class="headerlink" href="#objectif-10" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.1. </span>Objectif 10<a class="headerlink" href="#objectif-10" title="Permalink to this heading">#</a></h2>
 <section id="blacksquare-exercice">
-<span id="exo-suites"></span><h3><span class="section-number">2.1.1. </span><span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice<a class="headerlink" href="#blacksquare-exercice" title="Permalink to this heading">#</a></h3>
+<span id="exo-suites"></span><h3><span class="section-number">1.1.1. </span><span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice<a class="headerlink" href="#blacksquare-exercice" title="Permalink to this heading">#</a></h3>
 <p>On rappelle quelques suites et séries numériques classiques.</p>
 <ul class="simple">
 <li><p>La somme des <span class="math notranslate nohighlight">\(n\)</span> premiers entiers
@@ -490,14 +489,14 @@ principal précédent.</p></li>
 </ol>
 </section>
 <section id="exercice">
-<h3><span class="section-number">2.1.2. </span>Exercice<a class="headerlink" href="#exercice" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.1.2. </span>Exercice<a class="headerlink" href="#exercice" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p><span class="math notranslate nohighlight">\(\blacksquare\)</span> Définir et écrire une fonction <code class="docutils literal notranslate"><span class="pre">est_rectangle()</span></code> qui vérifie si un triangle est rectangle. Aucune hypothèse est effectuée sur les paramètres de ce traitement.</p></li>
 <li><p>Ecrire un ensemble de tests unitaires adaptés. Justifier vos choix.</p></li>
 </ol>
 </section>
 <section id="exo-fact">
-<span id="id1"></span><h3><span class="section-number">2.1.3. </span>Exercice<a class="headerlink" href="#exo-fact" title="Permalink to this heading">#</a></h3>
+<span id="id1"></span><h3><span class="section-number">1.1.3. </span>Exercice<a class="headerlink" href="#exo-fact" title="Permalink to this heading">#</a></h3>
 <p>La valeur de factorielle (de) <span class="math notranslate nohighlight">\(n\)</span>, où <span class="math notranslate nohighlight">\(n\)</span> est un entier positif, est :
 <span class="math notranslate nohighlight">\(n ! = 1 \times 2 \times \cdots \ \times (n-1) \times n\)</span>. On choisit
 <span class="math notranslate nohighlight">\(0 ! = 1\)</span>.</p>
@@ -520,7 +519,7 @@ prises dans un ensemble de <span class="math notranslate nohighlight">\(n\)</spa
 </ol>
 </section>
 <section id="exercice-codage-ascii">
-<h3><span class="section-number">2.1.4. </span>Exercice (Codage ASCII)<a class="headerlink" href="#exercice-codage-ascii" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.1.4. </span>Exercice (Codage ASCII)<a class="headerlink" href="#exercice-codage-ascii" title="Permalink to this heading">#</a></h3>
 <p>L’ASCII est un codage de caractères qui
 définit 128 codes sur 7 bits. Chaque code correspond à un caractère :
 chiffres, lettres, symboles mathématiques et de ponctuation. En Python,
@@ -530,13 +529,13 @@ donné.</p>
 <p>Ecrire un programme qui affiche la table des 128 codes ASCII.</p>
 </section>
 <section id="id2">
-<h3><span class="section-number">2.1.5. </span><span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.1.5. </span><span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>Écrire une fonction <code class="docutils literal notranslate"><span class="pre">moy()</span></code> qui calcule et retourne la moyenne de 4 valeurs flottantes. Ces 4 valeurs sont entrées au clavier et stockées dans un tableau.</p></li>
 </ol>
 </section>
 <section id="exo-tablst">
-<span id="id3"></span><h3><span class="section-number">2.1.6. </span><span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice<a class="headerlink" href="#exo-tablst" title="Permalink to this heading">#</a></h3>
+<span id="id3"></span><h3><span class="section-number">1.1.6. </span><span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice<a class="headerlink" href="#exo-tablst" title="Permalink to this heading">#</a></h3>
 <p>Soit <code class="docutils literal notranslate"><span class="pre">t</span></code> un tableau 1D
 d’entiers de taille <code class="docutils literal notranslate"><span class="pre">n</span></code> arbitraire. Voici quelques traitements
 classiques de ces tableaux et les fonctions associées.</p>
@@ -558,7 +557,7 @@ Les tester pour valider vos solutions.</p></li>
 </ol>
 </section>
 <section id="blacksquare-exercice-extrait-d-examen-2017-sans-machine">
-<h3><span class="section-number">2.1.7. </span><span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice (extrait d’examen 2017 sans machine)<a class="headerlink" href="#blacksquare-exercice-extrait-d-examen-2017-sans-machine" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.1.7. </span><span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice (extrait d’examen 2017 sans machine)<a class="headerlink" href="#blacksquare-exercice-extrait-d-examen-2017-sans-machine" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>Que calcule la fonction <code class="docutils literal notranslate"><span class="pre">m</span></code> suivante ?</p></li>
 </ol>
@@ -607,7 +606,7 @@ sans utiliser la fonction <code class="docutils literal notranslate"><span class
 </ol>
 </section>
 <section id="id4">
-<h3><span class="section-number">2.1.8. </span><span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.1.8. </span><span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
 <p>Un palindrome est un mot, ou un groupe de mots, dont l’ordre des lettres
 reste le même qu’on le lise de la droite vers la gauche ou inversement.
 Des exemples bien connus sont “été”, “kayak”, “mon nom”, “élu par cette
@@ -627,7 +626,7 @@ palindrome et retourne le booléen correspondant.</p></li>
 </ol>
 </section>
 <section id="id5">
-<h3><span class="section-number">2.1.9. </span>Exercice<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.1.9. </span>Exercice<a class="headerlink" href="#id5" title="Permalink to this heading">#</a></h3>
 <p>Rappel : le produit scalaire deux vecteurs orthogonaux est nul.</p>
 <p>Ecrire les fonctions qui vérifie l’orthogonalité ou non de vecteurs</p>
 <ol class="arabic simple">
@@ -637,10 +636,10 @@ palindrome et retourne le booléen correspondant.</p></li>
 </section>
 </section>
 <section id="objectif-20">
-<h2><span class="section-number">2.2. </span>Objectif 20<a class="headerlink" href="#objectif-20" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">1.2. </span>Objectif 20<a class="headerlink" href="#objectif-20" title="Permalink to this heading">#</a></h2>
 <p><strong>Remarque :</strong> Proposer les fonctions les plus générales possibles.</p>
 <section id="id6">
-<h3><span class="section-number">2.2.1. </span>Exercice<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.2.1. </span>Exercice<a class="headerlink" href="#id6" title="Permalink to this heading">#</a></h3>
 <p>On continue l’exercice <a class="reference internal" href="#exo-fact"><span class="std std-ref">Exercice</span></a>.</p>
 <ul class="simple">
 <li><p>Utiliser la fonction <code class="docutils literal notranslate"><span class="pre">factorielle()</span></code> pour écrire des fonctions qui  calculent les quantités suivantes.</p></li>
@@ -660,7 +659,7 @@ grands.</p></li>
 </ol>
 </section>
 <section id="id7">
-<h3><span class="section-number">2.2.2. </span>Exercice<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.2.2. </span>Exercice<a class="headerlink" href="#id7" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>Consulter la page wikipedia du <a class="reference external" href="https://fr.wikipedia.org/wiki/Crible_d%27%C3%89ratosth%C3%A8ne">crible d’Eratosthène</a></p></li>
 <li><p>Écrire une fonction <code class="docutils literal notranslate"><span class="pre">est_premier()</span></code> qui retourne un booléen qui indique si un nombre entier donné <span class="math notranslate nohighlight">\(n\)</span> est
@@ -668,7 +667,7 @@ premier ou non.</p></li>
 </ol>
 </section>
 <section id="id8">
-<h3><span class="section-number">2.2.3. </span>Exercice<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.2.3. </span>Exercice<a class="headerlink" href="#id8" title="Permalink to this heading">#</a></h3>
 <p>Écrire une fonction <code class="docutils literal notranslate"><span class="pre">pgcd()</span></code> qui
 calcule le PGCD de deux entiers naturels. On utilisera l’algorithme
 d’Euclide.</p>
@@ -680,7 +679,7 @@ diviseur commun autre que 1) est égal à 1. Cet exercice permet d’écrire
 une version itérative de cet algorithme.</p>
 </section>
 <section id="star-star-exercice">
-<h3><span class="section-number">2.2.4. </span>(<span class="math notranslate nohighlight">\(\star\star\)</span>) Exercice<a class="headerlink" href="#star-star-exercice" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.2.4. </span>(<span class="math notranslate nohighlight">\(\star\star\)</span>) Exercice<a class="headerlink" href="#star-star-exercice" title="Permalink to this heading">#</a></h3>
 <p>On souhaite évaluer la valeur d’un polynôme de degré <span class="math notranslate nohighlight">\(3\)</span>,
 <span class="math notranslate nohighlight">\(p_3(x) = a_0 + a_1 x + a_2 x^2 + a_3 x^3\)</span>, en des valeurs <span class="math notranslate nohighlight">\(x\)</span> arbitraires.</p>
 <ol class="arabic simple">
@@ -700,7 +699,7 @@ les paramètres sont entrés au clavier.</p></li>
 </ol>
 </section>
 <section id="star-exercice-algorithme-de-type-monte-carlo">
-<h3><span class="section-number">2.2.5. </span>(<span class="math notranslate nohighlight">\(\star\)</span>) Exercice (Algorithme de type Monte-Carlo)<a class="headerlink" href="#star-exercice-algorithme-de-type-monte-carlo" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.2.5. </span>(<span class="math notranslate nohighlight">\(\star\)</span>) Exercice (Algorithme de type Monte-Carlo)<a class="headerlink" href="#star-exercice-algorithme-de-type-monte-carlo" title="Permalink to this heading">#</a></h3>
 <p>On va calculer une approximation de <span class="math notranslate nohighlight">\(\pi\)</span> de façon probabiliste.</p>
 <ol class="arabic simple">
 <li><p>Ecrire une fonction qui vérifie si un point du plan défini par ses
@@ -720,7 +719,7 @@ précédent et calcule le ratio entre les points situés dans le cercle
 </ol>
 </section>
 <section id="id9">
-<h3><span class="section-number">2.2.6. </span>Exercice<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.2.6. </span>Exercice<a class="headerlink" href="#id9" title="Permalink to this heading">#</a></h3>
 <p>Ecrire une fonction qui transforme un tableau de 0 et de
 1 de longueur arbitraire, en l’entier de base 10 qui est codé par ce
 tableau en représentation de position en base 2 :</p>
@@ -731,7 +730,7 @@ tableau en représentation de position en base 2 :</p>
 \]</div>
 </section>
 <section id="id10">
-<h3><span class="section-number">2.2.7. </span><span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice.<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.2.7. </span><span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice.<a class="headerlink" href="#id10" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>Écrire un algorithme qui calcule les tables de multiplications entre
 entiers compris en 1 et 10, les stocke dans un tableau 2D puis les
@@ -740,7 +739,7 @@ affiche. Ainsi la case <span class="math notranslate nohighlight">\((i,j)\)</spa
 </ol>
 </section>
 <section id="id11">
-<h3><span class="section-number">2.2.8. </span>Exercice<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.2.8. </span>Exercice<a class="headerlink" href="#id11" title="Permalink to this heading">#</a></h3>
 <p>Les fonctions suivantes seront définies et utilisées dans
 un programme (principal) qui définit des tableaux que vous choisirez
 pour vérifier la validité de vos traitements. Vous choisirez la
@@ -759,7 +758,7 @@ valeurs deux à deux pour toutes les valeurs du tableau.</p></li>
 </ol>
 </section>
 <section id="exo-verif">
-<span id="id12"></span><h3><span class="section-number">2.2.9. </span><span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice.<a class="headerlink" href="#exo-verif" title="Permalink to this heading">#</a></h3>
+<span id="id12"></span><h3><span class="section-number">1.2.9. </span><span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice.<a class="headerlink" href="#exo-verif" title="Permalink to this heading">#</a></h3>
 <p>Ecrire les algorithmes de vérification suivants pour une matrice <span class="math notranslate nohighlight">\(M\)</span>
 donnée, carrée de taille <span class="math notranslate nohighlight">\(n\)</span> et à valeurs flottantes.</p>
 <ol class="arabic simple">
@@ -770,7 +769,7 @@ donnée, carrée de taille <span class="math notranslate nohighlight">\(n\)</spa
 </ol>
 </section>
 <section id="exo-imnb">
-<span id="id13"></span><h3><span class="section-number">2.2.10. </span><span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice<a class="headerlink" href="#exo-imnb" title="Permalink to this heading">#</a></h3>
+<span id="id13"></span><h3><span class="section-number">1.2.10. </span><span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice<a class="headerlink" href="#exo-imnb" title="Permalink to this heading">#</a></h3>
 <p><strong>Note.</strong> Cet exercice est inspiré d’un extrait de sujet d’examen.
 Il comporte des questions Objectifs 10 et Objectif 20.</p>
 <p>Une image 2D peut être représentée par un tableau 2D de <em>pixels</em>.<br />
@@ -841,7 +840,7 @@ data-reference="que:im4">[que:im4]</a>.</p></li>
 </section>
 </section>
 <section id="id15">
-<h3><span class="section-number">2.2.11. </span>Exercice.<a class="headerlink" href="#id15" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">1.2.11. </span>Exercice.<a class="headerlink" href="#id15" title="Permalink to this heading">#</a></h3>
 <p>De façon similaire à l’<a class="reference internal" href="#exo-imnb"><span class="std std-ref">exercice précédent</span></a>, on définit des images à
 niveaux de gris par un tableau 2D d’entiers compris en 0 (noir) et 255
 (blanc). La taille de l’image <span class="math notranslate nohighlight">\(L \times C\)</span> est arbitraire.<br />
@@ -906,12 +905,12 @@ valeur la moyenne des pixels du carré.</p></li>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="prealable-td.html"
+       href="../cm/a2-ndarray.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">1. </span>Préalables</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Les ‘ndarray’ : de vrais tableaux en python</p>
       </div>
     </a>
     <a class="right-next"
@@ -939,35 +938,35 @@ valeur la moyenne des pixels du carré.</p></li>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectif-10">2.1. Objectif 10</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blacksquare-exercice">2.1.1. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice">2.1.2. Exercice</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exo-fact">2.1.3. Exercice</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-codage-ascii">2.1.4. Exercice (Codage ASCII)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">2.1.5. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exo-tablst">2.1.6. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blacksquare-exercice-extrait-d-examen-2017-sans-machine">2.1.7. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice (extrait d’examen 2017 sans machine)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">2.1.8. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">2.1.9. Exercice</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectif-10">1.1. Objectif 10</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blacksquare-exercice">1.1.1. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice">1.1.2. Exercice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exo-fact">1.1.3. Exercice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-codage-ascii">1.1.4. Exercice (Codage ASCII)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">1.1.5. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exo-tablst">1.1.6. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blacksquare-exercice-extrait-d-examen-2017-sans-machine">1.1.7. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice (extrait d’examen 2017 sans machine)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">1.1.8. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id5">1.1.9. Exercice</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectif-20">2.2. Objectif 20</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">2.2.1. Exercice</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">2.2.2. Exercice</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">2.2.3. Exercice</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-star-exercice">2.2.4. (<span class="math notranslate nohighlight">\(\star\star\)</span>) Exercice</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-exercice-algorithme-de-type-monte-carlo">2.2.5. (<span class="math notranslate nohighlight">\(\star\)</span>) Exercice (Algorithme de type Monte-Carlo)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">2.2.6. Exercice</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">2.2.7. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">2.2.8. Exercice</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exo-verif">2.2.9. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice.</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exo-imnb">2.2.10. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectif-20">1.2. Objectif 20</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id6">1.2.1. Exercice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id7">1.2.2. Exercice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id8">1.2.3. Exercice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-star-exercice">1.2.4. (<span class="math notranslate nohighlight">\(\star\star\)</span>) Exercice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-exercice-algorithme-de-type-monte-carlo">1.2.5. (<span class="math notranslate nohighlight">\(\star\)</span>) Exercice (Algorithme de type Monte-Carlo)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id9">1.2.6. Exercice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id10">1.2.7. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id11">1.2.8. Exercice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exo-verif">1.2.9. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exo-imnb">1.2.10. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#premieres-transformations-d-images-3-times-4">Premières transformations d’images 3 <span class="math notranslate nohighlight">\(\times\)</span> 4.</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fonctions-et-transformation-d-image-de-taille-arbitraire">Fonctions et transformation d’image de taille arbitraire.</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#analyse-d-une-image-de-taille-arbitraire">Analyse d’une image de taille arbitraire.</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">2.2.11. Exercice.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id15">1.2.11. Exercice.</a></li>
 </ul>
 </li>
 </ul>
