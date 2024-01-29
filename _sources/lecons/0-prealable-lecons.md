@@ -1,5 +1,7 @@
 # Préalable avec les MTU moodle
 
+Lien vers les [MTU moodle](https://cours.univ-perp.fr/course/search.php?areaids=core_course-course&q=MTU+-+Méthodologies+du+Travail+Universitaire) 
+
 Dans la section Apprendre à apprendre :
 
 - reprendre la "MTU - Lire de manière active" : en particulier les sections 4 et 5 (/11).

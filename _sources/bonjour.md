@@ -35,6 +35,12 @@ Vacances en s8, s15-s16
 
 ## Semaine 5
 
+- Avant la leçon : lire la section [Préalable aux leçons](https://phillanglois.github.io/Algo-Prog-2024/lecons/0-prealable-lecons.html)
+- Avant le CM de jeudi : 
+  - préparer les questions sur le chapitre _Fonctions_
+  - lire le chapitre _Récursivité_ jusqu'à _section 2.3 inclus_ 
+- Avant le TD : avancer au maximum sur la feuille 1 selon vos objectifs
+
 ## Semaine 6
 
 ## Semaine 7
