@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>1. Préalable avec les MTU moodle &#8212; Algo-Prog 2024</title>
+    <title>2. Leçon 1. Fonctions &#8212; Algo-Prog 2024</title>
   
   
   
@@ -62,11 +62,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'lecons/0-prealable-lecons';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'lecons/1-lecon-fonctions';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2. Leçon 1. Fonctions" href="1-lecon-fonctions.html" />
-    <link rel="prev" title="3. Les ‘ndarray’ : de vrais tableaux en python" href="../cm/a2-ndarray.html" />
+    <link rel="next" title="1. Feuille 1 : fonctions" href="../td/td1.html" />
+    <link rel="prev" title="1. Préalable avec les MTU moodle" href="0-prealable-lecons.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -198,8 +198,8 @@ const thebe_selector_output = ".output, .cell_output"
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Leçons</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">1. Préalable avec les MTU moodle</a></li>
-<li class="toctree-l1"><a class="reference internal" href="1-lecon-fonctions.html">2. Leçon 1. Fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="0-prealable-lecons.html">1. Préalable avec les MTU moodle</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">2. Leçon 1. Fonctions</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">TD</span></p>
 <ul class="nav bd-sidenav">
@@ -251,7 +251,38 @@ const thebe_selector_output = ".output, .cell_output"
 <div class="article-header-buttons">
 
 
-<a href="https://github.com/phillanglois/Algo-Prog-2024/issues/new?title=Issue%20on%20page%20%2Flecons/0-prealable-lecons.html&body=Your%20issue%20content%20here." target="_blank"
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/phillanglois/Algo-Prog-2024/main?urlpath=tree/algoprog2024/lecons/1-lecon-fonctions.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+<a href="https://github.com/phillanglois/Algo-Prog-2024/issues/new?title=Issue%20on%20page%20%2Flecons/1-lecon-fonctions.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button"
    title="Open an issue"
    data-bs-placement="bottom" data-bs-toggle="tooltip"
@@ -277,7 +308,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/lecons/0-prealable-lecons.md" target="_blank"
+      <li><a href="../_sources/lecons/1-lecon-fonctions.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -287,7 +318,7 @@ const thebe_selector_output = ".output, .cell_output"
 <span class="btn__icon-container">
   <i class="fas fa-file"></i>
   </span>
-<span class="btn__text-container">.md</span>
+<span class="btn__text-container">.ipynb</span>
 </a>
 </li>
       
@@ -348,7 +379,9 @@ document.write(`
   </button>
 `);
 </script>
-
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
 </div></div>
       
     </div>
@@ -359,11 +392,23 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Préalable avec les MTU moodle</h1>
+    <h1>Leçon 1. Fonctions</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conseils">2.1. Conseils</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#travail-demande">2.2. Travail demandé</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reactiver-l-ecoute-du-cours">2.3. Réactiver l’écoute du cours</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-active">2.4. Lecture active</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#depot">2.5. Dépôt</a></li>
+</ul>
+            </nav>
         </div>
     </div>
 </div>
@@ -373,41 +418,70 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="prealable-avec-les-mtu-moodle">
-<h1><span class="section-number">1. </span>Préalable avec les MTU moodle<a class="headerlink" href="#prealable-avec-les-mtu-moodle" title="Permalink to this heading">#</a></h1>
-<p>Lien vers les <a class="reference external" href="https://cours.univ-perp.fr/course/search.php?areaids=core_course-course&amp;q=MTU+-+M%C3%A9thodologies+du+Travail+Universitaire">MTU moodle</a></p>
-<p>Dans la section Apprendre à apprendre :</p>
-<ul class="simple">
-<li><p>reprendre la “MTU - Lire de manière active” : en particulier les sections 4 et 5 (/11).</p></li>
-</ul>
-<p>Dans la section Rédiger,</p>
-<ul class="simple">
-<li><p>reprendre la “MTU rédaction - Rédiger ses fiches de révision” ; en particulier la section 4/11.</p></li>
-<li><p>la “MTU rédaction - Réaliser une fiche de lecture” est utile si on la transpose dans notre contexte scientifique. Prenez ce point de vue pour suivre
-rapidement cette capsule. En particulier les sections 3, 4, 7 (début) (/14).
-Voici 2 notions extraites de cette capsule.</p></li>
-</ul>
+  <section class="tex2jax_ignore mathjax_ignore" id="lecon-1-fonctions">
+<h1><span class="section-number">2. </span>Leçon 1. Fonctions<a class="headerlink" href="#lecon-1-fonctions" title="Permalink to this heading">#</a></h1>
+<section id="conseils">
+<h2><span class="section-number">2.1. </span>Conseils<a class="headerlink" href="#conseils" title="Permalink to this heading">#</a></h2>
 <ol class="arabic simple">
-<li><p>La lecture sélective (plus de 500 mots/minutes) :
-Elle prépare la lecture active en recherchant des mots-clés. Elle peut être :</p></li>
+<li><p>Lire tout le sujet avant de commencer</p></li>
+<li><p>Un aspect difficile de ce chapitre est l’introduction de “beaucoup de vocabulaire” – pour un seul chapitre. Ces notions sont importantes et sont à connaître : les fonctions occupent une place centrale en algorithmique et en programmation. En plus d’être nombreuses, ces notions font l’objet de pas mal de synonymes. Et il faut aussi les connaitre car ils sont communément employées.</p></li>
 </ol>
-<p>Un <em>survol</em> : lecture ultra-rapide en diagonale, afin de scanner la structure seule du texte,</p>
-<p>Puis devenir un <em>écrémage</em> : lecture rapide des passages et mots importants repérés lors du survol.</p>
-<ol class="arabic simple" start="2">
-<li><p>La lecture active (moins de 200 mots/minute) :
-C’est le mode de lecture mobilisé pour rédiger une fiche de lecture.
-ous la solliciterez beaucoup à l’université !
-Voici ses caractéristiques :</p></li>
-</ol>
+</section>
+<section id="travail-demande">
+<h2><span class="section-number">2.2. </span>Travail demandé<a class="headerlink" href="#travail-demande" title="Permalink to this heading">#</a></h2>
+<p>Deux objectifs donc pour chapitre.</p>
 <ul class="simple">
-<li><p>Elle a un objectif de lecture,</p></li>
-<li><p>Elle doit réactiver les connaissances que vous avez du sujet,</p></li>
-<li><p>Elle fait naître chez vous des questionnements,</p></li>
-<li><p>Elle entraîne des prédictions sur le contenu à venir,</p></li>
-<li><p>Elle relève les liens possibles entre différentes parties de son contenu, avec d’autres lectures,</p></li>
-<li><p>Elle clarifie le vocabulaire inconnu,</p></li>
-<li><p>Elle s’arrête ponctuellement afin de produire un résumé rédigé.</p></li>
+<li><p>Objectif 1. Obtenir un “lexique enrichi”, cad. un synthèse de ces notions avec leurs sens, le vocabulaire associé (appellation et synonymes) et avec des exemples associés “en face” de chaque notion.</p></li>
+<li><p>Objectif 2. Faire le contraire ! Ecrire un exemple qui illustre le maximum de notions. Compléter avec un autre exemple et ce tant que toutes les notions ne sont pas illustrées.</p></li>
 </ul>
+<p>Remarques :</p>
+<ul class="simple">
+<li><p>Comme mentionné dans les MTU, plusieurs formes sont possibles pour ce “lexique enrichi” : glossaire, <em>mind map</em>, …</p></li>
+<li><p>Le “lexique enrichi” et les exemples représentent 2 feuilles A4 “côte à côte” : le lexique sur une feuille et, en face sur l’autre feuille les exemples qui correspondent.</p></li>
+<li><p><strong>Il vous sera demandé de déposer ces 2 feuilles</strong></p></li>
+</ul>
+</section>
+<section id="reactiver-l-ecoute-du-cours">
+<h2><span class="section-number">2.3. </span>Réactiver l’écoute du cours<a class="headerlink" href="#reactiver-l-ecoute-du-cours" title="Permalink to this heading">#</a></h2>
+<p>Ce chapitre a été relu jeudi soir dernier après le cours.</p>
+<ol class="arabic simple">
+<li><p>Commencer par une lecture de type survol pour bien se remettre dans le contexte.</p></li>
+<li><p>Noter les passages qui n’ont pas été bien compris et qui méritent une attention supplémentaire</p></li>
+<li><p>Relire les compétences (avoir les idées claires, ce qu’il faut savoir faire) de ce chapitre</p></li>
+</ol>
+</section>
+<section id="lecture-active">
+<h2><span class="section-number">2.4. </span>Lecture active<a class="headerlink" href="#lecture-active" title="Permalink to this heading">#</a></h2>
+<ol class="arabic simple" start="4">
+<li><p>Ecrire le plan du chapitre. Il y a 5 sections. Pour chaque section, noter <em>avec un ou deux mots clés</em> les notions importantes qui apparaissent dans les titres des sections, sous-sections, … Lors du cours, le prof a insisté sur l’importance de ces notions. C’est le moment de faire le lien :</p></li>
+<li><p>Etiqueter (taguer) les sections/sous-sections en 4 catégories :</p>
+<ol class="arabic simple">
+<li><p>important et à <strong>bien</strong> comprendre en y passant le temps nécessaire <strong>et</strong> avant d’aller plus loin</p></li>
+<li><p>utile mais pas difficile : à étudier dans un deuxième temps</p></li>
+<li><p>secondaire ou très facile : s’en occuper à la fin pour savoir où le trouver quand on en aura besoin</p></li>
+<li><p>les exemples spécifiques – si il y en a</p></li>
+</ol>
+</li>
+<li><p>Relire la <strong>section 1</strong>. Reprendre la liste des notions importantes (catégorie A) identifiées à l’étape 1. Compléter la liste ou supprimer certains choix. Noter toutes ces notions <em>en gardant de la place</em> autour de chaque écriture, de chaque ligne. Commencer à identifier (au moins “dans votre tête”) un exemple de chaque notion. Il peut-être utile de diviser la page en 2 pour les noter (même partiellement dans un premier temps) dans une colonne à côté de la notion.</p></li>
+<li><p>Relire la <strong>section 2</strong>. Cette section reprend avec plus de détails la présentation de la section 1.  C’est le moment de compléter, préciser, mettre en relation, ré-ordonner ce qu’on a déjà écrit. On est content d’avoir laissé de la place plutôt que devoir tout ré-écrire.</p></li>
+<li><p>Reprendre ces 2 sections en mode lecture sélective pour lister les conseils, les consignes ou “interdits”. 2 choix :  i) les replacer de façon surlignée dans la synthèse effectuée ; ii) faire une liste séparée avec des “surlignages colorés” pour la mise en relation avec les notions de la synthèse.</p></li>
+<li><p>Ca y est : les sections 1 et 2 sont synthétisées en un “lexique enrichi” – au moins partiellement à cet instant. Bien le relire, le nettoyer voire le ré-écrire.</p></li>
+<li><p>Il est temps maintenant d’attaquer l’objectif 2. Donner un, deux ou trois exemples pour illustrer <em>tous</em> les points du “lexique enrichi”. Préférer des <em>exemples personnels</em> et non la simple recopie de ceux du cours.</p></li>
+<li><p>Appliquer la méthodologie précédente pour la <strong>section 3</strong>. Obtenir le “lexique enrichi” de cette section est rapide (peu de nouvelles notions enfin !). En revanche, l’enjeu est de résumer cette section avec quelques schémas ou en surlignant/coloriant les exemples choisis précédemment.</p></li>
+<li><p>Sauter la <strong>section 4</strong> qui porte sur des aspects plus techniques, plus spécifiques à python : des savoirs-faire et non des connaissances à proprement parler. Cependant les exemples écrits jusque-là <em>appliquent effectivement</em> cette section. Le vérifier quand-même.</p></li>
+<li><p>La <strong>section 5</strong> présente quelques nouvelles notions (en particulier pour les objectifs 20) mais surtout une dernière couche de compléments sur les aspects vus jusque-là. “Ré-injecter” ces compléments dans le lexique enrichi des sections 1, 2 et 3. Si besoin ajouter de nouveaux exemples.</p></li>
+<li><p>Retour à la <strong>section 4</strong>. Compléter le “lexique enrichi” avec ce qu’il faut avoir retenu de cette section. Des petits exemples suffisent.</p></li>
+<li><p>La <strong>section 6</strong> rassemble des exemples. Les lire en détail. S’en inspirer pour compléter vos exemples si besoin.</p></li>
+</ol>
+<p>Voilà. Le chapitre 1 est synthétisé avec ce “lexique enrichi” et des exemples personnels.
+Ces supports seront utiles pour “retenir” le cours, travailler en TD, réviser avant les CC et CT.
+Mais d’ores et déjà, les compétences visées avec ce chapitre sont identifiées, décrites et illustrées. C’est la première étape vers une  maitrise approfondie et définitive. D’autres étapes suivront : exercices, qcm, tp …</p>
+</section>
+<section id="depot">
+<h2><span class="section-number">2.5. </span>Dépôt<a class="headerlink" href="#depot" title="Permalink to this heading">#</a></h2>
+<p>Déposer le lexique enrichi et vos exemples.</p>
+<p>Rappel : Ce qui correspond à 2 feuilles A4 que vous pouvez photographier (jpeg) ou numériser (pdf).</p>
+</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -441,20 +515,20 @@ Voici ses caractéristiques :</p></li>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="../cm/a2-ndarray.html"
+       href="0-prealable-lecons.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">3. </span>Les ‘ndarray’ : de vrais tableaux en python</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Préalable avec les MTU moodle</p>
       </div>
     </a>
     <a class="right-next"
-       href="1-lecon-fonctions.html"
+       href="../td/td1.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2. </span>Leçon 1. Fonctions</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Feuille 1 : fonctions</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -465,7 +539,24 @@ Voici ses caractéristiques :</p></li>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"></div>
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conseils">2.1. Conseils</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#travail-demande">2.2. Travail demandé</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#reactiver-l-ecoute-du-cours">2.3. Réactiver l’écoute du cours</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#lecture-active">2.4. Lecture active</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#depot">2.5. Dépôt</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
               
             
           </div>

@@ -67,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'cm/1-fonctions';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="1. Récursivité" href="6-recursivite.html" />
+    <link rel="next" title="2. Un exemple pour plein de fonctions" href="1b-fonctions-exemple.html" />
     <link rel="prev" title="2. Compétences" href="competences.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -186,6 +186,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Les bases</span></p>
 <ul class="current nav bd-sidenav">
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">1. Fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1b-fonctions-exemple.html">2. Un exemple pour plein de fonctions</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Algorithmique</span></p>
 <ul class="nav bd-sidenav">
@@ -200,6 +201,7 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Leçons</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../lecons/0-prealable-lecons.html">1. Préalable avec les MTU moodle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecons/1-lecon-fonctions.html">2. Leçon 1. Fonctions</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">TD</span></p>
 <ul class="nav bd-sidenav">
@@ -461,7 +463,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="fonctions">
 <span id="ch-fonctions"></span><h1><span class="section-number">1. </span>Fonctions<a class="headerlink" href="#fonctions" title="Permalink to this heading">#</a></h1>
-<p>Mis à jour : Jan 29, 2024, lecture : 18 minutes minimum, PhL.</p>
+<p>Mis à jour : Jan 31, 2024, lecture : 18 minutes minimum, PhL.</p>
 <p>Ce premier chapitre présente des rappels et quelques compléments sur les fonctions.</p>
 <section id="rappels">
 <h2><span class="section-number">1.1. </span>Rappels<a class="headerlink" href="#rappels" title="Permalink to this heading">#</a></h2>
@@ -770,22 +772,22 @@ Il en est de même pour <span class="math notranslate nohighlight">\(\pi/2\)</sp
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1.0
 1.0
 1.0
-0.9999999999999999
-1.0
-1.0
-1.0
-0.9999999999999999
 1.0
 1.0
 0.9999999999999999
 1.0
-0.9999999999999999
-0.9999999999999999
 1.0
 1.0
 1.0
 1.0
-1.0000000000000002
+1.0
+1.0
+1.0
+1.0
+1.0
+1.0
+1.0
+1.0
 1.0
 </pre></div>
 </div>
@@ -1278,7 +1280,7 @@ La relecture de paragraphe sur le rôle du <code class="docutils literal notrans
 <section id="help-et-docstring">
 <h3><span class="section-number">1.5.2. </span><code class="docutils literal notranslate"><span class="pre">help()</span></code> et <em>docstring</em><a class="headerlink" href="#help-et-docstring" title="Permalink to this heading">#</a></h3>
 <p><code class="docutils literal notranslate"><span class="pre">help()</span></code> est une fonction python prédéfinie qui affiche l’en-tête (la signature) complet de la fonction passée en paramètre.</p>
-<p>Elle fournit les informations nécessaires à l’utilisation correcte de la fonction, ainsi que des détails sur son objet et son implémentation – si le ces aspects ont été décrits par le programmeur dans le <code class="docutils literal notranslate"><span class="pre">docstring</span></code> : la zone de commentaires entre <code class="docutils literal notranslate"><span class="pre">```</span> <span class="pre">```</span></code> et indentée sous le <code class="docutils literal notranslate"><span class="pre">def</span></code>.</p>
+<p>Elle fournit les informations nécessaires à l’utilisation correcte de la fonction, ainsi que des détails sur son objet et son implémentation – si le ces aspects ont été décrits par le programmeur dans le <code class="docutils literal notranslate"><span class="pre">docstring</span></code> : la zone de commentaires <em>entre</em> <code class="docutils literal notranslate"><span class="pre">'''</span></code> (3 <em>quotes</em> ou <code class="docutils literal notranslate"><span class="pre">&quot;&quot;&quot;</span></code> (3 <em>double quotes</em>) et indentée sous le <code class="docutils literal notranslate"><span class="pre">def</span></code>.</p>
 <p>Cette fonction est similaire à l’option de commande <code class="docutils literal notranslate"><span class="pre">--help</span></code> sous Unix.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2027,11 +2029,11 @@ Foix est la préfecture du département 09
       </div>
     </a>
     <a class="right-next"
-       href="6-recursivite.html"
+       href="1b-fonctions-exemple.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1. </span>Récursivité</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>Un exemple pour plein de fonctions</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
