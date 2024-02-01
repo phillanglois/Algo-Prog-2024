@@ -15,3 +15,7 @@ Activités.
 
 
 ## semaine 5
+
+- feedback leçon 1
+- suite exos feuille 1 fonctions
+- chapitre "fonctions par un exemple3 traité en CM
