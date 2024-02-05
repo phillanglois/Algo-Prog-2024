@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>1. Récursivité &#8212; Algo-Prog 2024</title>
+    <title>3. Récursivité &#8212; Algo-Prog 2024</title>
   
   
   
@@ -183,16 +183,13 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="0-presentation-2024.html">1. Algo Prog en 2024</a></li>
 <li class="toctree-l1"><a class="reference internal" href="competences.html">2. Compétences</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Les bases</span></p>
-<ul class="nav bd-sidenav">
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapitres</span></p>
+<ul class="current nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="1-fonctions.html">1. Fonctions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1b-fonctions-exemple.html">2. Un exemple, plein de fonctions</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">3. Récursivité</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Algorithmique</span></p>
-<ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">1. Récursivité</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Annexes</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Compléments</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="a0-boucles-avancees.html">1. Tableaux et boucles</a></li>
 <li class="toctree-l1"><a class="reference internal" href="a1-booleens.html">2. Annexe : les booléens en python (&gt;3.6)</a></li>
@@ -404,25 +401,25 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definitions-et-premiers-exemples">1.1. Définitions et premiers exemples</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition">1.1.1. Définition</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemples-de-fonctions-recursives">1.1.2. Exemples de fonctions récursives</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemple-de-geometries-recursives">1.1.3. Exemple de géométries récursives</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemples-de-structures-de-donnees-recursives">1.1.4. Exemples de structures de données récursives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definitions-et-premiers-exemples">3.1. Définitions et premiers exemples</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition">3.1.1. Définition</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemples-de-fonctions-recursives">3.1.2. Exemples de fonctions récursives</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemple-de-geometries-recursives">3.1.3. Exemple de géométries récursives</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemples-de-structures-de-donnees-recursives">3.1.4. Exemples de structures de données récursives</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interets-de-la-recursion">1.2. Intérêts de la récursion</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#avantage">1.2.1. Avantage</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inconvenient">1.2.2. Inconvénient</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#paradigme-diviser-pour-regner">1.2.3. Paradigme <strong>diviser pour régner</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interets-de-la-recursion">3.2. Intérêts de la récursion</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#avantage">3.2.1. Avantage</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inconvenient">3.2.2. Inconvénient</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#paradigme-diviser-pour-regner">3.2.3. Paradigme <strong>diviser pour régner</strong></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fonctions-numeriques-recursives">1.3. Fonctions numériques récursives</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#factorielle-forme-iterative">1.3.1. Factorielle : forme itérative</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fonctions-numeriques-recursives">3.3. Fonctions numériques récursives</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#factorielle-forme-iterative">3.3.1. Factorielle : forme itérative</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice">Exercice</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#factorielle-forme-recursive">1.3.2. Factorielle : forme récursive</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#factorielle-forme-recursive">3.3.2. Factorielle : forme récursive</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#premier-essai-qui-plante">Premier essai (qui plante :)</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#terminaison-pour-arreter-les-appels-recursifs">Terminaison : pour arrêter les appels récursifs !!!!</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#bien-comprendre-les-appels-recursifs">Bien comprendre les appels récursifs !</a></li>
@@ -430,53 +427,53 @@ document.write(`
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exponentiation-entiere-dite-rapide">1.4. Exponentiation entière (dite) rapide</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#une-premiere-recursion">1.4.1. Une première récursion</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#une-seconde-recursion-rapide-beaucoup-plus-rapide">1.4.2. Une seconde récursion rapide, beaucoup plus rapide</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exponentiation-entiere-dite-rapide">3.4. Exponentiation entière (dite) rapide</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#une-premiere-recursion">3.4.1. Une première récursion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#une-seconde-recursion-rapide-beaucoup-plus-rapide">3.4.2. Une seconde récursion rapide, beaucoup plus rapide</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fibonacci-ou-l-inefficacite-de-la-recursion">1.5. Fibonacci ou l’inefficacité de la récursion</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-recursive">1.5.1. Solution récursive</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fibonacci-ou-l-inefficacite-de-la-recursion">3.5. Fibonacci ou l’inefficacité de la récursion</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-recursive">3.5.1. Solution récursive</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appels-recursifs-environnement-pile-d-execution-pile-et-arbre-des-appels">1.6. Appels récursifs : environnement,  pile d’exécution, pile et arbre des appels</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#environnement">1.6.1. Environnement</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pile-d-execution">1.6.2. Pile d’exécution</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pile-des-appels">1.6.3. Pile des appels</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arbre-des-appels-recursifs">1.6.4. Arbre des appels récursifs</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#illustration-sur-la-factorielle-recursive">1.6.5. Illustration sur la factorielle récursive</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appels-recursifs-environnement-pile-d-execution-pile-et-arbre-des-appels">3.6. Appels récursifs : environnement,  pile d’exécution, pile et arbre des appels</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#environnement">3.6.1. Environnement</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pile-d-execution">3.6.2. Pile d’exécution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pile-des-appels">3.6.3. Pile des appels</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arbre-des-appels-recursifs">3.6.4. Arbre des appels récursifs</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#illustration-sur-la-factorielle-recursive">3.6.5. Illustration sur la factorielle récursive</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#arbre-des-appels">arbre des appels</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">pile des appels</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#environnements-successifs-pour-factorielle-3">environnements successifs pour factorielle(3)</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#illustration-sur-le-calcul-recursif-de-la-suite-de-fibonacci">1.6.6. Illustration sur le calcul récursif de la suite de Fibonacci.</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#illustration-sur-le-calcul-recursif-de-la-suite-de-fibonacci">3.6.6. Illustration sur le calcul récursif de la suite de Fibonacci.</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">arbre des appels</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pile-des-appels-recursifs">pile des appels récursifs</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#retour-sur-l-inefficacite-du-calcul-recursif-de-fibonacci">1.6.7. Retour sur l’inefficacité du calcul récursif de Fibonacci</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#retour-sur-l-inefficacite-du-calcul-recursif-de-fibonacci">3.6.7. Retour sur l’inefficacité du calcul récursif de Fibonacci</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#environnements-et-pile-d-execution">environnements et pile d’exécution</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-iterative">1.6.8. Solution itérative</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">1.6.9. Exercice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-iterative">3.6.8. Solution itérative</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">3.6.9. Exercice</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-tours-de-hanoi">1.7. Les tours de Hanoï</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#objectif">1.7.1. Objectif</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">1.7.2. Solution récursive</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-tours-de-hanoi">3.7. Les tours de Hanoï</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#objectif">3.7.1. Objectif</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">3.7.2. Solution récursive</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#analyse">Analyse</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#codage">Codage</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#observation-inquietante">1.7.3. Observation … inquiétante</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#observation-inquietante">3.7.3. Observation … inquiétante</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">1.8. Conclusion</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ce-qui-a-ete-vu">1.8.1. Ce qui a été vu</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ce-qui-reste-a-voir">1.8.2. Ce qui reste à voir</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#complements">1.8.3. Compléments</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">3.8. Conclusion</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ce-qui-a-ete-vu">3.8.1. Ce qui a été vu</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ce-qui-reste-a-voir">3.8.2. Ce qui reste à voir</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#complements">3.8.3. Compléments</a></li>
 </ul>
 </li>
 </ul>
@@ -491,19 +488,19 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="recursivite">
-<span id="ch-recursivite"></span><h1><span class="section-number">1. </span>Récursivité<a class="headerlink" href="#recursivite" title="Permalink to this heading">#</a></h1>
+<span id="ch-recursivite"></span><h1><span class="section-number">3. </span>Récursivité<a class="headerlink" href="#recursivite" title="Permalink to this heading">#</a></h1>
 <p>Mis à jour : Feb 05, 2024, lecture : 16
 minutes minimum, PhL.</p>
 <section id="definitions-et-premiers-exemples">
-<h2><span class="section-number">1.1. </span>Définitions et premiers exemples<a class="headerlink" href="#definitions-et-premiers-exemples" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">3.1. </span>Définitions et premiers exemples<a class="headerlink" href="#definitions-et-premiers-exemples" title="Permalink to this heading">#</a></h2>
 <section id="definition">
-<h3><span class="section-number">1.1.1. </span>Définition<a class="headerlink" href="#definition" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">3.1.1. </span>Définition<a class="headerlink" href="#definition" title="Permalink to this heading">#</a></h3>
 <blockquote>
 <div><p>Une construction est <em>récursive</em> si elle se définit à partir d’elle même</p>
 </div></blockquote>
 </section>
 <section id="exemples-de-fonctions-recursives">
-<h3><span class="section-number">1.1.2. </span>Exemples de fonctions récursives<a class="headerlink" href="#exemples-de-fonctions-recursives" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">3.1.2. </span>Exemples de fonctions récursives<a class="headerlink" href="#exemples-de-fonctions-recursives" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>factorielle : <span class="math notranslate nohighlight">\(n ! = n \times (n-1)!\)</span></p></li>
 <li><p>somme des <span class="math notranslate nohighlight">\(n\)</span> premiers entiers : <span class="math notranslate nohighlight">\(s(n) = n + s(n-1)\)</span></p></li>
@@ -512,7 +509,7 @@ minutes minimum, PhL.</p>
 </ul>
 </section>
 <section id="exemple-de-geometries-recursives">
-<h3><span class="section-number">1.1.3. </span>Exemple de géométries récursives<a class="headerlink" href="#exemple-de-geometries-recursives" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">3.1.3. </span>Exemple de géométries récursives<a class="headerlink" href="#exemple-de-geometries-recursives" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>segment et flocon de von Koch</p></li>
 </ul>
@@ -525,7 +522,7 @@ minutes minimum, PhL.</p>
 <p>L’<span class="xref myst">annexe</span> présente comment tracer ces figures à l’aide du module <a class="reference external" href="https://docs.python.org/fr/3/library/turtle.html">turtle</a>.</p>
 </section>
 <section id="exemples-de-structures-de-donnees-recursives">
-<h3><span class="section-number">1.1.4. </span>Exemples de structures de données récursives<a class="headerlink" href="#exemples-de-structures-de-donnees-recursives" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">3.1.4. </span>Exemples de structures de données récursives<a class="headerlink" href="#exemples-de-structures-de-donnees-recursives" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>liste chaînée
 <img alt="liste" src="../_images/listechainee.png" /></p></li>
@@ -543,9 +540,9 @@ minutes minimum, PhL.</p>
 </section>
 </section>
 <section id="interets-de-la-recursion">
-<h2><span class="section-number">1.2. </span>Intérêts de la récursion<a class="headerlink" href="#interets-de-la-recursion" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">3.2. </span>Intérêts de la récursion<a class="headerlink" href="#interets-de-la-recursion" title="Permalink to this heading">#</a></h2>
 <section id="avantage">
-<h3><span class="section-number">1.2.1. </span>Avantage<a class="headerlink" href="#avantage" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">3.2.1. </span>Avantage<a class="headerlink" href="#avantage" title="Permalink to this heading">#</a></h3>
 <p>Une solution <em>algorithmique récursive</em> est souvent plus simple, plus lisible, plus facile à prouver qu’une solution itérative</p>
 <ul class="simple">
 <li><p>exemple caractéristique : les tours de Hanoï (voir exercice de td)
@@ -555,7 +552,7 @@ minutes minimum, PhL.</p>
 <p><a class="reference external" href="https://upload.wikimedia.org/wikipedia/commons/6/60/Tower_of_Hanoi_4.gif">Tower of Hanoi 4 par André Karwath (wikimediacommons)</a></p>
 </section>
 <section id="inconvenient">
-<h3><span class="section-number">1.2.2. </span>Inconvénient<a class="headerlink" href="#inconvenient" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">3.2.2. </span>Inconvénient<a class="headerlink" href="#inconvenient" title="Permalink to this heading">#</a></h3>
 <p>L’<em>exécution</em> de la solution récursive est plus compliquée</p>
 <ul class="simple">
 <li><p>gestion d’une pile d’appels de fonctions : la pile d’exécution</p></li>
@@ -563,7 +560,7 @@ minutes minimum, PhL.</p>
 <p>L’exécution de la solution récursive peut provoquer des débordements de la mémoire</p>
 </section>
 <section id="paradigme-diviser-pour-regner">
-<h3><span class="section-number">1.2.3. </span>Paradigme <strong>diviser pour régner</strong><a class="headerlink" href="#paradigme-diviser-pour-regner" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">3.2.3. </span>Paradigme <strong>diviser pour régner</strong><a class="headerlink" href="#paradigme-diviser-pour-regner" title="Permalink to this heading">#</a></h3>
 <blockquote>
 <div><ul class="simple">
 <li><p>On divise le problème en des sous-problèmes <em>similaires, indépendants, de taille moindre</em></p></li>
@@ -601,7 +598,7 @@ minutes minimum, PhL.</p>
 </section>
 </section>
 <section id="fonctions-numeriques-recursives">
-<h2><span class="section-number">1.3. </span>Fonctions numériques récursives<a class="headerlink" href="#fonctions-numeriques-recursives" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">3.3. </span>Fonctions numériques récursives<a class="headerlink" href="#fonctions-numeriques-recursives" title="Permalink to this heading">#</a></h2>
 <p>Une définition, deux écritures équivalentes</p>
 <ul class="simple">
 <li><p><strong>forme itérative</strong></p></li>
@@ -617,7 +614,7 @@ minutes minimum, PhL.</p>
 <p>Bien différencier en quoi ces 2 écritures sont différentes.</p>
 </div>
 <section id="factorielle-forme-iterative">
-<h3><span class="section-number">1.3.1. </span>Factorielle : forme itérative<a class="headerlink" href="#factorielle-forme-iterative" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">3.3.1. </span>Factorielle : forme itérative<a class="headerlink" href="#factorielle-forme-iterative" title="Permalink to this heading">#</a></h3>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">n</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
@@ -700,7 +697,7 @@ minutes minimum, PhL.</p>
 </section>
 </section>
 <section id="factorielle-forme-recursive">
-<h3><span class="section-number">1.3.2. </span>Factorielle : forme récursive<a class="headerlink" href="#factorielle-forme-recursive" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">3.3.2. </span>Factorielle : forme récursive<a class="headerlink" href="#factorielle-forme-recursive" title="Permalink to this heading">#</a></h3>
 <p>On applique la définition récursive :
 <span class="math notranslate nohighlight">\(n ! = n \times (n-1) !\)</span></p>
 <p>Oui, oui ! On a oublié de définir <span class="math notranslate nohighlight">\(0 !\)</span>.</p>
@@ -996,10 +993,10 @@ Réponse :<div class="sd-summary-down docutils">
 </section>
 </section>
 <section id="exponentiation-entiere-dite-rapide">
-<h2><span class="section-number">1.4. </span>Exponentiation entière (dite) rapide<a class="headerlink" href="#exponentiation-entiere-dite-rapide" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">3.4. </span>Exponentiation entière (dite) rapide<a class="headerlink" href="#exponentiation-entiere-dite-rapide" title="Permalink to this heading">#</a></h2>
 <p>Objectif : calculer <span class="math notranslate nohighlight">\(x^n\)</span> où <span class="math notranslate nohighlight">\(x\)</span> est un réel et <span class="math notranslate nohighlight">\(n\)</span> un entier positif.</p>
 <section id="une-premiere-recursion">
-<h3><span class="section-number">1.4.1. </span>Une première récursion<a class="headerlink" href="#une-premiere-recursion" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">3.4.1. </span>Une première récursion<a class="headerlink" href="#une-premiere-recursion" title="Permalink to this heading">#</a></h3>
 <p>Elle est basée sur la relation récursive : <span class="math notranslate nohighlight">\(x^n = x \times x^{n-1}\)</span> pour <span class="math notranslate nohighlight">\(n &gt; 0\)</span> et <span class="math notranslate nohighlight">\(x^0 = 1\)</span>.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1034,7 +1031,7 @@ Réponse :<div class="sd-summary-down docutils">
 </ul>
 </section>
 <section id="une-seconde-recursion-rapide-beaucoup-plus-rapide">
-<h3><span class="section-number">1.4.2. </span>Une seconde récursion rapide, beaucoup plus rapide<a class="headerlink" href="#une-seconde-recursion-rapide-beaucoup-plus-rapide" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">3.4.2. </span>Une seconde récursion rapide, beaucoup plus rapide<a class="headerlink" href="#une-seconde-recursion-rapide-beaucoup-plus-rapide" title="Permalink to this heading">#</a></h3>
 <p>Autre écriture de <span class="math notranslate nohighlight">\(x^n\)</span> avec des airs de dichotomie :)</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(x^{2p} = (x^p)^2\)</span> – c’est simple et récursif !</p></li>
@@ -1245,14 +1242,14 @@ Ce module complète (et utilise) le module <em>time</em> déjà décrit dans le
 </section>
 </section>
 <section id="fibonacci-ou-l-inefficacite-de-la-recursion">
-<h2><span class="section-number">1.5. </span>Fibonacci ou l’inefficacité de la récursion<a class="headerlink" href="#fibonacci-ou-l-inefficacite-de-la-recursion" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">3.5. </span>Fibonacci ou l’inefficacité de la récursion<a class="headerlink" href="#fibonacci-ou-l-inefficacite-de-la-recursion" title="Permalink to this heading">#</a></h2>
 <p>La suite de Fibonaci est définie par une récurrence <em>d’ordre 2</em> :</p>
 <div class="math notranslate nohighlight">
 \[F(n+1) = F(n) + F(n-1).\]</div>
 <p>Ce qui nécessite de connaître 2 valeurs de départ :
 $<span class="math notranslate nohighlight">\(F(0) = F(1) = 1.\)</span>$</p>
 <section id="solution-recursive">
-<h3><span class="section-number">1.5.1. </span>Solution récursive<a class="headerlink" href="#solution-recursive" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">3.5.1. </span>Solution récursive<a class="headerlink" href="#solution-recursive" title="Permalink to this heading">#</a></h3>
 <p>L’expression est naturellement récursive donc …</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -1348,12 +1345,12 @@ Vous observerez que ce comportement se dégrade de plus de plus significativemen
 </section>
 </section>
 <section id="appels-recursifs-environnement-pile-d-execution-pile-et-arbre-des-appels">
-<h2><span class="section-number">1.6. </span>Appels récursifs : environnement,  pile d’exécution, pile et arbre des appels<a class="headerlink" href="#appels-recursifs-environnement-pile-d-execution-pile-et-arbre-des-appels" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">3.6. </span>Appels récursifs : environnement,  pile d’exécution, pile et arbre des appels<a class="headerlink" href="#appels-recursifs-environnement-pile-d-execution-pile-et-arbre-des-appels" title="Permalink to this heading">#</a></h2>
 <p>On s’intéresse à des notions liées <em>à la mise en oeuvre</em> des appels de fonction dans le cadre récursif.<br />
 On en restera surtout aux principes, aux <em>abstractions algorithmiques</em>.<br />
 Les aspects plus détaillés de la mise en oeuvre (implantation du mécanisme d’appel de fonction) sont étudiés en deuxième année.</p>
 <section id="environnement">
-<h3><span class="section-number">1.6.1. </span>Environnement<a class="headerlink" href="#environnement" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">3.6.1. </span>Environnement<a class="headerlink" href="#environnement" title="Permalink to this heading">#</a></h3>
 <p>On rappelle que l’appel d’une fonction rompt la séquentialité du calcul.</p>
 <ul class="simple">
 <li><p>l’appel déplace l’<strong>environnement d’exécution</strong> de <em>l’appelant</em> vers un nouvel environnement dédié à <em>l’appelé</em>.</p></li>
@@ -1374,7 +1371,7 @@ Chaque environnement est donc conservé dans une structure de donnée adaptée �
 <p>Cette structure de données est appelée la <em>pile d’exécution</em> ou la <em>pile des appels</em>.</p>
 </section>
 <section id="pile-d-execution">
-<h3><span class="section-number">1.6.2. </span>Pile d’exécution<a class="headerlink" href="#pile-d-execution" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">3.6.2. </span>Pile d’exécution<a class="headerlink" href="#pile-d-execution" title="Permalink to this heading">#</a></h3>
 <p>La <strong>pile d’exécution</strong> est la mémoire associée nécessaire au stockage des paramètres d’appel, des adresses de retour, des variables locales.</p>
 <p>Elle est gérée par le langage de programmation : une pile LIFO (<em>last in, first out</em>) de taille préfixée.
 Mais il y a un risque de débordement mémoire si les appels imbriqués trop nombreux – sans libération de la place occupée.</p>
@@ -1407,16 +1404,16 @@ Mais il y a un risque de débordement mémoire si les appels imbriqués trop nom
 <p>Ces “vues plus simples”, aussi appelées des <em>abstractions algorithmiques</em>, représentent la logique de fonctionnement de la pile d’exécution. Elles permettent de ne pas avoir à détailler pas toutes les caractéristiques de l’environnement de chaque appel.</p>
 </section>
 <section id="pile-des-appels">
-<h3><span class="section-number">1.6.3. </span>Pile des appels<a class="headerlink" href="#pile-des-appels" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">3.6.3. </span>Pile des appels<a class="headerlink" href="#pile-des-appels" title="Permalink to this heading">#</a></h3>
 <p>La <strong>pile des appels</strong> est une <em>abstraction algorithmique</em> qui représente la logique de la pile d’exécution <strong>en se limitant à l’identifiant de chaque appel</strong>.</p>
 </section>
 <section id="arbre-des-appels-recursifs">
-<h3><span class="section-number">1.6.4. </span>Arbre des appels récursifs<a class="headerlink" href="#arbre-des-appels-recursifs" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">3.6.4. </span>Arbre des appels récursifs<a class="headerlink" href="#arbre-des-appels-recursifs" title="Permalink to this heading">#</a></h3>
 <p>L’<strong>arbre des appels récursifs</strong> est une autre <em>abstraction algorithmique</em> de l’ensemble des appels d’un traitement récursif.<br />
 Le parcours des noeuds d’un arbre se représente aussi avec une pile … d’où la connexion entre ces deux abstractions du traitement de la récursion.</p>
 </section>
 <section id="illustration-sur-la-factorielle-recursive">
-<h3><span class="section-number">1.6.5. </span>Illustration sur la factorielle récursive<a class="headerlink" href="#illustration-sur-la-factorielle-recursive" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">3.6.5. </span>Illustration sur la factorielle récursive<a class="headerlink" href="#illustration-sur-la-factorielle-recursive" title="Permalink to this heading">#</a></h3>
 <p>Calcul de <code class="docutils literal notranslate"><span class="pre">fact(4)</span></code></p>
 <p><img alt="factorielle(4)" src="../_images/fact4.jpg" /></p>
 <section id="arbre-des-appels">
@@ -1630,7 +1627,7 @@ Ainsi la pile redevient vide après le traitement complet de l’appel principal
 </section>
 </section>
 <section id="illustration-sur-le-calcul-recursif-de-la-suite-de-fibonacci">
-<h3><span class="section-number">1.6.6. </span>Illustration sur le calcul récursif de la suite de Fibonacci.<a class="headerlink" href="#illustration-sur-le-calcul-recursif-de-la-suite-de-fibonacci" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">3.6.6. </span>Illustration sur le calcul récursif de la suite de Fibonacci.<a class="headerlink" href="#illustration-sur-le-calcul-recursif-de-la-suite-de-fibonacci" title="Permalink to this heading">#</a></h3>
 <p>On peut maintenant revenir sur les raisons de l’inefficacité du calcul récursif de la suite de Fibonacci.</p>
 <section id="id2">
 <h4>arbre des appels<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h4>
@@ -1658,7 +1655,7 @@ En effet, l’évaluation de <code class="docutils literal notranslate"><span cl
 </section>
 </section>
 <section id="retour-sur-l-inefficacite-du-calcul-recursif-de-fibonacci">
-<h3><span class="section-number">1.6.7. </span>Retour sur l’inefficacité du calcul récursif de Fibonacci<a class="headerlink" href="#retour-sur-l-inefficacite-du-calcul-recursif-de-fibonacci" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">3.6.7. </span>Retour sur l’inefficacité du calcul récursif de Fibonacci<a class="headerlink" href="#retour-sur-l-inefficacite-du-calcul-recursif-de-fibonacci" title="Permalink to this heading">#</a></h3>
 <p>Exercice : comptons le nombre d’appels à <code class="docutils literal notranslate"><span class="pre">fibo()</span></code> dans l’évaluation de <code class="docutils literal notranslate"><span class="pre">fibo(4)</span></code>.</p>
 <table class="colwidths-auto table">
 <thead>
@@ -1693,7 +1690,7 @@ En effet, l’évaluation de <code class="docutils literal notranslate"><span cl
 </section>
 </section>
 <section id="solution-iterative">
-<h3><span class="section-number">1.6.8. </span>Solution itérative<a class="headerlink" href="#solution-iterative" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">3.6.8. </span>Solution itérative<a class="headerlink" href="#solution-iterative" title="Permalink to this heading">#</a></h3>
 <p>On a déjà montré une solution itérative de ce calcul.</p>
 <p><strong>(<span class="math notranslate nohighlight">\(\star\)</span>) Exercice.</strong></p>
 <p>Proposer une solution itérative encore plus efficace que celle présentée.</p>
@@ -1709,14 +1706,14 @@ La solution itérative est plus efficace car elle évite de re-calculer les term
 </div>
 </details></section>
 <section id="id3">
-<h3><span class="section-number">1.6.9. </span>Exercice<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">3.6.9. </span>Exercice<a class="headerlink" href="#id3" title="Permalink to this heading">#</a></h3>
 <p>Reprendre ça sous <a class="reference external" href="http://pythontutor.com/live.html#mode=edit">http://pythontutor.com/live.html#mode=edit</a></p>
 </section>
 </section>
 <section id="les-tours-de-hanoi">
-<h2><span class="section-number">1.7. </span>Les tours de Hanoï<a class="headerlink" href="#les-tours-de-hanoi" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">3.7. </span>Les tours de Hanoï<a class="headerlink" href="#les-tours-de-hanoi" title="Permalink to this heading">#</a></h2>
 <section id="objectif">
-<h3><span class="section-number">1.7.1. </span>Objectif<a class="headerlink" href="#objectif" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">3.7.1. </span>Objectif<a class="headerlink" href="#objectif" title="Permalink to this heading">#</a></h3>
 <p>Déplacer l’empilement de disques du piquet gauche au piquet droit en respectant les règles suivantes :</p>
 <ul class="simple">
 <li><p>déplacer un seul disque à la fois</p></li>
@@ -1727,7 +1724,7 @@ On doit utiliser le piquet du milieu.</p></li>
 <p>Situation finale : <img alt="hanoi_fin" src="../_images/hanoi2.jpg" /></p>
 </section>
 <section id="id4">
-<h3><span class="section-number">1.7.2. </span>Solution récursive<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">3.7.2. </span>Solution récursive<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
 <section id="analyse">
 <h4>Analyse<a class="headerlink" href="#analyse" title="Permalink to this heading">#</a></h4>
 <ul class="simple">
@@ -1914,7 +1911,7 @@ et vérifier que les problèmes sont effectivement résolus !</p>
 </section>
 </section>
 <section id="observation-inquietante">
-<h3><span class="section-number">1.7.3. </span>Observation … inquiétante<a class="headerlink" href="#observation-inquietante" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">3.7.3. </span>Observation … inquiétante<a class="headerlink" href="#observation-inquietante" title="Permalink to this heading">#</a></h3>
 <table class="colwidths-auto table">
 <thead>
 <tr class="row-odd"><th class="text-center head"><p># disques</p></th>
@@ -1990,9 +1987,9 @@ Ca vous fait penser à quelque chose :) ?
 </section>
 </section>
 <section id="conclusion">
-<h2><span class="section-number">1.8. </span>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this heading">#</a></h2>
+<h2><span class="section-number">3.8. </span>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this heading">#</a></h2>
 <section id="ce-qui-a-ete-vu">
-<h3><span class="section-number">1.8.1. </span>Ce qui a été vu<a class="headerlink" href="#ce-qui-a-ete-vu" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">3.8.1. </span>Ce qui a été vu<a class="headerlink" href="#ce-qui-a-ete-vu" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Les solutions récursives sont souvent plus faciles à écrire, à comprendre, à prouver.</p></li>
 <li><p>Commencer par écrire la terminaison de la solution récursive.</p></li>
@@ -2011,7 +2008,7 @@ Ca vous fait penser à quelque chose :) ?
 </ul>
 </section>
 <section id="ce-qui-reste-a-voir">
-<h3><span class="section-number">1.8.2. </span>Ce qui reste à voir<a class="headerlink" href="#ce-qui-reste-a-voir" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">3.8.2. </span>Ce qui reste à voir<a class="headerlink" href="#ce-qui-reste-a-voir" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>Version récursive d’autres algorithmes importants</p>
 <ul class="simple">
@@ -2049,7 +2046,7 @@ Ca vous fait penser à quelque chose :) ?
 </ol>
 </section>
 <section id="complements">
-<h3><span class="section-number">1.8.3. </span>Compléments<a class="headerlink" href="#complements" title="Permalink to this heading">#</a></h3>
+<h3><span class="section-number">3.8.3. </span>Compléments<a class="headerlink" href="#complements" title="Permalink to this heading">#</a></h3>
 <p>Des ressources utiles :</p>
 <ul class="simple">
 <li><p>sur <a class="reference external" href="http://interstices.info">interstices.info</a> : <a class="reference external" href="https://interstices.info/jcms/p_82121/les-tours-de-hanoi-un-probleme-classique-de-recursion">hanoi_interstices</a></p></li>
@@ -2123,25 +2120,25 @@ Ca vous fait penser à quelque chose :) ?
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definitions-et-premiers-exemples">1.1. Définitions et premiers exemples</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition">1.1.1. Définition</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemples-de-fonctions-recursives">1.1.2. Exemples de fonctions récursives</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemple-de-geometries-recursives">1.1.3. Exemple de géométries récursives</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemples-de-structures-de-donnees-recursives">1.1.4. Exemples de structures de données récursives</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definitions-et-premiers-exemples">3.1. Définitions et premiers exemples</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definition">3.1.1. Définition</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemples-de-fonctions-recursives">3.1.2. Exemples de fonctions récursives</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemple-de-geometries-recursives">3.1.3. Exemple de géométries récursives</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exemples-de-structures-de-donnees-recursives">3.1.4. Exemples de structures de données récursives</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interets-de-la-recursion">1.2. Intérêts de la récursion</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#avantage">1.2.1. Avantage</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inconvenient">1.2.2. Inconvénient</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#paradigme-diviser-pour-regner">1.2.3. Paradigme <strong>diviser pour régner</strong></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#interets-de-la-recursion">3.2. Intérêts de la récursion</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#avantage">3.2.1. Avantage</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#inconvenient">3.2.2. Inconvénient</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#paradigme-diviser-pour-regner">3.2.3. Paradigme <strong>diviser pour régner</strong></a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fonctions-numeriques-recursives">1.3. Fonctions numériques récursives</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#factorielle-forme-iterative">1.3.1. Factorielle : forme itérative</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fonctions-numeriques-recursives">3.3. Fonctions numériques récursives</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#factorielle-forme-iterative">3.3.1. Factorielle : forme itérative</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice">Exercice</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#factorielle-forme-recursive">1.3.2. Factorielle : forme récursive</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#factorielle-forme-recursive">3.3.2. Factorielle : forme récursive</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#premier-essai-qui-plante">Premier essai (qui plante :)</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#terminaison-pour-arreter-les-appels-recursifs">Terminaison : pour arrêter les appels récursifs !!!!</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#bien-comprendre-les-appels-recursifs">Bien comprendre les appels récursifs !</a></li>
@@ -2149,53 +2146,53 @@ Ca vous fait penser à quelque chose :) ?
 </li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exponentiation-entiere-dite-rapide">1.4. Exponentiation entière (dite) rapide</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#une-premiere-recursion">1.4.1. Une première récursion</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#une-seconde-recursion-rapide-beaucoup-plus-rapide">1.4.2. Une seconde récursion rapide, beaucoup plus rapide</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exponentiation-entiere-dite-rapide">3.4. Exponentiation entière (dite) rapide</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#une-premiere-recursion">3.4.1. Une première récursion</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#une-seconde-recursion-rapide-beaucoup-plus-rapide">3.4.2. Une seconde récursion rapide, beaucoup plus rapide</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fibonacci-ou-l-inefficacite-de-la-recursion">1.5. Fibonacci ou l’inefficacité de la récursion</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-recursive">1.5.1. Solution récursive</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#fibonacci-ou-l-inefficacite-de-la-recursion">3.5. Fibonacci ou l’inefficacité de la récursion</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-recursive">3.5.1. Solution récursive</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appels-recursifs-environnement-pile-d-execution-pile-et-arbre-des-appels">1.6. Appels récursifs : environnement,  pile d’exécution, pile et arbre des appels</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#environnement">1.6.1. Environnement</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pile-d-execution">1.6.2. Pile d’exécution</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pile-des-appels">1.6.3. Pile des appels</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arbre-des-appels-recursifs">1.6.4. Arbre des appels récursifs</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#illustration-sur-la-factorielle-recursive">1.6.5. Illustration sur la factorielle récursive</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#appels-recursifs-environnement-pile-d-execution-pile-et-arbre-des-appels">3.6. Appels récursifs : environnement,  pile d’exécution, pile et arbre des appels</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#environnement">3.6.1. Environnement</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pile-d-execution">3.6.2. Pile d’exécution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pile-des-appels">3.6.3. Pile des appels</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#arbre-des-appels-recursifs">3.6.4. Arbre des appels récursifs</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#illustration-sur-la-factorielle-recursive">3.6.5. Illustration sur la factorielle récursive</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#arbre-des-appels">arbre des appels</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">pile des appels</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#environnements-successifs-pour-factorielle-3">environnements successifs pour factorielle(3)</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#illustration-sur-le-calcul-recursif-de-la-suite-de-fibonacci">1.6.6. Illustration sur le calcul récursif de la suite de Fibonacci.</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#illustration-sur-le-calcul-recursif-de-la-suite-de-fibonacci">3.6.6. Illustration sur le calcul récursif de la suite de Fibonacci.</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">arbre des appels</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#pile-des-appels-recursifs">pile des appels récursifs</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#retour-sur-l-inefficacite-du-calcul-recursif-de-fibonacci">1.6.7. Retour sur l’inefficacité du calcul récursif de Fibonacci</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#retour-sur-l-inefficacite-du-calcul-recursif-de-fibonacci">3.6.7. Retour sur l’inefficacité du calcul récursif de Fibonacci</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#environnements-et-pile-d-execution">environnements et pile d’exécution</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-iterative">1.6.8. Solution itérative</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">1.6.9. Exercice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#solution-iterative">3.6.8. Solution itérative</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id3">3.6.9. Exercice</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-tours-de-hanoi">1.7. Les tours de Hanoï</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#objectif">1.7.1. Objectif</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">1.7.2. Solution récursive</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#les-tours-de-hanoi">3.7. Les tours de Hanoï</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#objectif">3.7.1. Objectif</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">3.7.2. Solution récursive</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#analyse">Analyse</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#codage">Codage</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#observation-inquietante">1.7.3. Observation … inquiétante</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#observation-inquietante">3.7.3. Observation … inquiétante</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">1.8. Conclusion</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ce-qui-a-ete-vu">1.8.1. Ce qui a été vu</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ce-qui-reste-a-voir">1.8.2. Ce qui reste à voir</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#complements">1.8.3. Compléments</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">3.8. Conclusion</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ce-qui-a-ete-vu">3.8.1. Ce qui a été vu</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ce-qui-reste-a-voir">3.8.2. Ce qui reste à voir</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#complements">3.8.3. Compléments</a></li>
 </ul>
 </li>
 </ul>
