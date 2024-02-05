@@ -46,7 +46,7 @@ Vacances en s8, s15-s16
 - Avant la leçon, _travailler_ le chapitre "Un exemple, plein de fonctions"
 - Avant le CM de jeudi : 
   - **attention : nouvelle numérotation des chapitres pour identifier plus facilement les sections et sous sections.** 
-  - lire le chapitre _Récursivité_ jusqu'à _section 2.3 inclus_ 
+  - lire le chapitre _Récursivité_ jusqu'à _section 3.3 inclus_ 
 - Dernière séance de TD sur la feuille 1
 
 
