@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>1. Algo Prog en 2024 &#8212; Algo-Prog 2024</title>
+    <title>Algo Prog en 2024 &#8212; Algo-Prog 2024</title>
   
   
   
@@ -67,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'cm/0-presentation-2024';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="2. Compétences" href="competences.html" />
+    <link rel="next" title="Compétences" href="competences.html" />
     <link rel="prev" title="Bienvenu en Algo-Prog !" href="../bonjour.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -180,19 +180,16 @@ const thebe_selector_output = ".output, .cell_output"
         </ul>
         <p aria-level="2" class="caption" role="heading"><span class="caption-text">Présentation</span></p>
 <ul class="current nav bd-sidenav">
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">1. Algo Prog en 2024</a></li>
-<li class="toctree-l1"><a class="reference internal" href="competences.html">2. Compétences</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">Algo Prog en 2024</a></li>
+<li class="toctree-l1"><a class="reference internal" href="competences.html">Compétences</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Les bases</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapitres</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="1-fonctions.html">1. Fonctions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1b-fonctions-exemple.html">2. Un exemple, plein de fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6-recursivite.html">3. Récursivité</a></li>
 </ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Algorithmique</span></p>
-<ul class="nav bd-sidenav">
-<li class="toctree-l1"><a class="reference internal" href="6-recursivite.html">1. Récursivité</a></li>
-</ul>
-<p aria-level="2" class="caption" role="heading"><span class="caption-text">Annexes</span></p>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Compléments</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="a0-boucles-avancees.html">1. Tableaux et boucles</a></li>
 <li class="toctree-l1"><a class="reference internal" href="a1-booleens.html">2. Annexe : les booléens en python (&gt;3.6)</a></li>
@@ -202,10 +199,12 @@ const thebe_selector_output = ".output, .cell_output"
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../lecons/0-prealable-lecons.html">1. Préalable avec les MTU moodle</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lecons/1-lecon-fonctions.html">2. Leçon 1. Fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecons/2-lecon-fonctions-recursion.html">3. Leçon 2 - Fonctions et récursion (début)</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">TD</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../td/td1.html">1. Feuille 1 : fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../td/td2.html">2. Feuille 5</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">(Intervenants) suivi des séances</span></p>
 <ul class="nav bd-sidenav">
@@ -373,54 +372,54 @@ document.write(`
             </div>
             <nav aria-label="Page">
                 <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algo-prog-version-2024">1.1. Algo-Prog : version 2024</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#version-2024">1.1.1. Version 2024</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#controle-de-connaissances-et-dates-importantes">1.1.2. Contrôle de connaissances et dates importantes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algo-prog-version-2024">Algo-Prog : version 2024</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#version-2024">Version 2024</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#controle-de-connaissances-et-dates-importantes">Contrôle de connaissances et dates importantes</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#structure-de-l-enseignement">1.2. Structure de l’enseignement</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#organisation">1.2.1. Organisation</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cm">1.2.2. CM</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#la-tres-grande-importance-des-cm">1.2.3. La très grande importance des CM</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-seances-de-lecons-nouveau-en-2024">1.2.4. Les séances de “leçons” (nouveau en 2024)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-td-pour-reflechir-et-travailler-en-petit-groupe">1.2.5. Les TD pour réfléchir et travailler en petit groupe</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-tp-pour-maitriser-les-notions-et-acquerir-du-savoir-faire-personnel">1.2.6. Les TP pour maitriser les notions et acquérir du savoir-faire personnel</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-outils-pour-mieux-comprendre-mieux-retenir">1.2.7. Les outils pour mieux comprendre, mieux retenir</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#structure-de-l-enseignement">Structure de l’enseignement</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#organisation">Organisation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cm">CM</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#la-tres-grande-importance-des-cm">La très grande importance des CM</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-seances-de-lecons-nouveau-en-2024">Les séances de “leçons” (nouveau en 2024)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-td-pour-reflechir-et-travailler-en-petit-groupe">Les TD pour réfléchir et travailler en petit groupe</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-tp-pour-maitriser-les-notions-et-acquerir-du-savoir-faire-personnel">Les TP pour maitriser les notions et acquérir du savoir-faire personnel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-outils-pour-mieux-comprendre-mieux-retenir">Les outils pour mieux comprendre, mieux retenir</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#savoirs-savoir-faire-savoir-etre">1.3. Savoirs, savoir faire, savoir être</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#acquis-du-semestre-1-et-prerequis">1.3.1. Acquis du semestre 1 et prérequis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#savoirs-savoir-faire-savoir-etre">Savoirs, savoir faire, savoir être</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#acquis-du-semestre-1-et-prerequis">Acquis du semestre 1 et prérequis</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#programme-detaille-aspects-plutot-algorithmique">1.4. Programme détaillé : aspects plutôt algorithmique</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#programme-detaille-aspects-plus-programmation">1.5. Programme détaillé : aspects plus programmation</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rappels-du-semestre-1">1.5.1. Rappels du semestre 1</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notions-du-semestre-2">1.5.2. Notions du semestre 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#programme-detaille-aspects-plutot-algorithmique">Programme détaillé : aspects plutôt algorithmique</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#programme-detaille-aspects-plus-programmation">Programme détaillé : aspects plus programmation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rappels-du-semestre-1">Rappels du semestre 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notions-du-semestre-2">Notions du semestre 2</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#supports-de-cours">1.6. Supports de cours</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#travailler-en-python">1.7. Travailler en python</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#important-de-quoi-a-t-on-absolument-besoin">1.7.1. IMPORTANT : De quoi a-t-on <em>absolument</em> besoin ?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#en-pratique">1.7.2. En pratique</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#supports-de-cours">Supports de cours</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#travailler-en-python">Travailler en python</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#important-de-quoi-a-t-on-absolument-besoin">IMPORTANT : De quoi a-t-on <em>absolument</em> besoin ?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#en-pratique">En pratique</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#installer-un-environnement-python">Installer un environnement python</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#distributions-python-classiques">Distributions python classiques</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#que-faire-en-cas-de-probleme-avec-sa-configuration-python">1.7.3. Que faire en cas de problème avec sa configuration python ….</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#que-faire-en-cas-de-probleme-avec-sa-configuration-python">Que faire en cas de problème avec sa configuration python ….</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references-bibliographiques">1.8. Références bibliographiques</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algo-et-prog">1.8.1. Algo et prog</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references-bibliographiques">Références bibliographiques</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algo-et-prog">Algo et prog</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ellipses">Ellipses</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hatier">Hatier</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#nathan">Nathan</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#approfondisssement-en-algo">1.8.2. Approfondisssement en algo</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#approfondisssement-en-programmation-python">1.8.3. Approfondisssement en programmation Python</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#approfondisssement-en-algo">Approfondisssement en algo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#approfondisssement-en-programmation-python">Approfondisssement en programmation Python</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">1.9. Conclusion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
 </ul>
             </nav>
         </div>
@@ -433,8 +432,8 @@ document.write(`
                 <article class="bd-article">
                   
   <section class="tex2jax_ignore mathjax_ignore" id="algo-prog-en-2024">
-<span id="ch-intro"></span><h1><span class="section-number">1. </span>Algo Prog en 2024<a class="headerlink" href="#algo-prog-en-2024" title="Permalink to this heading">#</a></h1>
-<p>Mis à jour : Feb 05, 2024, lecture : 11 minutes minimum, PhL.</p>
+<span id="ch-intro"></span><h1>Algo Prog en 2024<a class="headerlink" href="#algo-prog-en-2024" title="Permalink to this heading">#</a></h1>
+<p>Mis à jour : Feb 12, 2024, lecture : 11 minutes minimum, PhL.</p>
 <ul class="simple">
 <li><p>Vous : <strong>L1 math-info</strong></p></li>
 <li><p>Moi : <strong>Philippe Langlois</strong></p></li>
@@ -443,13 +442,13 @@ document.write(`
 <li><p>Où me rencontrer : au bâtiment B, étage 1, à gauche (laboratoire DALI).</p></li>
 </ul>
 <section id="algo-prog-version-2024">
-<h2><span class="section-number">1.1. </span>Algo-Prog : version 2024<a class="headerlink" href="#algo-prog-version-2024" title="Permalink to this heading">#</a></h2>
+<h2>Algo-Prog : version 2024<a class="headerlink" href="#algo-prog-version-2024" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Les <a class="reference external" href="https://phillanglois.github.io/Algo-Prog-2024/bonjour.html">supports du CM</a> régulièrement mis à jour.</p></li>
 <li><p>Les autres ressources sont sur l’espace moodle de cet enseignement.</p></li>
 </ul>
 <section id="version-2024">
-<h3><span class="section-number">1.1.1. </span>Version 2024<a class="headerlink" href="#version-2024" title="Permalink to this heading">#</a></h3>
+<h3>Version 2024<a class="headerlink" href="#version-2024" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>évolutions</strong> vs. 2023-2024</p></li>
 <li><p>12 séances de CM : <strong>2h/semaine</strong></p></li>
@@ -460,7 +459,7 @@ document.write(`
 </ul>
 </section>
 <section id="controle-de-connaissances-et-dates-importantes">
-<h3><span class="section-number">1.1.2. </span>Contrôle de connaissances et dates importantes<a class="headerlink" href="#controle-de-connaissances-et-dates-importantes" title="Permalink to this heading">#</a></h3>
+<h3>Contrôle de connaissances et dates importantes<a class="headerlink" href="#controle-de-connaissances-et-dates-importantes" title="Permalink to this heading">#</a></h3>
 <p>CC : contrôle “dit” continu, CT contrôle “dit” terminal</p>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
@@ -489,9 +488,9 @@ document.write(`
 </section>
 </section>
 <section id="structure-de-l-enseignement">
-<h2><span class="section-number">1.2. </span>Structure de l’enseignement<a class="headerlink" href="#structure-de-l-enseignement" title="Permalink to this heading">#</a></h2>
+<h2>Structure de l’enseignement<a class="headerlink" href="#structure-de-l-enseignement" title="Permalink to this heading">#</a></h2>
 <section id="organisation">
-<h3><span class="section-number">1.2.1. </span>Organisation<a class="headerlink" href="#organisation" title="Permalink to this heading">#</a></h3>
+<h3>Organisation<a class="headerlink" href="#organisation" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>10 chapitres, 12 semaines, 11 séances de CM, 12 séances de TD ou TP</p></li>
 <li><p>“12ème séance” : écrit mi-parcours, TP de fin de semestre</p></li>
@@ -507,7 +506,7 @@ document.write(`
 </ul>
 </section>
 <section id="cm">
-<h3><span class="section-number">1.2.2. </span>CM<a class="headerlink" href="#cm" title="Permalink to this heading">#</a></h3>
+<h3>CM<a class="headerlink" href="#cm" title="Permalink to this heading">#</a></h3>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Le CM est <strong>essentiel</strong> à la compréhension globale de l’UE issue de l’articulation de toutes les notions traitées.</p>
@@ -520,7 +519,7 @@ document.write(`
 </ul>
 </section>
 <section id="la-tres-grande-importance-des-cm">
-<h3><span class="section-number">1.2.3. </span>La très grande importance des CM<a class="headerlink" href="#la-tres-grande-importance-des-cm" title="Permalink to this heading">#</a></h3>
+<h3>La très grande importance des CM<a class="headerlink" href="#la-tres-grande-importance-des-cm" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p><strong>Tout</strong> ce qui est nécessaire à votre compréhension est présenté en cours avec des explications orales adaptées, les répétitions nécessaires des points importants, les mises en garde sur les notions difficiles,  ce qui est essentiel <em>vs.</em> ce qui est plus secondaire, les compétences à acquérir : savoir, savoir faire et savoir être, ce qui est attendu pour le contrôle de connaissance, ce qui relève de l’objectif 10 <em>vs.</em> de l’objectif 20, …</p>
 <ul>
@@ -543,7 +542,7 @@ document.write(`
 </ul>
 </section>
 <section id="les-seances-de-lecons-nouveau-en-2024">
-<h3><span class="section-number">1.2.4. </span>Les séances de “leçons” (nouveau en 2024)<a class="headerlink" href="#les-seances-de-lecons-nouveau-en-2024" title="Permalink to this heading">#</a></h3>
+<h3>Les séances de “leçons” (nouveau en 2024)<a class="headerlink" href="#les-seances-de-lecons-nouveau-en-2024" title="Permalink to this heading">#</a></h3>
 <p><strong>Il est faux de croire</strong> que :</p>
 <blockquote>
 <div><p>l’exercice posé en examen n’a pas été traité en cours ni en td !</p>
@@ -563,7 +562,7 @@ Ensuite, à terme, <em>votre autonomie</em> dans cette démarche d’appropriati
 </ul>
 </section>
 <section id="les-td-pour-reflechir-et-travailler-en-petit-groupe">
-<h3><span class="section-number">1.2.5. </span>Les TD pour réfléchir et travailler en petit groupe<a class="headerlink" href="#les-td-pour-reflechir-et-travailler-en-petit-groupe" title="Permalink to this heading">#</a></h3>
+<h3>Les TD pour réfléchir et travailler en petit groupe<a class="headerlink" href="#les-td-pour-reflechir-et-travailler-en-petit-groupe" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>séance de 1h25</p></li>
 <li><p>par groupe de 2 à <strong>4</strong></p></li>
@@ -594,7 +593,7 @@ Ensuite, à terme, <em>votre autonomie</em> dans cette démarche d’appropriati
 </ul>
 </section>
 <section id="les-tp-pour-maitriser-les-notions-et-acquerir-du-savoir-faire-personnel">
-<h3><span class="section-number">1.2.6. </span>Les TP pour maitriser les notions et acquérir du savoir-faire personnel<a class="headerlink" href="#les-tp-pour-maitriser-les-notions-et-acquerir-du-savoir-faire-personnel" title="Permalink to this heading">#</a></h3>
+<h3>Les TP pour maitriser les notions et acquérir du savoir-faire personnel<a class="headerlink" href="#les-tp-pour-maitriser-les-notions-et-acquerir-du-savoir-faire-personnel" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>1 TP = un <em>notebook jupyter</em></p></li>
 <li><p>codage, expérimentation et approfondissement :</p>
@@ -613,7 +612,7 @@ Ensuite, à terme, <em>votre autonomie</em> dans cette démarche d’appropriati
 </ul>
 </section>
 <section id="les-outils-pour-mieux-comprendre-mieux-retenir">
-<h3><span class="section-number">1.2.7. </span>Les outils pour mieux comprendre, mieux retenir<a class="headerlink" href="#les-outils-pour-mieux-comprendre-mieux-retenir" title="Permalink to this heading">#</a></h3>
+<h3>Les outils pour mieux comprendre, mieux retenir<a class="headerlink" href="#les-outils-pour-mieux-comprendre-mieux-retenir" title="Permalink to this heading">#</a></h3>
 <div class="admonition tip">
 <p class="admonition-title">Tip</p>
 <p><strong>Pratiquer pour maitriser</strong></p>
@@ -641,7 +640,7 @@ Ensuite, à terme, <em>votre autonomie</em> dans cette démarche d’appropriati
 </section>
 </section>
 <section id="savoirs-savoir-faire-savoir-etre">
-<h2><span class="section-number">1.3. </span>Savoirs, savoir faire, savoir être<a class="headerlink" href="#savoirs-savoir-faire-savoir-etre" title="Permalink to this heading">#</a></h2>
+<h2>Savoirs, savoir faire, savoir être<a class="headerlink" href="#savoirs-savoir-faire-savoir-etre" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Des connaissances à connaitre :)</p></li>
 <li><p>Des techniques à savoir mettre en oeuvre</p></li>
@@ -649,7 +648,7 @@ Ensuite, à terme, <em>votre autonomie</em> dans cette démarche d’appropriati
 <li><p>Des ressources à savoir mobiliser</p></li>
 </ul>
 <section id="acquis-du-semestre-1-et-prerequis">
-<h3><span class="section-number">1.3.1. </span>Acquis du semestre 1 et prérequis<a class="headerlink" href="#acquis-du-semestre-1-et-prerequis" title="Permalink to this heading">#</a></h3>
+<h3>Acquis du semestre 1 et prérequis<a class="headerlink" href="#acquis-du-semestre-1-et-prerequis" title="Permalink to this heading">#</a></h3>
 <div class="admonition warning">
 <p class="admonition-title">Warning</p>
 <p>Vérifiez vos acquisitions en début de semestre 2 !</p>
@@ -718,7 +717,7 @@ Ensuite, à terme, <em>votre autonomie</em> dans cette démarche d’appropriati
 </section>
 </section>
 <section id="programme-detaille-aspects-plutot-algorithmique">
-<h2><span class="section-number">1.4. </span>Programme détaillé : aspects plutôt algorithmique<a class="headerlink" href="#programme-detaille-aspects-plutot-algorithmique" title="Permalink to this heading">#</a></h2>
+<h2>Programme détaillé : aspects plutôt algorithmique<a class="headerlink" href="#programme-detaille-aspects-plutot-algorithmique" title="Permalink to this heading">#</a></h2>
 <ul class="simple">
 <li><p>Récursivité :</p>
 <ul>
@@ -772,9 +771,9 @@ Ensuite, à terme, <em>votre autonomie</em> dans cette démarche d’appropriati
 </ul>
 </section>
 <section id="programme-detaille-aspects-plus-programmation">
-<h2><span class="section-number">1.5. </span>Programme détaillé : aspects plus programmation<a class="headerlink" href="#programme-detaille-aspects-plus-programmation" title="Permalink to this heading">#</a></h2>
+<h2>Programme détaillé : aspects plus programmation<a class="headerlink" href="#programme-detaille-aspects-plus-programmation" title="Permalink to this heading">#</a></h2>
 <section id="rappels-du-semestre-1">
-<h3><span class="section-number">1.5.1. </span>Rappels du semestre 1<a class="headerlink" href="#rappels-du-semestre-1" title="Permalink to this heading">#</a></h3>
+<h3>Rappels du semestre 1<a class="headerlink" href="#rappels-du-semestre-1" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Tableaux 1D :</p>
 <ul>
@@ -806,7 +805,7 @@ Ensuite, à terme, <em>votre autonomie</em> dans cette démarche d’appropriati
 </ul>
 </section>
 <section id="notions-du-semestre-2">
-<h3><span class="section-number">1.5.2. </span>Notions du semestre 2<a class="headerlink" href="#notions-du-semestre-2" title="Permalink to this heading">#</a></h3>
+<h3>Notions du semestre 2<a class="headerlink" href="#notions-du-semestre-2" title="Permalink to this heading">#</a></h3>
 <ul>
 <li><p>Fonctions</p>
 <ul class="simple">
@@ -856,7 +855,7 @@ Des ressources présentées en annexe du support de cours pourront être exploit
 </section>
 </section>
 <section id="supports-de-cours">
-<h2><span class="section-number">1.6. </span>Supports de cours<a class="headerlink" href="#supports-de-cours" title="Permalink to this heading">#</a></h2>
+<h2>Supports de cours<a class="headerlink" href="#supports-de-cours" title="Permalink to this heading">#</a></h2>
 <div class="admonition note">
 <p class="admonition-title">Note</p>
 <p>Excepté les supports de cours cette année, toutes les autres ressources sont sur moodle et sont mises à jour <strong>très</strong> régulièrement</p>
@@ -873,7 +872,7 @@ Des ressources présentées en annexe du support de cours pourront être exploit
 </ul>
 </section>
 <section id="travailler-en-python">
-<h2><span class="section-number">1.7. </span>Travailler en python<a class="headerlink" href="#travailler-en-python" title="Permalink to this heading">#</a></h2>
+<h2>Travailler en python<a class="headerlink" href="#travailler-en-python" title="Permalink to this heading">#</a></h2>
 <p>Il est indispensable :</p>
 <ul class="simple">
 <li><p>d’avoir accès à un environnement de programmation python, si possible assez complet,</p></li>
@@ -883,7 +882,7 @@ Des ressources présentées en annexe du support de cours pourront être exploit
 <p>Ensuite, les <span class="xref myst">distributions python</span> sont assez variées, et peuvent différer selon les OS .</p>
 <p>Il est aisé <em>pour chacun</em> de trouver ce qui correspond à ses contraintes matérielles et ses envies.</p>
 <section id="important-de-quoi-a-t-on-absolument-besoin">
-<h3><span class="section-number">1.7.1. </span>IMPORTANT : De quoi a-t-on <em>absolument</em> besoin ?<a class="headerlink" href="#important-de-quoi-a-t-on-absolument-besoin" title="Permalink to this heading">#</a></h3>
+<h3>IMPORTANT : De quoi a-t-on <em>absolument</em> besoin ?<a class="headerlink" href="#important-de-quoi-a-t-on-absolument-besoin" title="Permalink to this heading">#</a></h3>
 <p>Ce qui suit est une liste minimale de composants utiles cette année et les années à venir.
 Elle peut sembler longue mais en pratique, ces composants “arrivent” d’un seul coup avec une distribution – cf. paragraphe suivant.</p>
 <ul class="simple">
@@ -940,7 +939,7 @@ Elle peut sembler longue mais en pratique, ces composants “arrivent” d’un 
 </ul>
 </section>
 <section id="en-pratique">
-<h3><span class="section-number">1.7.2. </span>En pratique<a class="headerlink" href="#en-pratique" title="Permalink to this heading">#</a></h3>
+<h3>En pratique<a class="headerlink" href="#en-pratique" title="Permalink to this heading">#</a></h3>
 <section id="installer-un-environnement-python">
 <h4>Installer un environnement python<a class="headerlink" href="#installer-un-environnement-python" title="Permalink to this heading">#</a></h4>
 <div class="admonition important">
@@ -967,7 +966,7 @@ Le web est bien sûr plein de tutos et autres sites explicatifs …</p>
 </section>
 </section>
 <section id="que-faire-en-cas-de-probleme-avec-sa-configuration-python">
-<h3><span class="section-number">1.7.3. </span>Que faire en cas de problème avec sa configuration python ….<a class="headerlink" href="#que-faire-en-cas-de-probleme-avec-sa-configuration-python" title="Permalink to this heading">#</a></h3>
+<h3>Que faire en cas de problème avec sa configuration python ….<a class="headerlink" href="#que-faire-en-cas-de-probleme-avec-sa-configuration-python" title="Permalink to this heading">#</a></h3>
 <ol class="arabic simple">
 <li><p>En parler en TD : solution sans garantie de succès tant les configurations de vos ordinateurs peuvent être variées</p></li>
 <li><p>Utiliser le forum moodle de cet UE pour solliciter les autres étudiants de votre promotion : il est probable que vous partagiez une configuration commune</p></li>
@@ -976,9 +975,9 @@ Le web est bien sûr plein de tutos et autres sites explicatifs …</p>
 </section>
 </section>
 <section id="references-bibliographiques">
-<h2><span class="section-number">1.8. </span>Références bibliographiques<a class="headerlink" href="#references-bibliographiques" title="Permalink to this heading">#</a></h2>
+<h2>Références bibliographiques<a class="headerlink" href="#references-bibliographiques" title="Permalink to this heading">#</a></h2>
 <section id="algo-et-prog">
-<h3><span class="section-number">1.8.1. </span>Algo et prog<a class="headerlink" href="#algo-et-prog" title="Permalink to this heading">#</a></h3>
+<h3>Algo et prog<a class="headerlink" href="#algo-et-prog" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Informatique pour tous en CPGE avec Python et nouveaux programmes 2013 :</p>
 <ul>
@@ -1045,7 +1044,7 @@ ISBN : 2091574651 (Première),  2091575437  (Terminale)</p>
 </section>
 </section>
 <section id="approfondisssement-en-algo">
-<h3><span class="section-number">1.8.2. </span>Approfondisssement en algo<a class="headerlink" href="#approfondisssement-en-algo" title="Permalink to this heading">#</a></h3>
+<h3>Approfondisssement en algo<a class="headerlink" href="#approfondisssement-en-algo" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>Des petits livres</p>
 <ul>
@@ -1062,7 +1061,7 @@ ISBN : 2091574651 (Première),  2091575437  (Terminale)</p>
 </ul>
 </section>
 <section id="approfondisssement-en-programmation-python">
-<h3><span class="section-number">1.8.3. </span>Approfondisssement en programmation Python<a class="headerlink" href="#approfondisssement-en-programmation-python" title="Permalink to this heading">#</a></h3>
+<h3>Approfondisssement en programmation Python<a class="headerlink" href="#approfondisssement-en-programmation-python" title="Permalink to this heading">#</a></h3>
 <ul class="simple">
 <li><p>poly ou bouquin de Cordeau-Pointal (fr)</p></li>
 <li><p><a class="reference external" href="https://docs.python.org/3/reference/index.html">ref python 3</a>  (eng)</p></li>
@@ -1070,7 +1069,7 @@ ISBN : 2091574651 (Première),  2091575437  (Terminale)</p>
 </section>
 </section>
 <section id="conclusion">
-<h2><span class="section-number">1.9. </span>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this heading">#</a></h2>
+<h2>Conclusion<a class="headerlink" href="#conclusion" title="Permalink to this heading">#</a></h2>
 <p>Bon courage et bon travail ce semestre !</p>
 </section>
 </section>
@@ -1119,7 +1118,7 @@ ISBN : 2091574651 (Première),  2091575437  (Terminale)</p>
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">2. </span>Compétences</p>
+        <p class="prev-next-title">Compétences</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -1139,54 +1138,54 @@ ISBN : 2091574651 (Première),  2091575437  (Terminale)</p>
   </div>
   <nav class="bd-toc-nav page-toc">
     <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algo-prog-version-2024">1.1. Algo-Prog : version 2024</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#version-2024">1.1.1. Version 2024</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#controle-de-connaissances-et-dates-importantes">1.1.2. Contrôle de connaissances et dates importantes</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#algo-prog-version-2024">Algo-Prog : version 2024</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#version-2024">Version 2024</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#controle-de-connaissances-et-dates-importantes">Contrôle de connaissances et dates importantes</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#structure-de-l-enseignement">1.2. Structure de l’enseignement</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#organisation">1.2.1. Organisation</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cm">1.2.2. CM</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#la-tres-grande-importance-des-cm">1.2.3. La très grande importance des CM</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-seances-de-lecons-nouveau-en-2024">1.2.4. Les séances de “leçons” (nouveau en 2024)</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-td-pour-reflechir-et-travailler-en-petit-groupe">1.2.5. Les TD pour réfléchir et travailler en petit groupe</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-tp-pour-maitriser-les-notions-et-acquerir-du-savoir-faire-personnel">1.2.6. Les TP pour maitriser les notions et acquérir du savoir-faire personnel</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-outils-pour-mieux-comprendre-mieux-retenir">1.2.7. Les outils pour mieux comprendre, mieux retenir</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#structure-de-l-enseignement">Structure de l’enseignement</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#organisation">Organisation</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#cm">CM</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#la-tres-grande-importance-des-cm">La très grande importance des CM</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-seances-de-lecons-nouveau-en-2024">Les séances de “leçons” (nouveau en 2024)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-td-pour-reflechir-et-travailler-en-petit-groupe">Les TD pour réfléchir et travailler en petit groupe</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-tp-pour-maitriser-les-notions-et-acquerir-du-savoir-faire-personnel">Les TP pour maitriser les notions et acquérir du savoir-faire personnel</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-outils-pour-mieux-comprendre-mieux-retenir">Les outils pour mieux comprendre, mieux retenir</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#savoirs-savoir-faire-savoir-etre">1.3. Savoirs, savoir faire, savoir être</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#acquis-du-semestre-1-et-prerequis">1.3.1. Acquis du semestre 1 et prérequis</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#savoirs-savoir-faire-savoir-etre">Savoirs, savoir faire, savoir être</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#acquis-du-semestre-1-et-prerequis">Acquis du semestre 1 et prérequis</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#programme-detaille-aspects-plutot-algorithmique">1.4. Programme détaillé : aspects plutôt algorithmique</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#programme-detaille-aspects-plus-programmation">1.5. Programme détaillé : aspects plus programmation</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rappels-du-semestre-1">1.5.1. Rappels du semestre 1</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notions-du-semestre-2">1.5.2. Notions du semestre 2</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#programme-detaille-aspects-plutot-algorithmique">Programme détaillé : aspects plutôt algorithmique</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#programme-detaille-aspects-plus-programmation">Programme détaillé : aspects plus programmation</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#rappels-du-semestre-1">Rappels du semestre 1</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#notions-du-semestre-2">Notions du semestre 2</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#supports-de-cours">1.6. Supports de cours</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#travailler-en-python">1.7. Travailler en python</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#important-de-quoi-a-t-on-absolument-besoin">1.7.1. IMPORTANT : De quoi a-t-on <em>absolument</em> besoin ?</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#en-pratique">1.7.2. En pratique</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#supports-de-cours">Supports de cours</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#travailler-en-python">Travailler en python</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#important-de-quoi-a-t-on-absolument-besoin">IMPORTANT : De quoi a-t-on <em>absolument</em> besoin ?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#en-pratique">En pratique</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#installer-un-environnement-python">Installer un environnement python</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#distributions-python-classiques">Distributions python classiques</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#que-faire-en-cas-de-probleme-avec-sa-configuration-python">1.7.3. Que faire en cas de problème avec sa configuration python ….</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#que-faire-en-cas-de-probleme-avec-sa-configuration-python">Que faire en cas de problème avec sa configuration python ….</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references-bibliographiques">1.8. Références bibliographiques</a><ul class="nav section-nav flex-column">
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algo-et-prog">1.8.1. Algo et prog</a><ul class="nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#references-bibliographiques">Références bibliographiques</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algo-et-prog">Algo et prog</a><ul class="nav section-nav flex-column">
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#ellipses">Ellipses</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#hatier">Hatier</a></li>
 <li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#nathan">Nathan</a></li>
 </ul>
 </li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#approfondisssement-en-algo">1.8.2. Approfondisssement en algo</a></li>
-<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#approfondisssement-en-programmation-python">1.8.3. Approfondisssement en programmation Python</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#approfondisssement-en-algo">Approfondisssement en algo</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#approfondisssement-en-programmation-python">Approfondisssement en programmation Python</a></li>
 </ul>
 </li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">1.9. Conclusion</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#conclusion">Conclusion</a></li>
 </ul>
   </nav></div>
 

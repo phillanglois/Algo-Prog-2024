@@ -49,8 +49,13 @@ Vacances en s8, s15-s16
   - lire le chapitre _Récursivité_ jusqu'à _section 3.3 inclus_ 
 - Dernière séance de TD sur la feuille 1
 
-
 ## Semaine 7
+
+- Leçon sur le début du chapitre _Récursivité_
+- Avant le CM de jeudi : lire le chapitre _Récursivité_ en entier
+- TD
+  - Feuille 1 : finir _tous_ les exercices de votre Objectif
+  - Feuille 2 :  _Récursivité_ 
 
 ## _Semaine 8_
 
