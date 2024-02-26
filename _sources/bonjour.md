@@ -35,7 +35,7 @@ Vacances en s8, s15-s16
 
 ## Semaine 5
 
-- Avant la leçon : lire la section [Préalable aux leçons](https://phillanglois.github.io/Algo-Prog-2024/lecons/0-prealable-lecons.html)
+- Avant la leçon 1 : lire la section [Préalable aux leçons](https://phillanglois.github.io/Algo-Prog-2024/lecons/0-prealable-lecons.html)
 - Avant le CM de jeudi : 
   - préparer les questions sur le chapitre _Fonctions_
   - lire le chapitre _Récursivité_ jusqu'à _section 2.3 inclus_ 
@@ -43,7 +43,7 @@ Vacances en s8, s15-s16
 
 ## Semaine 6
 
-- Avant la leçon, _travailler_ le chapitre "Un exemple, plein de fonctions"
+- Avant la leçon 2, _travailler_ le chapitre "Un exemple, plein de fonctions"
 - Avant le CM de jeudi : 
   - **attention : nouvelle numérotation des chapitres pour identifier plus facilement les sections et sous sections.** 
   - lire le chapitre _Récursivité_ jusqu'à _section 3.3 inclus_ 
@@ -51,7 +51,7 @@ Vacances en s8, s15-s16
 
 ## Semaine 7
 
-- Leçon sur le début du chapitre _Récursivité_
+- Leçon 3 sur le début du chapitre _Récursivité_
 - Avant le CM de jeudi : lire le chapitre _Récursivité_ en entier
 - TD
   - Feuille 1 : finir _tous_ les exercices de votre Objectif
@@ -62,6 +62,10 @@ Vacances en s8, s15-s16
 - Vacances d'hiver 
 
 ## Semaine 9
+
+- Leçon 4 sur le chapitre _Récursivité_
+- Avant le CM de jeudi : lire le chapitre _Rechercher_ jusqu'à _section 3.3 inclus_
+- TD :  Feuille 2 _Récursivité_ selon vos objectifs 
 
 ## Semaine 10
 

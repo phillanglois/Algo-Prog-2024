@@ -67,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'cm/6-recursivite';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="1. Tableaux et boucles" href="a0-boucles-avancees.html" />
+    <link rel="next" title="4. Rechercher" href="8-rechercher.html" />
     <link rel="prev" title="2. Un exemple, plein de fonctions" href="1b-fonctions-exemple.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -188,6 +188,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="1-fonctions.html">1. Fonctions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="1b-fonctions-exemple.html">2. Un exemple, plein de fonctions</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">3. Récursivité</a></li>
+<li class="toctree-l1"><a class="reference internal" href="8-rechercher.html">4. Rechercher</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Compléments</span></p>
 <ul class="nav bd-sidenav">
@@ -200,11 +201,12 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../lecons/0-prealable-lecons.html">1. Préalable avec les MTU moodle</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lecons/1-lecon-fonctions.html">2. Leçon 1. Fonctions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lecons/2-lecon-fonctions-recursion.html">3. Leçon 2 - Fonctions et récursion (début)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecons/3-lecon-recursion.html">4. Leçon 3 - Récursivité (début)</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">TD</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../td/td1.html">1. Feuille 1 : fonctions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../td/td2.html">2. Feuille 5</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../td/td2.html">2. Feuille 2. Récursivité</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">(Intervenants) suivi des séances</span></p>
 <ul class="nav bd-sidenav">
@@ -491,7 +493,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="recursivite">
 <span id="ch-recursivite"></span><h1><span class="section-number">3. </span>Récursivité<a class="headerlink" href="#recursivite" title="Permalink to this heading">#</a></h1>
-<p>Mis à jour : Feb 12, 2024, lecture : 16
+<p>Mis à jour : Feb 26, 2024, lecture : 16
 minutes minimum, PhL.</p>
 <section id="definitions-et-premiers-exemples">
 <h2><span class="section-number">3.1. </span>Définitions et premiers exemples<a class="headerlink" href="#definitions-et-premiers-exemples" title="Permalink to this heading">#</a></h2>
@@ -508,7 +510,7 @@ minutes minimum, PhL.</p>
 <li><p>somme des <span class="math notranslate nohighlight">\(n\)</span> premiers entiers : <span class="math notranslate nohighlight">\(s(n) = n + s(n-1)\)</span></p></li>
 <li><p>suite de Fibonaci : <span class="math notranslate nohighlight">\(f(n+1) = f(n) + f(n-1)\)</span></p></li>
 </ul>
-<img alt="&lt;https://commons.wikimedia.org/w/index.php?curid=11104228&gt;" class="align-center" src="cm/fig/FibonacciRabbit.png" />
+<img alt="&lt;https://commons.wikimedia.org/w/index.php?curid=11104228&gt;" class="align-center" src="../_images/FibonacciRabbit.png" />
 <ul class="simple">
 <li><p>suites récurrentes : <span class="math notranslate nohighlight">\(u_n = f(u_{n-1})\)</span> ou <span class="math notranslate nohighlight">\(u_n = f(u_{n-1},u_{n-2},\dots)\)</span></p></li>
 </ul>
@@ -1037,14 +1039,15 @@ Réponse :<div class="sd-summary-down docutils">
 </section>
 <section id="une-seconde-recursion-rapide-beaucoup-plus-rapide">
 <h3><span class="section-number">3.4.2. </span>Une seconde récursion rapide, beaucoup plus rapide<a class="headerlink" href="#une-seconde-recursion-rapide-beaucoup-plus-rapide" title="Permalink to this heading">#</a></h3>
-<p>Autre écriture de <span class="math notranslate nohighlight">\(x^n\)</span> avec des airs de dichotomie :)</p>
+<p>On a déjà annoncé ce calcul comme exemple de l’approche <em>diviser pour régner</em>.
+Le cacul rapide de l’exponentiation entière s’appuie sur l’écriture suivante de <span class="math notranslate nohighlight">\(x^n\)</span> qui a des airs de dichotomie :)</p>
 <ul class="simple">
 <li><p><span class="math notranslate nohighlight">\(x^{2p} = (x^p)^2\)</span> – c’est simple et récursif !</p></li>
 <li><p><span class="math notranslate nohighlight">\(x^{2p+1} = x \times (x^p)^2\)</span> –  c’est simple et aussi récursif, non ?</p></li>
 </ul>
 <p>On passe de la puissance <span class="math notranslate nohighlight">\(2p\)</span> ou <span class="math notranslate nohighlight">\(2p+1\)</span> à la puissance <span class="math notranslate nohighlight">\(p\)</span>.
-On divise donc successivement par 2 les tailles des calculs à effectuer.
-<em>L’exponentiation rapide</em> est un exemple de résolution selon une analyse <em>diviser pour régner</em>.</p>
+On <em>divise</em> donc successivement par 2 les tailles des calculs à effectuer.
+<em>L’exponentiation rapide</em> est bien un exemple de résolution selon une analyse <em>diviser</em> pour régner.</p>
 <p>On a bien sûr besoin de la terminaison de cette écriture récursive :
 <span class="math notranslate nohighlight">\(x^0 = 1\)</span>.</p>
 <div class="cell docutils container">
@@ -1213,10 +1216,10 @@ Ce module complète (et utilise) le module <em>time</em> déjà décrit dans le
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>738 ns ± 4.98 ns per loop (mean ± std. dev. of 7 runs, 1,000,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>713 ns ± 3.09 ns per loop (mean ± std. dev. of 7 runs, 1,000,000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>380 ns ± 2.35 ns per loop (mean ± std. dev. of 7 runs, 1,000,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>361 ns ± 0.505 ns per loop (mean ± std. dev. of 7 runs, 1,000,000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1231,8 +1234,8 @@ Ce module complète (et utilise) le module <em>time</em> déjà décrit dans le
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>736 ns ± 10.1 ns per loop (mean ± std. dev. of 7 runs, 100 loops each)
-386 ns ± 11.4 ns per loop (mean ± std. dev. of 7 runs, 100 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>707 ns ± 5.77 ns per loop (mean ± std. dev. of 7 runs, 100 loops each)
+365 ns ± 10.3 ns per loop (mean ± std. dev. of 7 runs, 100 loops each)
 </pre></div>
 </div>
 </div>
@@ -1246,10 +1249,10 @@ Ce module complète (et utilise) le module <em>time</em> déjà décrit dans le
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>735 ns ± 3.94 ns per loop (mean ± std. dev. of 5 runs, 1,000,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>716 ns ± 1.75 ns per loop (mean ± std. dev. of 5 runs, 1,000,000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>378 ns ± 1.94 ns per loop (mean ± std. dev. of 5 runs, 1,000,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>368 ns ± 0.687 ns per loop (mean ± std. dev. of 5 runs, 1,000,000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1349,10 +1352,10 @@ Réponse<div class="sd-summary-down docutils">
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>68 µs ± 310 ns per loop (mean ± std. dev. of 5 runs, 10,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>66.3 µs ± 756 ns per loop (mean ± std. dev. of 5 runs, 10,000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>317 ns ± 0.857 ns per loop (mean ± std. dev. of 5 runs, 1,000,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>309 ns ± 0.554 ns per loop (mean ± std. dev. of 5 runs, 1,000,000 loops each)
 </pre></div>
 </div>
 </div>
@@ -2032,6 +2035,7 @@ Ca vous fait penser à quelque chose :) ?
 <ol class="arabic simple">
 <li><p>Version récursive d’autres algorithmes importants</p>
 <ul class="simple">
+<li><p>algorithmes de recherche : version récursive de différentes recherches de complexité linéaire</p></li>
 <li><p>algorithmes de tri : tri fusion, tri rapide : voir chapitre “Trier”</p></li>
 </ul>
 </li>
@@ -2116,11 +2120,11 @@ Ca vous fait penser à quelque chose :) ?
       </div>
     </a>
     <a class="right-next"
-       href="a0-boucles-avancees.html"
+       href="8-rechercher.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1. </span>Tableaux et boucles</p>
+        <p class="prev-next-title"><span class="section-number">4. </span>Rechercher</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
