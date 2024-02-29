@@ -19,5 +19,22 @@ Activités.
 - CM : chapitre "fonctions par un exemple"
 - TD : feedback leçon 1, suite exos feuille 1 fonctions
 
-## semaine 6
+## semaine 6 
+
+- CM : récursivité : début (-> Fibonacci])
+- groupe TD3 : feedbacks leçon 2
+
+## semaine 7
+
+- CM : récursivité : fin ([pile des appels -> )
+- groupe TD3 (Vincent)
+
+## semaine 8
+
+Vacances hiver
+
+## semaine 9
+
+- CM : rechercher
+- groupe TD3 : 1 seul étudiant a commencé la feuille 2 (récursivité)
 
