@@ -189,6 +189,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="1b-fonctions-exemple.html">2. Un exemple, plein de fonctions</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">3. Récursivité</a></li>
 <li class="toctree-l1"><a class="reference internal" href="8-rechercher.html">4. Rechercher</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10-trier.html">5. Trier</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Compléments</span></p>
 <ul class="nav bd-sidenav">
@@ -202,6 +203,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../lecons/1-lecon-fonctions.html">2. Leçon 1. Fonctions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lecons/2-lecon-fonctions-recursion.html">3. Leçon 2 - Fonctions et récursion (début)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lecons/3-lecon-recursion.html">4. Leçon 3 - Récursivité (début)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecons/4-lecon-recursion-2.html">5. Leçon 4 - Récursivité</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">TD</span></p>
 <ul class="nav bd-sidenav">
@@ -493,7 +495,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="recursivite">
 <span id="ch-recursivite"></span><h1><span class="section-number">3. </span>Récursivité<a class="headerlink" href="#recursivite" title="Permalink to this heading">#</a></h1>
-<p>Mis à jour : Feb 26, 2024, lecture : 16
+<p>Mis à jour : Mar 03, 2024, lecture : 16
 minutes minimum, PhL.</p>
 <section id="definitions-et-premiers-exemples">
 <h2><span class="section-number">3.1. </span>Définitions et premiers exemples<a class="headerlink" href="#definitions-et-premiers-exemples" title="Permalink to this heading">#</a></h2>
@@ -1216,10 +1218,10 @@ Ce module complète (et utilise) le module <em>time</em> déjà décrit dans le
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>713 ns ± 3.09 ns per loop (mean ± std. dev. of 7 runs, 1,000,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>714 ns ± 1.59 ns per loop (mean ± std. dev. of 7 runs, 1,000,000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>361 ns ± 0.505 ns per loop (mean ± std. dev. of 7 runs, 1,000,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>371 ns ± 0.997 ns per loop (mean ± std. dev. of 7 runs, 1,000,000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1234,8 +1236,8 @@ Ce module complète (et utilise) le module <em>time</em> déjà décrit dans le
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>707 ns ± 5.77 ns per loop (mean ± std. dev. of 7 runs, 100 loops each)
-365 ns ± 10.3 ns per loop (mean ± std. dev. of 7 runs, 100 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>702 ns ± 10.7 ns per loop (mean ± std. dev. of 7 runs, 100 loops each)
+381 ns ± 25.5 ns per loop (mean ± std. dev. of 7 runs, 100 loops each)
 </pre></div>
 </div>
 </div>
@@ -1249,10 +1251,10 @@ Ce module complète (et utilise) le module <em>time</em> déjà décrit dans le
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>716 ns ± 1.75 ns per loop (mean ± std. dev. of 5 runs, 1,000,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>709 ns ± 1.93 ns per loop (mean ± std. dev. of 5 runs, 1,000,000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>368 ns ± 0.687 ns per loop (mean ± std. dev. of 5 runs, 1,000,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>370 ns ± 0.644 ns per loop (mean ± std. dev. of 5 runs, 1,000,000 loops each)
 </pre></div>
 </div>
 </div>
@@ -1352,10 +1354,10 @@ Réponse<div class="sd-summary-down docutils">
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>66.3 µs ± 756 ns per loop (mean ± std. dev. of 5 runs, 10,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>65.8 µs ± 227 ns per loop (mean ± std. dev. of 5 runs, 10,000 loops each)
 </pre></div>
 </div>
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>309 ns ± 0.554 ns per loop (mean ± std. dev. of 5 runs, 1,000,000 loops each)
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>311 ns ± 2.04 ns per loop (mean ± std. dev. of 5 runs, 1,000,000 loops each)
 </pre></div>
 </div>
 </div>

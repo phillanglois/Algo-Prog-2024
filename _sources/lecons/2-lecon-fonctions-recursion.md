@@ -1,4 +1,4 @@
-# Leçon 2 - Fonctions et récursion (début)
+# Leçon 2 : fonctions et récursion (début)
 
 ## Dépot attendu
 

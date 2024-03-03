@@ -37,4 +37,9 @@ Vacances hiver
 
 - CM : rechercher
 - groupe TD3 : 1 seul étudiant a commencé la feuille 2 (récursivité)
+- groupe TD2 : idem ...
+  
+## semaine 10
+
+
 

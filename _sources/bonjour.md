@@ -11,9 +11,12 @@ Ceci est le premier point d'entrée de l'UE Algo-Prog en complément de l'[espac
 
 :::{important} Rappels des dates importantes
 
+CC1 (s12): 22 mars 2024, 14 heures (durée à venir)  : TP1 individuel sur machine, en temps limité
+
 Démarrages : CM en semaine s3, leçons en s5, TD en s4.
 
 Vacances en s8, s15-s16
+
 :::
 
 :::{note}
@@ -64,14 +67,24 @@ Vacances en s8, s15-s16
 ## Semaine 9
 
 - Leçon 4 sur le chapitre _Récursivité_
-- Avant le CM de jeudi : lire le chapitre _Rechercher_ jusqu'à _section 3.3 inclus_
+- Avant le CM de jeudi : lire le chapitre _Rechercher_ jusqu'à la _section 3.3 inclus_
 - TD :  Feuille 2 _Récursivité_ selon vos objectifs 
 
 ## Semaine 10
 
+- Leçon 5 sur les chapitres _Récursivité_ et _Rechercher_
+- Avant le CM de jeudi : lire le chapitre _Trier_ jusqu'à la _section 4.4 inclus_ et en sautant les sections :
+    - 4.1.2, 4.1.3 (complexités)
+    - 4.2.5 (vers la complexité du tri insertion)
+    - 4.3.8 (vers la complexité du tri rapide)
+    - 4.4.6 (vers la complexité du tri fusion)
+- TD :  Feuille 2 _Récursivité_ selon vos objectifs 
+
 ## Semaine 11
 
 ## Semaine 12
+
+- **CC1 du vendredi 22 mars 2024, 14h.**
 
 ## Semaine 13
 

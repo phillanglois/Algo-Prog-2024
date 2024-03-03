@@ -1,4 +1,4 @@
-# Leçon 3 - Récursivité (début)
+# Leçon 3 : récursivité (début)
 
 Début du chapitre = jusqu'à section 3.5 _inclus_
 
