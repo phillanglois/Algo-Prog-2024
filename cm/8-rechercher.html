@@ -787,21 +787,10 @@ Attention à l’ordre des tests dans la condition de la ligne 4</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
-<span class="n">v</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="s2">&quot;dans &quot;</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="s2">&quot;?&quot;</span><span class="p">,</span> <span class="n">rech_seq_for_ecourtee</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)))</span>
-<span class="n">v</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="s2">&quot;dans &quot;</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="s2">&quot;?&quot;</span><span class="p">,</span> <span class="n">rech_seq_for_ecourtee</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)))</span>
-<span class="n">v</span> <span class="o">=</span> <span class="mi">7</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="s2">&quot;dans &quot;</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="s2">&quot;?&quot;</span><span class="p">,</span> <span class="n">rech_seq_for_ecourtee</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0, 1, 1, 5, 2, 10, 4, 4, 9, 3]
-1 dans  [0, 1, 1, 5, 2, 10, 4, 4, 9, 3] ? True
-3 dans  [0, 1, 1, 5, 2, 10, 4, 4, 9, 3] ? True
-7 dans  [0, 1, 1, 5, 2, 10, 4, 4, 9, 3] ? False
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#  t = [0, 1, 1, 5, 2, 10, 4, 4, 9, 3]</span>
+<span class="k">assert</span> <span class="n">rech_seq_for_ecourtee</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">==</span> <span class="kc">True</span>
+<span class="k">assert</span> <span class="n">rech_seq_for_ecourtee</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">==</span> <span class="kc">True</span>
+<span class="k">assert</span> <span class="n">rech_seq_for_ecourtee</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">==</span> <span class="kc">False</span>
 </pre></div>
 </div>
 </div>
@@ -862,7 +851,7 @@ Attention à l’ordre des tests dans la condition de la ligne 4</p>
     <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">val</span><span class="p">:</span>
             <span class="k">return</span> <span class="kc">True</span>
-        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="n">dim</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="n">dim</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span> <span class="c1"># le dernier élément de tab a été atteint et ne vaut pas val</span>
             <span class="k">return</span> <span class="kc">False</span>
         <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span> 
 </pre></div>
@@ -879,35 +868,10 @@ Attention à l’ordre des tests dans la condition de la ligne 4</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">v</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="s2">&quot;dans &quot;</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="s2">&quot;?&quot;</span><span class="p">,</span> <span class="n">rech_seq_while_2</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)))</span>
-<span class="n">v</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="s2">&quot;dans &quot;</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="s2">&quot;?&quot;</span><span class="p">,</span> <span class="n">rech_seq_while_2</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)))</span>
-<span class="n">v</span> <span class="o">=</span> <span class="mi">7</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="s2">&quot;dans &quot;</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="s2">&quot;?&quot;</span><span class="p">,</span> <span class="n">rech_seq_while_2</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 dans  [0, 1, 1, 5, 2, 10, 4, 4, 9, 3] ? True
-3 dans  [0, 1, 1, 5, 2, 10, 4, 4, 9, 3] ? True
-</pre></div>
-</div>
-<div class="output traceback highlight-ipythontb notranslate"><div class="highlight"><pre><span></span><span class="gt">---------------------------------------------------------------------------</span>
-<span class="ne">IndexError</span><span class="g g-Whitespace">                                </span>Traceback (most recent call last)
-<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">18</span><span class="p">],</span> <span class="n">line</span> <span class="mi">6</span>
-<span class="g g-Whitespace">      </span><span class="mi">4</span> <span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="s2">&quot;dans &quot;</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="s2">&quot;?&quot;</span><span class="p">,</span> <span class="n">rech_seq_while_2</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)))</span>
-<span class="g g-Whitespace">      </span><span class="mi">5</span> <span class="n">v</span> <span class="o">=</span> <span class="mi">7</span>
-<span class="ne">----&gt; </span><span class="mi">6</span> <span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="s2">&quot;dans &quot;</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="s2">&quot;?&quot;</span><span class="p">,</span> <span class="n">rech_seq_while_2</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)))</span>
-
-<span class="nn">Cell In[16], line 14,</span> in <span class="ni">rech_seq_while_2</span><span class="nt">(val, tab, dim)</span>
-<span class="g g-Whitespace">     </span><span class="mi">12</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="g g-Whitespace">     </span><span class="mi">13</span> <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
-<span class="ne">---&gt; </span><span class="mi">14</span>     <span class="k">if</span> <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">val</span><span class="p">:</span>
-<span class="g g-Whitespace">     </span><span class="mi">15</span>         <span class="k">return</span> <span class="kc">True</span>
-<span class="g g-Whitespace">     </span><span class="mi">16</span>     <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="n">dim</span><span class="p">:</span>
-
-<span class="ne">IndexError</span>: list index out of range
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#  t = [0, 1, 1, 5, 2, 10, 4, 4, 9, 3]</span>
+<span class="k">assert</span> <span class="n">rech_seq_while_2</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">==</span> <span class="kc">True</span>
+<span class="k">assert</span> <span class="n">rech_seq_while_2</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">==</span> <span class="kc">True</span>
+<span class="k">assert</span> <span class="n">rech_seq_while_2</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">==</span> <span class="kc">False</span>
 </pre></div>
 </div>
 </div>
@@ -1014,6 +978,20 @@ On va introduire <code class="docutils literal notranslate"><span class="pre">g<
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 dans  [0, 1, 1, 5, 2, 10, 4, 4, 9, 3] ? True
 3 dans  [0, 1, 1, 5, 2, 10, 4, 4, 9, 3] ? True
 7 dans  [0, 1, 1, 5, 2, 10, 4, 4, 9, 3] ? False
+</pre></div>
+</div>
+</div>
+</div>
+<p>Reprenons les bonnes habitudes avec les test unitaires déjà utilisés pour les versions itératives.
+On ajoute dès maintenant le cas du tableau vide.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#  t = [0, 1, 1, 5, 2, 10, 4, 4, 9, 3]</span>
+<span class="k">assert</span> <span class="n">rech_seq_rec</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">==</span> <span class="kc">True</span>
+<span class="k">assert</span> <span class="n">rech_seq_rec</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">==</span> <span class="kc">True</span>
+<span class="k">assert</span> <span class="n">rech_seq_rec</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">==</span> <span class="kc">False</span>
+<span class="c1"># tableau vide</span>
+<span class="k">assert</span> <span class="n">rech_seq_rec</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="p">[],</span> <span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span>
 </pre></div>
 </div>
 </div>
@@ -1167,6 +1145,23 @@ Un algorithme <em>diviser pour régner</em> où chaque division réduit la reche
 </div>
 </div>
 </div>
+<p><strong>Tests unitaires.</strong></p>
+<ul class="simple">
+<li><p>Le tableau <code class="docutils literal notranslate"><span class="pre">t</span></code> est maintenant trié. On peut donc reprendre les tests  utilisé jusque-là.</p></li>
+<li><p>De même, le tableau vide est trié.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#  t = [0, 1, 1, 5, 2, 10, 4, 4, 9, 3]</span>
+<span class="k">assert</span> <span class="n">dichotomie_iterative</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">==</span> <span class="kc">True</span>
+<span class="k">assert</span> <span class="n">dichotomie_iterative</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">==</span> <span class="kc">True</span>
+<span class="k">assert</span> <span class="n">dichotomie_iterative</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">==</span> <span class="kc">False</span>
+<span class="c1"># tableau vide</span>
+<span class="k">assert</span> <span class="n">dichotomie_iterative</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="p">[],</span> <span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</div>
+</div>
 </section>
 <section id="id2">
 <h3><span class="section-number">4.3.3. </span>Algorithme récursif<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
@@ -1235,19 +1230,12 @@ Un algorithme <em>diviser pour régner</em> où chaque division réduit la reche
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">v</span> <span class="o">=</span> <span class="mi">1</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="s2">&quot;dans &quot;</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="s2">&quot;?&quot;</span><span class="p">,</span> <span class="n">dichotomie_recursive</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)))</span>
-<span class="n">v</span> <span class="o">=</span> <span class="mi">3</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="s2">&quot;dans &quot;</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="s2">&quot;?&quot;</span><span class="p">,</span> <span class="n">dichotomie_recursive</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)))</span>
-<span class="n">v</span> <span class="o">=</span> <span class="mi">7</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="s2">&quot;dans &quot;</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="s2">&quot;?&quot;</span><span class="p">,</span> <span class="n">dichotomie_recursive</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 dans  [0, 1, 1, 2, 3, 4, 4, 5, 9, 10] ? True
-3 dans  [0, 1, 1, 2, 3, 4, 4, 5, 9, 10] ? True
-7 dans  [0, 1, 1, 2, 3, 4, 4, 5, 9, 10] ? False
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#  t = [0, 1, 1, 5, 2, 10, 4, 4, 9, 3]</span>
+<span class="k">assert</span> <span class="n">dichotomie_recursive</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">==</span> <span class="kc">True</span>
+<span class="k">assert</span> <span class="n">dichotomie_recursive</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">==</span> <span class="kc">True</span>
+<span class="k">assert</span> <span class="n">dichotomie_recursive</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">==</span> <span class="kc">False</span>
+<span class="c1"># tableau vide</span>
+<span class="k">assert</span> <span class="n">dichotomie_recursive</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="p">[],</span> <span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span>
 </pre></div>
 </div>
 </div>
@@ -1405,25 +1393,12 @@ Cette ré-écriture est un changement de variable “classique”.</p>
 </div>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">v</span> <span class="o">=</span> <span class="mi">0</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="s2">&quot;dans &quot;</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="s2">&quot;?&quot;</span><span class="p">,</span> <span class="n">rech_seq_while_variant</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)))</span>
-<span class="n">v</span> <span class="o">=</span> <span class="mi">7</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="s2">&quot;dans &quot;</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="s2">&quot;?&quot;</span><span class="p">,</span> <span class="n">rech_seq_while_variant</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)))</span>
-<span class="n">v</span> <span class="o">=</span> <span class="mi">10</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="s2">&quot;dans &quot;</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="s2">&quot;?&quot;</span><span class="p">,</span> <span class="n">rech_seq_while_variant</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)))</span>
-
-<span class="c1"># cas du tableau vide</span>
-<span class="n">v</span> <span class="o">=</span> <span class="mi">1</span> <span class="c1"># par exemple</span>
-<span class="n">t_vide</span> <span class="o">=</span> <span class="p">[]</span>
-<span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="s2">&quot;dans &quot;</span><span class="p">,</span> <span class="n">t_vide</span><span class="p">,</span> <span class="s2">&quot;?&quot;</span><span class="p">,</span> <span class="n">rech_seq_while_variant</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">t_vide</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t_vide</span><span class="p">)))</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0 dans  [0, 1, 1, 2, 3, 4, 4, 5, 9, 10] ? True
-7 dans  [0, 1, 1, 2, 3, 4, 4, 5, 9, 10] ? False
-10 dans  [0, 1, 1, 2, 3, 4, 4, 5, 9, 10] ? True
-1 dans  [] ? False
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#  t = [0, 1, 1, 5, 2, 10, 4, 4, 9, 3]</span>
+<span class="k">assert</span> <span class="n">rech_seq_while_variant</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">==</span> <span class="kc">True</span>
+<span class="k">assert</span> <span class="n">rech_seq_while_variant</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">==</span> <span class="kc">True</span>
+<span class="k">assert</span> <span class="n">rech_seq_while_variant</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">==</span> <span class="kc">False</span>
+<span class="c1"># tableau vide</span>
+<span class="k">assert</span> <span class="n">rech_seq_while_variant</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="p">[],</span> <span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span>
 </pre></div>
 </div>
 </div>
