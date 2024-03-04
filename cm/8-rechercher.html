@@ -200,15 +200,15 @@ const thebe_selector_output = ".output, .cell_output"
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Leçons</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../lecons/0-prealable-lecons.html">1. Préalable avec les MTU moodle</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lecons/1-lecon-fonctions.html">2. Leçon 1. Fonctions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lecons/2-lecon-fonctions-recursion.html">3. Leçon 2 - Fonctions et récursion (début)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lecons/3-lecon-recursion.html">4. Leçon 3 - Récursivité (début)</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../lecons/4-lecon-recursion-2.html">5. Leçon 4 - Récursivité</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecons/1-lecon-fonctions.html">2. Leçon 1 : fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecons/2-lecon-fonctions-recursion.html">3. Leçon 2 : fonctions et récursion (début)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecons/3-lecon-recursion.html">4. Leçon 3 : récursivité (début)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecons/4-lecon-recursion-2.html">5. Leçon 4 : récursivité</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">TD</span></p>
 <ul class="nav bd-sidenav">
 <li class="toctree-l1"><a class="reference internal" href="../td/td1.html">1. Feuille 1 : fonctions</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../td/td2.html">2. Feuille 2. Récursivité</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../td/td2.html">2. Feuille 2 : récursivité</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">(Intervenants) suivi des séances</span></p>
 <ul class="nav bd-sidenav">
@@ -456,7 +456,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="rechercher">
 <span id="ch-rechercher"></span><h1><span class="section-number">4. </span>Rechercher<a class="headerlink" href="#rechercher" title="Permalink to this heading">#</a></h1>
-<p>Mis à jour : Mar 03, 2024, lecture : 17
+<p>Mis à jour : Mar 04, 2024, lecture : 17
 minutes minimum, PhL.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -816,12 +816,14 @@ Attention à l’ordre des tests dans la condition de la ligne 4</p>
 <li><p>Les versions avec la boucle <code class="docutils literal notranslate"><span class="pre">for</span></code> avec la borne <code class="docutils literal notranslate"><span class="pre">len(t)</span></code> s’adaptent “automatiquement” à ce cas grâce à la fonction <code class="docutils literal notranslate"><span class="pre">range()</span></code> – et retournent <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
 <li><p>En revanche, les écritures avec <code class="docutils literal notranslate"><span class="pre">while</span></code> demandent <em>en général</em> plus d’attention.</p>
 <ul>
-<li><p>ici la condition d’arrêt <code class="docutils literal notranslate"><span class="pre">i</span> <span class="pre">&lt;</span> <span class="pre">dim</span></code> est satisfaite pour <code class="docutils literal notranslate"><span class="pre">i</span> <span class="pre">==</span> <span class="pre">0</span></code> et <code class="docutils literal notranslate"><span class="pre">dim</span> <span class="pre">==</span> <span class="pre">0</span></code>.</p></li>
-<li><p>et dans ce cas la valeur <code class="docutils literal notranslate"><span class="pre">False</span></code> est retournée.</p></li>
+<li><p>Dans <code class="docutils literal notranslate"><span class="pre">rech_seq_while()</span></code> :</p></li>
+<li><p>la condition de répétition <code class="docutils literal notranslate"><span class="pre">i</span> <span class="pre">&lt;</span> <span class="pre">dim</span></code> n’est pas satisfaite pour <code class="docutils literal notranslate"><span class="pre">i</span> <span class="pre">==</span> <span class="pre">0</span></code> et <code class="docutils literal notranslate"><span class="pre">dim</span> <span class="pre">==</span> <span class="pre">0</span></code>,</p></li>
+<li><p>et dans ce cas la valeur <code class="docutils literal notranslate"><span class="pre">False</span></code> est retournée, ce qui est correct.</p></li>
 </ul>
 </li>
 </ul>
 <p>On verra que l’analyse de la correction de cet algorithme confirme que cette écriture est bien correcte.</p>
+<p>Pour la version suivante, le traitement du tableau se termine avec l’erreur <code class="docutils literal notranslate"><span class="pre">IndexError:</span> <span class="pre">list</span> <span class="pre">index</span> <span class="pre">out</span> <span class="pre">of</span> <span class="pre">range</span></code></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rech_seq_while_2_faux</span><span class="p">(</span><span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">tab</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">dim</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
@@ -832,17 +834,16 @@ Attention à l’ordre des tests dans la condition de la ligne 4</p>
     
     <span class="c1"># autres cas</span>
     <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
-    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">dimTrue</span><span class="p">:</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
         <span class="k">if</span> <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">val</span><span class="p">:</span>
             <span class="k">return</span> <span class="kc">True</span>
-        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="n">dim</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="n">dim</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span> <span class="c1"># le dernier élément de tab a été atteint et ne vaut pas val</span>
             <span class="k">return</span> <span class="kc">False</span>
         <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span> 
 </pre></div>
 </div>
 </div>
 </div>
-<p>L’exécution suivante déclenche une erreur <code class="docutils literal notranslate"><span class="pre">IndexError:</span> <span class="pre">list</span> <span class="pre">index</span> <span class="pre">out</span> <span class="pre">of</span> <span class="pre">range</span></code></p>
 <p>L’ajout du traitement du cas particulier du tableau vide permet maintenant une exécution sans erreur de cette version.</p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
