@@ -82,6 +82,12 @@ Vacances en s8, s15-s16
 
 ## Semaine 11
 
+- Leçon 6 sur le chapitre _Trier_ (sauf tri fusion)
+- Avant le CM de jeudi : lire le chapitre _Types composés_ jusqu'à la _section 6.4 inclus_.
+- Premier TP en séance
+- Travail personnel : finir feuille 2 _Récursivité_ selon vos objectifs, bien reprendre le tri fusion en fin du chapitre _Trier_
+
+
 ## Semaine 12
 
 - **CC1 du vendredi 22 mars 2024, 14h.**

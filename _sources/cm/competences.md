@@ -93,7 +93,7 @@ Dans/avec un notebook jupyter :
 
 ### Avoir les idées claires
 
-- Connaitre, reconnaitre et savoir classifier les algorithmes de tri selon leurs caractéristiques (tris en place, par comparaisons, quadratiques/rapides/linéaires) 
+- Connaitre, reconnaitre et savoir classifier les algorithmes de tri selon leurs caractéristiques : tris en place ou non, par comparaisons ou non, (tris de complexité quadratique/rapide/linéaire) 
 - Comprendre les algorithmes de tri insertion, _quicksort_ et fusion grâce à leur invariant
 - Savoir identifier les pires et meilleurs cas des tris insertion, _quicksort_ et fusion
 

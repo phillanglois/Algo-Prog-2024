@@ -41,5 +41,12 @@ Vacances hiver
   
 ## semaine 10
 
+- CM : trier (tri fusion pas vu en détail)
+- feuille récursivité
+
+## semaine 11
+
+- CM : types composés jusqu'au listes (en entier)
+
 
 
