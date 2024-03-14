@@ -558,12 +558,16 @@ Ils ne sont pas abordés ici et font l’objet de ce <span class="xref myst">cha
 <h2><span class="section-number">6.2. </span>Ce qui est commun aux conteneurs python<a class="headerlink" href="#ce-qui-est-commun-aux-conteneurs-python" title="Permalink to this heading">#</a></h2>
 <section id="operations-communes-aux-conteneurs-python">
 <h3><span class="section-number">6.2.1. </span>Opérations communes aux conteneurs python<a class="headerlink" href="#operations-communes-aux-conteneurs-python" title="Permalink to this heading">#</a></h3>
-<p><strong>itération sur les <em>valeurs</em></strong> d’un conteneur :
-&gt; <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">val</span> <span class="pre">in</span> <span class="pre">conteneur:</span></code><br />
-- pythonerie utile en pratique pour parcourir les valeurs d’un conteneur sans se soucier de son “indice”
-- cette itération s’effectue indépendamment de l’existence ou non d’un ordre sur les <em>valeurs</em> du conteneur, ie. séquence ou non séquence
-- on reviendra sur cette notion, en particulier pour les dictionnaires
-- tous les conteneurs sont ainsi des <strong>itérables</strong>.</p>
+<p><strong>itération sur les <em>valeurs</em></strong> d’un conteneur :</p>
+<blockquote>
+<div><p><code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">val</span> <span class="pre">in</span> <span class="pre">conteneur:</span></code></p>
+</div></blockquote>
+<div class="highlight-none notranslate"><div class="highlight"><pre><span></span>- pythonerie utile en pratique pour parcourir les valeurs d&#39;un conteneur sans se soucier de son &quot;indice&quot; 
+- cette itération s&#39;effectue indépendamment de l&#39;existence ou non d&#39;un ordre sur les _valeurs_ du conteneur, ie. séquence ou non séquence
+    - on reviendra sur cette notion, en particulier pour les dictionnaires
+- tous les conteneurs sont ainsi des **itérables**.
+</pre></div>
+</div>
 <p><strong>accès à l’élément</strong> par indexation pour les séquences et dictionnaires :</p>
 <blockquote>
 <div><p><code class="docutils literal notranslate"><span class="pre">v[1]</span></code>,<code class="docutils literal notranslate"><span class="pre">m[3][2]</span></code>, <code class="docutils literal notranslate"><span class="pre">st[-1]</span></code>, <code class="docutils literal notranslate"><span class="pre">tuple[-len(tuple)]</span></code>, <code class="docutils literal notranslate"><span class="pre">d[clé]</span></code></p>
@@ -1215,7 +1219,7 @@ lst: [&#39;r&#39;, &#39;a&#39;, &#39;n&#39;, &#39;t&#39;, &#39;a&#39;, &#39;n&#3
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
 [3, 1, 2] [3, 1, 2]
-4370246656 4370246656
+4431490560 4431490560
 </pre></div>
 </div>
 </div>
@@ -1251,7 +1255,7 @@ False
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>duplication par affectation de tranche complète : 
 False True
-4370205824 4370246656
+4431228608 4431490560
 </pre></div>
 </div>
 </div>
@@ -1652,9 +1656,9 @@ bnor! 5
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>abc 4309161552
-abc 4309161552
-abcdef 4370351152
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>abc 4378728016
+abc 4378728016
+abcdef 4431510192
 </pre></div>
 </div>
 </div>
@@ -1803,10 +1807,10 @@ BONJOUR ! True False
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4370378032
-4370378032
-4370377200
-4370377200
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4431621232
+4431621232
+4431621744
+4431621744
 </pre></div>
 </div>
 </div>
@@ -2048,7 +2052,7 @@ Bonjour &quot;collègue&quot; !
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;o&#39;, &#39;a&#39;, &#39;y&#39;, &#39;u&#39;, &#39;i&#39;, &#39;e&#39;} 6
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;u&#39;, &#39;o&#39;, &#39;y&#39;, &#39;a&#39;, &#39;e&#39;, &#39;i&#39;} 6
 </pre></div>
 </div>
 </div>
@@ -2075,8 +2079,8 @@ False
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>aie : {&#39;e&#39;, &#39;a&#39;, &#39;i&#39;}
-voyelles : {&#39;o&#39;, &#39;a&#39;, &#39;y&#39;, &#39;u&#39;, &#39;i&#39;, &#39;e&#39;}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>aie : {&#39;i&#39;, &#39;e&#39;, &#39;a&#39;}
+voyelles : {&#39;u&#39;, &#39;o&#39;, &#39;y&#39;, &#39;a&#39;, &#39;e&#39;, &#39;i&#39;}
 </pre></div>
 </div>
 </div>
@@ -2095,11 +2099,11 @@ voyelles : {&#39;o&#39;, &#39;a&#39;, &#39;y&#39;, &#39;u&#39;, &#39;i&#39;, &#3
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>union : {&#39;o&#39;, &#39;a&#39;, &#39;y&#39;, &#39;u&#39;, &#39;i&#39;, &#39;e&#39;}
-autre union : {&#39;f&#39;, &#39;o&#39;, &#39;a&#39;, &#39;y&#39;, &#39;u&#39;, &#39;i&#39;, &#39;b&#39;, &#39;e&#39;}
-intersection : {&#39;e&#39;, &#39;a&#39;, &#39;i&#39;}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>union : {&#39;o&#39;, &#39;u&#39;, &#39;y&#39;, &#39;a&#39;, &#39;e&#39;, &#39;i&#39;}
+autre union : {&#39;o&#39;, &#39;u&#39;, &#39;y&#39;, &#39;a&#39;, &#39;b&#39;, &#39;e&#39;, &#39;i&#39;, &#39;f&#39;}
+intersection : {&#39;i&#39;, &#39;a&#39;, &#39;e&#39;}
 difference :  set() {&#39;b&#39;, &#39;f&#39;}
-difference symétrique:  {&#39;u&#39;, &#39;o&#39;, &#39;y&#39;}
+difference symétrique:  {&#39;o&#39;, &#39;u&#39;, &#39;y&#39;}
 inclusions : True True False False
 </pre></div>
 </div>
@@ -2240,7 +2244,7 @@ ses paramètres formels. On appelle aussi cette homonymie de la <em>surcharge de
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;1&#39;: &#39;a&#39;, &#39;2&#39;: &#39;b&#39;} 2
-{&#39;2&#39;, &#39;1&#39;} 2
+{&#39;1&#39;, &#39;2&#39;} 2
 </pre></div>
 </div>
 </div>
