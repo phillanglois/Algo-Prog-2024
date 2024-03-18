@@ -96,7 +96,11 @@ Vacances en s8, s15-s16
 
 ## Semaine 12
 
-- **CC1 du vendredi 22 mars 2024, 14h.**
+- Leçon 7 sur le début du chapitre _Types composés_ : `tuple` et `list`
+- Avant le CM de jeudi : lire le chapitre _Types composés_ en entier
+- Finir TP1, dépot pour évaluation possible
+- Travail personnel : reprendre les cours et exercices en vue du CC1
+- **CC1 du vendredi 22 mars 2024, 14h, durée : 2 heures.**
 
 ## Semaine 13
 

@@ -9,7 +9,7 @@
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
-    <title>5. Leçon 4 : récursivité &#8212; Algo-Prog 2024</title>
+    <title>8. Leçon 7 : types composés list et tuple &#8212; Algo-Prog 2024</title>
   
   
   
@@ -62,13 +62,11 @@ const thebe_selector_input = "pre"
 const thebe_selector_output = ".output, .cell_output"
 </script>
     <script async="async" src="../_static/sphinx-thebe.js"></script>
-    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
-    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
-    <script>DOCUMENTATION_OPTIONS.pagename = 'lecons/4-lecon-recursion-2';</script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'lecons/7-lecon-conteneurs-1';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="6. Leçon 5 : rechercher" href="5-lecon-rechercher.html" />
-    <link rel="prev" title="4. Leçon 3 : récursivité (début)" href="3-lecon-recursion.html" />
+    <link rel="next" title="1. Feuille 1 : fonctions" href="../td/td1.html" />
+    <link rel="prev" title="7. Leçon 6 : trier" href="6-lecon-trier.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
   </head>
@@ -204,10 +202,10 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="1-lecon-fonctions.html">2. Leçon 1 : fonctions</a></li>
 <li class="toctree-l1"><a class="reference internal" href="2-lecon-fonctions-recursion.html">3. Leçon 2 : fonctions et récursion (début)</a></li>
 <li class="toctree-l1"><a class="reference internal" href="3-lecon-recursion.html">4. Leçon 3 : récursivité (début)</a></li>
-<li class="toctree-l1 current active"><a class="current reference internal" href="#">5. Leçon 4 : récursivité</a></li>
+<li class="toctree-l1"><a class="reference internal" href="4-lecon-recursion-2.html">5. Leçon 4 : récursivité</a></li>
 <li class="toctree-l1"><a class="reference internal" href="5-lecon-rechercher.html">6. Leçon 5 : rechercher</a></li>
 <li class="toctree-l1"><a class="reference internal" href="6-lecon-trier.html">7. Leçon 6 : trier</a></li>
-<li class="toctree-l1"><a class="reference internal" href="7-lecon-conteneurs-1.html">8. Leçon 7 : types composés <code class="docutils literal notranslate"><span class="pre">list</span></code> et <code class="docutils literal notranslate"><span class="pre">tuple</span></code></a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">8. Leçon 7 : types composés <code class="docutils literal notranslate"><span class="pre">list</span></code> et <code class="docutils literal notranslate"><span class="pre">tuple</span></code></a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">TD</span></p>
 <ul class="nav bd-sidenav">
@@ -271,7 +269,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="https://mybinder.org/v2/gh/phillanglois/Algo-Prog-2024/main?urlpath=tree/algoprog2024/lecons/4-lecon-recursion-2.ipynb" target="_blank"
+      <li><a href="https://mybinder.org/v2/gh/phillanglois/Algo-Prog-2024/main?urlpath=tree/algoprog2024/lecons/7-lecon-conteneurs-1.ipynb" target="_blank"
    class="btn btn-sm dropdown-item"
    title="Launch onBinder"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -291,7 +289,7 @@ const thebe_selector_output = ".output, .cell_output"
 
 
 
-<a href="https://github.com/phillanglois/Algo-Prog-2024/issues/new?title=Issue%20on%20page%20%2Flecons/4-lecon-recursion-2.html&body=Your%20issue%20content%20here." target="_blank"
+<a href="https://github.com/phillanglois/Algo-Prog-2024/issues/new?title=Issue%20on%20page%20%2Flecons/7-lecon-conteneurs-1.html&body=Your%20issue%20content%20here." target="_blank"
    class="btn btn-sm btn-source-issues-button"
    title="Open an issue"
    data-bs-placement="bottom" data-bs-toggle="tooltip"
@@ -317,7 +315,7 @@ const thebe_selector_output = ".output, .cell_output"
       
       
       
-      <li><a href="../_sources/lecons/4-lecon-recursion-2.ipynb" target="_blank"
+      <li><a href="../_sources/lecons/7-lecon-conteneurs-1.ipynb" target="_blank"
    class="btn btn-sm btn-download-source-button dropdown-item"
    title="Download source file"
    data-bs-placement="left" data-bs-toggle="tooltip"
@@ -388,9 +386,7 @@ document.write(`
   </button>
 `);
 </script>
-<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
-    <span class="fa-solid fa-list"></span>
-</label>
+
 </div></div>
       
     </div>
@@ -401,21 +397,11 @@ document.write(`
               
 
 <div id="jb-print-docs-body" class="onlyprint">
-    <h1>Leçon 4 : récursivité</h1>
+    <h1>Leçon 7 : types composés list et tuple</h1>
     <!-- Table of contents -->
     <div id="print-main-content">
         <div id="jb-print-toc">
             
-            <div>
-                <h2> Contents </h2>
-            </div>
-            <nav aria-label="Page">
-                <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#depot-attendu">5.1. Dépôt attendu</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1">5.2. Exercice 1.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#star-exercice-2-bien-comprendre-les-appels-recursifs">5.3. (<span class="math notranslate nohighlight">\(\star\)</span>) Exercice 2. “Bien comprendre les appels récursifs !”</a></li>
-</ul>
-            </nav>
         </div>
     </div>
 </div>
@@ -425,78 +411,21 @@ document.write(`
 <div id="searchbox"></div>
                 <article class="bd-article">
                   
-  <section class="tex2jax_ignore mathjax_ignore" id="lecon-4-recursivite">
-<h1><span class="section-number">5. </span>Leçon 4 : récursivité<a class="headerlink" href="#lecon-4-recursivite" title="Permalink to this heading">#</a></h1>
-<section id="depot-attendu">
-<h2><span class="section-number">5.1. </span>Dépôt attendu<a class="headerlink" href="#depot-attendu" title="Permalink to this heading">#</a></h2>
-<p>En pdf ou jpeg :</p>
+  <section class="tex2jax_ignore mathjax_ignore" id="lecon-7-types-composes-list-et-tuple">
+<h1><span class="section-number">8. </span>Leçon 7 : types composés <code class="docutils literal notranslate"><span class="pre">list</span></code> et <code class="docutils literal notranslate"><span class="pre">tuple</span></code><a class="headerlink" href="#lecon-7-types-composes-list-et-tuple" title="Permalink to this heading">#</a></h1>
+<p><strong>Dépôt attendu :</strong>
+Aucun</p>
+<p>Ces notions sont au programme de NSI, classe de première.
+Il existe ainsi de très nombreux QCM en ligne que vous pouvez utiliser pour accompagner votre acquisition du chapitre.</p>
+<p>En voici deux à effectuer.</p>
 <ol class="arabic simple">
-<li><p>Objectif 10 : exercice 1</p></li>
-<li><p>Objectif 20 : exercices 1 et 2</p></li>
+<li><p><a class="reference external" href="http://lycee.stanislas.info.free.fr/Python/QCMconteneur/QCMbilan.html">QCM niveau première</a></p></li>
+<li><p><a class="reference external" href="https://realpython.com/quizzes/python-lists-tuples/">QCM Real Python</a></p></li>
 </ol>
-</section>
-<section id="exercice-1">
-<h2><span class="section-number">5.2. </span>Exercice 1.<a class="headerlink" href="#exercice-1" title="Permalink to this heading">#</a></h2>
-<p>On définit les deux fonctions <code class="docutils literal notranslate"><span class="pre">f()</span></code> et <code class="docutils literal notranslate"><span class="pre">g()</span></code> suivantes.
-Expliciter l’évolution de la pile des appels pour l’exécution de :</p>
 <ul class="simple">
-<li><p>code 1</p></li>
-<li><p>code 2</p></li>
+<li><p>le premier rédigé en français est objectif 10 (dans l’ensemble).</p></li>
+<li><p>le second est extrait du <em>très bon</em> site <a class="reference external" href="https://realpython.com">Real Python</a>. Il est rédigé en anglais et son format ne permet pas toujours une traduction complète par votre browser. Il est important d’apprendre à comprendre l’anglais utile en informatique. Les questions et les réponses à choisir se comprennent aisément. Son intérêt est de vous renvoyer vers des parties ciblées du cours (Real Python, aussi en anglais) et de fournir des explications détaillées pour le bonnes et mauvaises réponses. Vous apprécierez vite son utilité en comparaison des QCM passifs comme le premier.</p></li>
 </ul>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">p</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39;un calcul&#39;&#39;&#39;</span>
-    <span class="k">assert</span> <span class="n">p</span> <span class="o">&gt;=</span> <span class="mi">0</span>
-    <span class="k">if</span> <span class="n">p</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">0</span>
-    <span class="k">return</span> <span class="n">p</span> <span class="o">-</span> <span class="mi">1</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">g</span><span class="p">(</span><span class="n">p</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
-<span class="w">    </span><span class="sd">&#39;&#39;&#39;un calcul&#39;&#39;&#39;</span>
-    <span class="k">assert</span> <span class="n">p</span> <span class="o">&gt;=</span> <span class="mi">0</span>
-    <span class="k">if</span> <span class="n">p</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
-        <span class="k">return</span> <span class="mi">0</span>
-    <span class="k">return</span> <span class="n">g</span><span class="p">(</span><span class="n">p</span> <span class="o">-</span> <span class="mi">1</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># code 1</span>
-<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">6</span><span class="p">):</span>
-    <span class="n">res</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">i</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-</div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># code 2</span>
-<span class="n">res</span> <span class="o">=</span> <span class="n">g</span><span class="p">(</span><span class="mi">5</span><span class="p">)</span> 
-</pre></div>
-</div>
-</div>
-</div>
-</section>
-<section id="star-exercice-2-bien-comprendre-les-appels-recursifs">
-<h2><span class="section-number">5.3. </span>(<span class="math notranslate nohighlight">\(\star\)</span>) Exercice 2. “Bien comprendre les appels récursifs !”<a class="headerlink" href="#star-exercice-2-bien-comprendre-les-appels-recursifs" title="Permalink to this heading">#</a></h2>
-<p>Pour la forme récursive de <span class="math notranslate nohighlight">\(n!\)</span>, l’exemple de la section “Bien comprendre les appels récursifs !” déroge à 2 obligations pédagogiques :</p>
-<ul class="simple">
-<li><p>il mélange traitement et entrées-sorties (indiqué en cours)</p></li>
-<li><p>il utilise l’instruction <code class="docutils literal notranslate"><span class="pre">global</span></code> pour définir une variable globale</p></li>
-</ul>
-<ol class="arabic simple">
-<li><p>Ré-écrire cet exemple sans utiliser l’instruction <code class="docutils literal notranslate"><span class="pre">global</span></code></p></li>
-<li><p>Ré-écrire cet exemple sans utiliser l’instruction <code class="docutils literal notranslate"><span class="pre">global</span></code> et en conservant la signature originale.</p></li>
-</ol>
-</section>
 </section>
 
     <script type="text/x-thebe-config">
@@ -530,20 +459,20 @@ Expliciter l’évolution de la pile des appels pour l’exécution de :</p>
                   
 <div class="prev-next-area">
     <a class="left-prev"
-       href="3-lecon-recursion.html"
+       href="6-lecon-trier.html"
        title="previous page">
       <i class="fa-solid fa-angle-left"></i>
       <div class="prev-next-info">
         <p class="prev-next-subtitle">previous</p>
-        <p class="prev-next-title"><span class="section-number">4. </span>Leçon 3 : récursivité (début)</p>
+        <p class="prev-next-title"><span class="section-number">7. </span>Leçon 6 : trier</p>
       </div>
     </a>
     <a class="right-next"
-       href="5-lecon-rechercher.html"
+       href="../td/td1.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">6. </span>Leçon 5 : rechercher</p>
+        <p class="prev-next-title"><span class="section-number">1. </span>Feuille 1 : fonctions</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
@@ -554,22 +483,7 @@ Expliciter l’évolution de la pile des appels pour l’exécution de :</p>
             
             
               
-                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
-
-
-  <div class="sidebar-secondary-item">
-  <div class="page-toc tocsection onthispage">
-    <i class="fa-solid fa-list"></i> Contents
-  </div>
-  <nav class="bd-toc-nav page-toc">
-    <ul class="visible nav section-nav flex-column">
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#depot-attendu">5.1. Dépôt attendu</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-1">5.2. Exercice 1.</a></li>
-<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#star-exercice-2-bien-comprendre-les-appels-recursifs">5.3. (<span class="math notranslate nohighlight">\(\star\)</span>) Exercice 2. “Bien comprendre les appels récursifs !”</a></li>
-</ul>
-  </nav></div>
-
-</div></div>
+                <div class="bd-sidebar-secondary bd-toc"></div>
               
             
           </div>
