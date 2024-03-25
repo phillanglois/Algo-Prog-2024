@@ -17,8 +17,8 @@ Vacances en s8, s15-s16
 
 
 
-- CC1 (s12): vendredi 22 mars 2024, 14 heures, durée : **2 heures**  : TP1 individuel sur machine, en temps limité
-- **CC2 (s14): jeudi 4 avril 2024, 13h15**, écrit, 2 heures
+- CC1 (s12) : vendredi 22 mars 2024, 14 heures, durée : 2 heures : TP1 individuel sur machine, en temps limité
+- **CC2 (s14) : jeudi 4 avril 2024, 13h15**, écrit, 2 heures
 - CC1 : TP2 3 heures individuel sur machine, à venir en semaine examen
 - CT : écrit 2 heures, à venir en semaine examen
 
@@ -104,7 +104,13 @@ Vacances en s8, s15-s16
 
 ## Semaine 13
 
+- Leçon 8 sur le chapitre _Types composés_
+- Avant le CM de jeudi : lire les chapitres _ES simples avec des fichiers_ (section _Compléments_ pour Obj. 20) et _ES : formats_ (section 1.1 en s'arrêtant au 1.1.4 exclus).
+- TP de la semaine : TP2 sur les types composés 
+
 ## Semaine 14
+
+- C2 (s14) : jeudi 4 avril 2024, 13h15, écrit, 2 heures
 
 ## _Semaines 15 et 16_
 

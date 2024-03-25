@@ -67,7 +67,7 @@ const thebe_selector_output = ".output, .cell_output"
     <script>DOCUMENTATION_OPTIONS.pagename = 'cm/5-types_composes';</script>
     <link rel="index" title="Index" href="../genindex.html" />
     <link rel="search" title="Search" href="../search.html" />
-    <link rel="next" title="1. Tableaux et boucles" href="a0-boucles-avancees.html" />
+    <link rel="next" title="7. Entrées-sorties simples avec des fichiers" href="3-ES-fichiers.html" />
     <link rel="prev" title="5. Trier" href="10-trier.html" />
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <meta name="docsearch:language" content="en"/>
@@ -191,6 +191,8 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="8-rechercher.html">4. Rechercher</a></li>
 <li class="toctree-l1"><a class="reference internal" href="10-trier.html">5. Trier</a></li>
 <li class="toctree-l1 current active"><a class="current reference internal" href="#">6. Les types composés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3-ES-fichiers.html">7. Entrées-sorties simples avec des fichiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9-ES-formats.html">8. Les entrées-sorties (E/S) : formats</a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">Compléments</span></p>
 <ul class="nav bd-sidenav">
@@ -208,6 +210,7 @@ const thebe_selector_output = ".output, .cell_output"
 <li class="toctree-l1"><a class="reference internal" href="../lecons/5-lecon-rechercher.html">6. Leçon 5 : rechercher</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lecons/6-lecon-trier.html">7. Leçon 6 : trier</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../lecons/7-lecon-conteneurs-1.html">8. Leçon 7 : types composés <code class="docutils literal notranslate"><span class="pre">list</span></code> et <code class="docutils literal notranslate"><span class="pre">tuple</span></code></a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecons/8-lecon-conteneurs-2.html">9. Leçon 7 : types composés <code class="docutils literal notranslate"><span class="pre">list</span></code> et <code class="docutils literal notranslate"><span class="pre">tuple</span></code></a></li>
 </ul>
 <p aria-level="2" class="caption" role="heading"><span class="caption-text">TD</span></p>
 <ul class="nav bd-sidenav">
@@ -464,7 +467,7 @@ document.write(`
                   
   <section class="tex2jax_ignore mathjax_ignore" id="les-types-composes">
 <span id="ch-typescomposes"></span><h1><span class="section-number">6. </span>Les types composés<a class="headerlink" href="#les-types-composes" title="Permalink to this heading">#</a></h1>
-<p>Mis à jour : Mar 18, 2024, lecture : 15
+<p>Mis à jour : Mar 25, 2024, lecture : 15
 minutes minimum, PhL.</p>
 <p>Les types composés ou <em>conteneurs</em> de python sont  introduits  dans ce chapitre :</p>
 <ul class="simple">
@@ -553,7 +556,7 @@ Le module <code class="docutils literal notranslate"><span class="pre">numpy</sp
 <li><p>les fichiers de texte</p></li>
 </ul>
 <p>Les fichiers (le type <code class="docutils literal notranslate"><span class="pre">file</span></code>) sont aussi des conteneurs.
-Ils ne sont pas abordés ici et font l’objet de ce <span class="xref myst">chapitre</span>.</p>
+Ils ne sont pas abordés ici et font l’objet de ce <a class="reference internal" href="3-ES-fichiers.html#ch-es-fichiers"><span class="std std-ref">chapitre</span></a>.</p>
 </section>
 </section>
 <section id="ce-qui-est-commun-aux-conteneurs-python">
@@ -1224,7 +1227,7 @@ lst: [&#39;r&#39;, &#39;a&#39;, &#39;n&#39;, &#39;t&#39;, &#39;a&#39;, &#39;n&#3
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
 [3, 1, 2] [3, 1, 2]
-4388678144 4388678144
+4421523328 4421523328
 </pre></div>
 </div>
 </div>
@@ -1260,7 +1263,7 @@ False
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>duplication par affectation de tranche complète : 
 False True
-4388868800 4388678144
+4421566656 4421523328
 </pre></div>
 </div>
 </div>
@@ -1661,9 +1664,9 @@ bnor! 5
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>abc 4336096848
-abc 4336096848
-abcdef 4388785904
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>abc 4368799312
+abc 4368799312
+abcdef 4421680816
 </pre></div>
 </div>
 </div>
@@ -1812,10 +1815,10 @@ BONJOUR ! True False
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4388991152
-4388991152
-4388991856
-4388991856
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4421704816
+4421704816
+4421672560
+4421672560
 </pre></div>
 </div>
 </div>
@@ -2032,19 +2035,9 @@ Bonjour &quot;collègue&quot; !
 <li><p><code class="docutils literal notranslate"><span class="pre">set</span></code>: ensemble <em>mutable</em></p></li>
 <li><p>(<span class="math notranslate nohighlight">\(\star\)</span>) <code class="docutils literal notranslate"><span class="pre">frozenset</span></code> : ensemble <em>non mutable</em></p></li>
 </ul>
-<p>La fonction <code class="docutils literal notranslate"><span class="pre">set()</span></code> permet de créer un ensemble à partir d’un tuple ou d’une chaîne de caractères.</p>
-<p><strong>Opérations :</strong></p>
 <ul class="simple">
-<li><p>opérations ensemblistes (des maths) :</p>
-<ul>
-<li><p><code class="docutils literal notranslate"><span class="pre">in</span></code> et <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">in</span></code> :  appartenance ou non</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">|</span></code> : union</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&amp;</span></code> : intersection</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">-</span></code>: différence</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">^</span></code>: différence symétrique  (complémentaire de l’intersection)</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">&lt;=</span></code> ou <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> : inclusion ensembliste, resp. <em>est un sous-ensemble de</em> vs. <em>est inclus strictement dans</em>; <code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">&lt;</span> <span class="pre">B</span></code> == <code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">&lt;=</span> <span class="pre">B</span></code> and <code class="docutils literal notranslate"><span class="pre">A</span> <span class="pre">!=</span> <span class="pre">B</span></code> (et de même : <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>)</p></li>
-</ul>
-</li>
+<li><p>La fonction <code class="docutils literal notranslate"><span class="pre">set()</span></code> permet de créer un ensemble à partir d’un tuple ou d’une chaîne de caractères</p></li>
+<li><p>Et de façon similaire, la fonction <code class="docutils literal notranslate"><span class="pre">frozenset()</span></code> …</p></li>
 </ul>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
@@ -2057,7 +2050,35 @@ Bonjour &quot;collègue&quot; !
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;a&#39;, &#39;u&#39;, &#39;o&#39;, &#39;y&#39;, &#39;e&#39;, &#39;i&#39;} 6
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;o&#39;, &#39;e&#39;, &#39;y&#39;, &#39;u&#39;, &#39;i&#39;, &#39;a&#39;} 6
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">f_set</span> <span class="o">=</span> <span class="nb">frozenset</span><span class="p">(</span><span class="s2">&quot;non mutable&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">f_set</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">f_set</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>frozenset({&#39;o&#39;, &#39;n&#39;, &#39;e&#39;, &#39;m&#39;, &#39;u&#39;, &#39;b&#39;, &#39;t&#39;, &#39;a&#39;, &#39; &#39;, &#39;l&#39;}) 10
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;aie :&quot;</span><span class="p">,</span> <span class="n">aie</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;voyelles :&quot;</span><span class="p">,</span> <span class="n">voyelles</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>aie : {&#39;e&#39;, &#39;a&#39;, &#39;i&#39;}
+voyelles : {&#39;o&#39;, &#39;e&#39;, &#39;y&#39;, &#39;u&#39;, &#39;i&#39;, &#39;a&#39;}
 </pre></div>
 </div>
 </div>
@@ -2076,20 +2097,20 @@ False
 </div>
 </div>
 </div>
-<div class="cell docutils container">
-<div class="cell_input docutils container">
-<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;aie :&quot;</span><span class="p">,</span> <span class="n">aie</span><span class="p">)</span>
-<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;voyelles :&quot;</span><span class="p">,</span> <span class="n">voyelles</span><span class="p">)</span>
-</pre></div>
-</div>
-</div>
-<div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>aie : {&#39;e&#39;, &#39;a&#39;, &#39;i&#39;}
-voyelles : {&#39;a&#39;, &#39;u&#39;, &#39;o&#39;, &#39;y&#39;, &#39;e&#39;, &#39;i&#39;}
-</pre></div>
-</div>
-</div>
-</div>
+<p><strong>Opérations :</strong></p>
+<ul class="simple">
+<li><p>opérations ensemblistes (des maths) :</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">in</span></code> et <code class="docutils literal notranslate"><span class="pre">not</span> <span class="pre">in</span></code> :  appartenance ou non</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">|</span></code> : union</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&amp;</span></code> : intersection</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">-</span></code>: différence (habituellement notée <code class="docutils literal notranslate"><span class="pre">\</span></code> : <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">-</span> <span class="pre">b</span></code> = { x <span class="math notranslate nohighlight">\(\in\)</span> <code class="docutils literal notranslate"><span class="pre">a</span></code> | x <span class="math notranslate nohighlight">\(\notin\)</span> <code class="docutils literal notranslate"><span class="pre">b</span></code>})</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">^</span></code>: différence symétrique  (complémentaire de l’intersection)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">&lt;=</span></code> ou <code class="docutils literal notranslate"><span class="pre">&lt;</span></code> : inclusion ensembliste, resp. <em>est un sous-ensemble de</em> vs. <em>est inclus strictement dans</em>; <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">&lt;</span> <span class="pre">b</span></code> == <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">&lt;=</span> <span class="pre">b</span></code> and <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">!=</span> <span class="pre">b</span></code> (et de même : <code class="docutils literal notranslate"><span class="pre">&gt;=</span></code> <code class="docutils literal notranslate"><span class="pre">&gt;</span></code>)</p></li>
+</ul>
+</li>
+</ul>
+<p><strong>Rappel.</strong> Si besoin : <a class="reference external" href="https://fr.wikipedia.org/wiki/Alg%C3%A8bre_des_parties_d%27un_ensemble#Diff%C3%A9rence_et_diff%C3%A9rence_sym%C3%A9trique">différence  et différence symétrique </a></p>
 <div class="cell docutils container">
 <div class="cell_input docutils container">
 <div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="nb">print</span><span class="p">(</span><span class="s2">&quot;union :&quot;</span><span class="p">,</span> <span class="n">voyelles</span> <span class="o">|</span> <span class="n">aie</span><span class="p">)</span>
@@ -2104,11 +2125,11 @@ voyelles : {&#39;a&#39;, &#39;u&#39;, &#39;o&#39;, &#39;y&#39;, &#39;e&#39;, &#3
 </div>
 </div>
 <div class="cell_output docutils container">
-<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>union : {&#39;a&#39;, &#39;u&#39;, &#39;y&#39;, &#39;o&#39;, &#39;e&#39;, &#39;i&#39;}
-autre union : {&#39;b&#39;, &#39;a&#39;, &#39;u&#39;, &#39;y&#39;, &#39;o&#39;, &#39;e&#39;, &#39;f&#39;, &#39;i&#39;}
-intersection : {&#39;a&#39;, &#39;e&#39;, &#39;i&#39;}
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>union : {&#39;o&#39;, &#39;e&#39;, &#39;y&#39;, &#39;u&#39;, &#39;i&#39;, &#39;a&#39;}
+autre union : {&#39;f&#39;, &#39;o&#39;, &#39;e&#39;, &#39;y&#39;, &#39;u&#39;, &#39;b&#39;, &#39;i&#39;, &#39;a&#39;}
+intersection : {&#39;e&#39;, &#39;a&#39;, &#39;i&#39;}
 difference :  set() {&#39;b&#39;, &#39;f&#39;}
-difference symétrique:  {&#39;y&#39;, &#39;u&#39;, &#39;o&#39;}
+difference symétrique:  {&#39;o&#39;, &#39;y&#39;, &#39;u&#39;}
 inclusions : True True False False
 </pre></div>
 </div>
@@ -2249,7 +2270,7 @@ ses paramètres formels. On appelle aussi cette homonymie de la <em>surcharge de
 </div>
 <div class="cell_output docutils container">
 <div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>{&#39;1&#39;: &#39;a&#39;, &#39;2&#39;: &#39;b&#39;} 2
-{&#39;2&#39;, &#39;1&#39;} 2
+{&#39;1&#39;, &#39;2&#39;} 2
 </pre></div>
 </div>
 </div>
@@ -2426,11 +2447,11 @@ tuple, liste, dictionnaire, ensemble, et chaîne de caractères
       </div>
     </a>
     <a class="right-next"
-       href="a0-boucles-avancees.html"
+       href="3-ES-fichiers.html"
        title="next page">
       <div class="prev-next-info">
         <p class="prev-next-subtitle">next</p>
-        <p class="prev-next-title"><span class="section-number">1. </span>Tableaux et boucles</p>
+        <p class="prev-next-title"><span class="section-number">7. </span>Entrées-sorties simples avec des fichiers</p>
       </div>
       <i class="fa-solid fa-angle-right"></i>
     </a>
