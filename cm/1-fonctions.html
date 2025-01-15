@@ -1,0 +1,2170 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>1. Fonctions &#8212; Algo-Prog 2024</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.4cbf315f70debaebd550c87a6162cf0f.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'cm/1-fonctions';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="2. Un exemple, plein de fonctions" href="1b-fonctions-exemple.html" />
+    <link rel="prev" title="Compétences" href="competences.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <header>
+  
+    <div class="bd-header navbar navbar-expand-lg bd-navbar">
+    </div>
+  
+  </header>
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../bonjour.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Algo-Prog 2024 - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Algo-Prog 2024 - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../bonjour.html">
+                    Bienvenu en Algo-Prog !
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Présentation</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="0-presentation-2024.html">Algo Prog en 2024</a></li>
+<li class="toctree-l1"><a class="reference internal" href="competences.html">Compétences</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapitres</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">1. Fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1b-fonctions-exemple.html">2. Un exemple, plein de fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6-recursivite.html">3. Récursivité</a></li>
+<li class="toctree-l1"><a class="reference internal" href="8-rechercher.html">4. Rechercher</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10-trier.html">5. Trier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5-types_composes.html">6. Les types composés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3-ES-fichiers.html">7. Entrées-sorties simples avec des fichiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9-ES-formats.html">8. Les entrées-sorties (E/S) : formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="7-fonctions-avancees.html">9. Affectation et appel de fonction – aspects avancés</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Compléments</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="a0-boucles-avancees.html">10. Tableaux et boucles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="a1-booleens.html">11. Annexe : les booléens en python (&gt;3.6)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="a2-ndarray.html">12. Les ‘ndarray’ : de vrais tableaux en python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11-modules-utiles.html">13. Modules utiles</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Leçons</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../lecons/0-prealable-lecons.html">14. Préalable avec les MTU moodle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecons/1-lecon-fonctions.html">15. Leçon 1 : fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecons/2-lecon-fonctions-recursion.html">16. Leçon 2 : fonctions et récursion (début)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecons/3-lecon-recursion.html">17. Leçon 3 : récursivité (début)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecons/4-lecon-recursion-2.html">18. Leçon 4 : récursivité</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecons/5-lecon-rechercher.html">19. Leçon 5 : rechercher</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecons/6-lecon-trier.html">20. Leçon 6 : trier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecons/7-lecon-conteneurs-1.html">21. Leçon 7 : types composés (début)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecons/8-lecon-conteneurs-2.html">22. Leçon 8 : types composés (fin)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecons/9-lecon-es.html">23. Leçon 9 : entrées sorties simples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecons/10-lecon-fichier-affectation-revision.html">24. Leçon 10 : fichiers, affectation : révisions, aspects avancés et passage de paramètres</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">TD</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../td/td1.html">25. Feuille 1 : fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../td/td2.html">26. Feuille 2 : récursivité</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">(Intervenants) suivi des séances</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../suivi_seances.html">27. (Intervenant) Suivi des séances</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/phillanglois/Algo-Prog-2024/main?urlpath=tree/algoprog2024/cm/1-fonctions.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+<a href="https://github.com/phillanglois/Algo-Prog-2024/issues/new?title=Issue%20on%20page%20%2Fcm/1-fonctions.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button"
+   title="Open an issue"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/cm/1-fonctions.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Fonctions</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rappels">1.1. Rappels</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#utiliser-une-fonction-existante">1.1.1. Utiliser une fonction existante</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definir-une-nouvelle-fonction">1.1.2. Définir une nouvelle fonction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#appeler-cette-fonction">1.1.3. Appeler cette fonction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tester-cette-fonction">1.1.4. Tester cette fonction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pourquoi-des-fonctions">1.1.5. Pourquoi des fonctions ?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-signature-corps-et-appels-de-fonction">1.2. Définition, signature, corps et appels de fonction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distinguer-le-quoi-du-comment">1.2.1. Distinguer le <em>Quoi</em> du <em>Comment</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#la-signature-d-une-fonction-en-python">1.2.2. La signature d’une fonction en python</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#le-corps-et-le-retour-de-valeur-en-python">1.2.3. Le corps et le retour de valeur en python</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#l-appel-d-une-fonction-en-python">1.2.4. L’appel d’une fonction en python</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#methodologie-d-ecriture-des-fonctions-pour-ce-semestre">1.2.5. Méthodologie d’écriture des fonctions pour ce semestre</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#l-appel-de-fonction-rompt-le-sequencement-des-instructions-ecrites-dans-le-code-source">1.3. L’appel de fonction rompt le séquencement des instructions écrites dans le code source</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#appel-appelant-to-appele-return-appele-to-appelant">1.3.1. Appel = appelant <span class="math notranslate nohighlight">\(\to\)</span> appelé ; <code class="docutils literal notranslate"><span class="pre">return</span></code> = appelé <span class="math notranslate nohighlight">\(\to\)</span> appelant</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#le-return-termine-l-appel-de-la-fonction">1.3.2. Le <code class="docutils literal notranslate"><span class="pre">return</span></code> termine l’appel de la fonction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice">1.3.3. Exercice</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#specifications-de-fonctions-avec-parametre-list-en-python">1.4. Spécifications de fonctions avec paramètre <code class="docutils literal notranslate"><span class="pre">list</span></code> en python</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comment-indiquer-le-type-d-un-parametre-formel-list">1.4.1. Comment indiquer le type d’un paramètre formel <code class="docutils literal notranslate"><span class="pre">list</span></code> ?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comment-specifier-une-fonction-avec-des-parametres-formels-de-type-tableau">1.4.2. Comment spécifier une fonction avec des paramètres formels de type tableau ?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#autres-complements">1.5. Autres compléments</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ne-pas-confondre-return-et-print">1.5.1. Ne pas confondre <code class="docutils literal notranslate"><span class="pre">return</span></code> et <code class="docutils literal notranslate"><span class="pre">print</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#help-et-docstring">1.5.2. <code class="docutils literal notranslate"><span class="pre">help()</span></code> et <em>docstring</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plusieurs-parametres">1.5.3. Plusieurs paramètres</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fonction-sans-parametre">1.5.4. Fonction sans paramètre</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fonction-sans-return">1.5.5. Fonction sans <code class="docutils literal notranslate"><span class="pre">return</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#portee-des-variables-variable-locale-variable-globale">1.5.6. Portée des variables, variable locale, variable globale,</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fonction-locale">1.5.7. Fonction locale</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pas-d-effet-de-bord-pas-de-global">1.5.8. Pas d’effet de bord ! Pas de <code class="docutils literal notranslate"><span class="pre">global</span></code> !</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-sur-les-annotations-de-fonctions">1.5.9. <span class="math notranslate nohighlight">\(\star\)</span> Sur les annotations de fonctions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-statique-vs-dynamique-trace-d-execution">1.5.10. <span class="math notranslate nohighlight">\(\star\)</span> Statique <em>vs.</em> dynamique, trace d’exécution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-venir">1.5.11. A venir</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercices-en-demonstration">1.6. Exercices en démonstration</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#differentes-ecritures-de-fonctions-min">1.6.1. Différentes écritures de fonctions min</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#une-procedure-d-affichage-e-s">1.6.2. Une procédure d’affichage (E/S)</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="fonctions">
+<span id="ch-fonctions"></span><h1><span class="section-number">1. </span>Fonctions<a class="headerlink" href="#fonctions" title="Permalink to this heading">#</a></h1>
+<p>Mis à jour : Jan 15, 2025, lecture : 18 minutes minimum, PhL.</p>
+<p>Ce premier chapitre présente des rappels et quelques compléments sur les fonctions.</p>
+<section id="rappels">
+<h2><span class="section-number">1.1. </span>Rappels<a class="headerlink" href="#rappels" title="Permalink to this heading">#</a></h2>
+<p>Une <em>fonction</em> est une suite d’instructions qui effectue un calcul ou réalise une action.</p>
+<p>Une fonction est désignée par son nom, comme par exemple en mathématiques la fonction <span class="math notranslate nohighlight">\(f\)</span> ou les fonctions trigonométriques <span class="math notranslate nohighlight">\(\cos, \sin\)</span>, …</p>
+<p>Le calcul ou l’action réalisé par une fonction peut <em>dépendre d’aucun, d’un ou de  plusieurs paramètres</em>.
+Par exemple en mathématiques, le calcul de <span class="math notranslate nohighlight">\(f(x)\)</span> dépend de la valeur du paramètre <span class="math notranslate nohighlight">\(x\)</span>.</p>
+<ol class="arabic simple">
+<li><p><strong>Définir.</strong> Une fonction doit d’abord être <em>définie</em> avant de pouvoir être utilisée.</p>
+<ul class="simple">
+<li><p>la fonction <span class="math notranslate nohighlight">\(f(x)\)</span> doit être définie avant de pouvoir calculer <span class="math notranslate nohighlight">\(f(3)\)</span> par exemple.</p></li>
+</ul>
+</li>
+<li><p><strong>Appeler.</strong> <em>Appeler une fonction</em> veut dire utiliser une fonction pour effectuer un calcul ou une action.</p>
+<ul class="simple">
+<li><p><span class="math notranslate nohighlight">\(f(3)\)</span> est l’appel de la fonction <span class="math notranslate nohighlight">\(f(x)\)</span> pour <span class="math notranslate nohighlight">\(x = 3\)</span>.</p></li>
+</ul>
+</li>
+</ol>
+<section id="utiliser-une-fonction-existante">
+<h3><span class="section-number">1.1.1. </span>Utiliser une fonction existante<a class="headerlink" href="#utiliser-une-fonction-existante" title="Permalink to this heading">#</a></h3>
+<p>Les fonctions mathématiques  comme les fonctions trigonométriques, logarithmes, exponentielles, puissances … sont “fournies” avec le langage de programmation.
+Elle sont définies et donc <em>appelables</em>.</p>
+<p>Techniquement, elles sont regroupées sous la forme de <em>bibliothèques</em> de fonctions aussi appelées <em>modules</em> en python.</p>
+<p>L’exemple suivant illustre l’appel de la fonction <code class="docutils literal notranslate"><span class="pre">cos()</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">cos</span><span class="p">,</span> <span class="n">pi</span>
+<span class="c1"># pour utiliser la fonction cos et la valeur pi définis dans le module math</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="n">cos</span><span class="p">(</span><span class="n">pi</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span>
+<span class="c1"># calcul qui utilise cos et pi, puis affectation du résultat dans la variable c</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">c</span><span class="p">)</span>
+<span class="c1"># affichage de la valeur de la variable c</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.5000000000000001
+</pre></div>
+</div>
+</div>
+</div>
+<div class="alert alert-block alert-info">
+<p><strong>A retenir</strong> : Les <strong>parenthèses <code class="docutils literal notranslate"><span class="pre">(...)</span></code></strong> derrière le nom de la fonction : c’est à ça qu’on reconnait une fonction !</p>
+</div>
+<div class="alert alert-block alert-info">
+<p><strong>A retenir</strong> : la construction
+<code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">module</span> <span class="pre">import</span> <span class="pre">fonction1,</span> <span class="pre">fonction2</span></code>
+permet d’utiliser les fonctions <code class="docutils literal notranslate"><span class="pre">fonction1</span></code> et <code class="docutils literal notranslate"><span class="pre">fonction2</span></code> définies dans la bibliothèque <code class="docutils literal notranslate"><span class="pre">module</span></code></p>
+</div><ol class="arabic simple" start="3">
+<li><p><strong>Retourner un résultat.</strong> Dans cet exemple, l’appel de la fonction <code class="docutils literal notranslate"><span class="pre">cos()</span></code> effectue un calcul et <em>retourne un résultat</em> : ici 0.5000000000000001.</p></li>
+</ol>
+<p><strong>Remarques.</strong></p>
+<ul class="simple">
+<li><p>Une fonction peut ne pas retourner de résultat.</p></li>
+<li><p>Je ne connais pas nécessairement <em>comment</em> la fonction calcule son résultat.</p></li>
+<li><p>En revanche, je connais le résultat attendu par l’appel de la fonction pour certains paramètres.</p></li>
+</ul>
+<p><strong>Exemple important à comprendre.</strong> Dans le code précédent :</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">print(c)</span></code> est l’appel à la fonction <code class="docutils literal notranslate"><span class="pre">print()</span></code></p></li>
+<li><p>cet appel réalise une action : afficher la valeur de <code class="docutils literal notranslate"><span class="pre">c</span></code></p></li>
+<li><p>cet appel ne retourne aucun résultat (voir * ci-dessous), et surtout pas la valeur de <code class="docutils literal notranslate"><span class="pre">c</span></code> !</p></li>
+</ul>
+<p>(*) Pour être exact, le <code class="docutils literal notranslate"><span class="pre">print()</span></code> de python retourne la valeur <code class="docutils literal notranslate"><span class="pre">None</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">res</span> <span class="o">=</span> <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;toto&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">res</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>toto
+None
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="4">
+<li><p><strong>Paramètre formel <em>vs.</em> paramètre effectif</strong>.</p>
+<ul class="simple">
+<li><p>il peut y avoir 0, un ou plusieurs paramètres</p></li>
+<li><p>un paramètre est appelé <em>paramètre formel</em> lorsqu’il apparait <em>dans la définition</em> de la fonction</p></li>
+<li><p>un paramètre est appelé paramètre effectif lorsqu’il apparait <em>dans l’appel</em> de la fonction</p></li>
+</ul>
+</li>
+</ol>
+<ul class="simple">
+<li><p>Dans la cellule précédente, la chaine de caractères <code class="docutils literal notranslate"><span class="pre">toto</span></code> est le paramètre effectif de l’appel de la fonction <code class="docutils literal notranslate"><span class="pre">print()</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">print()</span></code> est une fonction prédéfinie compliquée qui possède de nombreux paramètres formels.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#help(print)</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="definir-une-nouvelle-fonction">
+<h3><span class="section-number">1.1.2. </span>Définir une nouvelle fonction<a class="headerlink" href="#definir-une-nouvelle-fonction" title="Permalink to this heading">#</a></h3>
+<p>Soit la fonction affine <span class="math notranslate nohighlight">\(f(x) = 2x + 1\)</span>.
+On veut calculer <span class="math notranslate nohighlight">\(f(0)\)</span>, <span class="math notranslate nohighlight">\(f(1)\)</span>, <span class="math notranslate nohighlight">\(f(-1)\)</span> ou tracer sa représentation graphique.</p>
+<p>On va définir en python une fonction nommée <code class="docutils literal notranslate"><span class="pre">f</span></code> qui réalise ce calcul.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span> <span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+    <span class="n">res</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">res</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">def</span></code> annonce la définition de la fonction <code class="docutils literal notranslate"><span class="pre">f</span></code></p>
+<ul>
+<li><p>on écrit aussi <code class="docutils literal notranslate"><span class="pre">f()</span></code> qui explicite que <code class="docutils literal notranslate"><span class="pre">f</span></code> est une fonction</p></li>
+</ul>
+</li>
+<li><p>les paramètres de la fonction sont <em>entre parenthèses</em> <code class="docutils literal notranslate"><span class="pre">(</span> <span class="pre">)</span></code></p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">f()</span></code> possède un seul paramètre <code class="docutils literal notranslate"><span class="pre">x</span></code> de type <code class="docutils literal notranslate"><span class="pre">float</span></code>. Noter le symbole <code class="docutils literal notranslate"><span class="pre">:</span></code> dans les <code class="docutils literal notranslate"><span class="pre">(</span> <span class="pre">)</span></code></p></li>
+<li><p>Ainsi <code class="docutils literal notranslate"><span class="pre">x</span></code> est le <em>paramètre formel</em> de la fonction <code class="docutils literal notranslate"><span class="pre">f()</span></code></p></li>
+<li><p>On</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">f()</span></code> <em>retourne</em> une valeur de type <code class="docutils literal notranslate"><span class="pre">float</span></code>. Noter le symbole <code class="docutils literal notranslate"><span class="pre">-&gt;</span></code> après les <code class="docutils literal notranslate"><span class="pre">(</span> <span class="pre">)</span></code></p></li>
+<li><p>cette première ligne se termine par un <code class="docutils literal notranslate"><span class="pre">:</span></code> qui annonce une partie indentée</p></li>
+<li><p>la partie indentée par rapport à <code class="docutils literal notranslate"><span class="pre">def</span></code> définit le traitement</p>
+<ul>
+<li><p>on reconnaît le calcul de <span class="math notranslate nohighlight">\(f(x)\)</span></p></li>
+<li><p>le résultat de ce calcul est affecté dans <code class="docutils literal notranslate"><span class="pre">res</span></code> : <code class="docutils literal notranslate"><span class="pre">res</span></code> est une <em>variable locale</em> à la fonction</p></li>
+</ul>
+</li>
+<li><p><code class="docutils literal notranslate"><span class="pre">return</span></code> désigne la valeur retournée par la fonction</p>
+<ul>
+<li><p>ici la valeur de <code class="docutils literal notranslate"><span class="pre">res</span></code> est retournée par <code class="docutils literal notranslate"><span class="pre">f()</span></code></p></li>
+</ul>
+</li>
+</ul>
+<div class='alert alert-block alert-info'>
+<p><strong>RETENIR</strong> :</p>
+<ul class="simple">
+<li><p>Le mot clé <code class="docutils literal notranslate"><span class="pre">def</span></code>, les <code class="docutils literal notranslate"><span class="pre">()</span></code> et le <code class="docutils literal notranslate"><span class="pre">:</span></code></p></li>
+<li><p>Les types des paramètres formels et de la valeur retournée : les <code class="docutils literal notranslate"><span class="pre">:</span></code> dans les <code class="docutils literal notranslate"><span class="pre">(</span> <span class="pre">)</span></code>et le <code class="docutils literal notranslate"><span class="pre">-&gt;</span></code></p></li>
+</ul>
+</div>    </section>
+<section id="appeler-cette-fonction">
+<h3><span class="section-number">1.1.3. </span>Appeler cette fonction<a class="headerlink" href="#appeler-cette-fonction" title="Permalink to this heading">#</a></h3>
+<p>Exécuter la cellule qui contient la définition de la fonction <code class="docutils literal notranslate"><span class="pre">f()</span></code> ne calcule rien. Pour “calculer avec f”, il faut appeler la fonction <code class="docutils literal notranslate"><span class="pre">f()</span></code> pour des valeurs de son paramètre <code class="docutils literal notranslate"><span class="pre">x</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 3 appels pour des valeurs numériques</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="mf">1.0</span><span class="p">)</span>
+<span class="n">c</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="mf">3.0</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">,</span> <span class="n">c</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 3.0 -1 7.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 2 appels pour des variables</span>
+<span class="n">zero</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">un</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">zero</span><span class="p">)</span>
+<span class="n">trois</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">un</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">zero</span><span class="p">,</span> <span class="n">un</span><span class="p">,</span> <span class="n">trois</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0 1 3
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 2 appels dans une expression </span>
+<span class="n">combien</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">zero</span><span class="p">)</span> <span class="o">+</span> <span class="n">f</span><span class="p">(</span><span class="n">un</span><span class="p">)</span> 
+
+<span class="c1"># 2 appels : 1 d&#39;une expression et 1 dans un argument qui est une expression </span>
+<span class="n">et_celui_la</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">zero</span> <span class="o">+</span> <span class="n">f</span><span class="p">(</span><span class="n">un</span><span class="p">))</span> 
+
+<span class="nb">print</span><span class="p">(</span><span class="n">combien</span><span class="p">,</span> <span class="n">et_celui_la</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4 7
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># un joli tracé vaut mieux qu&#39;un long discours</span>
+<span class="kn">import</span> <span class="nn">matplotlib.pyplot</span> <span class="k">as</span> <span class="nn">plt</span>
+
+<span class="n">x</span> <span class="o">=</span> <span class="p">[</span><span class="n">i</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">)]</span> <span class="c1"># une liste de 10 arguments</span>
+<span class="n">y</span> <span class="o">=</span> <span class="p">[</span><span class="n">f</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="n">x</span><span class="p">]</span> <span class="c1"># la liste des 10 valeurs de la fonction correspondante</span>
+
+<span class="n">plt</span><span class="o">.</span><span class="n">plot</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">)</span>
+<span class="n">plt</span><span class="o">.</span><span class="n">title</span><span class="p">(</span><span class="s2">&quot;f(x)=2x+1&quot;</span><span class="p">)</span>
+<span class="c1">#plt.close()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Text(0.5, 1.0, &#39;f(x)=2x+1&#39;)
+</pre></div>
+</div>
+<img alt="../_images/860df530eb0ce75af3cf4dc798fc07543b800f6e4bbed55f7b7e29b4f8e9452e.png" src="../_images/860df530eb0ce75af3cf4dc798fc07543b800f6e4bbed55f7b7e29b4f8e9452e.png" />
+</div>
+</div>
+<div class='alert alert-block alert-danger'>
+<p>NE PAS CONFONDRE :  <strong>LA</strong> définition  vs. <strong>LES</strong> appels</p>
+</div></section>
+<section id="tester-cette-fonction">
+<h3><span class="section-number">1.1.4. </span>Tester cette fonction<a class="headerlink" href="#tester-cette-fonction" title="Permalink to this heading">#</a></h3>
+<p>Il faut s’assurer que l’implémentation effectue sans erreur le traitement voulu.
+Pour celà, on effectue des <em>tests unitaires</em> basés sur des propriétés caractéristiques de la fonction.</p>
+<p>L’instruction <code class="docutils literal notranslate"><span class="pre">assert</span></code> de python est utile à cet effet.</p>
+<p><strong>Exemple.</strong> Une implémentation correcte des fonctions trigonométriques <span class="math notranslate nohighlight">\(cos\)</span> et <span class="math notranslate nohighlight">\(sin\)</span> doit vérifier pour toute valeur réelle <span class="math notranslate nohighlight">\(x\)</span>, <span class="math notranslate nohighlight">\(cos(x)^2 + sin(x)^2 = 1\)</span>.</p>
+<p>Cette expression est une <em>assertion</em>, c-a-d. une expression qui est vraie.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">math</span> <span class="kn">import</span> <span class="n">sin</span>
+
+<span class="n">c</span> <span class="o">=</span> <span class="n">cos</span><span class="p">(</span><span class="n">pi</span><span class="o">/</span><span class="mf">3.0</span><span class="p">)</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">sin</span><span class="p">(</span><span class="n">pi</span><span class="o">/</span><span class="mf">3.0</span><span class="p">)</span>
+
+<span class="k">assert</span> <span class="n">c</span><span class="o">*</span><span class="n">c</span> <span class="o">+</span> <span class="n">s</span><span class="o">*</span><span class="n">s</span> <span class="o">==</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Il ne se passe rien. L’assertion est vraie.
+Morale : “Pas de nouvelle, bonne nouvelle !”</p>
+<p>On peut donc être un peu plus exhaustif en testant d’autres valeurs dont on connait le résultat attendu.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># des valeurs caractéristiques </span>
+<span class="k">assert</span> <span class="n">cos</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mf">1.0</span>
+<span class="k">assert</span> <span class="n">cos</span><span class="p">(</span><span class="n">pi</span><span class="p">)</span> <span class="o">==</span> <span class="o">-</span><span class="mf">1.0</span>
+<span class="k">assert</span> <span class="n">sin</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mf">0.0</span>
+<span class="k">assert</span> <span class="n">sin</span><span class="p">(</span><span class="n">pi</span><span class="o">/</span><span class="mf">2.</span><span class="p">)</span> <span class="o">==</span> <span class="mf">1.0</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Aucune erreur n’est signalée, ce qui est rassurant. Au moins dans un premier temps : nous avons vu plus haut que avec le calcul de <code class="docutils literal notranslate"><span class="pre">cos(pi/3)</span></code> souffrait d’une erreur à la 16ème décimale.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">cos</span><span class="p">(</span><span class="n">pi</span><span class="o">/</span><span class="mi">3</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.5000000000000001
+</pre></div>
+</div>
+</div>
+</div>
+<p>On peut donc craindre de perdre certaines <em>égalités</em> pour certaines valeurs de <span class="math notranslate nohighlight">\(x\)</span>.
+Dans ces cas, les tests unitaires déclancheront une erreur. Par exemple :</p>
+<p><code class="docutils literal notranslate"><span class="pre">assert</span> <span class="pre">cos(pi/2.)</span> <span class="pre">==</span> <span class="pre">0.0</span></code></p>
+<p>provoquera l’affichage suivant :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ne">AssertionError</span>
+<span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">)</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">12</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="o">----&gt;</span> <span class="mi">1</span> <span class="k">assert</span> <span class="n">cos</span><span class="p">(</span><span class="n">pi</span><span class="o">/</span><span class="mf">2.</span><span class="p">)</span> <span class="o">==</span> <span class="mf">0.0</span>
+
+<span class="ne">AssertionError</span><span class="p">:</span>
+</pre></div>
+</div>
+<p><strong>(<span class="math notranslate nohighlight">\(\star\)</span>) Que penser de ces “résultats faux” ?</strong>
+Rassurez-vous : vous pouvez faire confiance aux résultats de ces fonctions élementaires. Il n’y a pas de bug. Cette petite imprécision est inévitable : il est par exemple impossible de représenter <em>la valeur numérique exacte</em> de <span class="math notranslate nohighlight">\(\pi\)</span> sur un ordinateur – et aussi sur votre feuille.
+Il en est de même pour <span class="math notranslate nohighlight">\(\pi/2\)</span> et donc ce serait chanceux que la fonction <span class="math notranslate nohighlight">\(\cos\)</span> en calcule le résultat exact – sauf à être elle-même fausse ou très savante ! Ce type de problème relève de l’analyse des erreurs d’arrondi des calculs sur ordinateur. Ce qui dépasse le cadre de ce chapitre.</p>
+<p><strong>Morale.</strong> <em>Toujours</em> prendre avec précaution le résultat d’un calcul avec des nombres flottants car chaque opération arithmétique peut introduire une petite erreur, parfois – mais pas toujours – sans grande conséquence.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># une propriété qui ne rassure pas complètement ...</span>
+<span class="kn">import</span> <span class="nn">random</span>
+
+<span class="k">for</span> <span class="n">_</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">20</span><span class="p">):</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="n">random</span><span class="o">.</span><span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="mi">10</span><span class="p">,</span><span class="mi">10</span><span class="p">)</span>
+    <span class="c1">#assert cos(v)**2 + sin(v)**2 == 1</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">cos</span><span class="p">(</span><span class="n">v</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span> <span class="o">+</span> <span class="n">sin</span><span class="p">(</span><span class="n">v</span><span class="p">)</span><span class="o">**</span><span class="mi">2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>0.9999999999999999
+1.0
+1.0
+1.0
+1.0
+1.0
+1.0
+1.0
+1.0
+1.0
+1.0
+1.0
+1.0000000000000002
+1.0
+1.0
+0.9999999999999999
+1.0
+1.0000000000000002
+1.0
+1.0
+</pre></div>
+</div>
+</div>
+</div>
+<div class='alert alert-block alert-info'>
+<p><strong>RETENIR.</strong></p>
+<p>Toujours tester les fonctions que vous définissez</p>
+</div>   <p>En pratique, je teste une fonction avec l’instruction <code class="docutils literal notranslate"><span class="pre">assert</span></code> et <strong>pas avec <code class="docutils literal notranslate"><span class="pre">print()</span></code></strong></p>
+<p>Des tests unitaires, même en grand nombre, ne vous permettent pas de conclure que votre implémentation est correcte. Mais juste que vous n’avez pas réussi à exhiber un éventuel traitement faux.</p>
+</section>
+<section id="pourquoi-des-fonctions">
+<h3><span class="section-number">1.1.5. </span>Pourquoi des fonctions ?<a class="headerlink" href="#pourquoi-des-fonctions" title="Permalink to this heading">#</a></h3>
+<p>Les exemples précédents illustrent des premières réponses à cette question.</p>
+<ul class="simple">
+<li><p>Eviter de ré-écrire, de dupliquer, un calcul, un traitement, du code. Ré-utiliser l’existant.</p></li>
+<li><p>Simplifier la lecture donc la compréhension</p></li>
+<li><p>Ecrire des algorithmes, des codes de façon plus <em>modulaire</em></p></li>
+</ul>
+<p><em>Modularité</em> : découper un traitement compliqué en une suite d’étapes plus simples, plus indépendantes. Une étape peut être réalisée par une fonction. Une étape peut être elle-même découpée jusqu’à obtenir un traitement assez simple pour l’écrire !</p>
+</section>
+</section>
+<section id="definition-signature-corps-et-appels-de-fonction">
+<h2><span class="section-number">1.2. </span>Définition, signature, corps et appels de fonction<a class="headerlink" href="#definition-signature-corps-et-appels-de-fonction" title="Permalink to this heading">#</a></h2>
+<p>Le vocabulaire des fonctions varie selon les langages de programmation. Reprenons certains des aspects déjà décrits avec d’autres notions proches et très classiques en programmation.</p>
+<section id="distinguer-le-quoi-du-comment">
+<h3><span class="section-number">1.2.1. </span>Distinguer le <em>Quoi</em> du <em>Comment</em><a class="headerlink" href="#distinguer-le-quoi-du-comment" title="Permalink to this heading">#</a></h3>
+<p>De façon imagée, une fonction peut-être vu comme :</p>
+<ul class="simple">
+<li><p>une boîte opaque</p></li>
+<li><p>qui “prends des choses” en entrée : les paramètres,</p></li>
+<li><p>qui effectue des traitements dépendants de ces paramètres : la zone indentée,</p></li>
+<li><p>et qui fourni un “résultat” en sortie : le <code class="docutils literal notranslate"><span class="pre">return</span></code>.</p></li>
+</ul>
+<p>La boîte porte le nom de la fonction et est en général accompagnée d’une description de ce qu’elle fait.</p>
+<p>La boîte est opaque. Je peux m’en servir – je sais <strong>ce qu’elle fait</strong> – mais pour ça, je n’ai pas besoin de savoir <strong>comment</strong> elle le fait.</p>
+<p><strong>Exemple.</strong> Vous savez ce que vaut <code class="docutils literal notranslate"><span class="pre">cos(0)</span></code> mais <em>a priori</em> pas comment il est calculé.</p>
+<p>On distingue ainsi de :</p>
+<ul class="simple">
+<li><p><strong>la spécification</strong> d’une fonction = ce que ça fait : le QUOI</p></li>
+<li><p><strong>une implémentation</strong> de cette fonction = comment ça le fait : le COMMENT</p></li>
+</ul>
+<div class='alert alert-block alert-warning'>
+<p>Vocabulaire – selon les langages de programmation :</p>
+<ul>
+    <li> spécification = signature = en-tête (= prototype)  </li>
+    <li> implémentation = corps   </li>
+</ul>
+</div>    </section>
+<section id="la-signature-d-une-fonction-en-python">
+<h3><span class="section-number">1.2.2. </span>La signature d’une fonction en python<a class="headerlink" href="#la-signature-d-une-fonction-en-python" title="Permalink to this heading">#</a></h3>
+<p>La <em>signature</em> d’une fonction explicite le minimum nécessaire et suffisant pour appeler cette fonction, ie. le <em>quoi</em> : que fait la fonction et de quoi a-t-elle besoin pour ça ?</p>
+<p>On ne gardera que le nécessaire de la syntaxe de la définition vue jusqu’ici.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span> <span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;Fonction affine de coeff directeur 2 et d&#39;ordonnée à l&#39;origine 1&#39;&#39;&#39;</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>La lecture de cette signature indique que la fonction <code class="docutils literal notranslate"><span class="pre">f</span></code>  prend en entrée un paramètre de type numérique à virgule flottante (<em>un flottant</em>) noté <code class="docutils literal notranslate"><span class="pre">x</span></code> et fourni en retour une valeur flottante.
+Le commentaire, appelé <em>docstring</em> décrit ce que fait la fonction <code class="docutils literal notranslate"><span class="pre">f</span></code>.</p>
+<div class='alert alert-block alert-danger'>
+<p>ATTENTION  : cette seule signature ne définie pas une fonction exécutable en python</p>
+<p>En revanche, cette signature <em>suffit à</em> écrire les tests unitaires qui seront exécutés une fois la fonction entièrement définie.</p>
+</div></section>
+<section id="le-corps-et-le-retour-de-valeur-en-python">
+<h3><span class="section-number">1.2.3. </span>Le corps et le retour de valeur en python<a class="headerlink" href="#le-corps-et-le-retour-de-valeur-en-python" title="Permalink to this heading">#</a></h3>
+<p>Le corps définit le traitement effectué par la fonction, <em>ie.</em> l’implémentation de la fonction.
+Il complète la signature.<br />
+Ce traitement s’effectue avec les paramètres formels et des variables locales à la fonction.<br />
+Ce traitement comporte en général une valeur de sortie retournée par l’instruction <code class="docutils literal notranslate"><span class="pre">return</span></code>.</p>
+<p><strong>Rappels</strong> :</p>
+<ul class="simple">
+<li><p>le corps est <em>indenté</em> d’un niveau par rapport à celui du <code class="docutils literal notranslate"><span class="pre">def</span></code> (qui finit par un <code class="docutils literal notranslate"><span class="pre">:</span></code>).</p></li>
+<li><p>mot-clé <code class="docutils literal notranslate"><span class="pre">return</span></code></p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">return</span></code> une valeur, une variable, une expression</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">return</span> <span class="pre">None</span></code> : ne retourne rien … mais le dit !</p></li>
+<li><p>l’exécution d’un <code class="docutils literal notranslate"><span class="pre">return</span></code> <strong>termine l’<em>exécution</em> du corps de la fonction</strong></p>
+<ul>
+<li><p>à la fin de l’écriture du corps, en général</p></li>
+<li><p>mais pas toujours : le <code class="docutils literal notranslate"><span class="pre">return</span></code> n’est pas nécessairement unique</p></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<p>On retrouve donc la définition complète d’une fonction, maintenant décomposée en sa signature et son corps.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">f</span><span class="p">(</span><span class="n">x</span> <span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;Une fonction affine déjà rencontrée&#39;&#39;&#39;</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">x</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="n">y</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="l-appel-d-une-fonction-en-python">
+<h3><span class="section-number">1.2.4. </span>L’appel d’une fonction en python<a class="headerlink" href="#l-appel-d-une-fonction-en-python" title="Permalink to this heading">#</a></h3>
+<p>L’appel de la fonction consiste à exécuter la fonction pour des valeurs fixées des arguments d’entrée.</p>
+<p>En python :</p>
+<ul class="simple">
+<li><p>le <em>nom</em> de la fonction : sans le <code class="docutils literal notranslate"><span class="pre">def</span></code> mais avec les <code class="docutils literal notranslate"><span class="pre">(</span> <span class="pre">)</span></code></p></li>
+<li><p>les <strong>paramètres effectifs</strong> : les <em>valeurs</em> des arguments d’entrée</p></li>
+<li><p>les <em>identifiants</em> des variables de sortie</p></li>
+</ul>
+<p><strong>Exemple (déjà vu)</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">##### 3 appels pour des valeurs numériques</span>
+<span class="n">a</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">a</span> <span class="o">==</span> <span class="mi">1</span>
+
+<span class="k">assert</span> <span class="n">f</span><span class="p">(</span><span class="mf">1.0</span><span class="p">)</span> <span class="o">==</span> <span class="mi">3</span>
+
+<span class="n">zero</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">un</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">zero</span><span class="p">)</span>
+<span class="k">assert</span> <span class="n">a</span> <span class="o">==</span> <span class="n">un</span>
+
+<span class="n">combien</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">zero</span><span class="p">)</span> <span class="o">+</span> <span class="n">f</span><span class="p">(</span><span class="n">un</span><span class="p">)</span> 
+<span class="k">assert</span> <span class="n">combien</span> <span class="o">&gt;</span> <span class="n">un</span>
+<span class="k">assert</span> <span class="n">combien</span> <span class="o">&lt;</span> <span class="n">f</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">combien</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
+</pre></div>
+</div>
+</div>
+</div>
+<div class='alert alert-block alert-danger'>
+<p><strong>NE PAS CONFONDRE</strong> :  <strong>paramètre formel</strong> <em>vs.</em> <strong>paramètre effectif</strong> ou argument</p>
+</div>    
+</section>
+<section id="methodologie-d-ecriture-des-fonctions-pour-ce-semestre">
+<h3><span class="section-number">1.2.5. </span>Méthodologie d’écriture des fonctions pour ce semestre<a class="headerlink" href="#methodologie-d-ecriture-des-fonctions-pour-ce-semestre" title="Permalink to this heading">#</a></h3>
+<p>En pratique, vous respecterez <strong>l’ordre d’écriture</strong> suivant.</p>
+<div class='alert alert-block alert-info'>
+<ol class="arabic simple">
+<li><p>écriture de la signature de la fonction</p>
+<ul class="simple">
+<li><p><em>docstring</em> compris</p></li>
+</ul>
+</li>
+<li><p>écriture d’appels simples, de tests unitaires</p>
+<ul class="simple">
+<li><p>rappel : appels sur des valeurs de tests, cad. dont on connait le résultat attendu de la fonction</p></li>
+<li><p>et correction de l’étape 1 si besoin</p></li>
+</ul>
+</li>
+<li><p>écriture du corps</p></li>
+<li><p><strong>exécution</strong> des tests unitaires</p>
+<ul class="simple">
+<li><p>et correction de l’étape 2 si besoin</p></li>
+</ul>
+</li>
+<li><p>écriture des appels voulus</p></li>
+<li><p><strong>exécution</strong> des appels voulus</p></li>
+</ol>
+</div><div class='alert alert-block alert-warning'>
+<p>CONSIGNE PEDAGOGIQUE : L’écriture de l’appel (simple ou test unitaire) est effectuée avant celle du corps, <em>ie.</em> en se basant uniquement sur la signature.</p>
+</div>
+<p>Ainsi :</p>
+<ul class="simple">
+<li><p>une erreur de spécification peut être détectée : absence ou excès de paramètre, ordre des paramètres mal choisi, …</p></li>
+<li><p>il n’est pas possible d’exécuter cet appel avant d’avoir fini l’écriture du corps.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># définition de 3 fonctions</span>
+<span class="k">def</span> <span class="nf">doubler</span><span class="p">(</span><span class="n">u</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; retourne le double de u &quot;&quot;&quot;</span>
+    <span class="k">return</span> <span class="mi">2</span> <span class="o">*</span> <span class="n">u</span>
+
+<span class="k">def</span> <span class="nf">tripler</span><span class="p">(</span><span class="n">u</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&quot;&quot;&quot; retourne le triple de u    &quot;&quot;&quot;</span>
+    <span class="n">v</span> <span class="o">=</span> <span class="mi">3</span> <span class="o">*</span> <span class="n">u</span>
+    <span class="k">return</span> <span class="n">v</span>
+
+<span class="c1"># des tests unitaires</span>
+<span class="n">doubler</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+<span class="n">tripler</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mi">0</span>
+
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">,</span><span class="mi">5</span><span class="p">):</span>
+    <span class="k">assert</span> <span class="n">doubler</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">==</span> <span class="n">i</span> <span class="o">+</span> <span class="n">i</span>
+    <span class="k">assert</span> <span class="n">tripler</span><span class="p">(</span><span class="n">i</span><span class="p">)</span> <span class="o">==</span> <span class="n">i</span> <span class="o">+</span> <span class="n">i</span> <span class="o">+</span> <span class="n">i</span>
+
+<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">uniform</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="mi">1</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">doubler</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">==</span> <span class="n">x</span> <span class="o">+</span> <span class="n">x</span>
+    <span class="k">assert</span> <span class="n">tripler</span><span class="p">(</span><span class="n">x</span><span class="p">)</span> <span class="o">==</span> <span class="n">x</span> <span class="o">+</span> <span class="n">x</span> <span class="o">+</span> <span class="n">x</span>
+    
+<span class="c1"># des appels</span>
+<span class="n">d</span> <span class="o">=</span> <span class="n">doubler</span><span class="p">(</span><span class="mi">1234</span><span class="p">)</span>
+<span class="n">t</span> <span class="o">=</span> <span class="n">tripler</span><span class="p">(</span><span class="mi">5678</span><span class="p">)</span>
+
+<span class="c1"># un affichage</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">d</span><span class="p">,</span> <span class="n">t</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2468 17034
+</pre></div>
+</div>
+</div>
+</div>
+<div class='alert alert-block alert-danger'>
+<p><strong>INTERDIT PEDAGOGIQUE</strong> : il est interdit d’utiliser l’identifiant du paramètre formel comme paramètre effectif d’un appel.</p>
+</div><div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">x</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="c1"># L&#39;appel suivant est interdit pour la fonction affine f(x) définie précédemment</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">x</span><span class="p">)</span>
+
+<span class="n">y</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="mi">3</span><span class="p">)</span> <span class="c1"># ok</span>
+
+
+<span class="n">val</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">y</span> <span class="o">=</span> <span class="n">f</span><span class="p">(</span><span class="n">val</span><span class="p">)</span> <span class="c1"># ok</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="alert alert-block alert-info">
+<p><strong>A retenir :</strong> l’appel est situé <em>après</em> la définition</p>
+</div>  
+<ul class="simple">
+<li><p>logique : il faut connaître la fonction pour l’utiliser !</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">python</span></code> : se souvenir que <code class="docutils literal notranslate"><span class="pre">from</span> <span class="pre">module</span> <span class="pre">import</span> <span class="pre">f</span></code> permet de connaître, donc d’utiliser, <code class="docutils literal notranslate"><span class="pre">f</span></code> qui a été définie (par moi ou par un.e autre) dans la bibliothèque <code class="docutils literal notranslate"><span class="pre">module</span></code></p></li>
+</ul>
+</section>
+</section>
+<section id="l-appel-de-fonction-rompt-le-sequencement-des-instructions-ecrites-dans-le-code-source">
+<h2><span class="section-number">1.3. </span>L’appel de fonction rompt le séquencement des instructions écrites dans le code source<a class="headerlink" href="#l-appel-de-fonction-rompt-le-sequencement-des-instructions-ecrites-dans-le-code-source" title="Permalink to this heading">#</a></h2>
+<p>Le modèle d’exécution séquentielle des instructions consiste à exécuter l’instruction <em>qui suit</em> celle qui vient de s’exécuter.
+Mais de quel ordre parle-t-on ?</p>
+<p>L’ordre des instructions exécutées n’est pas l’ordre des instructions <em>écrites dans le code source</em> (python).</p>
+<ul class="simple">
+<li><p>Les cas le plus simple est une suite d’instructions composée d’affectations, d’opérateurs booléen ou arithmétiques ou encore d’expressions arithmétiques. Ici les instructions sont globalement exécutées “ligne après ligne”, pour ne pas dire “instruction après instruction”.</p></li>
+<li><p>Les structures de contrôle cassent ce séquencement “ligne après ligne” du <em>code source</em>.</p>
+<ul>
+<li><p>Les tests (<code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">..</span>&#160; <span class="pre">elif</span> <span class="pre">..</span> <span class="pre">else</span></code>) engendrent des sauts vers des lignes du code source distantes de celle du test.</p></li>
+<li><p>Les répétitions (<code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">..</span></code> ou <code class="docutils literal notranslate"><span class="pre">while</span> <span class="pre">..</span></code>) engendrent des retours vers des lignes du code source placées avant la dernière exécutée.</p></li>
+</ul>
+</li>
+</ul>
+<p>Ainsi tests et répétitions rompent le séquencement des instructions écrites dans le code source.
+Les fonctions génèrent un ordre d’exécution encore différent.</p>
+<p>Nous illustrons avec <a class="reference external" href="http://pythontutor.com/visualize.html#mode=edit">pythontutor</a> l’exécution d’un appel de fonction.</p>
+<ul class="simple">
+<li><p>Fonction affine :
+<a class="reference external" href="http://pythontutor.com/visualize.html#code=def%20f%28x%20%3A%20float%29%20-%3E%20float%3A%0A%20%20%20%20'''Une%20fonction%20affine%20d%C3%A9j%C3%A0%20rencontr%C3%A9e'''%0A%20%20%20%20y%20%3D%202%20*%20x%20%2B%201%0A%20%20%20%20return%20y%0A%20%20%20%20%0Aordonnee_a_l_origine%20%3D%20f%280%29%0A%0Aprint%28ordonnee_a_l_origine%29%0A%0Aprint%28%22n,%20f%28n%29%22%29%0A%23%20plusieurs%20appels%20de%20f%0Afor%20val%20in%20range%283%29%3A%0A%20%20%20%20print%28val,%20f%28val%29%29&amp;amp;cumulative=false&amp;amp;curInstr=0&amp;amp;heapPrimitives=nevernest&amp;amp;mode=display&amp;amp;origin=opt-frontend.js&amp;amp;py=3&amp;amp;rawInputLstJSON=%5B%5D&amp;amp;textReferences=false">visualisation pythontutor</a></p></li>
+</ul>
+<p>On observe :</p>
+<ul class="simple">
+<li><p>l’appel de fonction provoque une rupture de l’exécution séquentielle, un débranchement de l’appelant vers l’appelé ;</p></li>
+<li><p>le <code class="docutils literal notranslate"><span class="pre">return</span></code> provoque le retour au cadre appelant pour continuer l’exécution séquentielle.</p></li>
+<li><p>Plusieurs <code class="docutils literal notranslate"><span class="pre">return</span></code> ?</p>
+<ul>
+<li><p>Oui mais 1 seul exécuté par appel.</p></li>
+</ul>
+</li>
+</ul>
+<section id="appel-appelant-to-appele-return-appele-to-appelant">
+<h3><span class="section-number">1.3.1. </span>Appel = appelant <span class="math notranslate nohighlight">\(\to\)</span> appelé ; <code class="docutils literal notranslate"><span class="pre">return</span></code> = appelé <span class="math notranslate nohighlight">\(\to\)</span> appelant<a class="headerlink" href="#appel-appelant-to-appele-return-appele-to-appelant" title="Permalink to this heading">#</a></h3>
+<p>Distinguer <em>appelant</em> et <em>appelé</em> :</p>
+<ul class="simple">
+<li><p><em>l’appelant</em> : le cadre (ie. la zone logique de code) où l’appel est effectué</p></li>
+<li><p><em>l’appelé</em> : le traitement de la définition de la fonction avec les paramètres effectifs de l’appel</p></li>
+</ul>
+<p><strong>L’appel provoque une rupture de l’exécution séquentielle de l’appelant</strong> : un débranchement de l’appelant vers l’appelé.</p>
+<ul class="simple">
+<li><p>L’appel “passe la main” à l’appelé en même temps qu’il transmet les paramètres effectifs et une information pour que l’appelé puisse, plus tard, revenir dans l’appelant (pour fournir le résultat, ie. retourner le résultat).</p></li>
+<li><p>L’exécution revient dans la zone de l’appelant une fois achevée l’exécution de l’appelé  – en pratique, après l’exécution d’un <code class="docutils literal notranslate"><span class="pre">return</span></code>.</p></li>
+<li><p>Ce <code class="docutils literal notranslate"><span class="pre">return</span></code> déclenche le retour dans l’appelant à l’instruction de l’appel – car c’est souvent une affectation si l’appelé est une (vraie) fonction – ou à l’instruction suivante – si c’est une procédure qui ne renvoie aucun résultat, cad. un appel sans affectation.</p></li>
+</ul>
+<div class="alert alert-block alert-info">
+<p><strong>Retenir :</strong></p>
+<ul class="simple">
+<li><p>l’appel = appelant -&gt; appelé</p></li>
+<li><p>le <code class="docutils literal notranslate"><span class="pre">return</span></code> = appelé -&gt; appelant</p></li>
+</ul>
+</div> </section>
+<section id="le-return-termine-l-appel-de-la-fonction">
+<h3><span class="section-number">1.3.2. </span>Le <code class="docutils literal notranslate"><span class="pre">return</span></code> termine l’appel de la fonction<a class="headerlink" href="#le-return-termine-l-appel-de-la-fonction" title="Permalink to this heading">#</a></h3>
+<p>L’exécution d’un <code class="docutils literal notranslate"><span class="pre">return</span></code>, quel qu’il soit, <em>termine l’exécution de la fonction</em> – et provoque le retour dans le cadre appelant.</p>
+<p>Plusieurs instructions <code class="docutils literal notranslate"><span class="pre">return</span></code> sont possibles dans une même fonction.
+Donc pas uniquement comme dernière instruction du corps de la fonction.</p>
+<ul class="simple">
+<li><p>Le premier <code class="docutils literal notranslate"><span class="pre">return</span></code> exécuté arrête l’exécution</p></li>
+<li><p>les instructions suivantes du corps de la fonction ne sont pas traitées – comme dans une branche non prise d’un <code class="docutils literal notranslate"><span class="pre">if</span> <span class="pre">..</span> <span class="pre">elif</span> <span class="pre">..</span> <span class="pre">else</span> <span class="pre">..</span></code>.</p></li>
+</ul>
+<p><a class="reference external" href="http://pythontutor.com/visualize.html#code=def%20aa%28u%20%3A%20float%29%20-%3E%20float%3A%0A%20%20%20%20'''La%20m%C3%AAme%20avec%202%20return%20'''%0A%20%20%20%20if%20u%20%3E%200%3A%0A%20%20%20%20%20%20%20%20res1%20%3D%20u%0A%20%20%20%20%20%20%20%20return%20res1%0A%20%20%20%20else%3A%0A%20%20%20%20%20%20%20%20res2%20%3D%20-u%0A%20%20%20%20%20%20%20%20return%20res2%0A%20%20%20%20%20%20%20%20%0Aun%20%3D%20aa%281.0%29%0Aencore_un%20%3D%20aa%28-1.0%29%0A%0A%23%20Profitons-en%20pour%20montrer%20un%20%60assert%60%20%0Aassert%20un%20%3D%3D%20encore_un&amp;amp;cumulative=false&amp;amp;curInstr=14&amp;amp;heapPrimitives=nevernest&amp;amp;mode=display&amp;amp;origin=opt-frontend.js&amp;amp;py=3&amp;amp;rawInputLstJSON=%5B%5D&amp;amp;textReferences=false">visualisation pythontutor</a>
+de plusieurs <code class="docutils literal notranslate"><span class="pre">return</span></code> et 1 seul exécuté par appel.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">abs0</span><span class="p">(</span><span class="n">u</span> <span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;calcule la valeur absolue de u&#39;&#39;&#39;</span>
+    <span class="k">if</span> <span class="n">u</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="n">u</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="o">-</span><span class="n">u</span>
+    <span class="k">return</span> <span class="n">res</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Rmq</strong>.
+<code class="docutils literal notranslate"><span class="pre">res</span></code> est une <em>variable locale</em> à la fonction qui est définie pour retourner le résultat du traitement de la fonction.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">abs2</span><span class="p">(</span><span class="n">u</span> <span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;La même avec 2 return &#39;&#39;&#39;</span>
+    <span class="k">if</span> <span class="n">u</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="n">u</span>
+        <span class="k">return</span> <span class="n">res</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="o">-</span><span class="n">u</span>
+        <span class="k">return</span> <span class="n">res</span>
+    
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># 2 appels</span>
+<span class="n">a_x</span> <span class="o">=</span> <span class="n">abs0</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="n">a_y</span> <span class="o">=</span> <span class="n">abs0</span><span class="p">(</span><span class="o">-</span><span class="mi">5</span><span class="p">)</span>
+
+<span class="c1"># affichage</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a_x</span><span class="p">,</span> <span class="n">a_y</span><span class="p">)</span>
+
+<span class="c1"># intérêt du docstring</span>
+<span class="n">help</span><span class="p">(</span><span class="n">abs0</span><span class="p">)</span>
+<span class="n">help</span><span class="p">(</span><span class="n">abs2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2 5
+Help on function abs0 in module __main__:
+
+abs0(u: float) -&gt; float
+    calcule la valeur absolue de u
+
+Help on function abs2 in module __main__:
+
+abs2(u: float) -&gt; float
+    La même avec 2 return
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">abs2bis</span><span class="p">(</span><span class="n">u</span> <span class="p">:</span> <span class="nb">float</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;La même avec 2 return sans variable locale&#39;&#39;&#39;</span>
+    <span class="k">if</span> <span class="n">u</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">u</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="o">-</span><span class="n">u</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Nous verrons que les fonctions récursives sont friandes de <code class="docutils literal notranslate"><span class="pre">return</span></code> très tôt écrits dans le corps.</p>
+</section>
+<section id="exercice">
+<h3><span class="section-number">1.3.3. </span>Exercice<a class="headerlink" href="#exercice" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Reprendre les fonctions précédentes (qui calculent et retournent la valeur absolue du paramètre d’entrée) et bien identifier le séquencement des instructions exécutées dans l’appelant et l’appelé.</p></li>
+</ul>
+</section>
+</section>
+<section id="specifications-de-fonctions-avec-parametre-list-en-python">
+<h2><span class="section-number">1.4. </span>Spécifications de fonctions avec paramètre <code class="docutils literal notranslate"><span class="pre">list</span></code> en python<a class="headerlink" href="#specifications-de-fonctions-avec-parametre-list-en-python" title="Permalink to this heading">#</a></h2>
+<p>Les <code class="docutils literal notranslate"><span class="pre">list</span></code> python sont utilisées pour représenter des tableaux.
+Rappelons comment spécifier des paramètres formels de type <code class="docutils literal notranslate"><span class="pre">list</span></code>.</p>
+<section id="comment-indiquer-le-type-d-un-parametre-formel-list">
+<h3><span class="section-number">1.4.1. </span>Comment indiquer le type d’un paramètre formel <code class="docutils literal notranslate"><span class="pre">list</span></code> ?<a class="headerlink" href="#comment-indiquer-le-type-d-un-parametre-formel-list" title="Permalink to this heading">#</a></h3>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Evolutions des annotations de typage</p>
+<ul class="simple">
+<li><p>python <span class="math notranslate nohighlight">\(&lt;\)</span> 3.9 : module <code class="docutils literal notranslate"><span class="pre">typing</span></code> nécessaire pour définir <code class="docutils literal notranslate"><span class="pre">List[...]</span></code> avec une majuscule</p></li>
+<li><p>python <span class="math notranslate nohighlight">\(\ge\)</span> 3.9 : possibilité d’utiliser le type <code class="docutils literal notranslate"><span class="pre">list[...]</span></code> sans majuscule et sans importer le module <code class="docutils literal notranslate"><span class="pre">typing</span></code></p></li>
+<li><p>python <span class="math notranslate nohighlight">\(\ge\)</span> 3.10 : le symbole <code class="docutils literal notranslate"><span class="pre">|</span></code> pour désigner l’union de types (ex <code class="docutils literal notranslate"><span class="pre">Union</span></code>)</p></li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>La suite de ce chapitre utilise les possibilités de python 3.9.</p>
+</div>
+<p>Le type d’un tableau (représenté par une liste) sera décrit avec la syntaxe <code class="docutils literal notranslate"><span class="pre">list[type_val]</span></code> où <code class="docutils literal notranslate"><span class="pre">type_val</span></code> est le type des valeurs du tableau.</p>
+<p><em>Exemples.</em></p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">list[int]</span></code> : un tableau 1D d’entiers</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">list[float]</span></code> : un tableau 1D de flottants</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">list[str]</span></code> : un tableau 1D de caractères <em>ou</em> de chaîne de caractères.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">list[list[int]]</span></code> : un tableau 2D d’entiers représenté par une liste de listes</p></li>
+</ul>
+<p>Cette syntaxe permet d’expliciter le type (unique) des valeurs contenues dans un tableau.</p>
+</section>
+<section id="comment-specifier-une-fonction-avec-des-parametres-formels-de-type-tableau">
+<h3><span class="section-number">1.4.2. </span>Comment spécifier une fonction avec des paramètres formels de type tableau ?<a class="headerlink" href="#comment-specifier-une-fonction-avec-des-parametres-formels-de-type-tableau" title="Permalink to this heading">#</a></h3>
+<p>Pour chaque paramètre formel de type tableau (représenté par une liste python), on <em>complète</em> la spécification de la fonction <em>avec</em> autant de <em>paramètres</em> nécessaires à la définition de <em>la dimension du tableau</em> : un paramètre supplémentaire pour un tableau 1D, deux pour un tableau 2D, …</p>
+<p>Montrons avec des exemples comment préciser la (ou les) taille(s) fixe(s) d’un tableau.</p>
+<p><strong>Exemple :</strong>
+la fonction <code class="docutils literal notranslate"><span class="pre">min1()</span></code> doit retourner la valeur minimale d’un tableau 1 D <code class="docutils literal notranslate"><span class="pre">t</span></code>, d’entiers (par exemple) et de taille <code class="docutils literal notranslate"><span class="pre">n</span></code> quelconque.</p>
+<p>La spécification de cette fonction s’écrira :</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">min1</span><span class="p">(</span><span class="n">t</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;retourne la valeur minimale du tableau d&#39;entiers t de taille n&#39;&#39;&#39;</span>
+
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>La taille <code class="docutils literal notranslate"><span class="pre">n</span></code> est définie ici comme second paramètre de cette fonction.</p>
+<ul>
+<li><p>C’est bien un entier</p></li>
+</ul>
+</li>
+<li><p>Ce paramètre supplémentaire n’est pas nécessaire en python mais <strong>il est obligatoire dans cet enseignement</strong></p></li>
+</ul>
+<p>Nous étendons cette pratique aux tableaux multidimensionnels.</p>
+<p>Par exemple, la spécification de la fonction qui identifie et retourne la valeur minimale dans un tableau 2D s’écrit par exemple (pour un tableau 2D d’entiers) :</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">min2</span><span class="p">(</span><span class="n">t</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]],</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">m</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;retourne la valeur minimale du tableau 2D d&#39;entiers t de taille n x m&#39;&#39;&#39;</span>
+</pre></div>
+</div>
+<p>Remarquons :</p>
+<ul class="simple">
+<li><p>l’annotation du type de <code class="docutils literal notranslate"><span class="pre">t</span></code>, paramètre formel de “type tableau 2D”, comme une liste de listes d’entiers,</p></li>
+<li><p>et les 2 paramètres de taille <code class="docutils literal notranslate"><span class="pre">n</span></code> et <code class="docutils literal notranslate"><span class="pre">m</span></code>, qui désignent respectivement le nombre de lignes et de colonnes de <code class="docutils literal notranslate"><span class="pre">t</span></code>.</p></li>
+</ul>
+<div class="alert alert-block alert-info">
+    <b>Convention à appliquer ce semestre.</b> 
+<ol class="arabic simple">
+<li><p>Lorsqu’une fonction admet un paramètre formel de type tableau (ou plus d’un), on convient que les paramètres de taille de chaque paramètre tableau suivent sa définition dans la spécification de la fonction.</p></li>
+<li><p>La seule simplfication possible est la suivante : si la fonction admet plusieurs paramètres de type tableau de même taille, alors ces paramètres sont placés en dernier, suivis d’une seule définition de leur taille.</p></li>
+</ol>
+</div>    
+<p><strong>Exemples.</strong></p>
+<ul class="simple">
+<li><p>si il y a 1 paramètre tableau 1D, on écrit dans l’ordre les types de <code class="docutils literal notranslate"><span class="pre">tab1,</span> <span class="pre">taille_de_tab1</span></code></p></li>
+<li><p>si il y a 2 paramètres tableaux 1D, on écrit dans l’ordre les types de  <code class="docutils literal notranslate"><span class="pre">tab1,</span> <span class="pre">taille_de_tab1,</span> <span class="pre">tab2,</span> <span class="pre">taille_de_tab2</span></code></p></li>
+<li><p>si il y a 1 paramètre tableau 2D, on écrit dans l’ordre les types de <code class="docutils literal notranslate"><span class="pre">tab1,</span> <span class="pre">nb_lignes_de_tab1,</span> <span class="pre">nb_colonnes_de_tab1</span></code>,</p></li>
+</ul>
+<p><strong>Exemple de la simplification.</strong></p>
+<p>(<span class="math notranslate nohighlight">\(\star\)</span>) On en profite pour montrer comment construire une pré-condition avec un <code class="docutils literal notranslate"><span class="pre">assert</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">somme3vecteurs</span><span class="p">(</span><span class="n">v1</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">v2</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">v3</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">n</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">]:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;Calcule et retourne la somme des 3 vecteurs v1, v2 et v3 de même taille n&#39;&#39;&#39;</span>
+    <span class="k">assert</span> <span class="nb">len</span><span class="p">(</span><span class="n">v1</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">v2</span><span class="p">)</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">v3</span><span class="p">)</span> <span class="o">==</span> <span class="n">n</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="autres-complements">
+<h2><span class="section-number">1.5. </span>Autres compléments<a class="headerlink" href="#autres-complements" title="Permalink to this heading">#</a></h2>
+<section id="ne-pas-confondre-return-et-print">
+<h3><span class="section-number">1.5.1. </span>Ne pas confondre <code class="docutils literal notranslate"><span class="pre">return</span></code> et <code class="docutils literal notranslate"><span class="pre">print</span></code><a class="headerlink" href="#ne-pas-confondre-return-et-print" title="Permalink to this heading">#</a></h3>
+<p>C’est une erreur très fréquente hélas.
+La relecture de paragraphe sur le rôle du <code class="docutils literal notranslate"><span class="pre">return</span></code> permet de bien se convaincre qu’un <code class="docutils literal notranslate"><span class="pre">return</span></code> fait des choses bien différentes d’un <code class="docutils literal notranslate"><span class="pre">print</span></code>.</p>
+<div class="alert alert-info">
+<p>CONSEIL DÉJÀ SOUVENT RAPPELÉ : séparer les E/S des traitements</p>
+</div>
+<p>En pratique, les E/S (<code class="docutils literal notranslate"><span class="pre">print</span></code> et <code class="docutils literal notranslate"><span class="pre">input</span></code>) doivent être limitées :</p>
+<ul class="simple">
+<li><p>au programme principal : le <code class="docutils literal notranslate"><span class="pre">main</span></code>, l’appelant de plus haut niveau</p></li>
+<li><p>aux fonctions d’entrées-sorties spécifiques à votre application, si il y en a.</p>
+<ul>
+<li><p>Voir <code class="docutils literal notranslate"><span class="pre">afficher_pref_dpt()</span></code> en fin de chapitre.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="help-et-docstring">
+<h3><span class="section-number">1.5.2. </span><code class="docutils literal notranslate"><span class="pre">help()</span></code> et <em>docstring</em><a class="headerlink" href="#help-et-docstring" title="Permalink to this heading">#</a></h3>
+<p><code class="docutils literal notranslate"><span class="pre">help()</span></code> est une fonction python prédéfinie qui affiche l’en-tête (la signature) complet de la fonction passée en paramètre.</p>
+<p>Elle fournit les informations nécessaires à l’utilisation correcte de la fonction, ainsi que des détails sur son objet et son implémentation – si le ces aspects ont été décrits par le programmeur dans le <code class="docutils literal notranslate"><span class="pre">docstring</span></code> : la zone de commentaires <em>entre</em> <code class="docutils literal notranslate"><span class="pre">'''</span></code> (3 <em>quotes</em> ou <code class="docutils literal notranslate"><span class="pre">&quot;&quot;&quot;</span></code> (3 <em>double quotes</em>) et indentée sous le <code class="docutils literal notranslate"><span class="pre">def</span></code>.</p>
+<p>Cette fonction est similaire à l’option de commande <code class="docutils literal notranslate"><span class="pre">--help</span></code> sous Unix.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">doubler</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on function doubler in module __main__:
+
+doubler(u: int) -&gt; int
+    retourne le double de u
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">help</span><span class="p">(</span><span class="n">f</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Help on function f in module __main__:
+
+f(x: float) -&gt; float
+    Une fonction affine déjà rencontrée
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Exercice</strong>. A quoi reconnait-on que <code class="docutils literal notranslate"><span class="pre">help</span></code> est une fonction ?</p>
+</section>
+<section id="plusieurs-parametres">
+<h3><span class="section-number">1.5.3. </span>Plusieurs paramètres<a class="headerlink" href="#plusieurs-parametres" title="Permalink to this heading">#</a></h3>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">puissance</span><span class="p">(</span><span class="n">x</span> <span class="p">:</span> <span class="nb">float</span><span class="p">,</span> <span class="n">n</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">float</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;calcule x**n de façon itérative pour&#39;&#39;&#39;</span>
+    <span class="c1"># (un) corps de la fonction puissance</span>
+    <span class="n">r</span> <span class="o">=</span> <span class="mf">1.0</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+        <span class="n">r</span> <span class="o">=</span> <span class="n">r</span> <span class="o">*</span> <span class="n">x</span>
+    <span class="k">return</span> <span class="n">r</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># tests</span>
+<span class="k">assert</span> <span class="n">puissance</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="mf">1.</span>
+<span class="k">assert</span> <span class="n">puissance</span><span class="p">(</span><span class="mf">1.0</span><span class="p">,</span> <span class="mi">1</span><span class="p">)</span> <span class="o">==</span> <span class="mf">1.</span>
+<span class="k">assert</span> <span class="n">puissance</span><span class="p">(</span><span class="mf">2.0</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span> <span class="o">==</span> <span class="mf">8.0</span>
+
+<span class="c1"># appels avec des valeurs  </span>
+<span class="n">mille</span> <span class="o">=</span> <span class="n">puissance</span><span class="p">(</span><span class="mf">10.0</span><span class="p">,</span> <span class="mi">3</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;mille =&quot;</span><span class="p">,</span> <span class="n">mille</span><span class="p">)</span>
+
+<span class="c1"># si besoin, avant d&#39;écrire un assert</span>
+<span class="n">vrai_ou_faux</span> <span class="o">=</span> <span class="p">(</span><span class="n">puissance</span><span class="p">(</span><span class="mf">3.1</span><span class="p">,</span><span class="mi">2</span><span class="p">)</span> <span class="o">==</span> <span class="mf">3.1</span> <span class="o">*</span> <span class="mf">3.1</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">vrai_ou_faux</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>mille = 1000.0
+True
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># appels avec une variable</span>
+
+<span class="c1"># évitons les entrées au clavier</span>
+<span class="c1">#n = int(input(&quot;n premières puissances de 2.0 pour n = &quot;))</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">5</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;2 **&quot;</span><span class="p">,</span> <span class="n">i</span><span class="p">,</span> <span class="s2">&quot;=&quot;</span><span class="p">,</span> <span class="n">puissance</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span>
+<span class="nb">print</span><span class="p">()</span> 
+
+
+<span class="c1"># évitons les entrées au clavier</span>
+<span class="c1">#p = float(input(&quot;n premières puissances de p pour p = &quot;))</span>
+<span class="c1">#n = int(input(&quot;et n = &quot;))</span>
+<span class="n">p</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">n</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="o">+</span><span class="mi">1</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">puissance</span><span class="p">(</span><span class="n">p</span><span class="p">,</span> <span class="n">i</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2 ** 0 = 1.0
+2 ** 1 = 2.0
+2 ** 2 = 4.0
+2 ** 3 = 8.0
+2 ** 4 = 16.0
+2 ** 5 = 32.0
+
+1.0
+3.0
+9.0
+27.0
+81.0
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="fonction-sans-parametre">
+<h3><span class="section-number">1.5.4. </span>Fonction sans paramètre<a class="headerlink" href="#fonction-sans-parametre" title="Permalink to this heading">#</a></h3>
+<p>Une fonction peut ne pas avoir de paramètre formel. Et donc être appelée sans argument (sans paramètre effectif).</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">tetu</span><span class="p">()</span> <span class="p">:</span>
+    <span class="k">return</span> <span class="mi">1</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">res</span> <span class="o">=</span> <span class="n">tetu</span><span class="p">()</span> <span class="c1"># appel et affectation du résultat</span>
+<span class="nb">print</span><span class="p">(</span><span class="s1">&#39;res = &#39;</span><span class="p">,</span> <span class="n">res</span><span class="p">)</span>   <span class="c1"># affichage</span>
+
+<span class="c1"># boucle d&#39;appels à tetu() dans un print()  </span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">5</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s1">&#39;appel tetu&#39;</span><span class="p">,</span> <span class="n">tetu</span><span class="p">())</span>
+        
+<span class="c1"># appel sans affectation, ni print. </span>
+<span class="c1"># L&#39;interpréteur python affiche sa valeur en Out[..] </span>
+<span class="n">tetu</span><span class="p">()</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>res =  1
+appel tetu 1
+appel tetu 1
+appel tetu 1
+appel tetu 1
+appel tetu 1
+</pre></div>
+</div>
+<div class="output text_plain highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="fonction-sans-return">
+<h3><span class="section-number">1.5.5. </span>Fonction sans <code class="docutils literal notranslate"><span class="pre">return</span></code><a class="headerlink" href="#fonction-sans-return" title="Permalink to this heading">#</a></h3>
+<div class="alert alert-block alert-warning">
+<p>Toute fonction python retourne un résultat. Si aucun <code class="docutils literal notranslate"><span class="pre">return</span></code> est exécuté, la valeur <code class="docutils literal notranslate"><span class="pre">None</span></code> est systématiquement retournée.</p>
+</div>
+<p><strong>Exemple</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">mal_ecrite</span><span class="p">(</span><span class="n">x</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;Si si je suis un bon exemple de fonction sans return&#39;&#39;&#39;</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">x</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="n">mal_ecrite</span><span class="p">(</span><span class="mi">1</span><span class="p">)</span>
+<span class="n">b</span> <span class="o">=</span> <span class="n">mal_ecrite</span><span class="p">(</span><span class="mi">0</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 None
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="portee-des-variables-variable-locale-variable-globale">
+<h3><span class="section-number">1.5.6. </span>Portée des variables, variable locale, variable globale,<a class="headerlink" href="#portee-des-variables-variable-locale-variable-globale" title="Permalink to this heading">#</a></h3>
+<blockquote>
+<div><p>La <strong>portée</strong> d’une variable : la zone où une variable est <em>accessible</em> c-a-d. (re)connue à l’aide de son identifiant.</p>
+</div></blockquote>
+<p>Les notions de variable locale (à une fonction) ou de variable globale sont classiques en programmation.</p>
+<blockquote>
+<div><p><strong>Variable locale</strong> à une fonction : variable définie dans le <em>corps</em> de la fonction pour permettre le traitement réalisé par la fonction.</p>
+</div></blockquote>
+<p>Par extension, les paramètres <strong>formels</strong> de la fonction sont aussi des <strong>variables locales</strong> à sa définition.</p>
+<blockquote>
+<div><p>Une <strong>variable</strong> est dite  <strong>globale</strong> par rapport à une fonction si elle est définie à l’extérieur de la fonction, et plus particulièrement dans l’appelant de la fonction.</p>
+</div></blockquote>
+<p><strong>Convention.</strong> Sauf besoin, on utilisera le terme “variable locale” sans ajouter “locale à une fonction”.</p>
+<ul class="simple">
+<li><p>La portée d’une variable locale est <strong>limitée au corps de la fonction</strong> qui contient sa définition.<br />
+- Une variable locale <em>n’existe pas à l’extérieur</em> de la définition ou du traitement de la fonction.</p></li>
+<li><p>La portée d’une variable globale est définie par le cadre <em>appelant</em>.</p>
+<ul>
+<li><p>La portée d’une variable <strong>commence à sa définition et s’étend au cadre qui contient cette définition</strong>.</p></li>
+<li><p>cette portée inclut les fonctions définies dans ce cadre et aussi leurs corps</p></li>
+</ul>
+</li>
+<li><p>Les portées d’une variable globale et d’une variable locale peuvent se recouvrir (dans la fonction de la variable locale) si <em>ces 2 variables ont le même identifiant</em>.</p></li>
+</ul>
+<p>Cette dernière remarque justifie les deux interdits suivants.</p>
+<div class="alert alert-block alert-danger">
+<p>INTERDITS PEDAGOGIQUES :</p>
+<ol class="arabic simple">
+<li><p>Dans la définition d’une fonction, il est interdit d’introduire ou d’utiliser des variables globales, excepté si ce sont des <strong>constantes</strong>.</p></li>
+<li><p>Il est interdit d’utiliser l’identifiant du paramètre formel comme paramètre effectif d’un appel.</p></li>
+</ol>
+</div><ol class="arabic simple">
+<li><p>Ainsi en pratique, vous limitez le corps d’une fonction au traitement de ses paramètres formels et de variables locales.</p></li>
+<li><p>(<span class="math notranslate nohighlight">\(\star\)</span>) On comprend maintenant la justification de cet interdit déjà posé.</p></li>
+</ol>
+<div class="alert alert-block alert-info">
+<p>CONVENTION PYTHON : les identifiants de constantes s’écrivent en MAJUSCULES</p>
+<p><code class="docutils literal notranslate"><span class="pre">ANNEE_EN_COURS</span> <span class="pre">=</span> <span class="pre">2020</span></code></p>
+</div><p><strong>Exemple.</strong></p>
+<ul class="simple">
+<li><p>Reprendre le pythontutor précédent et observer comment <code class="docutils literal notranslate"><span class="pre">res1</span></code> ou <code class="docutils literal notranslate"><span class="pre">res2</span></code> naissent, vivent et meurent.</p></li>
+</ul>
+<p>Au delà de certaines spécificités de python qui la rendent assez délicate (un chapitre sera dédié à cet aspect), l’utilisation de variables globale  est à l’origine de la notion <em>d’effet de bord</em> souvent à l’origine de longues phases de debugging.</p>
+<p>Si on souhaite utiliser une variable extérieure à une fonction, il suffit de la passer commme paramètre de cette fonction.</p>
+<p><strong>Exercice.</strong></p>
+<ul class="simple">
+<li><p>Reprendre les fonctions <code class="docutils literal notranslate"><span class="pre">abs0</span></code>, <code class="docutils literal notranslate"><span class="pre">abs2</span></code> et <code class="docutils literal notranslate"><span class="pre">abs2bis</span></code> précédentes et identifier leurs variables locales et leur portée, dans la définition, dans les appels, dans les appelants.</p></li>
+</ul>
+</section>
+<section id="fonction-locale">
+<h3><span class="section-number">1.5.7. </span>Fonction locale<a class="headerlink" href="#fonction-locale" title="Permalink to this heading">#</a></h3>
+<p>A la manière d’une variable locale, une <em>fonction locale</em> (à une fonction) est :</p>
+<ul class="simple">
+<li><p>définie dans le corps d’une fonction,</p></li>
+<li><p>puis utilisable par cette fonction (englobante)</p></li>
+<li><p>mais <em>uniquement par elle</em> : elle est inconnue de l’extérieur de la fonction englobante</p></li>
+<li><p>et ce récursivement.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">max3</span><span class="p">(</span><span class="n">x</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">z</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    autre version (1 return) sans fonction locale</span>
+<span class="sd">    role : calcule et retourne le max de 3 valeurs</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">y</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="n">z</span><span class="p">:</span>
+            <span class="n">res</span> <span class="o">=</span> <span class="n">z</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">res</span> <span class="o">=</span> <span class="n">y</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">z</span><span class="p">:</span>
+            <span class="n">res</span> <span class="o">=</span> <span class="n">z</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="n">res</span> <span class="o">=</span> <span class="n">x</span>
+    <span class="k">return</span> <span class="n">res</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># test exhaustif pour 3 valeurs différentes    </span>
+<span class="nb">print</span><span class="p">(</span><span class="n">max3</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">max3</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="n">max3</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">),</span> <span class="n">max3</span><span class="p">(</span><span class="mi">2</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">),</span> <span class="n">max3</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">1</span><span class="p">,</span> <span class="mi">2</span><span class="p">),</span> <span class="n">max3</span><span class="p">(</span><span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">,</span> <span class="mi">1</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4 4 4 4 4 4
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">max3_f_loc</span><span class="p">(</span><span class="n">x</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">z</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    role : calcule et retourne le max de 3 valeurs</span>
+<span class="sd">    avec fonction locale</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">def</span> <span class="nf">max2</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        fontion locale : </span>
+<span class="sd">        calcule et retourne le max de 2 valeurs&#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="n">u</span> <span class="o">&gt;</span> <span class="n">v</span><span class="p">:</span>
+            <span class="n">res</span> <span class="o">=</span> <span class="n">u</span>
+        <span class="k">else</span><span class="p">:</span> 
+            <span class="n">res</span> <span class="o">=</span> <span class="n">v</span>
+        <span class="k">return</span> <span class="n">res</span>
+    
+    <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">y</span><span class="p">:</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="n">max2</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="n">max2</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>    
+    <span class="k">return</span> <span class="n">res</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">m1</span> <span class="o">=</span> <span class="n">max3</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="n">m2</span> <span class="o">=</span> <span class="n">max3_f_loc</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">m1</span> <span class="o">==</span> <span class="n">m2</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>True
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Exercice.</strong></p>
+<ul class="simple">
+<li><p>Compléter le test unitaire de <code class="docutils literal notranslate"><span class="pre">max3</span></code>.</p></li>
+<li><p>(<span class="math notranslate nohighlight">\(\star\)</span>) Ecrire une version de <code class="docutils literal notranslate"><span class="pre">max3</span></code> sans variable locale, ni fonction locale.</p></li>
+<li><p>(<span class="math notranslate nohighlight">\(\star\)</span>) Ecrire une version de <code class="docutils literal notranslate"><span class="pre">max3</span></code> avec une fonction locale et réduite à <em>une seule ligne d’instruction</em> (pour le traitement de <code class="docutils literal notranslate"><span class="pre">max3</span></code>).</p></li>
+</ul>
+<p><strong>Solutions.</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">max3_v2</span><span class="p">(</span><span class="n">x</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">z</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    role : calcule et retourne le max de 3 valeurs</span>
+<span class="sd">    version 4 return : sans variable, ni fonction locale </span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">y</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">y</span> <span class="o">&lt;</span> <span class="n">z</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">z</span>
+        <span class="k">else</span><span class="p">:</span>
+            <span class="k">return</span> <span class="n">y</span>
+    <span class="k">if</span> <span class="n">x</span> <span class="o">&lt;</span> <span class="n">z</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">z</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">x</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># exemple de tests unitaires à partir d&#39;une version de référence</span>
+<span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="mi">10</span><span class="p">):</span>
+    <span class="n">x</span> <span class="o">=</span> <span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+    <span class="n">y</span> <span class="o">=</span> <span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+    <span class="n">z</span> <span class="o">=</span> <span class="n">uniform</span><span class="p">(</span><span class="o">-</span><span class="mi">50</span><span class="p">,</span> <span class="mi">50</span><span class="p">)</span>
+    <span class="k">assert</span> <span class="n">max3</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span> <span class="o">==</span> <span class="n">max3_v2</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">max3_fonctionnelle</span><span class="p">(</span><span class="n">x</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">y</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">z</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">    role : calcule et retourne le max de 3 valeurs</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">def</span> <span class="nf">max2</span><span class="p">(</span><span class="n">u</span><span class="p">,</span> <span class="n">v</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">        </span><span class="sd">&#39;&#39;&#39;</span>
+<span class="sd">        fonction locale : </span>
+<span class="sd">        calcule et retourne le max de 2 valeurs&#39;&#39;&#39;</span>
+        <span class="k">if</span> <span class="n">u</span> <span class="o">&gt;</span> <span class="n">v</span><span class="p">:</span>
+            <span class="n">res</span> <span class="o">=</span> <span class="n">u</span>
+        <span class="k">else</span><span class="p">:</span> 
+            <span class="n">res</span> <span class="o">=</span> <span class="n">v</span>
+        <span class="k">return</span> <span class="n">res</span>
+    
+    <span class="k">return</span> <span class="n">max2</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">max2</span><span class="p">(</span><span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">m</span> <span class="o">=</span> <span class="n">max3_fonctionnelle</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="mi">4</span><span class="p">,</span> <span class="mi">2</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">m</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>4
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="pas-d-effet-de-bord-pas-de-global">
+<h3><span class="section-number">1.5.8. </span>Pas d’effet de bord ! Pas de <code class="docutils literal notranslate"><span class="pre">global</span></code> !<a class="headerlink" href="#pas-d-effet-de-bord-pas-de-global" title="Permalink to this heading">#</a></h3>
+<p>Une fonction réalise un <em>effet de bord</em> si son traitement modifie (au moins) une variable de l’appelant qui n’est pas la variable d’affectation de son retour, ni un paramètre effectif de l’appel (comme nous le verrons dans un prochain chapitre).</p>
+<p>En pratique (en python), l’éventuel effet de bord peut concerner n’importe qu’elle variable de l’appelant qui existe avant l’appel de la fonction, ie. hors du cadre de la fonction, dès lors que cette variable est caractérisée comme  (pour variable globale).</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Pas d’effet de bord implique donc en python  pas d’utilisation du mot-clé <code class="docutils literal notranslate"><span class="pre">global</span></code>.</p>
+</div>
+<p><strong>Exemple.</strong></p>
+<p>Dans l’exemple suivant, le second appel modifie aussi la valeur de <code class="docutils literal notranslate"><span class="pre">a</span></code>. Ce qui est impossible à deviner sans connaître le corps de la fonction. On ne peut donc plus l’utiliser comme une “boîte noire”.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">a</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">b</span> <span class="o">=</span> <span class="mi">0</span>
+<span class="n">un</span> <span class="o">=</span> <span class="mi">1</span>
+
+<span class="k">def</span> <span class="nf">incremente</span><span class="p">(</span><span class="n">u</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+    <span class="k">return</span> <span class="n">u</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="k">def</span> <span class="nf">incremente_avec_effet_de_bord</span><span class="p">(</span><span class="n">u</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+    <span class="k">global</span> <span class="n">a</span>  
+    <span class="n">a</span> <span class="o">=</span> <span class="n">a</span> <span class="o">+</span> <span class="mi">10</span> <span class="c1"># mais pourquoi faire ça ici ...</span>
+    <span class="k">return</span> <span class="n">u</span> <span class="o">+</span> <span class="mi">1</span>
+
+<span class="n">a</span> <span class="o">=</span> <span class="n">incremente</span><span class="p">(</span><span class="n">un</span><span class="p">)</span> <span class="c1"># seul `a` est modifié par la fonction</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+
+<span class="n">b</span> <span class="o">=</span> <span class="n">incremente_avec_effet_de_bord</span><span class="p">(</span><span class="n">un</span><span class="p">)</span> <span class="c1"># `a` et `b` sont modifiés </span>
+<span class="nb">print</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>2 0
+12 2
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="star-sur-les-annotations-de-fonctions">
+<h3><span class="section-number">1.5.9. </span><span class="math notranslate nohighlight">\(\star\)</span> Sur les annotations de fonctions<a class="headerlink" href="#star-sur-les-annotations-de-fonctions" title="Permalink to this heading">#</a></h3>
+<p>Le type des paramètres de fonctions sont des <em>annotations</em> en python. Ces annotations sont optionnelles. Ainsi, un appel qui ne respecte pas <em>le type</em> des paramètres ne provoquera pas d’erreur sigificative de cette incompatibilité. python appliquera le traitement de la fonction qui pourra, selon l’incompatibilité, provoquer ou non une erreur à l’exécution.</p>
+<p><strong>Exemple.</strong></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">v</span> <span class="o">=</span> <span class="n">doubler</span><span class="p">(</span><span class="mf">5.5</span><span class="p">)</span>
+<span class="n">s</span> <span class="o">=</span> <span class="n">doubler</span><span class="p">(</span><span class="s2">&quot;bonjour&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">s</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>11.0 bonjourbonjour
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="star-statique-vs-dynamique-trace-d-execution">
+<h3><span class="section-number">1.5.10. </span><span class="math notranslate nohighlight">\(\star\)</span> Statique <em>vs.</em> dynamique, trace d’exécution<a class="headerlink" href="#star-statique-vs-dynamique-trace-d-execution" title="Permalink to this heading">#</a></h3>
+<p>Selon les langages de programmation, la signature peut-être séparée, voire compilée, indépendamment du corps de la fonction.
+Ainsi connue du compilateur, cette signature peut lui servir pour <em>vérifier automatiquement la correction</em> de l’implémentation de la fonction et aussi des appels à cette fonction : nombre de paramètres effectifs, type de ces paramètres, type du résultat retourné, …
+Ces vérifications sont possibles lors de la <em>compilation</em> , cad. <em>avant toute exécution</em> du programme. Ce type de vérification diminue le risque d’erreur lors de l’exécution.</p>
+<p>On parle d’analyse <em>statique</em> (ou de vérification statique) pour ces <em>traitements effectués lors de la compilation</em>.</p>
+<p>De façon complémentaire, on parle d’analyse <em>dynamique</em> (ou de vérification dynamique) pour les traitements effectués lors de <em>l’exécution</em> du programme.</p>
+<div class="alert alert-info">
+<p>Par extention, le <em>statique</em> caractérise ce qui relève du code source tandis que le <em>dynamique</em> traduit ce qui est propre à l’exécution de ce code.</p>
+</div><p>A code source constant, les instructions exécutées dépendent des paramètres de l’exécution.
+On appelle <em>trace d’exécution</em> l’ensemble des valeurs et des états produits par <em>une</em> exécution.
+Ainsi, le même code <em>statique</em> engendrera des <em>traces d’exécutions</em> différentes.
+On a déjà remarqué que la séquentialité des instructions écrites dans le code source et une trace de leur exécution sont différentes.
+La trace est une notion <em>dynamique</em>.</p>
+<p><strong>Remarque.</strong> Oui : un compilateur est un programme qui s’exécute ! Il “prend en entrée” un code (dit) source et produit en sortie un code (dit) exécutable. Ce traitement comporte plusieurs étapes dont celle de vérification mentionnée qui s’effectue lors de l’étape (dite) d’analyse syntaxique – ne pas confondre les termes “syntaxique” et “statique”.</p>
+</section>
+<section id="a-venir">
+<h3><span class="section-number">1.5.11. </span>A venir<a class="headerlink" href="#a-venir" title="Permalink to this heading">#</a></h3>
+<p>Un point important a été passé sous silence dans ce chapitre :</p>
+<ul class="simple">
+<li><p>comment s’effectue le passage de paramètres lors de l’appel ?</p></li>
+</ul>
+<p>Autrement dit :</p>
+<ul class="simple">
+<li><p>comment les paramètres formels de la définition d’une fonction “deviennent” des paramètres effectifs, cad. des valeurs effectivement traités (ou des objets effectivement manipulés) par les instructions du corps de la fonction ?</p></li>
+</ul>
+<p>Cette importante question sera traitée dans un chapitre dédié.</p>
+</section>
+</section>
+<section id="exercices-en-demonstration">
+<h2><span class="section-number">1.6. </span>Exercices en démonstration<a class="headerlink" href="#exercices-en-demonstration" title="Permalink to this heading">#</a></h2>
+<section id="differentes-ecritures-de-fonctions-min">
+<h3><span class="section-number">1.6.1. </span>Différentes écritures de fonctions min<a class="headerlink" href="#differentes-ecritures-de-fonctions-min" title="Permalink to this heading">#</a></h3>
+<ul class="simple">
+<li><p>Ecrire la fonction min(a,b) en suivant la méthodologie demandée</p></li>
+<li><p>Proposer plusieurs écritures du corps : avec un seul return, avec deux, …</p></li>
+<li><p>S’en servir pour écrire la fonction min(x, y, z) : signature, appels, puis corps</p></li>
+<li><p>Proposer plusieurs écritures du corps</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">min</span><span class="p">(</span><span class="n">a</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">b</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;retourne min(a,b)</span>
+<span class="sd">    -&gt; version un seul return</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">if</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">:</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="n">a</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="n">b</span>
+    <span class="k">return</span> <span class="n">m</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">min2</span><span class="p">(</span><span class="n">a</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">b</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;retourne min(a,b)</span>
+<span class="sd">    -&gt; version deux return</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">if</span> <span class="n">a</span> <span class="o">&lt;</span> <span class="n">b</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">a</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="n">b</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">min3a</span><span class="p">(</span><span class="n">a</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">b</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">c</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;retourne min(a,b,c)</span>
+<span class="sd">    -&gt; version 1 return, 2 appels à min(a,b)</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">if</span> <span class="nb">min</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span> <span class="o">&lt;</span> <span class="n">c</span><span class="p">:</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="n">c</span>
+    <span class="k">return</span> <span class="n">m</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">min3b</span><span class="p">(</span><span class="n">a</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">b</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">c</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span> <span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;retourne min(a,b,c)</span>
+<span class="sd">    -&gt; version 1 return, 1 appel à min(a,b)</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">m_ab</span> <span class="o">=</span> <span class="nb">min</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">)</span>
+    <span class="k">if</span> <span class="n">m_ab</span> <span class="o">&lt;</span> <span class="n">c</span><span class="p">:</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="n">m_ab</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="n">c</span>
+    <span class="k">return</span> <span class="n">m</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">min3</span><span class="p">(</span><span class="n">a</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">b</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">c</span> <span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;retourne min(a,b,c)</span>
+<span class="sd">    -&gt; version fonctionnelle : 2 appels imbriqués </span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">return</span> <span class="nb">min</span><span class="p">(</span><span class="nb">min</span><span class="p">(</span><span class="n">a</span><span class="p">,</span> <span class="n">b</span><span class="p">),</span> <span class="n">c</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># des appels</span>
+<span class="n">x</span> <span class="o">=</span> <span class="mi">23</span>
+<span class="n">y</span> <span class="o">=</span> <span class="mi">44</span>
+<span class="n">z</span> <span class="o">=</span> <span class="mi">27</span>
+<span class="n">m_xyz</span> <span class="o">=</span> <span class="n">min3a</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">m_xyz</span><span class="p">)</span>
+<span class="n">m_xyz</span> <span class="o">=</span> <span class="n">min3b</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">m_xyz</span><span class="p">)</span>
+<span class="n">m_xyz</span> <span class="o">=</span> <span class="n">min3</span><span class="p">(</span><span class="n">x</span><span class="p">,</span> <span class="n">y</span><span class="p">,</span> <span class="n">z</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">m_xyz</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>23
+23
+23
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="une-procedure-d-affichage-e-s">
+<h3><span class="section-number">1.6.2. </span>Une procédure d’affichage (E/S)<a class="headerlink" href="#une-procedure-d-affichage-e-s" title="Permalink to this heading">#</a></h3>
+<p>Ecrire une fonction qui réalise efficacement l’affichage suivant :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">Carcassonne</span> <span class="n">est</span> <span class="n">la</span> <span class="n">préfecture</span> <span class="n">du</span> <span class="n">département</span> <span class="mi">11</span>
+<span class="o">------------------------------------------------</span>
+<span class="n">Perpignan</span> <span class="n">est</span> <span class="n">la</span> <span class="n">préfecture</span> <span class="n">du</span> <span class="n">département</span> <span class="mi">66</span>
+<span class="o">------------------------------------------------</span>
+<span class="n">Montpellier</span> <span class="n">est</span> <span class="n">la</span> <span class="n">préfecture</span> <span class="n">du</span> <span class="n">département</span> <span class="mi">34</span>
+<span class="o">------------------------------------------------</span>
+<span class="n">Foix</span> <span class="n">est</span> <span class="n">la</span> <span class="n">préfecture</span> <span class="n">du</span> <span class="n">département</span> <span class="mi">09</span>
+<span class="o">------------------------------------------------</span>  
+</pre></div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Bourrin et pas satisfaisant</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Carcassonne est la préfecture du département 11&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;------------------------------------------------&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Perpignan est la préfecture du département 66&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;------------------------------------------------&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Montpellier est la préfecture du département 34&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;------------------------------------------------&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;Foix est la préfecture du département 09&quot;</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="s2">&quot;------------------------------------------------&quot;</span><span class="p">)</span>
+
+<span class="c1"># On pourrait bien sûr mettre tout dans un seul print (avec des `\n`)</span>
+<span class="c1"># ce qui n&#39;est pas satisfaisant non plus ...</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Carcassonne est la préfecture du département 11
+------------------------------------------------
+Perpignan est la préfecture du département 66
+------------------------------------------------
+Montpellier est la préfecture du département 34
+------------------------------------------------
+Foix est la préfecture du département 09
+------------------------------------------------
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># Synthétique mais un peu pythonesque : une boucle sur des &quot;couples&quot; (tuple) </span>
+<span class="k">for</span> <span class="n">v</span><span class="p">,</span><span class="n">d</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;Carca&quot;</span><span class="p">,</span> <span class="s2">&quot;11&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Perpi&quot;</span><span class="p">,</span><span class="s2">&quot;66&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Montpel&quot;</span><span class="p">,</span> <span class="s2">&quot;34&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Foix&quot;</span><span class="p">,</span> <span class="s2">&quot;09&quot;</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="s2">&quot;est la préfecture du département&quot;</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;------------------------------------------------&quot;</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Carca est la préfecture du département 11
+------------------------------------------------
+Perpi est la préfecture du département 66
+------------------------------------------------
+Montpel est la préfecture du département 34
+------------------------------------------------
+Foix est la préfecture du département 09
+------------------------------------------------
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Le couple entre parenthèses <code class="docutils literal notranslate"><span class="pre">(&quot;Carca&quot;,</span> <span class="pre">&quot;11&quot;)</span></code> est un <strong>tuple</strong> python, notion sur laquelle nous reviendrons très vite</p></li>
+<li><p>En attendant, considérer ce tuple comme une constante composée de 2 valeurs de type string</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># définition d&#39;une fonction qui affiche ce qu&#39;on veut comme on veut</span>
+<span class="k">def</span> <span class="nf">afficher_pref_dpt</span><span class="p">(</span><span class="n">ville</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">num_dpt</span> <span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+    <span class="nb">print</span><span class="p">(</span><span class="n">ville</span><span class="p">,</span> <span class="s2">&quot;est la préfecture du département&quot;</span><span class="p">,</span> <span class="n">num_dpt</span><span class="p">)</span>
+    <span class="nb">print</span><span class="p">(</span><span class="s2">&quot;------------------------------------------------&quot;</span><span class="p">)</span>
+
+
+ <span class="c1"># 4 appels de cette fonction</span>
+<span class="n">afficher_pref_dpt</span><span class="p">(</span><span class="s2">&quot;Carca&quot;</span><span class="p">,</span> <span class="s2">&quot;11&quot;</span><span class="p">)</span>
+<span class="n">afficher_pref_dpt</span><span class="p">(</span><span class="s2">&quot;Perpi&quot;</span><span class="p">,</span> <span class="s2">&quot;66&quot;</span><span class="p">)</span>
+<span class="n">afficher_pref_dpt</span><span class="p">(</span><span class="s2">&quot;Montpell&quot;</span><span class="p">,</span> <span class="s2">&quot;34&quot;</span><span class="p">)</span>
+<span class="n">afficher_pref_dpt</span><span class="p">(</span><span class="s2">&quot;Foix&quot;</span><span class="p">,</span> <span class="s2">&quot;09&quot;</span><span class="p">)</span>
+
+<span class="nb">print</span><span class="p">()</span>
+
+<span class="c1"># 4 appels synthétiques de façon pythonesque  </span>
+<span class="k">for</span> <span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="n">d</span><span class="p">)</span> <span class="ow">in</span> <span class="p">(</span><span class="s2">&quot;Carca&quot;</span><span class="p">,</span> <span class="s2">&quot;11&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Perpi&quot;</span><span class="p">,</span><span class="s2">&quot;66&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Montpell&quot;</span><span class="p">,</span> <span class="s2">&quot;34&quot;</span><span class="p">),</span> <span class="p">(</span><span class="s2">&quot;Foix&quot;</span><span class="p">,</span> <span class="s2">&quot;09&quot;</span><span class="p">):</span>
+    <span class="n">afficher_pref_dpt</span><span class="p">(</span><span class="n">v</span><span class="p">,</span><span class="n">d</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>Carca est la préfecture du département 11
+------------------------------------------------
+Perpi est la préfecture du département 66
+------------------------------------------------
+Montpell est la préfecture du département 34
+------------------------------------------------
+Foix est la préfecture du département 09
+------------------------------------------------
+
+Carca est la préfecture du département 11
+------------------------------------------------
+Perpi est la préfecture du département 66
+------------------------------------------------
+Montpell est la préfecture du département 34
+------------------------------------------------
+Foix est la préfecture du département 09
+------------------------------------------------
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Rmq.</strong></p>
+<ul class="simple">
+<li><p>Pourquoi <code class="docutils literal notranslate"><span class="pre">afficher_pref_dept()</span></code> n’est pas une fonction excepté pour python ?</p></li>
+</ul>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./cm"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="competences.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title">Compétences</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="1b-fonctions-exemple.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">2. </span>Un exemple, plein de fonctions</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#rappels">1.1. Rappels</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#utiliser-une-fonction-existante">1.1.1. Utiliser une fonction existante</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#definir-une-nouvelle-fonction">1.1.2. Définir une nouvelle fonction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#appeler-cette-fonction">1.1.3. Appeler cette fonction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#tester-cette-fonction">1.1.4. Tester cette fonction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pourquoi-des-fonctions">1.1.5. Pourquoi des fonctions ?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#definition-signature-corps-et-appels-de-fonction">1.2. Définition, signature, corps et appels de fonction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#distinguer-le-quoi-du-comment">1.2.1. Distinguer le <em>Quoi</em> du <em>Comment</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#la-signature-d-une-fonction-en-python">1.2.2. La signature d’une fonction en python</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#le-corps-et-le-retour-de-valeur-en-python">1.2.3. Le corps et le retour de valeur en python</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#l-appel-d-une-fonction-en-python">1.2.4. L’appel d’une fonction en python</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#methodologie-d-ecriture-des-fonctions-pour-ce-semestre">1.2.5. Méthodologie d’écriture des fonctions pour ce semestre</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#l-appel-de-fonction-rompt-le-sequencement-des-instructions-ecrites-dans-le-code-source">1.3. L’appel de fonction rompt le séquencement des instructions écrites dans le code source</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#appel-appelant-to-appele-return-appele-to-appelant">1.3.1. Appel = appelant <span class="math notranslate nohighlight">\(\to\)</span> appelé ; <code class="docutils literal notranslate"><span class="pre">return</span></code> = appelé <span class="math notranslate nohighlight">\(\to\)</span> appelant</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#le-return-termine-l-appel-de-la-fonction">1.3.2. Le <code class="docutils literal notranslate"><span class="pre">return</span></code> termine l’appel de la fonction</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice">1.3.3. Exercice</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#specifications-de-fonctions-avec-parametre-list-en-python">1.4. Spécifications de fonctions avec paramètre <code class="docutils literal notranslate"><span class="pre">list</span></code> en python</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comment-indiquer-le-type-d-un-parametre-formel-list">1.4.1. Comment indiquer le type d’un paramètre formel <code class="docutils literal notranslate"><span class="pre">list</span></code> ?</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#comment-specifier-une-fonction-avec-des-parametres-formels-de-type-tableau">1.4.2. Comment spécifier une fonction avec des paramètres formels de type tableau ?</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#autres-complements">1.5. Autres compléments</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#ne-pas-confondre-return-et-print">1.5.1. Ne pas confondre <code class="docutils literal notranslate"><span class="pre">return</span></code> et <code class="docutils literal notranslate"><span class="pre">print</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#help-et-docstring">1.5.2. <code class="docutils literal notranslate"><span class="pre">help()</span></code> et <em>docstring</em></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#plusieurs-parametres">1.5.3. Plusieurs paramètres</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fonction-sans-parametre">1.5.4. Fonction sans paramètre</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fonction-sans-return">1.5.5. Fonction sans <code class="docutils literal notranslate"><span class="pre">return</span></code></a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#portee-des-variables-variable-locale-variable-globale">1.5.6. Portée des variables, variable locale, variable globale,</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#fonction-locale">1.5.7. Fonction locale</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#pas-d-effet-de-bord-pas-de-global">1.5.8. Pas d’effet de bord ! Pas de <code class="docutils literal notranslate"><span class="pre">global</span></code> !</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-sur-les-annotations-de-fonctions">1.5.9. <span class="math notranslate nohighlight">\(\star\)</span> Sur les annotations de fonctions</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-statique-vs-dynamique-trace-d-execution">1.5.10. <span class="math notranslate nohighlight">\(\star\)</span> Statique <em>vs.</em> dynamique, trace d’exécution</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#a-venir">1.5.11. A venir</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#exercices-en-demonstration">1.6. Exercices en démonstration</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#differentes-ecritures-de-fonctions-min">1.6.1. Différentes écritures de fonctions min</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#une-procedure-d-affichage-e-s">1.6.2. Une procédure d’affichage (E/S)</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Ph. Langlois
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

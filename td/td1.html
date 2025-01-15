@@ -1,0 +1,1056 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>25. Feuille 1 : fonctions &#8212; Algo-Prog 2024</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.4cbf315f70debaebd550c87a6162cf0f.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'td/td1';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="26. Feuille 2 : récursivité" href="td2.html" />
+    <link rel="prev" title="24. Leçon 10 : fichiers, affectation : révisions, aspects avancés et passage de paramètres" href="../lecons/10-lecon-fichier-affectation-revision.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <header>
+  
+    <div class="bd-header navbar navbar-expand-lg bd-navbar">
+    </div>
+  
+  </header>
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../bonjour.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Algo-Prog 2024 - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Algo-Prog 2024 - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../bonjour.html">
+                    Bienvenu en Algo-Prog !
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Présentation</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../cm/0-presentation-2024.html">Algo Prog en 2024</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/competences.html">Compétences</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapitres</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../cm/1-fonctions.html">1. Fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/1b-fonctions-exemple.html">2. Un exemple, plein de fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/6-recursivite.html">3. Récursivité</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/8-rechercher.html">4. Rechercher</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/10-trier.html">5. Trier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/5-types_composes.html">6. Les types composés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/3-ES-fichiers.html">7. Entrées-sorties simples avec des fichiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/9-ES-formats.html">8. Les entrées-sorties (E/S) : formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/7-fonctions-avancees.html">9. Affectation et appel de fonction – aspects avancés</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Compléments</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../cm/a0-boucles-avancees.html">10. Tableaux et boucles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/a1-booleens.html">11. Annexe : les booléens en python (&gt;3.6)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/a2-ndarray.html">12. Les ‘ndarray’ : de vrais tableaux en python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../cm/11-modules-utiles.html">13. Modules utiles</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Leçons</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../lecons/0-prealable-lecons.html">14. Préalable avec les MTU moodle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecons/1-lecon-fonctions.html">15. Leçon 1 : fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecons/2-lecon-fonctions-recursion.html">16. Leçon 2 : fonctions et récursion (début)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecons/3-lecon-recursion.html">17. Leçon 3 : récursivité (début)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecons/4-lecon-recursion-2.html">18. Leçon 4 : récursivité</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecons/5-lecon-rechercher.html">19. Leçon 5 : rechercher</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecons/6-lecon-trier.html">20. Leçon 6 : trier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecons/7-lecon-conteneurs-1.html">21. Leçon 7 : types composés (début)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecons/8-lecon-conteneurs-2.html">22. Leçon 8 : types composés (fin)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecons/9-lecon-es.html">23. Leçon 9 : entrées sorties simples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecons/10-lecon-fichier-affectation-revision.html">24. Leçon 10 : fichiers, affectation : révisions, aspects avancés et passage de paramètres</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">TD</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">25. Feuille 1 : fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="td2.html">26. Feuille 2 : récursivité</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">(Intervenants) suivi des séances</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../suivi_seances.html">27. (Intervenant) Suivi des séances</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/phillanglois/Algo-Prog-2024/main?urlpath=tree/algoprog2024/td/td1.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+<a href="https://github.com/phillanglois/Algo-Prog-2024/issues/new?title=Issue%20on%20page%20%2Ftd/td1.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button"
+   title="Open an issue"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/td/td1.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Feuille 1 : fonctions</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectif-10">25.1. Objectif 10</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blacksquare-exercice">25.1.1. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice">25.1.2. Exercice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-factorielle">25.1.3. Exercice. (factorielle)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-codage-ascii">25.1.4. Exercice (codage ASCII)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">25.1.5. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">25.1.6. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blacksquare-exercice-tableaux-1d">25.1.7. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice. (tableaux 1D)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blacksquare-exercice-extrait-d-examen-2017-sans-machine">25.1.8. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice (extrait d’examen 2017 sans machine)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blacksquare-exercice-palindrome">25.1.9. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice. (palindrome)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-produit-scalaire">25.1.10. Exercice. (produit scalaire)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectif-20">25.2. Objectif 20</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-math">25.2.1. Exercice. (math)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-crible-d-eratosthene">25.2.2. Exercice (crible d’Eratosthène)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-pgcd">25.2.3. Exercice. (pgcd)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-star-exercice">25.2.4. (<span class="math notranslate nohighlight">\(\star\star\)</span>) Exercice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-exercice-algorithme-de-type-monte-carlo">25.2.5. (<span class="math notranslate nohighlight">\(\star\)</span>) Exercice (Algorithme de type Monte-Carlo)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-ecriture-decimale">25.2.6. Exercice. (écriture décimale)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blacksquare-exercice-tableau-2d">25.2.7. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice. (tableau 2D)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-tableau-2d">25.2.8. Exercice. (tableau 2D)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blacksquare-exercice-matrices">25.2.9. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice. (matrices)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blacksquare-exercice-images-nb">25.2.10. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice (images NB)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#premieres-transformations-d-images-3-times-4">Premières transformations d’images 3 <span class="math notranslate nohighlight">\(\times\)</span> 4.</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fonctions-et-transformation-d-image-de-taille-arbitraire">Fonctions et transformation d’image de taille arbitraire.</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#analyse-d-une-image-de-taille-arbitraire">Analyse d’une image de taille arbitraire.</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">25.2.11. Exercice.</a></li>
+</ul>
+</li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="feuille-1-fonctions">
+<span id="td-td1"></span><h1><span class="section-number">25. </span>Feuille 1 : fonctions<a class="headerlink" href="#feuille-1-fonctions" title="Permalink to this heading">#</a></h1>
+<ul class="simple">
+<li><p>Le symbole <span class="math notranslate nohighlight">\(\blacksquare\)</span> indique les exercices ou questions obligatoires. Commencez pas ceux-là.</p></li>
+<li><p>Les symboles <span class="math notranslate nohighlight">\(\star\)</span> et <span class="math notranslate nohighlight">\(\star\star\)</span> indiquent les exercices ou questions de difficulté relative plus importante.</p></li>
+</ul>
+<p><strong>Focus</strong></p>
+<p>Fonctions</p>
+<p><strong>Compétences</strong></p>
+<ul class="simple">
+<li><p>utiliser une fonction prédéfinie ou existante</p></li>
+<li><p>définir et écrire la spécification d’une fonction qui réalise un traitement décrit en français, ou qui résout un problème (simple) décrit en français</p></li>
+<li><p>définir et écrire des appels simples (tests unitaires)</p></li>
+<li><p>définir et écrire l’implémentation d’une fonction associée à une spécification</p></li>
+</ul>
+<p><strong>Rappel de quelques consignes</strong></p>
+<p>Dans <em>cet ordre</em> et avec les corrections entre 2 étapes si besoin :</p>
+<ol class="arabic simple">
+<li><p>écriture de la signature de la fonction <em>docstring</em> compris</p></li>
+<li><p>écriture d’au moins un appel simple ou un test unitaire</p></li>
+<li><p>écriture du corps</p></li>
+<li><p>exécution des tests unitaires</p></li>
+<li><p>écriture des appels voulus</p></li>
+<li><p>exécution des appels voulus</p></li>
+</ol>
+<p><em>Se souvenir</em> :</p>
+<ul class="simple">
+<li><p>Séparer les entrées-sorties des traitements !</p></li>
+<li><p>Réduire au minimum l’utilisation des <code class="docutils literal notranslate"><span class="pre">input()</span></code> (les entrées au clavier) et des <code class="docutils literal notranslate"><span class="pre">print()</span></code> (les sorties à l’écran).</p></li>
+<li><p>Utiliser des identifiants différents pour les paramètres formels et effectifs, respectivement dans la définition et les appels.</p></li>
+</ul>
+<section id="objectif-10">
+<h2><span class="section-number">25.1. </span>Objectif 10<a class="headerlink" href="#objectif-10" title="Permalink to this heading">#</a></h2>
+<section id="blacksquare-exercice">
+<span id="exo-suites"></span><h3><span class="section-number">25.1.1. </span><span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice<a class="headerlink" href="#blacksquare-exercice" title="Permalink to this heading">#</a></h3>
+<p>On rappelle quelques suites et séries numériques classiques.</p>
+<ul class="simple">
+<li><p>La somme des <span class="math notranslate nohighlight">\(n\)</span> premiers entiers
+<span class="math notranslate nohighlight">\(s_1(n) = 1 + 2 + \cdots + (n-1) + n = \sum_{k=1}^{n} k\)</span> ;</p></li>
+<li><p>La suite arithmético-géométrique <span class="math notranslate nohighlight">\(u_{n+1} = u_n/3 + 2\)</span> avec <span class="math notranslate nohighlight">\(u_0=1\)</span>.</p></li>
+<li><p>La suite de Fibonacci <span class="math notranslate nohighlight">\(u_{n+1} = u_{n}+ u_{n-1}\)</span> et <span class="math notranslate nohighlight">\(u_0=u_1=1\)</span>.</p></li>
+</ul>
+<ol class="arabic simple">
+<li><p>Pour chacune de ces suites, écrire l’algorithme qui demande
+et lit une valeur de <span class="math notranslate nohighlight">\(n\)</span> entrée au clavier, calcule le <span class="math notranslate nohighlight">\(n\)</span>-ième
+terme de la suite puis l’affiche à l’écran.</p></li>
+<li><p>Écrire des fonctions (en-tête, appel, corps) qui calculent et
+retournent le <span class="math notranslate nohighlight">\(n\)</span>-ième terme des suites précédentes. L’appel
+incluera les phases d’entrées et de sorties de l’algorithme
+principal précédent.</p></li>
+</ol>
+</section>
+<section id="exercice">
+<h3><span class="section-number">25.1.2. </span>Exercice<a class="headerlink" href="#exercice" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(\blacksquare\)</span> Définir et écrire une fonction <code class="docutils literal notranslate"><span class="pre">est_rectangle()</span></code> qui vérifie si un triangle est rectangle. Aucune hypothèse est effectuée sur les paramètres de ce traitement.</p></li>
+<li><p>Ecrire un ensemble de tests unitaires adaptés. Justifier vos choix.</p></li>
+</ol>
+</section>
+<section id="exercice-factorielle">
+<span id="exo-fact"></span><h3><span class="section-number">25.1.3. </span>Exercice. (factorielle)<a class="headerlink" href="#exercice-factorielle" title="Permalink to this heading">#</a></h3>
+<p>La valeur de factorielle (de) <span class="math notranslate nohighlight">\(n\)</span>, où <span class="math notranslate nohighlight">\(n\)</span> est un entier positif, est :
+<span class="math notranslate nohighlight">\(n ! = 1 \times 2 \times \cdots \ \times (n-1) \times n\)</span>. On choisit
+<span class="math notranslate nohighlight">\(0 ! = 1\)</span>.</p>
+<ol class="arabic simple" start="2">
+<li><p><span class="math notranslate nohighlight">\(\blacksquare\)</span> Écrire la fonction <code class="docutils literal notranslate"><span class="pre">factorielle()</span></code> qui calcule et retourne <span class="math notranslate nohighlight">\(n!\)</span>.</p></li>
+<li><p>La fonction <code class="docutils literal notranslate"><span class="pre">factorial()</span></code> du module <code class="docutils literal notranslate"><span class="pre">math</span></code> effectue le même calcul. Utiliser cette fonction pour définir et coder des tests unitaires de votrefonction <code class="docutils literal notranslate"><span class="pre">factorielle()</span></code>.</p></li>
+<li><p>Utiliser la fonction <code class="docutils literal notranslate"><span class="pre">factorielle()</span></code> pour écrire des fonctions qui
+calculent les quantités suivantes.</p>
+<ol class="arabic simple">
+<li><p>Le nombre d’arrangements (listes ordonnées) de <span class="math notranslate nohighlight">\(k\)</span> valeurs
+prises dans un ensemble de <span class="math notranslate nohighlight">\(n\)</span> valeurs est :
+<span class="math notranslate nohighlight">\(\mathcal{A}_n^k = {n
+          !}/{(n-k)!}, (k \le n)\)</span>.</p></li>
+<li><p>Le nombre de combinaisons (listes non ordonnées) de <span class="math notranslate nohighlight">\(k\)</span> valeurs
+prises dans un ensemble de <span class="math notranslate nohighlight">\(n\)</span> valeurs est :
+<span class="math notranslate nohighlight">\(\left(_k^n\right) =
+        {\mathcal{A}_n^k}/{k!}\)</span>, <span class="math notranslate nohighlight">\((k \le n)\)</span>.</p></li>
+</ol>
+</li>
+</ol>
+</section>
+<section id="exercice-codage-ascii">
+<h3><span class="section-number">25.1.4. </span>Exercice (codage ASCII)<a class="headerlink" href="#exercice-codage-ascii" title="Permalink to this heading">#</a></h3>
+<p>L’ASCII est un codage de caractères qui
+définit 128 codes sur 7 bits. Chaque code correspond à un caractère :
+chiffres, lettres, symboles mathématiques et de ponctuation. En Python,
+la fonction <code class="docutils literal notranslate"><span class="pre">ord()</span></code> retourne le code ASCII d’un caractère fourni en
+argument. La fonction <code class="docutils literal notranslate"><span class="pre">chr()</span></code> retourne le caractère associé à un code
+donné.</p>
+<p>Ecrire un programme qui affiche la table des 128 codes ASCII.</p>
+</section>
+<section id="id1">
+<h3><span class="section-number">25.1.5. </span><span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<p>Écrire une fonction <code class="docutils literal notranslate"><span class="pre">moy()</span></code> qui calcule et retourne la moyenne de 4 valeurs flottantes. Ces 4 valeurs sont entrées au clavier et stockées dans un tableau.</p>
+</section>
+<section id="id2">
+<h3><span class="section-number">25.1.6. </span><span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice.<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<p>Ecrire une fonctions <code class="docutils literal notranslate"><span class="pre">tabup()</span></code> qui vérifie si les <code class="docutils literal notranslate"><span class="pre">n</span></code> valeurs d’un tableau sont rangées par ordre croissant. Ces valeurs sont des entiers.</p>
+</section>
+<section id="blacksquare-exercice-tableaux-1d">
+<span id="exo-tablst"></span><h3><span class="section-number">25.1.7. </span><span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice. (tableaux 1D)<a class="headerlink" href="#blacksquare-exercice-tableaux-1d" title="Permalink to this heading">#</a></h3>
+<p>Soit <code class="docutils literal notranslate"><span class="pre">t</span></code> un tableau 1D
+d’entiers de taille <code class="docutils literal notranslate"><span class="pre">n</span></code> arbitraire. Voici quelques traitements
+classiques de ces tableaux et les fonctions associées.</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">max_tab()</span></code> qui calcule et retourne la valeur maximale d’un tableau 1D.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">max_ind_max()</span></code> qui calcule et retourne le plus grand indice de la
+valeur maximale d’un tableau 1D.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">min_ind_max()</span></code> : une modification de la fonction précédente qui
+calcule et retourne le plus petit indice de la valeur maximale d’un
+tableau 1D.</p></li>
+</ol>
+<p>Pour chacune de ces fonctions, deux questions.</p>
+<ol class="arabic simple">
+<li><p>Proposer des solutions itératives alternatives (<code class="docutils literal notranslate"><span class="pre">for</span></code> vs.
+<code class="docutils literal notranslate"><span class="pre">while</span></code>) lorsque qu’elles conduisent à des traitements différents.</p></li>
+<li><p>Tests unitaires : expliciter différents tableaux <code class="docutils literal notranslate"><span class="pre">t</span></code> qui
+correspondent, le cas échéant, à des cas particuliers de traitement.
+Les tester pour valider vos solutions.</p></li>
+</ol>
+</section>
+<section id="blacksquare-exercice-extrait-d-examen-2017-sans-machine">
+<h3><span class="section-number">25.1.8. </span><span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice (extrait d’examen 2017 sans machine)<a class="headerlink" href="#blacksquare-exercice-extrait-d-examen-2017-sans-machine" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Que calcule la fonction <code class="docutils literal notranslate"><span class="pre">m</span></code> suivante ?</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="k">def</span> <span class="nf">m</span><span class="p">(</span><span class="n">s</span> <span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="n">n</span> <span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">c</span> <span class="p">:</span> <span class="nb">str</span> <span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">int</span><span class="p">:</span> 
+<span class="w">        </span><span class="sd">&#39;&#39;&#39; role : à vous de deviner :) &#39;&#39;&#39;</span>
+        <span class="n">res</span> <span class="o">=</span> <span class="mi">0</span>
+        <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span> 
+            <span class="k">if</span> <span class="n">s</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">c</span><span class="p">:</span> 
+                <span class="n">res</span> <span class="o">=</span> <span class="n">res</span> <span class="o">+</span> <span class="mi">1</span> 
+        <span class="k">return</span> <span class="n">res</span>
+</pre></div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>Quel résultat produit l’exécution du code suivant ?</p></li>
+</ol>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="n">t</span> <span class="o">=</span> <span class="s2">&quot;anticonstitutionnellement&quot;</span> 
+    <span class="n">nba</span> <span class="o">=</span> <span class="n">m</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">),</span> <span class="s1">&#39;a&#39;</span><span class="p">)</span> 
+    <span class="n">nbe</span> <span class="o">=</span> <span class="n">m</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">),</span> <span class="s1">&#39;e&#39;</span><span class="p">)</span> 
+    <span class="n">nbl</span> <span class="o">=</span> <span class="n">m</span><span class="p">(</span><span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">),</span> <span class="s1">&#39;l&#39;</span><span class="p">)</span> 
+    <span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">),</span> <span class="n">nba</span><span class="p">,</span> <span class="n">nbe</span><span class="p">,</span> <span class="n">nbl</span><span class="p">)</span>
+</pre></div>
+</div>
+<ol class="arabic simple" id="que-mmavecm" start="3">
+<li><p>Utiliser la fonction <code class="docutils literal notranslate"><span class="pre">m</span></code> pour écrire une fonction <code class="docutils literal notranslate"><span class="pre">mm</span></code> qui identifie
+et retourne la lettre ayant le maximum d’occurrences dans une chaîne
+de caractères de longueur <code class="docutils literal notranslate"><span class="pre">n</span></code>. Si plusieurs lettres conviennent,
+l’algorithme identifiera celle dont l’occurrence est la plus tardive
+dans <code class="docutils literal notranslate"><span class="pre">s</span></code>. Par exemple <code class="docutils literal notranslate"><span class="pre">'o'</span></code> dans <code class="docutils literal notranslate"><span class="pre">'toto'</span></code>.</p></li>
+</ol>
+<ol class="arabic simple" start="4">
+<li><p>Écrire le code qui utilise <code class="docutils literal notranslate"><span class="pre">mm</span></code> et fournit l’affichage suivant.</p></li>
+</ol>
+<blockquote>
+<div><p>t est la lettre qui apparaît le plus ( 5 fois) dans anticonstitutionnellement<br />
+o est la lettre qui apparaît le plus ( 2 fois) dans toto</p>
+</div></blockquote>
+<ol class="arabic simple" start="5">
+<li><p>Modifier <code class="docutils literal notranslate"><span class="pre">mm</span></code> pour que dans le cas d’une occurrence maximale
+multiple, l’algorithme identifie la lettre de première occurrence.
+Par exemple, <code class="docutils literal notranslate"><span class="pre">'t'</span></code> dans <code class="docutils literal notranslate"><span class="pre">'toto'</span></code>.</p></li>
+</ol>
+<ol class="arabic simple" start="6">
+<li><p>Réécrire la fonction <code class="docutils literal notranslate"><span class="pre">mm</span></code> de la
+<a class="reference internal" href="#que-mmavecm"><span class="std std-ref">question</span></a>
+sans utiliser la fonction <code class="docutils literal notranslate"><span class="pre">m</span></code>.</p></li>
+</ol>
+<p>(exo:palindromeiter)</p>
+</section>
+<section id="blacksquare-exercice-palindrome">
+<h3><span class="section-number">25.1.9. </span><span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice. (palindrome)<a class="headerlink" href="#blacksquare-exercice-palindrome" title="Permalink to this heading">#</a></h3>
+<p>Un palindrome est un mot, ou un groupe de mots, dont l’ordre des lettres
+reste le même qu’on le lise de la droite vers la gauche ou inversement.
+Des exemples bien connus sont “été”, “kayak”, “mon nom”, “élu par cette
+crapule”. Ce dernier permet d’illustrer qu’on ne tient pas compte en
+général des accents, trémas, cédilles, ni des espaces. Dans cet exercice
+:</p>
+<ul class="simple">
+<li><p>un mot ou un groupe de mots est représenté par une chaîne de
+caractères (<code class="docutils literal notranslate"><span class="pre">str</span></code>),</p></li>
+<li><p>ces caractères sont sans accent, tréma, ni cédille : “ete”</p></li>
+<li><p>les espaces sont considérés comme des caractères : ainsi “elu par
+cette crapule” n’est pas un palindrome ici.</p></li>
+</ul>
+<ol class="arabic simple">
+<li><p>Ecrire une fonction qui teste si un argument est ou non un
+palindrome et retourne le booléen correspondant.</p></li>
+</ol>
+</section>
+<section id="exercice-produit-scalaire">
+<h3><span class="section-number">25.1.10. </span>Exercice. (produit scalaire)<a class="headerlink" href="#exercice-produit-scalaire" title="Permalink to this heading">#</a></h3>
+<p>Rappel : le produit scalaire deux vecteurs orthogonaux est nul.</p>
+<p>Ecrire les fonctions qui vérifie l’orthogonalité ou non de vecteurs</p>
+<ol class="arabic simple">
+<li><p>de taille 3</p></li>
+<li><p>de taille arbitraire <span class="math notranslate nohighlight">\(n\)</span></p></li>
+</ol>
+</section>
+</section>
+<section id="objectif-20">
+<h2><span class="section-number">25.2. </span>Objectif 20<a class="headerlink" href="#objectif-20" title="Permalink to this heading">#</a></h2>
+<p><strong>Remarque :</strong> Proposer les fonctions les plus générales possibles.</p>
+<section id="exercice-math">
+<h3><span class="section-number">25.2.1. </span>Exercice. (math)<a class="headerlink" href="#exercice-math" title="Permalink to this heading">#</a></h3>
+<p>On continue l’exercice <a class="reference internal" href="#exo-fact"><span class="std std-ref">Exercice. (factorielle)</span></a>.</p>
+<ul class="simple">
+<li><p>Utiliser la fonction <code class="docutils literal notranslate"><span class="pre">factorielle()</span></code> pour écrire des fonctions qui  calculent les quantités suivantes.</p></li>
+<li><p>En s’inspirant d’un exemple donné au chapitre 1, proposer des
+représentations graphiques qui illustrent les approximations mentionnées.</p></li>
+</ul>
+<ol class="arabic simple">
+<li><p>Une approximation de <span class="math notranslate nohighlight">\(e \approx \sum_{k=0}^n 1/k !\)</span>, puis
+vérifier que l’approximation est d’autant plus précise que <span class="math notranslate nohighlight">\(n\)</span>
+est grand.</p></li>
+<li><p>La formule de Stirling <span class="math notranslate nohighlight">\(n! \approx \sqrt{2\pi n} (n/e)^n\)</span> qui
+donne un équivalent de la factorielle (et aussi une
+approximation de <span class="math notranslate nohighlight">\(\pi\)</span>), approximation dont on vérifiera la
+pertinence.</p></li>
+<li><p>Même question pour <span class="math notranslate nohighlight">\(\ln(n!) \approx n\ln(n)-n\)</span> et des <span class="math notranslate nohighlight">\(n\)</span> assez
+grands.</p></li>
+</ol>
+</section>
+<section id="exercice-crible-d-eratosthene">
+<h3><span class="section-number">25.2.2. </span>Exercice (crible d’Eratosthène)<a class="headerlink" href="#exercice-crible-d-eratosthene" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Consulter la page wikipedia du <a class="reference external" href="https://fr.wikipedia.org/wiki/Crible_d%27%C3%89ratosth%C3%A8ne">crible d’Eratosthène</a></p></li>
+<li><p>Écrire une fonction <code class="docutils literal notranslate"><span class="pre">est_premier()</span></code> qui retourne un booléen qui indique si un nombre entier donné <span class="math notranslate nohighlight">\(n\)</span> est
+premier ou non.</p></li>
+</ol>
+<p>(exo:pgcd)</p>
+</section>
+<section id="exercice-pgcd">
+<h3><span class="section-number">25.2.3. </span>Exercice. (pgcd)<a class="headerlink" href="#exercice-pgcd" title="Permalink to this heading">#</a></h3>
+<p>Écrire une fonction <code class="docutils literal notranslate"><span class="pre">pgcd()</span></code> qui
+calcule le PGCD de deux entiers naturels. On utilisera l’algorithme
+d’Euclide.</p>
+<p>Rappel : l’algorithme d’Euclide utilise la propriété suivante. Le PGCD
+de <span class="math notranslate nohighlight">\(a\)</span> et <span class="math notranslate nohighlight">\(b\)</span>, <span class="math notranslate nohighlight">\(a &gt; b\)</span>, est égal à <span class="math notranslate nohighlight">\(b\)</span> si le reste <span class="math notranslate nohighlight">\(r\)</span> de la division
+euclidienne de <span class="math notranslate nohighlight">\(a\)</span> par <span class="math notranslate nohighlight">\(b\)</span> est nul, sinon il vaut le PGCD de <span class="math notranslate nohighlight">\(b\)</span> et de
+<span class="math notranslate nohighlight">\(r\)</span>. Le PGCD de 2 nombres distincts premiers entre eux (<em>i.e.</em> sans
+diviseur commun autre que 1) est égal à 1. Cet exercice permet d’écrire
+une version itérative de cet algorithme.</p>
+</section>
+<section id="star-star-exercice">
+<h3><span class="section-number">25.2.4. </span>(<span class="math notranslate nohighlight">\(\star\star\)</span>) Exercice<a class="headerlink" href="#star-star-exercice" title="Permalink to this heading">#</a></h3>
+<p>On souhaite évaluer la valeur d’un polynôme de degré <span class="math notranslate nohighlight">\(3\)</span>,
+<span class="math notranslate nohighlight">\(p_3(x) = a_0 + a_1 x + a_2 x^2 + a_3 x^3\)</span>, en des valeurs <span class="math notranslate nohighlight">\(x\)</span> arbitraires.</p>
+<ol class="arabic simple">
+<li><p>Écrire une fonction <code class="docutils literal notranslate"><span class="pre">eval()</span></code> qui calcule et retourne <span class="math notranslate nohighlight">\(p_3(x)\)</span>.</p></li>
+<li><p>Ecrire un algorithme qui utilise cette fonction pour des valeurs
+entrées au clavier et affiche le résultat à l’écran.</p></li>
+<li><p>(<span class="math notranslate nohighlight">\(\star\)</span>) Détailler le principe d’un algorithme qui calcule une racine d’un
+polynôme sur un intervalle <span class="math notranslate nohighlight">\([a, b]\)</span> donné. La présence d’une racine
+<em>unique</em> sur <span class="math notranslate nohighlight">\([a, b]\)</span> sera admise MAIS l’existence d’une racine sera
+vérifiée par cet algorithme. Introduire un paramètre adapté au
+caractère approximatif de la valeur calculée.</p></li>
+<li><p>Écrire un algorithme principal qui effectue cette recherche pour un
+polynôme <span class="math notranslate nohighlight">\(p_3\)</span> de degré <span class="math notranslate nohighlight">\(3\)</span> et un intervalle <span class="math notranslate nohighlight">\([a, b]\)</span> donnés. Tous
+les paramètres sont entrés au clavier.</p></li>
+<li><p>(<span class="math notranslate nohighlight">\(\star\star\)</span>) Appliquer cet algorithme pour retrouver, une à une, les racines de
+<span class="math notranslate nohighlight">\(p(x)=x(x-1)(x-2)\)</span>. Ce polynôme sera considéré sous sa forme développée.</p></li>
+</ol>
+</section>
+<section id="star-exercice-algorithme-de-type-monte-carlo">
+<h3><span class="section-number">25.2.5. </span>(<span class="math notranslate nohighlight">\(\star\)</span>) Exercice (Algorithme de type Monte-Carlo)<a class="headerlink" href="#star-exercice-algorithme-de-type-monte-carlo" title="Permalink to this heading">#</a></h3>
+<p>On va calculer une approximation de <span class="math notranslate nohighlight">\(\pi\)</span> de façon probabiliste.</p>
+<ol class="arabic simple">
+<li><p>Ecrire une fonction qui vérifie si un point du plan défini par ses
+coordonnées <span class="math notranslate nohighlight">\((x,y)\)</span> appartient à un disque de centre <span class="math notranslate nohighlight">\((a,b)\)</span> et de
+rayon <span class="math notranslate nohighlight">\(r\)</span>.<br />
+Rappel. L’équation du cercle de mêmes caractéristiques est :
+<span class="math notranslate nohighlight">\((x-a)^2 + (y-b)^2 = r^2\)</span>.</p></li>
+<li><p>Identifier dans la documentation du module python <code class="docutils literal notranslate"><span class="pre">random</span></code> la
+fonction adaptée à la génération d’un point aléatoire dans le carré
+<span class="math notranslate nohighlight">\([-1, 1] \times [-1, 1]\)</span>.</p></li>
+<li><p>Soit <span class="math notranslate nohighlight">\(\mathcal{C}\)</span> le cercle de centre 0 et de rayon 1. Ecrire une
+programme qui génère <span class="math notranslate nohighlight">\(n\)</span> points aléatoires situés dans le carré
+précédent et calcule le ratio entre les points situés dans le cercle
+<span class="math notranslate nohighlight">\(\mathcal{C}\)</span> et <span class="math notranslate nohighlight">\(n\)</span>.</p></li>
+<li><p>Faire varier <span class="math notranslate nohighlight">\(n\)</span> et observer l’évolution de ce ratio.</p></li>
+<li><p>(<span class="math notranslate nohighlight">\(\star\)</span>) En déduire une approximation de <span class="math notranslate nohighlight">\(\pi\)</span>.</p></li>
+</ol>
+</section>
+<section id="exercice-ecriture-decimale">
+<h3><span class="section-number">25.2.6. </span>Exercice. (écriture décimale)<a class="headerlink" href="#exercice-ecriture-decimale" title="Permalink to this heading">#</a></h3>
+<p>Ecrire une fonction qui transforme un tableau de 0 et de
+1 de longueur arbitraire, en l’entier de base 10 qui est codé par ce
+tableau en représentation de position en base 2 :</p>
+<div class="math notranslate nohighlight">
+\[
+(b_n b_{n-1} \cdots b_1 b_0)_2 = (\sum_{i=0}^n b_i \times
+  2^i)_{10} \text{ avec } b_i \in \{0, 1\}.
+\]</div>
+</section>
+<section id="blacksquare-exercice-tableau-2d">
+<h3><span class="section-number">25.2.7. </span><span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice. (tableau 2D)<a class="headerlink" href="#blacksquare-exercice-tableau-2d" title="Permalink to this heading">#</a></h3>
+<ol class="arabic simple">
+<li><p>Écrire un algorithme qui calcule les tables de multiplications entre
+entiers compris en 1 et 10, les stocke dans un tableau 2D puis les
+affiche. Ainsi la case <span class="math notranslate nohighlight">\((i,j)\)</span> du tableau contient le résultat de
+<span class="math notranslate nohighlight">\(i \times j\)</span>.</p></li>
+</ol>
+</section>
+<section id="exercice-tableau-2d">
+<h3><span class="section-number">25.2.8. </span>Exercice. (tableau 2D)<a class="headerlink" href="#exercice-tableau-2d" title="Permalink to this heading">#</a></h3>
+<p>Les fonctions suivantes seront définies et utilisées dans
+un programme (principal) qui définit des tableaux que vous choisirez
+pour vérifier la validité de vos traitements. Vous choisirez la
+structure de donnée la plus adaptée à ces traitements.</p>
+<ol class="arabic simple">
+<li><p>Ecrire une fonction <code class="docutils literal notranslate"><span class="pre">est_egal()</span></code> qui réalise la comparaison entre
+deux tableaux de dimension 1 et retourne le booléen correspondant.
+On convient que deux tableaux sont égaux si leurs tailles sont
+égales et si leurs valeurs sont égales deux à deux.</p></li>
+<li><p>Ecrire une fonction <code class="docutils literal notranslate"><span class="pre">nb_communs()</span></code> qui retourne le nombre de valeurs
+communes entre deux tableaux de dimension 1.</p></li>
+<li><p>Reprendre les 2 questions précédentes pour des tableaux 2D.
+L’égalité entre tableaux multi-dimensionnels suppose l’égalité des
+dimensions, des tailles deux à deux dans chaque dimension, et des
+valeurs deux à deux pour toutes les valeurs du tableau.</p></li>
+</ol>
+</section>
+<section id="blacksquare-exercice-matrices">
+<span id="exo-verif"></span><h3><span class="section-number">25.2.9. </span><span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice. (matrices)<a class="headerlink" href="#blacksquare-exercice-matrices" title="Permalink to this heading">#</a></h3>
+<p>Ecrire les algorithmes de vérification suivants pour une matrice <span class="math notranslate nohighlight">\(M\)</span>
+donnée, carrée de taille <span class="math notranslate nohighlight">\(n\)</span> et à valeurs flottantes.</p>
+<ol class="arabic simple">
+<li><p><span class="math notranslate nohighlight">\(M\)</span> est diagonale ?</p></li>
+<li><p><span class="math notranslate nohighlight">\(M\)</span> est symétrique ?</p></li>
+<li><p><span class="math notranslate nohighlight">\(M\)</span> est égale à l’identité ?</p></li>
+<li><p><span class="math notranslate nohighlight">\(M\)</span> est l’inverse d’une autre matrice donnée <span class="math notranslate nohighlight">\(N\)</span> ?</p></li>
+</ol>
+</section>
+<section id="blacksquare-exercice-images-nb">
+<span id="exo-imnb"></span><h3><span class="section-number">25.2.10. </span><span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice (images NB)<a class="headerlink" href="#blacksquare-exercice-images-nb" title="Permalink to this heading">#</a></h3>
+<p><strong>Note.</strong> Cet exercice est inspiré d’un extrait de sujet d’examen.
+Il comporte des questions Objectifs 10 et Objectif 20.</p>
+<p>Une image 2D peut être représentée par un tableau 2D de <em>pixels</em>.<br />
+Une image “noir et blanc” de taille <span class="math notranslate nohighlight">\(L \times C\)</span> est ainsi représentée
+par un tableau de <span class="math notranslate nohighlight">\(L\)</span> lignes et <span class="math notranslate nohighlight">\(C\)</span> colonnes, de 0 (pixel blanc) ou de
+1 (pixel noir).<br />
+Les images suivantes sont des exemples d’images 3 <span class="math notranslate nohighlight">\(\times\)</span> 4.</p>
+<a class="reference internal image-reference" href="../_images/3x4-blanc.png" id="id3"><img alt="image blanche" id="id3" src="../_images/3x4-blanc.png" style="height: 20mm;" /></a>
+<a class="reference internal image-reference" href="../_images/3x4-nb-centre.png"><img alt="2 pixels noirs au centre" src="../_images/3x4-nb-centre.png" style="height: 20mm;" /></a>
+<a class="reference internal image-reference" href="../_images/3x4-tri.png"><img alt="triangle inférieur noir" src="../_images/3x4-tri.png" style="height: 20mm;" /></a>
+<p>L’image blanche (à gauche) est représentée par le tableau de taille <span class="math notranslate nohighlight">\(3 \times
+4\)</span> (une liste de listes de 0) donné par le code python suivant.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">l</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="n">c</span> <span class="o">=</span> <span class="mi">4</span>
+<span class="n">t</span> <span class="o">=</span> <span class="p">[[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">c</span><span class="p">)]</span> <span class="k">for</span> <span class="n">j</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">l</span><span class="p">)]</span>
+
+<span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">),</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">[</span><span class="mi">0</span><span class="p">]))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[[0, 0, 0, 0], [0, 0, 0, 0], [0, 0, 0, 0]]
+3 4
+</pre></div>
+</div>
+</div>
+</div>
+<section id="premieres-transformations-d-images-3-times-4">
+<h4>Premières transformations d’images 3 <span class="math notranslate nohighlight">\(\times\)</span> 4.<a class="headerlink" href="#premieres-transformations-d-images-3-times-4" title="Permalink to this heading">#</a></h4>
+<ol class="arabic simple">
+<li><p>Ecrire l’algorithme qui transforme l’image blanche (à gauche) en une image noire 3 <span class="math notranslate nohighlight">\(\times\)</span> 4 sans définir un autre tableau.</p></li>
+<li><p>Ecrire l’algorithme qui transforme l’image blanche en l’image du centre.</p></li>
+<li><p>Ecrire l’algorithme qui transforme l’image blanche en l’image de droite.</p></li>
+</ol>
+</section>
+<section id="fonctions-et-transformation-d-image-de-taille-arbitraire">
+<h4>Fonctions et transformation d’image de taille arbitraire.<a class="headerlink" href="#fonctions-et-transformation-d-image-de-taille-arbitraire" title="Permalink to this heading">#</a></h4>
+<p>On considère la dernière transformation où la partie
+triangulaire inférieure est noircie. Selon la forme de la matrice, cette
+partie noircie est un triangle (matrice rectangulaire “allongée”
+horizontalement) ou un trapèze (matrice rectangulaire “allongée”
+verticalement). On va définir cette transformation sous la forme d’une
+fonction.</p>
+<ol class="arabic simple">
+<li><p>Ecrire l’en-tête de cette fonction <code class="docutils literal notranslate"><span class="pre">tr()</span></code></p></li>
+<li><p>Appliquer cette fonction à l’image blanche de gauche.</p></li>
+<li><p>Ecrire le corps de la fonction <code class="docutils literal notranslate"><span class="pre">tr()</span></code>.</p></li>
+<li><p>(<span class="math notranslate nohighlight">\(\star\)</span>) Définir une image <code class="docutils literal notranslate"><span class="pre">t2</span></code> de taille 4 <span class="math notranslate nohighlight">\(\times\)</span> 8 composée de
+lignes alternativement blanche et noire</p></li>
+</ol>
+<ol class="arabic simple" id="que-im4" start="5">
+<li><p>On applique la fonction <code class="docutils literal notranslate"><span class="pre">tr()</span></code> à cette image. Dessiner “à la main” l’image ainsi transformée.</p></li>
+<li><p>Ecrire ce traitement à l’aide de la fonction <code class="docutils literal notranslate"><span class="pre">tr()</span></code></p></li>
+</ol>
+</section>
+<section id="analyse-d-une-image-de-taille-arbitraire">
+<h4>Analyse d’une image de taille arbitraire.<a class="headerlink" href="#analyse-d-une-image-de-taille-arbitraire" title="Permalink to this heading">#</a></h4>
+<ol class="arabic simple">
+<li><p>Ecrire une fonction <code class="docutils literal notranslate"><span class="pre">nbpixblc()</span></code> qui compte et retourne le
+nombre de pixels blanc d’une image de taille arbitraire</p></li>
+<li><p>Que retourne l’application de cette fonction à l’image (4) de la
+question <a href="#que:im4" data-reference-type="ref"
+data-reference="que:im4">[que:im4]</a>.</p></li>
+</ol>
+</section>
+</section>
+<section id="id4">
+<h3><span class="section-number">25.2.11. </span>Exercice.<a class="headerlink" href="#id4" title="Permalink to this heading">#</a></h3>
+<p>De façon similaire à l’<a class="reference internal" href="#exo-imnb"><span class="std std-ref">exercice précédent</span></a>, on définit des images à
+niveaux de gris par un tableau 2D d’entiers compris en 0 (noir) et 255
+(blanc). La taille de l’image <span class="math notranslate nohighlight">\(L \times C\)</span> est arbitraire.<br />
+Ecrire les algorithmes des traitements suivants. On pourra commencer en
+introduisant un tableau supplémentaire pour l’image transformée. Selon
+les cas, on essaiera ensuite une solution “en place” : la transformation
+s’effectue sur le tableau de l’image d’origine.</p>
+<ol class="arabic simple">
+<li><p>Générer le négatif (<em>reverse video</em>) d’une image NB ou par niveaux
+de gris.</p></li>
+<li><p>Générer une image NB à partir d’une image niveau de gris.</p></li>
+<li><p>Augmenter le contraste de la transformation précédente.<br />
+Principe : fixer un seuil et remplacer les pixels plus clairs que le
+seuil par des pixels blancs, et inversement les plus sombres que le
+seuil par des pixels noirs.</p></li>
+<li><p>Générer une image miroir vertical (le haut se retrouve en bas et
+réciproquement) ou horizontal d’une image NB.</p></li>
+<li><p>Augmenter la luminosité (ou luminance) d’une image à niveau de
+gris.<br />
+Principe : ajouter ou retrancher une constante de la valeur des
+pixels.</p></li>
+<li><p>Générer les contours significatifs d’une image.<br />
+Principe : on remplace par un pixel noir chaque pixel dont la
+variation des valeurs de ses 4 voisins varient au delà d’un certain
+seuil, sinon on le remplace par un pixel blanc.</p></li>
+<li><p>Réduire par 2 la taille d’une image à niveau de gris.<br />
+Principe : chaque carré de 2x2 pixels est remplacé par 1 pixel de
+valeur la moyenne des pixels du carré.</p></li>
+</ol>
+</section>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./td"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="../lecons/10-lecon-fichier-affectation-revision.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">24. </span>Leçon 10 : fichiers, affectation : révisions, aspects avancés et passage de paramètres</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="td2.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">26. </span>Feuille 2 : récursivité</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectif-10">25.1. Objectif 10</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blacksquare-exercice">25.1.1. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice">25.1.2. Exercice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-factorielle">25.1.3. Exercice. (factorielle)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-codage-ascii">25.1.4. Exercice (codage ASCII)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">25.1.5. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">25.1.6. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice.</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blacksquare-exercice-tableaux-1d">25.1.7. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice. (tableaux 1D)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blacksquare-exercice-extrait-d-examen-2017-sans-machine">25.1.8. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice (extrait d’examen 2017 sans machine)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blacksquare-exercice-palindrome">25.1.9. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice. (palindrome)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-produit-scalaire">25.1.10. Exercice. (produit scalaire)</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectif-20">25.2. Objectif 20</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-math">25.2.1. Exercice. (math)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-crible-d-eratosthene">25.2.2. Exercice (crible d’Eratosthène)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-pgcd">25.2.3. Exercice. (pgcd)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-star-exercice">25.2.4. (<span class="math notranslate nohighlight">\(\star\star\)</span>) Exercice</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-exercice-algorithme-de-type-monte-carlo">25.2.5. (<span class="math notranslate nohighlight">\(\star\)</span>) Exercice (Algorithme de type Monte-Carlo)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-ecriture-decimale">25.2.6. Exercice. (écriture décimale)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blacksquare-exercice-tableau-2d">25.2.7. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice. (tableau 2D)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#exercice-tableau-2d">25.2.8. Exercice. (tableau 2D)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blacksquare-exercice-matrices">25.2.9. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice. (matrices)</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#blacksquare-exercice-images-nb">25.2.10. <span class="math notranslate nohighlight">\(\blacksquare\)</span> Exercice (images NB)</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#premieres-transformations-d-images-3-times-4">Premières transformations d’images 3 <span class="math notranslate nohighlight">\(\times\)</span> 4.</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#fonctions-et-transformation-d-image-de-taille-arbitraire">Fonctions et transformation d’image de taille arbitraire.</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#analyse-d-une-image-de-taille-arbitraire">Analyse d’une image de taille arbitraire.</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id4">25.2.11. Exercice.</a></li>
+</ul>
+</li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Ph. Langlois
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

@@ -1,0 +1,1762 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>4. Rechercher &#8212; Algo-Prog 2024</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="../_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="../_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+
+  
+  <link href="../_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="../_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="../_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/styles/sphinx-book-theme.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="../_static/sphinx-design.4cbf315f70debaebd550c87a6162cf0f.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
+<link rel="preload" as="script" href="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
+  <script src="../_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
+
+    <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+    <script src="../_static/jquery.js"></script>
+    <script src="../_static/underscore.js"></script>
+    <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="../_static/doctools.js"></script>
+    <script src="../_static/clipboard.min.js"></script>
+    <script src="../_static/copybutton.js"></script>
+    <script src="../_static/scripts/sphinx-book-theme.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="../_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="../_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="../_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'cm/8-rechercher';</script>
+    <link rel="index" title="Index" href="../genindex.html" />
+    <link rel="search" title="Search" href="../search.html" />
+    <link rel="next" title="5. Trier" href="10-trier.html" />
+    <link rel="prev" title="3. Récursivité" href="6-recursivite.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="../search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <header>
+  
+    <div class="bd-header navbar navbar-expand-lg bd-navbar">
+    </div>
+  
+  </header>
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="../bonjour.html">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="../_static/logo.png" class="logo__image only-light" alt="Algo-Prog 2024 - Home"/>
+    <script>document.write(`<img src="../_static/logo.png" class="logo__image only-dark" alt="Algo-Prog 2024 - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1">
+                <a class="reference internal" href="../bonjour.html">
+                    Bienvenu en Algo-Prog !
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Présentation</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="0-presentation-2024.html">Algo Prog en 2024</a></li>
+<li class="toctree-l1"><a class="reference internal" href="competences.html">Compétences</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapitres</span></p>
+<ul class="current nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="1-fonctions.html">1. Fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="1b-fonctions-exemple.html">2. Un exemple, plein de fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="6-recursivite.html">3. Récursivité</a></li>
+<li class="toctree-l1 current active"><a class="current reference internal" href="#">4. Rechercher</a></li>
+<li class="toctree-l1"><a class="reference internal" href="10-trier.html">5. Trier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="5-types_composes.html">6. Les types composés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="3-ES-fichiers.html">7. Entrées-sorties simples avec des fichiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="9-ES-formats.html">8. Les entrées-sorties (E/S) : formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="7-fonctions-avancees.html">9. Affectation et appel de fonction – aspects avancés</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Compléments</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="a0-boucles-avancees.html">10. Tableaux et boucles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="a1-booleens.html">11. Annexe : les booléens en python (&gt;3.6)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="a2-ndarray.html">12. Les ‘ndarray’ : de vrais tableaux en python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="11-modules-utiles.html">13. Modules utiles</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Leçons</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../lecons/0-prealable-lecons.html">14. Préalable avec les MTU moodle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecons/1-lecon-fonctions.html">15. Leçon 1 : fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecons/2-lecon-fonctions-recursion.html">16. Leçon 2 : fonctions et récursion (début)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecons/3-lecon-recursion.html">17. Leçon 3 : récursivité (début)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecons/4-lecon-recursion-2.html">18. Leçon 4 : récursivité</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecons/5-lecon-rechercher.html">19. Leçon 5 : rechercher</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecons/6-lecon-trier.html">20. Leçon 6 : trier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecons/7-lecon-conteneurs-1.html">21. Leçon 7 : types composés (début)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecons/8-lecon-conteneurs-2.html">22. Leçon 8 : types composés (fin)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecons/9-lecon-es.html">23. Leçon 9 : entrées sorties simples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../lecons/10-lecon-fichier-affectation-revision.html">24. Leçon 10 : fichiers, affectation : révisions, aspects avancés et passage de paramètres</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">TD</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../td/td1.html">25. Feuille 1 : fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../td/td2.html">26. Feuille 2 : récursivité</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">(Intervenants) suivi des séances</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="../suivi_seances.html">27. (Intervenant) Suivi des séances</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+
+
+
+<div class="dropdown dropdown-launch-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Launch interactive content">
+    <i class="fas fa-rocket"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="https://mybinder.org/v2/gh/phillanglois/Algo-Prog-2024/main?urlpath=tree/algoprog2024/cm/8-rechercher.ipynb" target="_blank"
+   class="btn btn-sm dropdown-item"
+   title="Launch onBinder"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  
+    <img src="../_static/images/logo_binder.svg">
+  </span>
+<span class="btn__text-container">Binder</span>
+</a>
+</li>
+      
+  </ul>
+</div>
+
+
+
+<a href="https://github.com/phillanglois/Algo-Prog-2024/issues/new?title=Issue%20on%20page%20%2Fcm/8-rechercher.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button"
+   title="Open an issue"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="../_sources/cm/8-rechercher.ipynb" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.ipynb</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Rechercher</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectif-du-chapitre">4.1. Objectif du chapitre</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recherche-sequentielle">4.2. Recherche séquentielle</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#principes">4.2.1. Principes</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#en-tete-modele-de-la-fonction">En-tête “modèle” de la fonction</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithmes-iteratifs">4.2.2. Algorithmes itératifs</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithme-avec-parcours-complet">Algorithme avec parcours complet</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithme-avec-un-parcours-optimal">Algorithme avec un parcours optimal</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#cas-du-tableau-vide">Cas du tableau vide</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithme-recursif">4.2.3. Algorithme récursif</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recherche-dichotomique-dans-un-tableau-trie">4.3. Recherche dichotomique dans un tableau trié</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">4.3.1. Principes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithme-iteratif">4.3.2. Algorithme itératif</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">4.3.3. Algorithme récursif</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complexite-des-algorithmes-de-recherche">4.4. Complexité des algorithmes de recherche</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-parametres-de-l-analyse-de-la-complexite">4.4.1. Les paramètres de l’analyse de la complexité</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analyse-de-la-recherche-sequentielle-iterative">4.4.2. Analyse de la recherche séquentielle itérative</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analyse-de-la-recherche-dichotomique-version-iterative">4.4.3. Analyse de la recherche dichotomique, version itérative</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analyse-de-la-recherche-dichotomique-version-recursive">4.4.4. Analyse de la recherche dichotomique, version récursive</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#star-preuves-de-terminaison-et-de-correction">4.5. (<span class="math notranslate nohighlight">\(\star\)</span>) Preuves de terminaison et de correction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#terminaison-de-la-recherche-sequentielle-version-iterative">4.5.1. Terminaison de la recherche séquentielle : version itérative</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#correction-de-la-recherche-sequentielle-version-iterative">4.5.2. Correction de la recherche séquentielle :  version itérative</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#terminaison-de-la-recherche-dichotomique">4.5.3. Terminaison de la recherche dichotomique</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-star-correction-de-la-recherche-dichotomique-version-iterative">4.5.4. (<span class="math notranslate nohighlight">\(\star\star\)</span>) Correction de la recherche dichotomique : version itérative</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#synthese">4.6. Synthèse</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <section class="tex2jax_ignore mathjax_ignore" id="rechercher">
+<span id="ch-rechercher"></span><h1><span class="section-number">4. </span>Rechercher<a class="headerlink" href="#rechercher" title="Permalink to this heading">#</a></h1>
+<p>Mis à jour : Jan 15, 2025, lecture : 17
+minutes minimum, PhL.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># pour python&lt;3.9</span>
+<span class="c1">#from typing import list</span>
+</pre></div>
+</div>
+</div>
+</div>
+<section id="objectif-du-chapitre">
+<h2><span class="section-number">4.1. </span>Objectif du chapitre<a class="headerlink" href="#objectif-du-chapitre" title="Permalink to this heading">#</a></h2>
+<p>Ce chapitre présente des versions de deux algorithmes déjà connus pour <em>rechercher si une valeur est présente ou non dans un ensemble de valeurs</em>.
+Cet ensemble de valeurs est stocké dans <em>un tableau</em> (1D ou nD selon le type de valeurs).</p>
+<p>Au delà de la question de la recherche de valeur dans un ensemble, ce chapitre permet :</p>
+<ol class="arabic simple">
+<li><p>de construire des versions itératives et récursives d’un <strong>même algorithme</strong>,</p></li>
+<li><p>d’effectuer une analyse de complexité</p></li>
+<li><p>(<span class="math notranslate nohighlight">\(\star\)</span>) d’illustrer la preuve de terminaison et de correction de ces traitements.</p></li>
+</ol>
+<p>Les algorithmes concernés sont :</p>
+<ul class="simple">
+<li><p>la recherche séquentielle</p></li>
+<li><p>la recherche dichotomique – lorsque les valeurs sont préalablement triées.</p></li>
+</ul>
+</section>
+<section id="recherche-sequentielle">
+<h2><span class="section-number">4.2. </span>Recherche séquentielle<a class="headerlink" href="#recherche-sequentielle" title="Permalink to this heading">#</a></h2>
+<section id="principes">
+<h3><span class="section-number">4.2.1. </span>Principes<a class="headerlink" href="#principes" title="Permalink to this heading">#</a></h3>
+<p><strong>Objectif</strong><br />
+Rechercher si une valeur apparaît ou non dans un tableau de valeurs<br />
+Répondre <em>vrai</em> si la valeur est dans le tableau, <em>faux</em> sinon</p>
+<p><strong>Hypothèse de départ</strong><br />
+Il existe une relation de comparaison entre deux valeurs : égalité.
+- on la note <code class="docutils literal notranslate"><span class="pre">==</span></code><br />
+Aucune hypothèse sur les valeurs</p>
+<p><strong>Principe de la recherche séquentielle</strong><br />
+Parcourir <em>séquentiellement</em> le tableau de valeurs et comparer à la valeur cherchée.</p>
+<ul class="simple">
+<li><p>séquentiellement : “valeur après valeur” selon un ordre induit par les indices des valeurs dans le t</p>
+<ul>
+<li><p>exemple : du début à la fin du tableau donc pour un ordre croissant des indices</p></li>
+</ul>
+</li>
+<li><p>parcours complet : de 0 à <code class="docutils literal notranslate"><span class="pre">len(t)-1</span></code></p></li>
+<li><p>parcours optimal : arrêt du parcours dès la valeur trouvée</p></li>
+</ul>
+<p><strong>Exemple pour la suite</strong>.</p>
+<p>Un tableau de 10 entiers aléatoirement compris entre 0 et 10 va illustrer notre propos.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="kn">from</span> <span class="nn">random</span> <span class="kn">import</span> <span class="n">randint</span><span class="p">,</span> <span class="n">seed</span>
+
+<span class="n">n</span> <span class="o">=</span> <span class="mi">10</span>
+<span class="n">t</span> <span class="o">=</span> <span class="p">[</span><span class="mi">0</span> <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">)]</span>
+
+<span class="n">seed</span><span class="p">(</span><span class="mi">2</span><span class="p">)</span>
+<span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">n</span><span class="p">):</span>
+    <span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">=</span> <span class="n">randint</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="n">n</span><span class="p">)</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0, 1, 1, 5, 2, 10, 4, 4, 9, 3]
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Rmq.</strong>
+<code class="docutils literal notranslate"><span class="pre">seed(2)</span></code> initialise de façon reproductible le générateur aléatoire (<code class="docutils literal notranslate"><span class="pre">randint()</span></code>) qui construit le tableau <code class="docutils literal notranslate"><span class="pre">t</span></code>.
+<code class="docutils literal notranslate"><span class="pre">t</span></code> est ainsi initialisé de façon identique à chaque exécution de cette cellule.
+Ce qui est commode pour des tests unitaires.</p>
+<section id="en-tete-modele-de-la-fonction">
+<h4>En-tête “modèle” de la fonction<a class="headerlink" href="#en-tete-modele-de-la-fonction" title="Permalink to this heading">#</a></h4>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rech_seq</span><span class="p">(</span><span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">tab</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">dim</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;recherche si val est present dans tab (de longueur dim)&#39;&#39;&#39;</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>entrées :</p>
+<ul>
+<li><p><em>val</em> : la valeur à chercher – ici un <code class="docutils literal notranslate"><span class="pre">int</span></code></p></li>
+<li><p><em>tab</em> : le tableau 1D qui contient les valeurs – ici un tableau 1D représenté par une liste python</p></li>
+<li><p><em>dim</em> : <code class="docutils literal notranslate"><span class="pre">len(tab)</span></code> le nombre de valeurs</p></li>
+</ul>
+</li>
+<li><p>sortie :</p>
+<ul>
+<li><p>booléen : <em>True</em> ou <em>False</em></p></li>
+</ul>
+</li>
+</ul>
+<p>Cet en-tête de fonction fixe certaines caractéristiques des paramètres du problème.
+En effet, la recherche s’effectue ici dans <em>un ensemble</em> représenté par un tableau et <em>la valeur cherchée</em> est un entier.
+Ces paramètres ensemble et valeur pourraient être différents : par exemple la recherche peut s’effectuer dans une liste de nombres flottants, une chaîne de caractères, un dictionnaire …
+Il faudrait alors modifier l’en-tête pour ces types de données.</p>
+<p>Cet en-tête est donc un <em>modèle</em> d’en-tête pour une fonction de recherche.
+On peut voir <em>le type des valeurs</em> et <em>la structure de stockage</em> comme des paramètres de plus haut niveau d’abstraction de ce traitement.
+Ceci correspond à la notion de <em>généricité</em> ou de certaines formes de la notion d’héritage dans les langages (dits) objet.</p>
+<p><strong>Tests unitaires</strong></p>
+<p>Plusieurs versions de la fonction <code class="docutils literal notranslate"><span class="pre">rech_seq()</span></code> vont être étudiées par la suite.
+On illustrera le résultat de la première avec des <code class="docutils literal notranslate"><span class="pre">print()</span></code>.
+On préfère ensuite des tests unitaires avec le tableau <code class="docutils literal notranslate"><span class="pre">t</span></code>.
+On les définit dès maintenant.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1">#  t = [0, 1, 1, 5, 2, 10, 4, 4, 9, 3]</span>
+<span class="k">assert</span> <span class="n">rech_seq</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">==</span> <span class="kc">True</span>
+<span class="k">assert</span> <span class="n">rech_seq</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">==</span> <span class="kc">True</span>
+<span class="k">assert</span> <span class="n">rech_seq</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">==</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="algorithmes-iteratifs">
+<h3><span class="section-number">4.2.2. </span>Algorithmes itératifs<a class="headerlink" href="#algorithmes-iteratifs" title="Permalink to this heading">#</a></h3>
+<section id="algorithme-avec-parcours-complet">
+<h4>Algorithme avec parcours complet<a class="headerlink" href="#algorithme-avec-parcours-complet" title="Permalink to this heading">#</a></h4>
+<p><strong>Principe du parcours séquentiel (dit) “naïf”</strong>:</p>
+<ul class="simple">
+<li><p>On parcourt une à une <em>toutes</em> les valeurs <code class="docutils literal notranslate"><span class="pre">tab[i]</span></code> pour <code class="docutils literal notranslate"><span class="pre">i</span> <span class="pre">=</span> <span class="pre">0,..,</span> <span class="pre">dim-1</span></code></p></li>
+<li><p>on compare à la valeur cherchée <code class="docutils literal notranslate"><span class="pre">val</span></code></p></li>
+<li><p>on met à jour une variable booléenne <code class="docutils literal notranslate"><span class="pre">trouve</span></code> qui marque la présence ou non de <code class="docutils literal notranslate"><span class="pre">val</span></code>dans <code class="docutils literal notranslate"><span class="pre">tab</span></code></p></li>
+<li><p>A la fin du parcours, <code class="docutils literal notranslate"><span class="pre">trouve</span></code> indique si <code class="docutils literal notranslate"><span class="pre">val</span></code>a été trouvée ou non</p>
+<ul>
+<li><p>donc on initialise <code class="docutils literal notranslate"><span class="pre">trouve</span></code>à <code class="docutils literal notranslate"><span class="pre">False</span></code> avant de commencer le parcours</p></li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rech_seq_for</span><span class="p">(</span><span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">tab</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">dim</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;recherche si val est present dans tab (de longueur dim)</span>
+<span class="sd">    version itérative avec parcours complet de tab&#39;&#39;&#39;</span>
+    <span class="n">trouve</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">dim</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">val</span><span class="p">:</span>
+            <span class="n">trouve</span> <span class="o">=</span> <span class="kc">True</span>
+    <span class="k">return</span> <span class="n">trouve</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Application (appel et <code class="docutils literal notranslate"><span class="pre">print()</span></code>)</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">v</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="s2">&quot;dans &quot;</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="s2">&quot;?&quot;</span><span class="p">,</span> <span class="n">rech_seq_for</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)))</span>
+<span class="n">v</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="s2">&quot;dans &quot;</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="s2">&quot;?&quot;</span><span class="p">,</span> <span class="n">rech_seq_for</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)))</span>
+<span class="n">v</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="s2">&quot;dans &quot;</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="s2">&quot;?&quot;</span><span class="p">,</span> <span class="n">rech_seq_for</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 dans  [0, 1, 1, 5, 2, 10, 4, 4, 9, 3] ? True
+3 dans  [0, 1, 1, 5, 2, 10, 4, 4, 9, 3] ? True
+7 dans  [0, 1, 1, 5, 2, 10, 4, 4, 9, 3] ? False
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Tests unitaires.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#  t = [0, 1, 1, 5, 2, 10, 4, 4, 9, 3]</span>
+<span class="k">assert</span> <span class="n">rech_seq_for</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">==</span> <span class="kc">True</span>
+<span class="k">assert</span> <span class="n">rech_seq_for</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">==</span> <span class="kc">True</span>
+<span class="k">assert</span> <span class="n">rech_seq_for</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">==</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Commentaires.</strong></p>
+<ul class="simple">
+<li><p>Le parcours complet du tableau est d’autant moins efficace que le nombre de valeurs inutilement parcourues est important : valeur cherchée trouvée tôt dans ce parcours et/ou taille du tableau élevée.</p></li>
+<li><p>D’un point de vue de complexité, on identifie un meilleur cas (valeur présente tôt) qui n’est pas traité différemment d’un pire cas (valeur absente).</p></li>
+<li><p>C’est une faiblesse de cette première solution.</p></li>
+</ul>
+</section>
+<section id="algorithme-avec-un-parcours-optimal">
+<h4>Algorithme avec un parcours optimal<a class="headerlink" href="#algorithme-avec-un-parcours-optimal" title="Permalink to this heading">#</a></h4>
+<p>Même principe excepté :</p>
+<ul class="simple">
+<li><p>la mise à jour de <code class="docutils literal notranslate"><span class="pre">trouve</span></code> permet d’arrêter le parcours <em>dès que</em> <code class="docutils literal notranslate"><span class="pre">val</span></code> a été trouvée</p></li>
+</ul>
+<p>Voilà une première version qui découle de la construction avec <code class="docutils literal notranslate"><span class="pre">for</span></code>.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rech_seq_while_v0</span><span class="p">(</span><span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">tab</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">dim</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;recherche si val est present dans tab (de longueur dim)</span>
+<span class="sd">    version itérative avec parcours optimal de tab : while et test d&#39;arrêt supplémentaire&#39;&#39;&#39;</span>
+    <span class="n">trouve</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">dim</span> <span class="ow">and</span> <span class="n">trouve</span> <span class="o">==</span> <span class="kc">False</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">val</span><span class="p">:</span>
+            <span class="n">trouve</span> <span class="o">=</span> <span class="kc">True</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span> 
+    <span class="k">return</span> <span class="n">trouve</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>Tests unitaires.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#  t = [0, 1, 1, 5, 2, 10, 4, 4, 9, 3]</span>
+<span class="k">assert</span> <span class="n">rech_seq_while_v0</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">==</span> <span class="kc">True</span>
+<span class="k">assert</span> <span class="n">rech_seq_while_v0</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">==</span> <span class="kc">True</span>
+<span class="k">assert</span> <span class="n">rech_seq_while_v0</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">==</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>La variable <code class="docutils literal notranslate"><span class="pre">trouve</span></code> n’est pas nécessaire comme l’illustre la version plus simple suivante.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rech_seq_while</span><span class="p">(</span><span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">tab</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">dim</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;recherche si val est present dans tab (de longueur dim)</span>
+<span class="sd">    version itérative avec parcours optimal de tab : while&#39;&#39;&#39;</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">dim</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">val</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">True</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span> 
+    <span class="k">return</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#  t = [0, 1, 1, 5, 2, 10, 4, 4, 9, 3]</span>
+<span class="k">assert</span> <span class="n">rech_seq_while</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">==</span> <span class="kc">True</span>
+<span class="k">assert</span> <span class="n">rech_seq_while</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">==</span> <span class="kc">True</span>
+<span class="k">assert</span> <span class="n">rech_seq_while</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">==</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Autre écriture de la condition du <code class="docutils literal notranslate"><span class="pre">while</span></code> où il faut être prudent</strong> :
+Attention à l’ordre des tests dans la condition de la ligne 4</p>
+<p><em>Rappel :</em> En python, l’opérateur logique <code class="docutils literal notranslate"><span class="pre">and</span></code> est paresseux. C-a-d. l’opérande de droite est évaluée si l’opérande de gauche est <code class="docutils literal notranslate"><span class="pre">True</span></code>.</p>
+<ul class="simple">
+<li><p>Application : la condition de gauche protège l’évaluation de la condition de droite. Ici l’accès à une valeurs hors du tableau <code class="docutils literal notranslate"><span class="pre">t</span></code>.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">autre_rech_seq_while</span><span class="p">(</span><span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">tab</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">dim</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;recherche si val est present dans tab (de longueur dim)</span>
+<span class="sd">    version itérative avec parcours optimal de tab : while&#39;&#39;&#39;</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+   <span class="c1"># ordre correct où la validité de l&#39;indice est vérifiée avant de l&#39;utiliser</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">dim</span> <span class="ow">and</span> <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="n">val</span><span class="p">:</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span> 
+    <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">dim</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#  t = [0, 1, 1, 5, 2, 10, 4, 4, 9, 3]</span>
+<span class="k">assert</span> <span class="n">autre_rech_seq_while</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">==</span> <span class="kc">True</span>
+<span class="k">assert</span> <span class="n">autre_rech_seq_while</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">==</span> <span class="kc">True</span>
+<span class="k">assert</span> <span class="n">autre_rech_seq_while</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">==</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p>L’inversion de la condition de répétition du <code class="docutils literal notranslate"><span class="pre">while</span></code> est maintenant incorrecte : l’appel pour une valeur absente conduit à traitement qui <em>déborde</em> du tableau `t``.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">aie</span><span class="p">(</span><span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">tab</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">dim</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;recherche si val est present dans tab (de longueur dim)</span>
+<span class="sd">    version itérative avec parcours optimal de tab : while&#39;&#39;&#39;</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="c1"># ordre incorrect qui va lever IndexError</span>
+    <span class="k">while</span>  <span class="p">(</span><span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="n">val</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">dim</span><span class="p">):</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span> 
+    <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">dim</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">else</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="n">aie</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
+
+<span class="o">---------------------------------------------------------------------------</span>
+<span class="ne">IndexError</span>                                <span class="n">Traceback</span> <span class="p">(</span><span class="n">most</span> <span class="n">recent</span> <span class="n">call</span> <span class="n">last</span><span class="p">)</span>
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">22</span><span class="p">],</span> <span class="n">line</span> <span class="mi">1</span>
+<span class="o">----&gt;</span> <span class="mi">1</span> <span class="n">aie</span><span class="p">(</span><span class="mi">11</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span>
+
+<span class="n">Cell</span> <span class="n">In</span><span class="p">[</span><span class="mi">19</span><span class="p">],</span> <span class="n">line</span> <span class="mi">6</span><span class="p">,</span> <span class="ow">in</span> <span class="n">aie</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="n">tab</span><span class="p">,</span> <span class="n">dim</span><span class="p">)</span>
+      <span class="mi">4</span> <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+      <span class="mi">5</span> <span class="c1"># ordre incorrect qui va lever IndexError</span>
+<span class="o">----&gt;</span> <span class="mi">6</span> <span class="k">while</span>  <span class="p">(</span><span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">!=</span> <span class="n">val</span><span class="p">)</span> <span class="ow">and</span> <span class="p">(</span><span class="n">i</span> <span class="o">&lt;</span> <span class="n">dim</span><span class="p">):</span>
+      <span class="mi">7</span>     <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span> 
+      <span class="mi">8</span> <span class="k">if</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">dim</span><span class="p">:</span>
+
+<span class="ne">IndexError</span><span class="p">:</span> <span class="nb">list</span> <span class="n">index</span> <span class="n">out</span> <span class="n">of</span> <span class="nb">range</span>
+</pre></div>
+</div>
+<p><strong>Ecriture équivalente avec une boucle <code class="docutils literal notranslate"><span class="pre">for</span></code></strong></p>
+<p>La construction suivante permet le même traitement minimal au sein d’une boucle <code class="docutils literal notranslate"><span class="pre">for</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rech_seq_for_ecourtee</span><span class="p">(</span><span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">tab</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">dim</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;recherche si val est present dans tab (de longueur dim)</span>
+<span class="sd">    version itérative avec parcours optimal de tab : for et return d&#39;arrêt&#39;&#39;&#39;</span>
+    <span class="n">trouve</span> <span class="o">=</span> <span class="kc">False</span>
+    <span class="k">for</span> <span class="n">i</span> <span class="ow">in</span> <span class="nb">range</span><span class="p">(</span><span class="n">dim</span><span class="p">):</span>
+        <span class="k">if</span> <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">val</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">return</span> <span class="n">trouve</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#  t = [0, 1, 1, 5, 2, 10, 4, 4, 9, 3]</span>
+<span class="k">assert</span> <span class="n">rech_seq_for_ecourtee</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">==</span> <span class="kc">True</span>
+<span class="k">assert</span> <span class="n">rech_seq_for_ecourtee</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">==</span> <span class="kc">True</span>
+<span class="k">assert</span> <span class="n">rech_seq_for_ecourtee</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">==</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Remarque.</strong> Il est inutile d’utiliser l’instruction <code class="docutils literal notranslate"><span class="pre">break</span></code>.</p>
+</section>
+<section id="cas-du-tableau-vide">
+<h4>Cas du tableau vide<a class="headerlink" href="#cas-du-tableau-vide" title="Permalink to this heading">#</a></h4>
+<p>Ce cas extrême mérite souvent une attention particulière.</p>
+<ul class="simple">
+<li><p>On convient qu’aucune valeur n’existe dans un tableau vide. Donc la recherche doit retourner <code class="docutils literal notranslate"><span class="pre">False</span></code> pour toute valeur.</p></li>
+<li><p>Les versions avec la boucle <code class="docutils literal notranslate"><span class="pre">for</span></code> avec la borne <code class="docutils literal notranslate"><span class="pre">len(t)</span></code> s’adaptent “automatiquement” à ce cas grâce à la fonction <code class="docutils literal notranslate"><span class="pre">range()</span></code> – et retournent <code class="docutils literal notranslate"><span class="pre">False</span></code>.</p></li>
+<li><p>En revanche, les écritures avec <code class="docutils literal notranslate"><span class="pre">while</span></code> demandent <em>en général</em> plus d’attention.</p>
+<ul>
+<li><p>Dans <code class="docutils literal notranslate"><span class="pre">rech_seq_while()</span></code> :</p></li>
+<li><p>la condition de répétition <code class="docutils literal notranslate"><span class="pre">i</span> <span class="pre">&lt;</span> <span class="pre">dim</span></code> n’est pas satisfaite pour <code class="docutils literal notranslate"><span class="pre">i</span> <span class="pre">==</span> <span class="pre">0</span></code> et <code class="docutils literal notranslate"><span class="pre">dim</span> <span class="pre">==</span> <span class="pre">0</span></code>,</p></li>
+<li><p>et dans ce cas la valeur <code class="docutils literal notranslate"><span class="pre">False</span></code> est retournée, ce qui est correct.</p></li>
+</ul>
+</li>
+</ul>
+<p>On verra que l’analyse de la correction de cet algorithme confirme que cette écriture est bien correcte.</p>
+<p>Pour la version suivante, le traitement du tableau se termine avec l’erreur <code class="docutils literal notranslate"><span class="pre">IndexError:</span> <span class="pre">list</span> <span class="pre">index</span> <span class="pre">out</span> <span class="pre">of</span> <span class="pre">range</span></code></p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rech_seq_while_2_faux</span><span class="p">(</span><span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">tab</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">dim</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;recherche si val est present dans tab (de longueur dim)</span>
+<span class="sd">    - version itérative avec parcours optimal de tab : while</span>
+<span class="sd">    - erreur pour le tableau vide&#39;&#39;&#39;</span>
+    <span class="k">assert</span> <span class="n">dim</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span>
+    
+    <span class="c1"># autres cas</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">val</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="n">dim</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span> <span class="c1"># le dernier élément de tab a été atteint et ne vaut pas val</span>
+            <span class="k">return</span> <span class="kc">False</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<p>L’ajout du traitement du cas particulier du tableau vide permet maintenant une exécution sans erreur de cette version.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rech_seq_while_2</span><span class="p">(</span><span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">tab</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">dim</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;recherche si val est present dans tab (de longueur dim)</span>
+<span class="sd">    - version itérative avec parcours optimal de tab : while</span>
+<span class="sd">    - traite le cas du tableau vide&#39;&#39;&#39;</span>
+    <span class="k">assert</span> <span class="n">dim</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span>
+
+    <span class="c1"># cas du tableau vide</span>
+    <span class="k">if</span> <span class="n">dim</span> <span class="o">==</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span>
+    
+    <span class="c1"># autres cas</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="kc">True</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">val</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">if</span> <span class="n">i</span> <span class="o">==</span> <span class="n">dim</span> <span class="o">-</span> <span class="mi">1</span><span class="p">:</span> <span class="c1"># le dernier élément de tab a été atteint et ne vaut pas val</span>
+            <span class="k">return</span> <span class="kc">False</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span> 
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">t_vide</span> <span class="o">=</span> <span class="p">[]</span>
+<span class="n">res</span> <span class="o">=</span> <span class="n">rech_seq_while_2</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">t_vide</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t_vide</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#  t = [0, 1, 1, 5, 2, 10, 4, 4, 9, 3]</span>
+<span class="k">assert</span> <span class="n">rech_seq_while_2</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">==</span> <span class="kc">True</span>
+<span class="k">assert</span> <span class="n">rech_seq_while_2</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">==</span> <span class="kc">True</span>
+<span class="k">assert</span> <span class="n">rech_seq_while_2</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">==</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+</section>
+<section id="algorithme-recursif">
+<h3><span class="section-number">4.2.3. </span>Algorithme récursif<a class="headerlink" href="#algorithme-recursif" title="Permalink to this heading">#</a></h3>
+<p>La recherche séquentielle s’exprime aussi de façon récursive.</p>
+<p><strong>Principe</strong></p>
+<ul class="simple">
+<li><p><em>Récursion</em> : Rechercher <code class="docutils literal notranslate"><span class="pre">val</span></code> dans <code class="docutils literal notranslate"><span class="pre">tab</span></code> de <code class="docutils literal notranslate"><span class="pre">0</span></code> à <code class="docutils literal notranslate"><span class="pre">dim-1</span></code>, c’est :</p>
+<ol class="arabic simple">
+<li><p>regarder si <code class="docutils literal notranslate"><span class="pre">val</span></code> est en première position du tableau <code class="docutils literal notranslate"><span class="pre">tab</span></code>, cad. en <code class="docutils literal notranslate"><span class="pre">tab[0]</span></code>,</p></li>
+<li><p>si c’est le cas, on a trouvé et on peut répondre : <em>terminaison</em></p></li>
+<li><p>si ce n’est pas le cas, on recommence <em>récursivement</em> en 1. avec la partie restante de <code class="docutils literal notranslate"><span class="pre">tab</span></code>, cad. le sous-tableau “à droite” de la position testée.</p></li>
+</ol>
+</li>
+</ul>
+<ul class="simple">
+<li><p><em>En-tête adaptée à un traitement récursif</em> :<br />
+On va introduire <code class="docutils literal notranslate"><span class="pre">g</span></code> (pour gauche) pour désigner le premier indice de <code class="docutils literal notranslate"><span class="pre">tab</span></code>, cad. <code class="docutils literal notranslate"><span class="pre">tab[g,</span> <span class="pre">dim[</span></code>.</p>
+<ul>
+<li><p><code class="docutils literal notranslate"><span class="pre">g</span> <span class="pre">==</span> <span class="pre">0</span></code> pour le tableau complet</p></li>
+<li><p>c’est cet indice <code class="docutils literal notranslate"><span class="pre">g</span></code> qui permet de parcourir séquentiellement le tableau lors des appels récursifs</p></li>
+</ul>
+</li>
+</ul>
+<p>On reprend la description précédente : Rechercher <code class="docutils literal notranslate"><span class="pre">val</span></code> dans <code class="docutils literal notranslate"><span class="pre">tab[g,</span> <span class="pre">dim[</span></code> c’est :</p>
+<ol class="arabic simple">
+<li><p>regarder si <code class="docutils literal notranslate"><span class="pre">val</span></code> est en première position du tableau <code class="docutils literal notranslate"><span class="pre">tab</span></code>, c-a-d. en <code class="docutils literal notranslate"><span class="pre">tab[g]</span></code>,</p></li>
+<li><p>si c’est le cas, on a trouvé et on peut répondre : <em>la récursion termine</em></p></li>
+<li><p>si ce n’est pas le cas, on recommence <em>récursivement</em> (en 1.) avec la partie de <code class="docutils literal notranslate"><span class="pre">tab</span></code> “à droite” de la première position, cad. avec le sous-tableau <code class="docutils literal notranslate"><span class="pre">tab[g+1,</span> <span class="pre">dim[</span></code>.</p></li>
+</ol>
+<ul class="simple">
+<li><p><em>Terminaison</em> : 2 cas</p>
+<ol class="arabic simple">
+<li><p>on a trouvé <code class="docutils literal notranslate"><span class="pre">val</span></code> dans <code class="docutils literal notranslate"><span class="pre">tab</span></code> si <code class="docutils literal notranslate"><span class="pre">tab[g]</span> <span class="pre">==</span> <span class="pre">val</span></code></p></li>
+<li><p>on n’a pas trouvé  si <code class="docutils literal notranslate"><span class="pre">g</span> <span class="pre">==</span> <span class="pre">dim</span></code> le tableau <code class="docutils literal notranslate"><span class="pre">tab</span></code> a été entièrement parcouru sans succès.</p></li>
+</ol>
+</li>
+<li><p><em>Initialisation</em> :</p>
+<ol class="arabic simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">g</span> <span class="pre">=</span> <span class="pre">0</span></code> et <code class="docutils literal notranslate"><span class="pre">dim</span></code> ou <code class="docutils literal notranslate"><span class="pre">len(tab)</span></code> en python</p></li>
+</ol>
+</li>
+</ul>
+<p><strong>Mise en oeuvre</strong></p>
+<p>On écrit le traitement récursif en 2 temps.</p>
+<ol class="arabic simple">
+<li><p>La recherche récursive dans <code class="docutils literal notranslate"><span class="pre">tab[g,</span> <span class="pre">dim[</span></code></p>
+<ul class="simple">
+<li><p>On traite les terminaisons (<code class="docutils literal notranslate"><span class="pre">return</span></code> des lignes 4 et 6) avant l’appel récursif (avec le <code class="docutils literal notranslate"><span class="pre">return</span></code> de la ligne 8)</p></li>
+</ul>
+</li>
+</ol>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rech_seq_rec_g</span><span class="p">(</span><span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">g</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">tab</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">dim</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;recherche val dans tab[g, dim[&#39;&#39;&#39;</span>
+    <span class="k">if</span> <span class="n">g</span> <span class="o">==</span> <span class="n">dim</span><span class="p">:</span> <span class="c1"># fin du traitement séquentiel </span>
+        <span class="k">return</span> <span class="kc">False</span>
+    <span class="k">if</span> <span class="n">t</span><span class="p">[</span><span class="n">g</span><span class="p">]</span> <span class="o">==</span> <span class="n">val</span><span class="p">:</span> <span class="c1"># gagné</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">else</span><span class="p">:</span> <span class="c1"># récursion sur </span>
+        <span class="k">return</span> <span class="n">rech_seq_rec_g</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="n">g</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">tab</span><span class="p">,</span> <span class="n">dim</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ol class="arabic simple" start="2">
+<li><p>L’appel récursif principal, c-a-d. la recherche dans <code class="docutils literal notranslate"><span class="pre">tab[0,</span> <span class="pre">dim[</span></code></p></li>
+</ol>
+<ul class="simple">
+<li><p>L’initialisation des paramètres de la recherche récursive : c-a-d. ici <code class="docutils literal notranslate"><span class="pre">g</span> <span class="pre">=</span> <span class="pre">0</span></code>.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rech_seq_rec</span><span class="p">(</span><span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">tab</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">dim</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;recherche si val est present dans tab (de longueur dim)</span>
+<span class="sd">    - version récursive avec parcours optimal de tab </span>
+<span class="sd">    - traite le cas du tableau vide&#39;&#39;&#39;</span>
+    <span class="k">return</span> <span class="n">rech_seq_rec_g</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">tab</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">))</span>
+</pre></div>
+</div>
+</div>
+</div>
+<ul class="simple">
+<li><p>Ainsi la version récursive à un en-tête <em>similaire</em> à celle des versions itératives : 3 paramètres (la valeur, le nom du tableau et sa taille)</p></li>
+<li><p><strong>Vocabulaire.</strong> Cette fonction <em>encapsule</em> l’appel principal à la fonction récursive</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">v</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="s2">&quot;dans &quot;</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="s2">&quot;?&quot;</span><span class="p">,</span> <span class="n">rech_seq_rec</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)))</span>
+<span class="n">v</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="s2">&quot;dans &quot;</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="s2">&quot;?&quot;</span><span class="p">,</span> <span class="n">rech_seq_rec</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)))</span>
+<span class="n">v</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="s2">&quot;dans &quot;</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="s2">&quot;?&quot;</span><span class="p">,</span> <span class="n">rech_seq_rec</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 dans  [0, 1, 1, 5, 2, 10, 4, 4, 9, 3] ? True
+3 dans  [0, 1, 1, 5, 2, 10, 4, 4, 9, 3] ? True
+7 dans  [0, 1, 1, 5, 2, 10, 4, 4, 9, 3] ? False
+</pre></div>
+</div>
+</div>
+</div>
+<p>Reprenons les bonnes habitudes avec les test unitaires déjà utilisés pour les versions itératives.
+On ajoute dès maintenant le cas du tableau vide.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#  t = [0, 1, 1, 5, 2, 10, 4, 4, 9, 3]</span>
+<span class="k">assert</span> <span class="n">rech_seq_rec</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">==</span> <span class="kc">True</span>
+<span class="k">assert</span> <span class="n">rech_seq_rec</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">==</span> <span class="kc">True</span>
+<span class="k">assert</span> <span class="n">rech_seq_rec</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">==</span> <span class="kc">False</span>
+<span class="c1"># tableau vide</span>
+<span class="k">assert</span> <span class="n">rech_seq_rec</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="p">[],</span> <span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>L’ordre du traitement des terminaisons (lignes 3 et 5) est important : ici l’accès <code class="docutils literal notranslate"><span class="pre">t[g]</span></code> est susceptible de lever une exception (débordement de tableau).</p>
+</div>
+<p><strong>Remarques :</strong></p>
+<ul class="simple">
+<li><p>Quelle version de recherche séquentielle (parcours complet vs. minimal) correspond à l’écriture récursive ici proposée ?</p>
+<ul>
+<li><p>Ecrire l’autre version de façon récursive.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+<section id="recherche-dichotomique-dans-un-tableau-trie">
+<h2><span class="section-number">4.3. </span>Recherche dichotomique dans un tableau trié<a class="headerlink" href="#recherche-dichotomique-dans-un-tableau-trie" title="Permalink to this heading">#</a></h2>
+<p>Dans le cas où <strong>les valeurs sont triées</strong>, on peut introduire un traitement plus efficace.<br />
+Ce traitement, <em>par dichotomie</em>, peut s’écrire de façon itérative ou récursive.<br />
+On va ainsi illustrer l’application du principe <em>diviser pour régner</em>.</p>
+<section id="id1">
+<h3><span class="section-number">4.3.1. </span>Principes<a class="headerlink" href="#id1" title="Permalink to this heading">#</a></h3>
+<p><strong>Objectif</strong><br />
+Rechercher si une valeur apparait dans un tableau de valeurs <strong>triées</strong><br />
+Répondre <em>vrai</em> si la valeur est dans le tableau, <em>faux</em> sinon</p>
+<p><strong>Hypothèse de départ</strong><br />
+Les valeurs sont rangées de façon <strong>triée</strong> (on ne le dira jamais assez !)<br />
+par ordre croissant par exemple</p>
+<p>Trions <code class="docutils literal notranslate"><span class="pre">t</span></code> pour continuer selon ces hypothèses.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># En attendant le chapitre suivant, utilisons les fonctions prédéfinies de python</span>
+<span class="n">t</span><span class="o">.</span><span class="n">sort</span><span class="p">()</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">t</span><span class="p">)</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>[0, 1, 1, 2, 3, 4, 4, 5, 9, 10]
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Principe</strong><br />
+Un algorithme <em>diviser pour régner</em> où chaque division réduit la recherche à un ensemble de taille moitié, l’autre ensemble n’étant plus considéré</p>
+<ol class="arabic simple">
+<li><p>diviser :</p></li>
+</ol>
+<ul class="simple">
+<li><p>on partage en 2 par la moitié le tableau trié</p></li>
+</ul>
+<ol class="arabic simple">
+<li><p>régner :</p>
+<ul class="simple">
+<li><p>on compare la valeur cherchée à la valeur médiane du tableau</p></li>
+<li><p>si besoin, on en déduit la moitié gauche ou droite du tableau qui contient la valeur cherchée</p></li>
+<li><p>on recommence la recherche sur la “bonne moitié”</p></li>
+</ul>
+</li>
+</ol>
+</section>
+<section id="algorithme-iteratif">
+<h3><span class="section-number">4.3.2. </span>Algorithme itératif<a class="headerlink" href="#algorithme-iteratif" title="Permalink to this heading">#</a></h3>
+<p><strong>Analyse</strong></p>
+<p>Il faut :</p>
+<ol class="arabic simple">
+<li><p><em>itérer</em> :</p>
+<ul class="simple">
+<li><p>le test de la valeur de l’indice milieu</p></li>
+<li><p>le découpage en 2 du tableau</p></li>
+</ul>
+</li>
+<li><p><em>arrêter</em> :</p>
+<ul class="simple">
+<li><p>quand on a trouvé la valeur cherchée</p></li>
+<li><p>ou si la taille du tableau est égale à zéro (tableau vide)</p></li>
+</ul>
+</li>
+<li><p><em>retourner</em> un booléen</p></li>
+</ol>
+<p><strong>Codage</strong></p>
+<ul class="simple">
+<li><p>L’appel s’effectue en indiquant :</p>
+<ul>
+<li><p>la valeur cherchée</p></li>
+<li><p>le tableau</p></li>
+<li><p>sa taille</p></li>
+</ul>
+</li>
+<li><p>Le nombre d’itérations n’est a priori pas connu (il est borné en revanche)  donc boucle <code class="docutils literal notranslate"><span class="pre">while</span></code></p></li>
+<li><p>L’indice milieu est obtenu avec une division entière <code class="docutils literal notranslate"><span class="pre">//</span></code> sachant que le milieu entre <span class="math notranslate nohighlight">\(a\)</span> et <span class="math notranslate nohighlight">\(b\)</span> est <span class="math notranslate nohighlight">\((a+b)//2\)</span></p>
+<ul>
+<li><p>Rappel : la division entière <code class="docutils literal notranslate"><span class="pre">//</span></code> retourne le quotient de la division euclidienne</p></li>
+</ul>
+</li>
+<li><p>D’une itération à l’autre :</p>
+<ul>
+<li><p>choisir la partie gauche ou droite du tableau revient à changer l’indice de début et de fin du prochain tableau à traiter : on introduit des indices <code class="docutils literal notranslate"><span class="pre">g</span></code>, <code class="docutils literal notranslate"><span class="pre">d</span></code> et <code class="docutils literal notranslate"><span class="pre">m</span></code> pour désigner les indices de gauche, de droite et du milieu</p></li>
+<li><p>la taille est divisée par 2</p></li>
+</ul>
+</li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dichotomie_iterative</span><span class="p">(</span><span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">tab</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">dim</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;recherche dichotomique : version itérative</span>
+<span class="sd">    entrées - val :int cherché</span>
+<span class="sd">            - t : tableau d&#39;int de taille dim_t, trié par ordre croissant</span>
+<span class="sd">    sortie : vrai si val est dans t, faux sinon</span>
+<span class="sd">            </span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="n">g</span> <span class="o">=</span> <span class="mi">0</span>          <span class="c1"># indice de gauche du tableau exploré</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="n">dim</span> <span class="o">-</span> <span class="mi">1</span>  <span class="c1"># indice de droite du tableau exploré</span>
+    
+    <span class="k">while</span> <span class="n">g</span> <span class="o">&lt;=</span> <span class="n">d</span><span class="p">:</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="p">(</span><span class="n">g</span> <span class="o">+</span> <span class="n">d</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span>   <span class="c1"># indice milieu de t[g,d]</span>
+        <span class="k">if</span> <span class="n">tab</span><span class="p">[</span><span class="n">m</span><span class="p">]</span> <span class="o">==</span> <span class="n">val</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">elif</span> <span class="n">tab</span><span class="p">[</span><span class="n">m</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">val</span><span class="p">:</span> <span class="c1"># val est dans la partie gauche : t[g,m-1]</span>
+            <span class="n">d</span> <span class="o">=</span> <span class="n">m</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>            <span class="c1"># val est dans la partie droite : t[m+1,d]</span>
+            <span class="n">g</span> <span class="o">=</span> <span class="n">m</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="kc">False</span>               
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Ici aussi, l’ordre du traitement des terminaisons (lignes 14 et 16) est important : l’accès <code class="docutils literal notranslate"><span class="pre">tab[m]</span></code> est susceptible de lever une exception (débordement de tableau).</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="n">v</span> <span class="o">=</span> <span class="mi">1</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="s2">&quot;dans &quot;</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="s2">&quot;?&quot;</span><span class="p">,</span> <span class="n">dichotomie_iterative</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)))</span>
+<span class="n">v</span> <span class="o">=</span> <span class="mi">3</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="s2">&quot;dans &quot;</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="s2">&quot;?&quot;</span><span class="p">,</span> <span class="n">dichotomie_iterative</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)))</span>
+<span class="n">v</span> <span class="o">=</span> <span class="mi">7</span>
+<span class="nb">print</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="s2">&quot;dans &quot;</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="s2">&quot;?&quot;</span><span class="p">,</span> <span class="n">dichotomie_iterative</span><span class="p">(</span><span class="n">v</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">)))</span>
+</pre></div>
+</div>
+</div>
+<div class="cell_output docutils container">
+<div class="output stream highlight-myst-ansi notranslate"><div class="highlight"><pre><span></span>1 dans  [0, 1, 1, 2, 3, 4, 4, 5, 9, 10] ? True
+3 dans  [0, 1, 1, 2, 3, 4, 4, 5, 9, 10] ? True
+7 dans  [0, 1, 1, 2, 3, 4, 4, 5, 9, 10] ? False
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Tests unitaires.</strong></p>
+<ul class="simple">
+<li><p>Le tableau <code class="docutils literal notranslate"><span class="pre">t</span></code> est maintenant trié. On peut donc reprendre les tests  utilisé jusque-là.</p></li>
+<li><p>De même, le tableau vide est trié.</p></li>
+</ul>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># t = [0, 1, 1, 2, 3, 4, 4, 5, 9, 10]</span>
+<span class="k">assert</span> <span class="n">dichotomie_iterative</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">==</span> <span class="kc">True</span>
+<span class="k">assert</span> <span class="n">dichotomie_iterative</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">==</span> <span class="kc">True</span>
+<span class="k">assert</span> <span class="n">dichotomie_iterative</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">==</span> <span class="kc">False</span>
+<span class="c1"># tableau vide</span>
+<span class="k">assert</span> <span class="n">dichotomie_iterative</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="p">[],</span> <span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</div>
+</div>
+</section>
+<section id="id2">
+<h3><span class="section-number">4.3.3. </span>Algorithme récursif<a class="headerlink" href="#id2" title="Permalink to this heading">#</a></h3>
+<p><strong>Analyse</strong></p>
+<ol class="arabic simple">
+<li><p>Récursion</p>
+<ul class="simple">
+<li><p>il faut appeler récursivement la recherche sur le **sous-**tableau (gauche ou droite) qui va bien</p></li>
+</ul>
+</li>
+<li><p>Terminaison : 2 cas</p>
+<ul class="simple">
+<li><p>on a trouvé la valeur cherchée</p></li>
+<li><p>le tableau est vide</p></li>
+</ul>
+</li>
+</ol>
+<p><strong>Codage</strong></p>
+<p>Récursion : “le sous-tableau (gauche ou droite) qui va bien”</p>
+<ul class="simple">
+<li><p>il faut pouvoir préciser les indices gauche et droit du sous-tableau traité</p>
+<ul>
+<li><p>donc paramètres formels : <code class="docutils literal notranslate"><span class="pre">g</span></code> et <code class="docutils literal notranslate"><span class="pre">d</span></code></p></li>
+</ul>
+</li>
+<li><p>et sa taille (parce qu’on manipule un tableau)</p>
+<ul>
+<li><p>donc paramètre formel <code class="docutils literal notranslate"><span class="pre">n</span></code></p></li>
+</ul>
+</li>
+</ul>
+<p>Rmq.: A la place de <code class="docutils literal notranslate"><span class="pre">n</span></code>,  on pourrait déduire la taille effective du tableau traité à partir de <code class="docutils literal notranslate"><span class="pre">g</span></code>et <code class="docutils literal notranslate"><span class="pre">d</span></code>. Mais on convenu d’ajouter systématiquement la taille d’un tableau passé en argument d’un sous-programme.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">dichotomie</span><span class="p">(</span><span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">t</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">dim_t</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">g</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">d</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;recherche dichotomique : version récursive</span>
+<span class="sd">    recherche val dans t[g, d] et retourne True ou False</span>
+<span class="sd">    entrées. val : int, t: tableau d&#39;int de taille n,</span>
+<span class="sd">    g, d : int indices gauche et droite</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">if</span> <span class="n">g</span> <span class="o">&gt;</span> <span class="n">d</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">False</span> <span class="c1"># t est vide</span>
+    <span class="n">m</span> <span class="o">=</span> <span class="p">(</span><span class="n">g</span> <span class="o">+</span> <span class="n">d</span><span class="p">)</span> <span class="o">//</span> <span class="mi">2</span> 
+    <span class="k">if</span> <span class="n">t</span><span class="p">[</span><span class="n">m</span><span class="p">]</span> <span class="o">==</span> <span class="n">val</span><span class="p">:</span>
+        <span class="k">return</span> <span class="kc">True</span>
+    <span class="k">elif</span> <span class="n">val</span> <span class="o">&lt;</span> <span class="n">t</span><span class="p">[</span><span class="n">m</span><span class="p">]:</span> <span class="c1"># val est dans la partie gauche</span>
+        <span class="n">dim_t</span> <span class="o">=</span> <span class="p">(</span><span class="n">m</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span> <span class="o">-</span> <span class="n">g</span> <span class="o">+</span> <span class="mi">1</span> 
+        <span class="k">return</span> <span class="n">dichotomie</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">dim_t</span><span class="p">,</span> <span class="n">g</span><span class="p">,</span> <span class="n">m</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    <span class="k">else</span><span class="p">:</span>            <span class="c1"># val est dans la partie droite</span>
+        <span class="n">dim_t</span> <span class="o">=</span> <span class="n">d</span> <span class="o">-</span> <span class="n">m</span>
+        <span class="k">return</span> <span class="n">dichotomie</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">dim_t</span><span class="p">,</span> <span class="n">m</span><span class="o">+</span><span class="mi">1</span><span class="p">,</span> <span class="n">d</span><span class="p">)</span>
+        
+<span class="k">def</span> <span class="nf">dichotomie_recursive</span><span class="p">(</span><span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">t</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">dim_t</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="mi">0</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;recherche dichotomique de val dans t de taille dim_t</span>
+<span class="sd">    pour ressembler ) la version iterative en utilisant dichotomie</span>
+<span class="sd">    &#39;&#39;&#39;</span>
+    <span class="k">return</span> <span class="n">dichotomie</span><span class="p">(</span><span class="n">val</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="n">dim_t</span><span class="p">,</span> <span class="mi">0</span><span class="p">,</span> <span class="n">dim_t</span><span class="o">-</span><span class="mi">1</span><span class="p">)</span>
+    
+</pre></div>
+</div>
+</div>
+</div>
+<div class="admonition warning">
+<p class="admonition-title">Warning</p>
+<p>Ici encore, l’ordre du traitement des terminaisons (lignes 10 et 12) est important : l’accès <code class="docutils literal notranslate"><span class="pre">t[m]</span></code> est susceptible de lever une exception (débordement de tableau).</p>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1"># t = [0, 1, 1, 2, 3, 4, 4, 5, 9, 10]</span>
+<span class="k">assert</span> <span class="n">dichotomie_recursive</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">==</span> <span class="kc">True</span>
+<span class="k">assert</span> <span class="n">dichotomie_recursive</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">==</span> <span class="kc">True</span>
+<span class="k">assert</span> <span class="n">dichotomie_recursive</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">==</span> <span class="kc">False</span>
+<span class="c1"># tableau vide</span>
+<span class="k">assert</span> <span class="n">dichotomie_recursive</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="p">[],</span> <span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Remarque</strong></p>
+<ul class="simple">
+<li><p>Observer et bien comprendre pourquoi le traitement récursif <code class="docutils literal notranslate"><span class="pre">dichotomie</span></code> comporte 4 <code class="docutils literal notranslate"><span class="pre">return</span></code></p>
+<ul>
+<li><p>Essayer par exemple de supprimer les 2 derniers</p></li>
+</ul>
+</li>
+<li><p>L’<em>encapsulation</em> de <code class="docutils literal notranslate"><span class="pre">dichotomie</span></code> dans <code class="docutils literal notranslate"><span class="pre">dichotomie_recursive</span></code> permet un appel de plus haut niveau similaire à la version itérative. Dans l’absolu, il n’est pas nécessaire : c’est l’<em>appel principal</em> de <code class="docutils literal notranslate"><span class="pre">dichotomie</span></code> qui résout le problème..</p></li>
+</ul>
+<p><strong>Exercices</strong></p>
+<ul class="simple">
+<li><p>Instrumenter le code (ajouter des <code class="docutils literal notranslate"><span class="pre">print()</span></code> :) pour exhiber l’évalution de <code class="docutils literal notranslate"><span class="pre">g</span></code>, <code class="docutils literal notranslate"><span class="pre">d</span></code> et <code class="docutils literal notranslate"><span class="pre">m</span></code></p></li>
+<li><p>Effectuer les 2 recherches précédentes sans utiliser <code class="docutils literal notranslate"><span class="pre">dichotomie_recursive</span></code> mais seulement <code class="docutils literal notranslate"><span class="pre">dichotomie</span></code></p></li>
+</ul>
+</section>
+</section>
+<section id="complexite-des-algorithmes-de-recherche">
+<h2><span class="section-number">4.4. </span>Complexité des algorithmes de recherche<a class="headerlink" href="#complexite-des-algorithmes-de-recherche" title="Permalink to this heading">#</a></h2>
+<p>Nous allons montrer que la recherche séquentielle est un algorithme de complexité linéaire tandis que la recherche dichotomique est de complexité logarithmique. Ce qui justifie l’intérêt l’approche dichotomique pour des tableaux <strong>triés</strong> de grande taille.</p>
+<section id="les-parametres-de-l-analyse-de-la-complexite">
+<h3><span class="section-number">4.4.1. </span>Les paramètres de l’analyse de la complexité<a class="headerlink" href="#les-parametres-de-l-analyse-de-la-complexite" title="Permalink to this heading">#</a></h3>
+<p><strong>Paramètre de complexité :</strong> le nombre de valeurs présentes, c-a-d. la taille <code class="docutils literal notranslate"><span class="pre">dim</span></code> du tableau de stockage.</p>
+<p>Notons <strong><span class="math notranslate nohighlight">\(n\)</span></strong> ce paramètre et <code class="docutils literal notranslate"><span class="pre">t</span></code> ce tableau.</p>
+<p><strong>Mesure de la complexité :</strong> la comparaison <code class="docutils literal notranslate"><span class="pre">t[i]</span> <span class="pre">==</span> <span class="pre">val</span></code> dans le cas séquentiel itératif, ou  <code class="docutils literal notranslate"><span class="pre">t[g]</span> <span class="pre">==</span> <span class="pre">val</span></code> dans le cas séquentiel récursif ou enfin <code class="docutils literal notranslate"><span class="pre">t[m]</span> <span class="pre">==</span> <span class="pre">val</span></code> dans le cas dichotomique.</p>
+<p>On va donc chercher la quantité <span class="math notranslate nohighlight">\(C(n)\)</span>  qui compte le nombre de ces comparaisons comme une fonction de la taille <span class="math notranslate nohighlight">\(n\)</span> du tableau de stockage.</p>
+</section>
+<section id="analyse-de-la-recherche-sequentielle-iterative">
+<h3><span class="section-number">4.4.2. </span>Analyse de la recherche séquentielle itérative<a class="headerlink" href="#analyse-de-la-recherche-sequentielle-iterative" title="Permalink to this heading">#</a></h3>
+<p>Le nombre de comparaisons dépend de la position de <code class="docutils literal notranslate"><span class="pre">val</span></code> dans <code class="docutils literal notranslate"><span class="pre">t</span></code> :</p>
+<ul class="simple">
+<li><p>meilleur cas : <code class="docutils literal notranslate"><span class="pre">val</span></code> est présent à l’indice 0 : 1 comparaison suffit</p></li>
+<li><p>pire cas : <code class="docutils literal notranslate"><span class="pre">val</span></code> est absent de <code class="docutils literal notranslate"><span class="pre">t</span></code> donc le parcours du tableau est complet (quelque soit l’écriture) et comporte <span class="math notranslate nohighlight">\(n\)</span> comparaisons</p></li>
+<li><p>dans le cas général : traitement effectué avec un nombre de comparaisons inférieur ou égal à <span class="math notranslate nohighlight">\(n\)</span></p></li>
+</ul>
+<p>Donc <span class="math notranslate nohighlight">\(1 \le C(n) \le n\)</span>.</p>
+<p>La complexité en temps de la recherche séquentielle dans un tableau de <span class="math notranslate nohighlight">\(n\)</span> valeurs est au pire <strong>linéaire en <span class="math notranslate nohighlight">\(n\)</span></strong>.</p>
+<p>Sa complexité asymptotique est telle que : <span class="math notranslate nohighlight">\(C(n) = \cal{O}(n)\)</span>.</p>
+</section>
+<section id="analyse-de-la-recherche-dichotomique-version-iterative">
+<h3><span class="section-number">4.4.3. </span>Analyse de la recherche dichotomique, version itérative<a class="headerlink" href="#analyse-de-la-recherche-dichotomique-version-iterative" title="Permalink to this heading">#</a></h3>
+<p>La dichotomie effectue des divisions successives de la taille du tableau dans laquelle la recherche est effectuée. Il est <em>commode</em> de commencer l’analyse avec <span class="math notranslate nohighlight">\(n = 2^p\)</span> pour obtenir des tailles successives entières.</p>
+<p>Remarquons dès maintenant :</p>
+<ul class="simple">
+<li><p>si <span class="math notranslate nohighlight">\(n = 2^p\)</span> alors <span class="math notranslate nohighlight">\(p = \log_2(n)\)</span></p></li>
+<li><p>si <span class="math notranslate nohighlight">\(2^p \le n &lt; 2^{p+1}\)</span> alors <span class="math notranslate nohighlight">\(p =\)</span> <code class="docutils literal notranslate"><span class="pre">int</span></code>(<span class="math notranslate nohighlight">\(\log_2(n)\)</span>).</p></li>
+</ul>
+<p>Cette dernière ligne explicite l’intérêt de commencer avec <span class="math notranslate nohighlight">\(n = 2^p\)</span>.</p>
+<p><strong>Principe de l’analyse</strong>.</p>
+<p>Le nombre de comparaisons dépend de la position de <code class="docutils literal notranslate"><span class="pre">val</span></code> dans <code class="docutils literal notranslate"><span class="pre">t</span></code> :</p>
+<p>Meilleur cas : <code class="docutils literal notranslate"><span class="pre">val</span></code> est présent à l’indice <code class="docutils literal notranslate"><span class="pre">m</span> <span class="pre">==</span> <span class="pre">n//2</span></code> et 1 comparaison suffit</p>
+<p>Pire cas : <code class="docutils literal notranslate"><span class="pre">val</span></code> est absent de <code class="docutils literal notranslate"><span class="pre">t</span></code></p>
+<ul class="simple">
+<li><p>la recherche s’effectue successivement sur des tableaux de taille <span class="math notranslate nohighlight">\(n, n/2, n/4, \dots, 4, 2, 1\)</span> jusqu’à terminaison avec <code class="docutils literal notranslate"><span class="pre">g</span> <span class="pre">==</span> <span class="pre">d</span></code>, c-a-d. un tableau vide, soit donc <span class="math notranslate nohighlight">\(p = \log_2(n)\)</span> divisions par 2 avant terminaison</p></li>
+<li><p>pour chacune de ces tailles, une comparaison <code class="docutils literal notranslate"><span class="pre">t[m]</span> <span class="pre">==</span> <span class="pre">val</span></code> est effectuée</p></li>
+</ul>
+<p>Donc <span class="math notranslate nohighlight">\(C(n) = p = \log_2(n)\)</span> dans le pire des cas pour <span class="math notranslate nohighlight">\(n = 2^p\)</span>.</p>
+<p>Et pour le pire cas d’une taille <span class="math notranslate nohighlight">\(n\)</span> quelconque, <code class="docutils literal notranslate"><span class="pre">int</span></code><span class="math notranslate nohighlight">\((\log_2(n)) \le C(n) &lt;\)</span>  <code class="docutils literal notranslate"><span class="pre">int</span></code><span class="math notranslate nohighlight">\((\log_2(n))+1\)</span>.</p>
+<p>La complexité en temps de la recherche séquentielle dans un tableau de <span class="math notranslate nohighlight">\(n\)</span> valeurs est au pire majorée par le <strong>logarithme de <span class="math notranslate nohighlight">\(n\)</span></strong>.</p>
+<p>Sa complexité asymptotique est telle que : <span class="math notranslate nohighlight">\(C(n) = \cal{O}(\log(n))\)</span>.</p>
+<p><strong>Rmq.</strong>
+Les valeurs successives de la taille des tableaux traités sont celles de la suite géométrique de raison <span class="math notranslate nohighlight">\(1/2\)</span>  et de premier terme <span class="math notranslate nohighlight">\(n\)</span>.
+Une telle suite converge vers 0.
+Ce qui permettra de prouver la terminaison de l’algorithme.</p>
+<p><strong>Exercice.</strong></p>
+<p>La complexité logarithmique de la recherche dichotomique en version itérative peut aussi se démontrer en prouvant (par récurrence) que la taille de l’intervalle après <span class="math notranslate nohighlight">\(k\)</span> itération de <span class="math notranslate nohighlight">\([g, d[\)</span>, <span class="math notranslate nohighlight">\(|d - g| &lt; n / 2^k\)</span>.</p>
+</section>
+<section id="analyse-de-la-recherche-dichotomique-version-recursive">
+<h3><span class="section-number">4.4.4. </span>Analyse de la recherche dichotomique, version récursive<a class="headerlink" href="#analyse-de-la-recherche-dichotomique-version-recursive" title="Permalink to this heading">#</a></h3>
+<p>On retrouve facilement la complexité logarithmique de la recherche dichotomique dans sa version récursive.</p>
+<p>On simplifie l’analyse en observant un pire cas et <span class="math notranslate nohighlight">\(n = 2^p\)</span>.</p>
+<p>Soit <span class="math notranslate nohighlight">\(C(n)\)</span> le nombre de comparaisons effectuées par la recherche dichotomique dans <span class="math notranslate nohighlight">\(n\)</span> valeurs.</p>
+<p>Une étape de récursion de cette recherche :</p>
+<ul class="simple">
+<li><p>effectue une comparaison : <code class="docutils literal notranslate"><span class="pre">t[m]</span> <span class="pre">==</span> <span class="pre">val</span></code></p></li>
+<li><p>“appelle” la récursion pour <span class="math notranslate nohighlight">\(n/2\)</span>.</p></li>
+</ul>
+<p>La terminaison est obtenue dans le pire cas pour <span class="math notranslate nohighlight">\(C(1) = 1\)</span> (ou <span class="math notranslate nohighlight">\(C(0) = 0\)</span>).</p>
+<p>Soit donc directement :
+$<span class="math notranslate nohighlight">\(C(n) = 1 + C(n/2)\)</span><span class="math notranslate nohighlight">\(
+et 
+\)</span><span class="math notranslate nohighlight">\(C(1) = 1.\)</span>$</p>
+<p>On développe cette relation de récurrence pour <span class="math notranslate nohighlight">\(n, n/2, ..., 1\)</span>.</p>
+<p>Ce qui donne :
+<span class="math notranslate nohighlight">\(C(n) = 1 + 1 + \dots + 1 = \log_2(n)\)</span>.</p>
+<p>On remarque que l’analyse de la version récursive conduit naturellement à une relation de récurrence.</p>
+<p><strong>Exercice</strong>.</p>
+<p>De façon similaire, retrouver la complexité linéaire de la recherche séquentielle en version récursive.</p>
+</section>
+</section>
+<section id="star-preuves-de-terminaison-et-de-correction">
+<h2><span class="section-number">4.5. </span>(<span class="math notranslate nohighlight">\(\star\)</span>) Preuves de terminaison et de correction<a class="headerlink" href="#star-preuves-de-terminaison-et-de-correction" title="Permalink to this heading">#</a></h2>
+<p>Nous illustrons comment prouver :</p>
+<ul class="simple">
+<li><p>qu’un algorithme termine</p></li>
+<li><p>qu’un algorithme est correct, c-a-d. qu’il termine en trouvant bien la solution du problème.</p></li>
+</ul>
+<section id="terminaison-de-la-recherche-sequentielle-version-iterative">
+<h3><span class="section-number">4.5.1. </span>Terminaison de la recherche séquentielle : version itérative<a class="headerlink" href="#terminaison-de-la-recherche-sequentielle-version-iterative" title="Permalink to this heading">#</a></h3>
+<p>Il s’agit de montrer que l’exécution de l’algorithme termine son exécution quelques soient les entrées de l’instance. Dans un premier temps, on ne s’intéresse pas à la validité de la solution ainsi trouvée.</p>
+<p>Dans le cas d’un algorithme itératif, une technique classique pour prouver la terminaison de l’algorithme est d’identifier <strong>un variant de boucle</strong> ou <em>variant de l’itération</em>.</p>
+<p><strong>Variant de boucle</strong> : une quantité <em>entière</em> et <em>positive</em> qui <em>décroît</em> strictement à chaque itération de la boucle.</p>
+<p>La terminaison de l’algorithme itératif est prouvé si ce <em>variant arrête la répétition</em> (la boucle) – et ce quelques soient les entrées de la répétition.</p>
+<p>Reprenons une version itérative de la recherche séquentielle.</p>
+<p>Celle avec le <code class="docutils literal notranslate"><span class="pre">while</span></code> est la plus simple pour commencer.</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rech_seq_while</span><span class="p">(</span><span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">tab</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">dim</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">dim</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">tab</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">val</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">True</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span> 
+    <span class="k">return</span> <span class="kc">False</span>
+</pre></div>
+</div>
+<p><strong>Exemple de preuve de terminaison</strong></p>
+<p>Aucune quantité de l’algo ainsi écrit est <em>explicitement</em> un variant.</p>
+<p>Cependant  La condition d’arrêt <code class="docutils literal notranslate"><span class="pre">i</span> <span class="pre">&lt;</span> <span class="pre">dim</span></code> permet de ré-écrire une variable d’itération <strong><code class="docutils literal notranslate"><span class="pre">j</span> <span class="pre">=</span> <span class="pre">dim</span> <span class="pre">-</span> <span class="pre">i</span></code></strong> que l’on va prouver être un variant de la boucle.</p>
+<ul class="simple">
+<li><p>avant la première itération boucle : l’entier <code class="docutils literal notranslate"><span class="pre">j</span> <span class="pre">==</span> <span class="pre">dim</span></code> qui est positif si le tableau <code class="docutils literal notranslate"><span class="pre">t</span></code> n’est pas vide</p></li>
+<li><p>chaque itération de la boucle décrémente <code class="docutils literal notranslate"><span class="pre">j</span></code> de 1 (car elle incrémente <code class="docutils literal notranslate"><span class="pre">i</span></code> de 1)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">j</span></code> est donc un entier, positif qui décroît par pas de 1 à partir de <code class="docutils literal notranslate"><span class="pre">dim</span></code>,</p></li>
+<li><p><strong>donc, à terme</strong> (i.e. à un certain moment), <code class="docutils literal notranslate"><span class="pre">j</span></code> vaut  0.</p>
+<ul>
+<li><p>mathématiquement les valeurs de <code class="docutils literal notranslate"><span class="pre">j</span></code> suivent une suite arithmétique de raison -1 et de premier terme  <code class="docutils literal notranslate"><span class="pre">dim</span></code> &gt; 0.</p></li>
+</ul>
+</li>
+<li><p>Quand <code class="docutils literal notranslate"><span class="pre">j</span> <span class="pre">==</span> <span class="pre">0</span></code>, <code class="docutils literal notranslate"><span class="pre">i</span> <span class="pre">==</span> <span class="pre">dim</span></code>, valeur qui ne vérifie pas la condition de test de la ligne 5 et qui arrête donc la répétition.</p></li>
+</ul>
+<p>On a bien identifié un variant qui prouve la terminaison de cette recherche séquentielle (version itérative <code class="docutils literal notranslate"><span class="pre">while</span></code>).</p>
+<p><strong>Rmq.</strong></p>
+<ul class="simple">
+<li><p>Ceci est aussi vrai pour un tableau vide : <code class="docutils literal notranslate"><span class="pre">dim</span> <span class="pre">==</span> <span class="pre">0</span></code>.</p></li>
+<li><p>Ce qui permet d’écrire une solution valide avec tout tableau même vide, sans traitement spécifique de ce cas.</p></li>
+</ul>
+<p>Ainsi, on écrit l’algorithme avec une répétition <code class="docutils literal notranslate"><span class="pre">while</span></code> contrôlée par ce variant <code class="docutils literal notranslate"><span class="pre">j</span></code> : c-a-d. en prenant <code class="docutils literal notranslate"><span class="pre">j</span></code> comme indice, initialisé à <code class="docutils literal notranslate"><span class="pre">dim</span></code> et la condition d’arrêt <code class="docutils literal notranslate"><span class="pre">j</span> <span class="pre">&gt;</span> <span class="pre">0</span></code>.
+Cette ré-écriture est un changement de variable “classique”.</p>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="k">def</span> <span class="nf">rech_seq_while_variant</span><span class="p">(</span><span class="n">val</span><span class="p">:</span> <span class="nb">int</span><span class="p">,</span> <span class="n">tab</span><span class="p">:</span> <span class="nb">list</span><span class="p">[</span><span class="nb">int</span><span class="p">],</span> <span class="n">dim</span><span class="p">:</span> <span class="nb">int</span><span class="p">)</span> <span class="o">-&gt;</span> <span class="nb">bool</span><span class="p">:</span>
+<span class="w">    </span><span class="sd">&#39;&#39;&#39;recherche équentielle itérative : s&#39;il fallait n&#39;en garder qu&#39;une !&#39;&#39;&#39;</span>
+    <span class="k">assert</span> <span class="n">dim</span> <span class="o">==</span> <span class="nb">len</span><span class="p">(</span><span class="n">tab</span><span class="p">)</span>
+
+    <span class="n">j</span> <span class="o">=</span> <span class="n">dim</span>
+    <span class="k">while</span> <span class="n">j</span> <span class="o">&gt;</span> <span class="mi">0</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">tab</span><span class="p">[</span><span class="n">j</span> <span class="o">-</span> <span class="mi">1</span><span class="p">]</span> <span class="o">==</span> <span class="n">val</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">True</span>
+        <span class="n">j</span> <span class="o">=</span> <span class="n">j</span> <span class="o">-</span> <span class="mi">1</span> 
+    <span class="k">return</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</div>
+</div>
+<div class="cell docutils container">
+<div class="cell_input docutils container">
+<div class="highlight-ipython3 notranslate"><div class="highlight"><pre><span></span><span class="c1">#  t = [0, 1, 1, 5, 2, 10, 4, 4, 9, 3]</span>
+<span class="k">assert</span> <span class="n">rech_seq_while_variant</span><span class="p">(</span><span class="mi">1</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">==</span> <span class="kc">True</span>
+<span class="k">assert</span> <span class="n">rech_seq_while_variant</span><span class="p">(</span><span class="mi">3</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">==</span> <span class="kc">True</span>
+<span class="k">assert</span> <span class="n">rech_seq_while_variant</span><span class="p">(</span><span class="mi">7</span><span class="p">,</span> <span class="n">t</span><span class="p">,</span> <span class="nb">len</span><span class="p">(</span><span class="n">t</span><span class="p">))</span> <span class="o">==</span> <span class="kc">False</span>
+<span class="c1"># tableau vide</span>
+<span class="k">assert</span> <span class="n">rech_seq_while_variant</span><span class="p">(</span><span class="mi">0</span><span class="p">,</span> <span class="p">[],</span> <span class="mi">0</span><span class="p">)</span> <span class="o">==</span> <span class="kc">False</span>
+</pre></div>
+</div>
+</div>
+</div>
+<p><strong>Exercice</strong></p>
+<ul class="simple">
+<li><p>Adapter cette preuve de terminaison à la version avec une boucle <code class="docutils literal notranslate"><span class="pre">for</span></code>.</p></li>
+</ul>
+</section>
+<section id="correction-de-la-recherche-sequentielle-version-iterative">
+<h3><span class="section-number">4.5.2. </span>Correction de la recherche séquentielle :  version itérative<a class="headerlink" href="#correction-de-la-recherche-sequentielle-version-iterative" title="Permalink to this heading">#</a></h3>
+<p>Il s’agit maintenant de prouver que l’algorithme (qui termine) calcule la solution attendue – et ce quelques soient les instances de problèmes concernées.</p>
+<p>La preuve de la correction d’un algorithme itératif repose souvent sur la notion <strong>d’invariant de boucle</strong>.</p>
+<p>Un <strong>invariant de boucle</strong> est une propriété vérifiée tout au long de l’exécution d’une boucle et qui exhibe la correction de l’algorithme à la terminaison de la boucle.</p>
+<p>La preuve s’effectue en 3 étapes.
+En notant (P) cette propriété :</p>
+<ol class="arabic simple">
+<li><p><strong>initialisation</strong> : (P) est vraie avant la première itération du corps de la boucle</p></li>
+<li><p><strong>conservation</strong> : On suppose (P) vraie avant la i-ème itération. On montre que la i-ème itération conserve (P).	
+C-a-d. que (P) vraie avant la i-ème itération reste vraie avant la (i+1)-ème itération.</p></li>
+<li><p><strong>terminaison</strong> : (P) est vraie après la dernière itération.</p></li>
+</ol>
+<p>En pratique :</p>
+<ul class="simple">
+<li><p>la propriété appliquée à la sortie de boucle (terminaison) prouve que celle-ci a effectué le traitement prévu</p>
+<ul>
+<li><p>exemple : la recherche séquentielle étant “réduite” à une boucle, son invariant prouvera que la solution retournée par le traitement est exacte : soit <code class="docutils literal notranslate"><span class="pre">True</span></code> si la valeur est présente dans <code class="docutils literal notranslate"><span class="pre">t</span></code> et <code class="docutils literal notranslate"><span class="pre">False</span></code> sinon.</p></li>
+</ul>
+</li>
+<li><p>l’initialisation, c-a-d. avant la boucle, prouve que les variables sont correctement initialisées</p></li>
+<li><p>la conservation et la terminaison prouvent que l’indice de boucle et le nombre d’itérations sont corrects.</p></li>
+<li><p>initialisation et conservation constituent une preuve par récurrence “classique”</p></li>
+</ul>
+<p>Prouvons que la propriété suivante :</p>
+<blockquote>
+<div><p>(P) Avant l’itération <code class="docutils literal notranslate"><span class="pre">i</span></code>, si <code class="docutils literal notranslate"><span class="pre">val</span></code> est présent dans <code class="docutils literal notranslate"><span class="pre">t</span></code>, il est présent dans <code class="docutils literal notranslate"><span class="pre">t[i,</span> <span class="pre">dim-1]</span></code></p>
+</div></blockquote>
+<p>est un invariant de la boucle de la recherche séquentielle :</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="n">i</span> <span class="o">=</span> <span class="mi">0</span>
+    <span class="k">while</span> <span class="n">i</span> <span class="o">&lt;</span> <span class="n">dim</span><span class="p">:</span>
+        <span class="k">if</span> <span class="n">t</span><span class="p">[</span><span class="n">i</span><span class="p">]</span> <span class="o">==</span> <span class="n">val</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">True</span>
+        <span class="n">i</span> <span class="o">=</span> <span class="n">i</span> <span class="o">+</span> <span class="mi">1</span> 
+    <span class="k">return</span> <span class="kc">False</span>
+</pre></div>
+</div>
+<p>La contraposée de (P) est :</p>
+<blockquote>
+<div><p>(P) Avant l’itération <code class="docutils literal notranslate"><span class="pre">i</span></code>, si <code class="docutils literal notranslate"><span class="pre">val</span></code> est absent de <code class="docutils literal notranslate"><span class="pre">t[i,</span> <span class="pre">dim-1]</span></code>, il est absent de <code class="docutils literal notranslate"><span class="pre">t</span></code>.</p>
+</div></blockquote>
+<p><em>1. Initialisation.</em>
+Avant la première itération, <code class="docutils literal notranslate"><span class="pre">i==0</span></code> et <code class="docutils literal notranslate"><span class="pre">t[0,dim-1]</span></code> est le tableau tout entier. Donc (P) est trivialement vraie.</p>
+<p><em>2. Conservation.</em>
+D’après (P), avant la i-ième itération pour <code class="docutils literal notranslate"><span class="pre">val</span></code> présent dans <code class="docutils literal notranslate"><span class="pre">t</span></code>, <code class="docutils literal notranslate"><span class="pre">val</span></code> est dans <code class="docutils literal notranslate"><span class="pre">t[i,</span> <span class="pre">dim-1]</span></code>.
+Donc <code class="docutils literal notranslate"><span class="pre">val</span> <span class="pre">==</span> <span class="pre">t[i]</span></code> ou <code class="docutils literal notranslate"><span class="pre">val</span> <span class="pre">=</span> <span class="pre">t[j]</span></code> pour <code class="docutils literal notranslate"><span class="pre">i+1</span> <span class="pre">&lt;=</span> <span class="pre">j</span> <span class="pre">&lt;</span> <span class="pre">dim</span></code>.</p>
+<ul class="simple">
+<li><p>si <code class="docutils literal notranslate"><span class="pre">i</span> <span class="pre">&lt;</span> <span class="pre">dim</span></code>, l’itération s’effectue et <code class="docutils literal notranslate"><span class="pre">t[i]</span></code> est valide.</p>
+<ul>
+<li><p>si <code class="docutils literal notranslate"><span class="pre">t[i]</span> <span class="pre">!=</span> <span class="pre">val</span></code>, <code class="docutils literal notranslate"><span class="pre">val</span></code> est donc dans <code class="docutils literal notranslate"><span class="pre">t[i+1,</span> <span class="pre">dim-1]</span></code> d’après (P).
+<code class="docutils literal notranslate"><span class="pre">i</span></code> est incrémenté donc (P) est bien conservée après l’itération <code class="docutils literal notranslate"><span class="pre">i</span></code>.</p></li>
+<li><p>si <code class="docutils literal notranslate"><span class="pre">t[i]</span> <span class="pre">==</span> <span class="pre">val</span></code>, <code class="docutils literal notranslate"><span class="pre">val</span></code> est bien dans <code class="docutils literal notranslate"><span class="pre">t[i,</span> <span class="pre">dim-1]</span></code>. <code class="docutils literal notranslate"><span class="pre">i</span></code> n’est pas modifié, l’itération s’arrête  et (P) reste vrai.</p></li>
+</ul>
+</li>
+</ul>
+<p><em>3. Terminaison.</em> 2 cas.</p>
+<ul class="simple">
+<li><p>Si  <code class="docutils literal notranslate"><span class="pre">i==dim</span></code> alors la conservation de (P) à l’itération précédente dit que si <code class="docutils literal notranslate"><span class="pre">val</span></code> est présent dans <code class="docutils literal notranslate"><span class="pre">t</span></code>, il est présent dans <code class="docutils literal notranslate"><span class="pre">t[dim,</span> <span class="pre">dim-1]</span></code>, ce qui est impossible car <code class="docutils literal notranslate"><span class="pre">t[dim,</span> <span class="pre">dim-1]</span></code> est vide.
+Donc <code class="docutils literal notranslate"><span class="pre">val</span></code> est absent dans <code class="docutils literal notranslate"><span class="pre">t</span></code> selon la contraposée de (P).</p></li>
+<li><p>Sinon (cas déjà vu), <code class="docutils literal notranslate"><span class="pre">val</span></code> est présent en position <code class="docutils literal notranslate"><span class="pre">i</span></code> dans <code class="docutils literal notranslate"><span class="pre">t</span></code> (et est bien dans <code class="docutils literal notranslate"><span class="pre">t[i,</span> <span class="pre">dim-1]</span></code>).</p></li>
+</ul>
+<p><strong>Rmq.</strong></p>
+<ul class="simple">
+<li><p>L’identification de l’invariant est plus difficile que sa preuve.</p></li>
+<li><p><strong>L’invariant est une propriété caractéristique de l’algorithme itératif</strong>.</p>
+<ul>
+<li><p>Dit simplement, <em>l’invariant formalise “ce qui fait marcher” l’algorithme</em>.</p></li>
+<li><p>Il n’y a pas qu’un seul invariant possible, bien sûr.</p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="terminaison-de-la-recherche-dichotomique">
+<h3><span class="section-number">4.5.3. </span>Terminaison de la recherche dichotomique<a class="headerlink" href="#terminaison-de-la-recherche-dichotomique" title="Permalink to this heading">#</a></h3>
+<p>Lors de l’analyse de complexité de la recherche dichotomique, on a indiqué <strong>pour le pire cas</strong> :</p>
+<ul class="simple">
+<li><p>que la condition d’arrêt <code class="docutils literal notranslate"><span class="pre">g</span> <span class="pre">&gt;=</span> <span class="pre">d</span></code> <em>commune aux formulations itérative et récursive</em>
+correspond à un tableau vide, i.e. de taille 0,</p></li>
+<li><p>que la taille <code class="docutils literal notranslate"><span class="pre">d</span> <span class="pre">-</span> <span class="pre">g</span></code> des tableaux successifs de la dichotomie suivaient la suite géométrique de raison <span class="math notranslate nohighlight">\(1/2\)</span>  et de premier terme <span class="math notranslate nohighlight">\(n\)</span>.</p></li>
+</ul>
+<p>Cette suite de termes positifs converge vers 0.
+Ce qui prouve la terminaison de l’algorithme par vérification de la condition d’arrêt :</p>
+<ul class="simple">
+<li><p>de façon explicite dans le cas récursif</p></li>
+<li><p>en considérant <code class="docutils literal notranslate"><span class="pre">d-g</span></code> (entier positif) comme variant dans le cas itératif.</p></li>
+</ul>
+</section>
+<section id="star-star-correction-de-la-recherche-dichotomique-version-iterative">
+<h3><span class="section-number">4.5.4. </span>(<span class="math notranslate nohighlight">\(\star\star\)</span>) Correction de la recherche dichotomique : version itérative<a class="headerlink" href="#star-star-correction-de-la-recherche-dichotomique-version-iterative" title="Permalink to this heading">#</a></h3>
+<p>Prouvons que la propriété suivante est un invariant de la boucle de la recherche dichotomique.</p>
+<p>Invariant (P) :</p>
+<blockquote>
+<div><p>si <code class="docutils literal notranslate"><span class="pre">val</span></code> est présent dans <code class="docutils literal notranslate"><span class="pre">t</span></code> alors il est dans <code class="docutils literal notranslate"><span class="pre">t[g,d]</span></code>.</p>
+</div></blockquote>
+<p>Avant de prouver (P), énonçons <em>sa contraposée</em> :</p>
+<blockquote>
+<div><p>si <code class="docutils literal notranslate"><span class="pre">val</span></code> n’est pas dans <code class="docutils literal notranslate"><span class="pre">t[g,d]</span></code> alors <code class="docutils literal notranslate"><span class="pre">val</span></code> n’est pas présent dans <code class="docutils literal notranslate"><span class="pre">t</span></code>.</p>
+</div></blockquote>
+<p>Par commodité, on rappelle l’algorithme concerné (sans la spécification de la fonction).</p>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span>    <span class="n">g</span> <span class="o">=</span> <span class="mi">0</span>          <span class="c1"># indice de gauche du tableau exploré</span>
+    <span class="n">d</span> <span class="o">=</span> <span class="n">dim_t</span> <span class="o">-</span> <span class="mi">1</span>  <span class="c1"># indice de droite du tableau exploré    </span>
+    <span class="k">while</span> <span class="n">g</span> <span class="o">&lt;=</span> <span class="n">d</span><span class="p">:</span>
+        <span class="n">m</span> <span class="o">=</span> <span class="p">(</span><span class="n">g</span> <span class="o">+</span> <span class="n">d</span><span class="p">)</span><span class="o">//</span><span class="mi">2</span>   <span class="c1"># indice milieu de t[g,d]</span>
+        <span class="k">if</span> <span class="n">t</span><span class="p">[</span><span class="n">m</span><span class="p">]</span> <span class="o">==</span> <span class="n">val</span><span class="p">:</span>
+            <span class="k">return</span> <span class="kc">True</span>
+        <span class="k">elif</span> <span class="n">t</span><span class="p">[</span><span class="n">m</span><span class="p">]</span> <span class="o">&gt;</span> <span class="n">val</span><span class="p">:</span> <span class="c1"># val est dans la partie gauche : t[g,m-1]</span>
+            <span class="n">d</span> <span class="o">=</span> <span class="n">m</span> <span class="o">-</span> <span class="mi">1</span>
+        <span class="k">else</span><span class="p">:</span>            <span class="c1"># val est dans la partie droite : t[m+1,d]</span>
+            <span class="n">g</span> <span class="o">=</span> <span class="n">m</span> <span class="o">+</span> <span class="mi">1</span>
+    <span class="k">return</span> <span class="kc">False</span>   
+
+</pre></div>
+</div>
+<p>Dans l’énoncé de (P), “est présent” correspond à la valeur renvoyée <code class="docutils literal notranslate"><span class="pre">True</span></code>, et inversement pour la contraposée.</p>
+<p>Sans perdre de généralité, on facilite l’écriture de la preuve en supposant que toutes les valeurs de <code class="docutils literal notranslate"><span class="pre">t</span></code> sont différentes (ce qui donne des inégalités strictes) et on note <code class="docutils literal notranslate"><span class="pre">n</span> <span class="pre">=</span> <span class="pre">dim_t</span></code>.</p>
+<p>Appelons <em>pivot</em> la valeur de <code class="docutils literal notranslate"><span class="pre">t[m]</span></code> où <code class="docutils literal notranslate"><span class="pre">m</span> <span class="pre">=</span> <span class="pre">(g+d)//2</span></code>.<br />
+Chaque itération effectuée teste donc si la valeur du pivot est celle cherchée, et sinon continue le traitement sur une des deux parties à droite ou à gauche du pivot (d’où son nom).</p>
+<p>La preuve de l’invariant repose sur la propriété simple suivante :</p>
+<ul class="simple">
+<li><p>les valeurs “à gauche” du pivot sont inférieures au pivot,</p></li>
+<li><p>et inversement pour celles “à droite” du pivot.</p></li>
+</ul>
+<p>Ce qui ce formalise comme suit :</p>
+<ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">t[i]</span> <span class="pre">&lt;</span> <span class="pre">pivot</span></code> pour <code class="docutils literal notranslate"><span class="pre">g</span> <span class="pre">&lt;=</span> <span class="pre">i</span> <span class="pre">&lt;</span> <span class="pre">m</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">t[i]</span> <span class="pre">&gt;</span> <span class="pre">pivot</span></code> pour <code class="docutils literal notranslate"><span class="pre">m</span> <span class="pre">&lt;</span> <span class="pre">i</span> <span class="pre">&lt;=</span> <span class="pre">d</span></code></p></li>
+</ul>
+<p><img alt="" src="../_images/dichotomie.png" /></p>
+<p><strong>Preuve de (P).</strong></p>
+<p>Globalement, l’algorithme met à jour <code class="docutils literal notranslate"><span class="pre">g</span></code> ou <code class="docutils literal notranslate"><span class="pre">d</span></code> jusqu’à avoir trouvé <code class="docutils literal notranslate"><span class="pre">val</span></code> ou … être sûr de ne plus pouvoir le trouver. Ces 4 aspects sont les clés de la preuve de :</p>
+<blockquote>
+<div><p>(P) si <code class="docutils literal notranslate"><span class="pre">val</span></code> est présent dans <code class="docutils literal notranslate"><span class="pre">t</span></code> alors il est dans <code class="docutils literal notranslate"><span class="pre">t[g,d]</span></code>.</p>
+</div></blockquote>
+<p><em>1. Initialisation</em></p>
+<ul class="simple">
+<li><p>Avant la première itération, <code class="docutils literal notranslate"><span class="pre">g==0</span></code> et <code class="docutils literal notranslate"><span class="pre">d==n-1</span></code>donc <code class="docutils literal notranslate"><span class="pre">t[g,d]</span> <span class="pre">==</span> <span class="pre">t[0,n-1]</span></code>, c-a-d. le tableau <code class="docutils literal notranslate"><span class="pre">t</span></code> (en entier). Donc (P) est (trivialement) vraie.</p></li>
+</ul>
+<p><em>2. Conservation</em>
+Au début d’une itération donnée, (P) assure que si <code class="docutils literal notranslate"><span class="pre">val</span></code> est présent, il existe <code class="docutils literal notranslate"><span class="pre">j</span></code> tel que <code class="docutils literal notranslate"><span class="pre">t[j]==val</span></code> avec <code class="docutils literal notranslate"><span class="pre">g</span> <span class="pre">&lt;=</span> <span class="pre">j</span> <span class="pre">&lt;=</span> <span class="pre">d</span></code>.</p>
+<ul class="simple">
+<li><p>si <code class="docutils literal notranslate"><span class="pre">j</span> <span class="pre">==</span> <span class="pre">(g+d)//2</span> <span class="pre">==</span> <span class="pre">m</span></code> alors ni <code class="docutils literal notranslate"><span class="pre">g</span></code> ni <code class="docutils literal notranslate"><span class="pre">d</span></code> sont modifiés par l’itération et (P) reste donc vraie au début de l’itération suivante avec <code class="docutils literal notranslate"><span class="pre">g</span> <span class="pre">&lt;=</span> <span class="pre">m</span> <span class="pre">&lt;=</span> <span class="pre">d</span></code>.</p></li>
+<li><p>si <code class="docutils literal notranslate"><span class="pre">val</span> <span class="pre">&lt;</span> <span class="pre">pivot</span> <span class="pre">(==</span> <span class="pre">t[m])</span></code> alors <code class="docutils literal notranslate"><span class="pre">d=m-1</span></code>. Montrons que <code class="docutils literal notranslate"><span class="pre">val</span></code> présent est dans <code class="docutils literal notranslate"><span class="pre">t[g,</span> <span class="pre">m-1]</span></code>. On sait que <code class="docutils literal notranslate"><span class="pre">t[i]</span> <span class="pre">&lt;</span> <span class="pre">pivot</span></code> pour <code class="docutils literal notranslate"><span class="pre">g</span> <span class="pre">&lt;=</span> <span class="pre">i</span> <span class="pre">&lt;</span> <span class="pre">m</span></code> et <code class="docutils literal notranslate"><span class="pre">t[i]</span> <span class="pre">&gt;</span> <span class="pre">pivot</span></code> sinon. Donc <code class="docutils literal notranslate"><span class="pre">val</span> <span class="pre">&lt;</span> <span class="pre">pivot</span></code> présent est bien dans <code class="docutils literal notranslate"><span class="pre">t[g,m-1]==t[g,d]</span></code> et non dans le reste de <code class="docutils literal notranslate"><span class="pre">t</span></code>.
+(P) reste vraie au début de l’itération suivante.</p></li>
+<li><p>si <code class="docutils literal notranslate"><span class="pre">val</span> <span class="pre">&gt;</span> <span class="pre">pivot</span> <span class="pre">(==</span> <span class="pre">t[m])</span></code> alors <code class="docutils literal notranslate"><span class="pre">g=m+1</span></code> et cette fois <code class="docutils literal notranslate"><span class="pre">val</span></code> est présent dans <code class="docutils literal notranslate"><span class="pre">t[m+1,d]</span></code>. En effet, <code class="docutils literal notranslate"><span class="pre">t[i]</span> <span class="pre">&gt;</span> <span class="pre">pivot</span></code> pour <code class="docutils literal notranslate"><span class="pre">m</span> <span class="pre">&lt;</span> <span class="pre">i</span> <span class="pre">&lt;=</span> <span class="pre">d</span></code> et <code class="docutils literal notranslate"><span class="pre">t[i]</span> <span class="pre">&lt;</span> <span class="pre">pivot</span></code> sinon.
+Donc <code class="docutils literal notranslate"><span class="pre">val</span> <span class="pre">&gt;</span> <span class="pre">pivot</span></code> est présent dans <code class="docutils literal notranslate"><span class="pre">t[m+1,d]</span> <span class="pre">==</span> <span class="pre">t[g,d]</span></code> et non dans le reste de <code class="docutils literal notranslate"><span class="pre">t</span></code>. (P) reste aussi vraie au début de l’itération suivante.</p></li>
+</ul>
+<p><em>3. Terminaison</em>: La boucle <code class="docutils literal notranslate"><span class="pre">while</span></code> se termine dans 2 cas.</p>
+<ul class="simple">
+<li><p>cas a : on a trouvé <code class="docutils literal notranslate"><span class="pre">m</span></code> dans tel que <code class="docutils literal notranslate"><span class="pre">val</span> <span class="pre">==</span> <span class="pre">t[m]</span></code> sans modifier <code class="docutils literal notranslate"><span class="pre">g</span></code> et <code class="docutils literal notranslate"><span class="pre">d</span></code> depuis l’itération précédente. Donc <code class="docutils literal notranslate"><span class="pre">val</span></code> est présent en <code class="docutils literal notranslate"><span class="pre">t[m]</span></code> avec <code class="docutils literal notranslate"><span class="pre">g</span> <span class="pre">&lt;=</span> <span class="pre">m</span> <span class="pre">&lt;=</span> <span class="pre">d</span></code> donc (P) est vrai pour <code class="docutils literal notranslate"><span class="pre">t[g,d]</span></code> après la dernière itération.</p></li>
+<li><p>cas b : si <code class="docutils literal notranslate"><span class="pre">g</span> <span class="pre">&gt;</span> <span class="pre">d</span></code>, <code class="docutils literal notranslate"><span class="pre">t[g,d]</span></code> est vide donc <code class="docutils literal notranslate"><span class="pre">val</span></code> n’est pas dans <code class="docutils literal notranslate"><span class="pre">t[g,d]</span></code>. La conservation de la contraposée de (P) prouve que <code class="docutils literal notranslate"><span class="pre">val</span></code> n’est pas présente dans <code class="docutils literal notranslate"><span class="pre">t</span></code> après la dernière itération. Ce qui prouve (P) dans ce cas de terminaison aussi.</p></li>
+</ul>
+<p><strong>Conclusion</strong>.
+Les 2 cas de la terminaison prouvent la correction de l’algorithme étudié.</p>
+<p><strong>Rmq.</strong></p>
+<ul class="simple">
+<li><p>Dans la preuve précédente, la validité de (tous les) <code class="docutils literal notranslate"><span class="pre">t[g,d]</span></code> est implicite :  aucun indice ne se trouve à l’extérieur du tableau <code class="docutils literal notranslate"><span class="pre">t[0,</span> <span class="pre">dim_t]</span></code>. Si besoin, on peut compléter chaque encadrement avec <code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">&lt;=</span> <span class="pre">g</span></code> et <code class="docutils literal notranslate"><span class="pre">d</span> <span class="pre">&lt;</span> <span class="pre">dim_t</span></code>, se convaincre que <code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">&lt;=</span> <span class="pre">g</span> <span class="pre">&lt;=</span> <span class="pre">m</span> <span class="pre">&lt;=</span> <span class="pre">d</span> <span class="pre">&lt;</span> <span class="pre">dim_t</span></code> et compléter la formulation de l’invariant comme suit :</p></li>
+</ul>
+<blockquote>
+<div><p>(P) si <code class="docutils literal notranslate"><span class="pre">val</span></code> est présent dans <code class="docutils literal notranslate"><span class="pre">t</span></code> alors il est dans <code class="docutils literal notranslate"><span class="pre">t[g,d]</span></code> avec <code class="docutils literal notranslate"><span class="pre">0</span> <span class="pre">&lt;=</span> <span class="pre">g</span></code> et <code class="docutils literal notranslate"><span class="pre">d</span> <span class="pre">&lt;</span> <span class="pre">dim_t</span></code>.</p>
+</div></blockquote>
+</section>
+</section>
+<section id="synthese">
+<h2><span class="section-number">4.6. </span>Synthèse<a class="headerlink" href="#synthese" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Deux algorithmes simples de recherche : séquentielle et dichotomique sur tableau trié</p>
+<ul>
+<li><p>complexité linéaire vs. logarithmique</p></li>
+<li><p>meilleurs cas, pire cas</p></li>
+</ul>
+</li>
+<li><p>Exemples d’écritures itératives ou récursives du même algorithme</p>
+<ul>
+<li><p>en-têtes identiques par encapsulation de l’appel récursif principal</p></li>
+</ul>
+</li>
+<li><p>Exemples d’analyse de complexité</p></li>
+<li><p>(<span class="math notranslate nohighlight">\(\star\)</span>) Exemples de preuve de terminaison et de correction</p>
+<ul>
+<li><p>algo itératif : variant et invariant de boucle</p></li>
+</ul>
+</li>
+</ul>
+</section>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./cm"
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="left-prev"
+       href="6-recursivite.html"
+       title="previous page">
+      <i class="fa-solid fa-angle-left"></i>
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">previous</p>
+        <p class="prev-next-title"><span class="section-number">3. </span>Récursivité</p>
+      </div>
+    </a>
+    <a class="right-next"
+       href="10-trier.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title"><span class="section-number">5. </span>Trier</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#objectif-du-chapitre">4.1. Objectif du chapitre</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recherche-sequentielle">4.2. Recherche séquentielle</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#principes">4.2.1. Principes</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#en-tete-modele-de-la-fonction">En-tête “modèle” de la fonction</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithmes-iteratifs">4.2.2. Algorithmes itératifs</a><ul class="nav section-nav flex-column">
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithme-avec-parcours-complet">Algorithme avec parcours complet</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithme-avec-un-parcours-optimal">Algorithme avec un parcours optimal</a></li>
+<li class="toc-h4 nav-item toc-entry"><a class="reference internal nav-link" href="#cas-du-tableau-vide">Cas du tableau vide</a></li>
+</ul>
+</li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithme-recursif">4.2.3. Algorithme récursif</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#recherche-dichotomique-dans-un-tableau-trie">4.3. Recherche dichotomique dans un tableau trié</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id1">4.3.1. Principes</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#algorithme-iteratif">4.3.2. Algorithme itératif</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#id2">4.3.3. Algorithme récursif</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#complexite-des-algorithmes-de-recherche">4.4. Complexité des algorithmes de recherche</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#les-parametres-de-l-analyse-de-la-complexite">4.4.1. Les paramètres de l’analyse de la complexité</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analyse-de-la-recherche-sequentielle-iterative">4.4.2. Analyse de la recherche séquentielle itérative</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analyse-de-la-recherche-dichotomique-version-iterative">4.4.3. Analyse de la recherche dichotomique, version itérative</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#analyse-de-la-recherche-dichotomique-version-recursive">4.4.4. Analyse de la recherche dichotomique, version récursive</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#star-preuves-de-terminaison-et-de-correction">4.5. (<span class="math notranslate nohighlight">\(\star\)</span>) Preuves de terminaison et de correction</a><ul class="nav section-nav flex-column">
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#terminaison-de-la-recherche-sequentielle-version-iterative">4.5.1. Terminaison de la recherche séquentielle : version itérative</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#correction-de-la-recherche-sequentielle-version-iterative">4.5.2. Correction de la recherche séquentielle :  version itérative</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#terminaison-de-la-recherche-dichotomique">4.5.3. Terminaison de la recherche dichotomique</a></li>
+<li class="toc-h3 nav-item toc-entry"><a class="reference internal nav-link" href="#star-star-correction-de-la-recherche-dichotomique-version-iterative">4.5.4. (<span class="math notranslate nohighlight">\(\star\star\)</span>) Correction de la recherche dichotomique : version itérative</a></li>
+</ul>
+</li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#synthese">4.6. Synthèse</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Ph. Langlois
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="../_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
+<script src="../_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>

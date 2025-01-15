@@ -1,0 +1,719 @@
+
+
+<!DOCTYPE html>
+
+
+<html lang="en" data-content_root="" >
+
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Bienvenu en Algo-Prog ! &#8212; Algo-Prog 2024</title>
+  
+  
+  
+  <script data-cfasync="false">
+    document.documentElement.dataset.mode = localStorage.getItem("mode") || "";
+    document.documentElement.dataset.theme = localStorage.getItem("theme") || "light";
+  </script>
+  
+  <!-- Loaded before other Sphinx assets -->
+  <link href="_static/styles/theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="_static/styles/bootstrap.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+<link href="_static/styles/pydata-sphinx-theme.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+
+  
+  <link href="_static/vendor/fontawesome/6.5.1/css/all.min.css?digest=bd9e20870c6007c4c509" rel="stylesheet" />
+  <link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-solid-900.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-brands-400.woff2" />
+<link rel="preload" as="font" type="font/woff2" crossorigin href="_static/vendor/fontawesome/6.5.1/webfonts/fa-regular-400.woff2" />
+
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/styles/sphinx-book-theme.css" />
+    <link rel="stylesheet" type="text/css" href="_static/togglebutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/copybutton.css" />
+    <link rel="stylesheet" type="text/css" href="_static/mystnb.4510f1fc1dee50b3e5859aac5469c37c29e427902b24a333a5f9fcb2f0b3ac41.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-thebe.css" />
+    <link rel="stylesheet" type="text/css" href="_static/sphinx-design.4cbf315f70debaebd550c87a6162cf0f.min.css" />
+  
+  <!-- Pre-loaded scripts that we'll load fully later -->
+  <link rel="preload" as="script" href="_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509" />
+<link rel="preload" as="script" href="_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509" />
+  <script src="_static/vendor/fontawesome/6.5.1/js/all.min.js?digest=bd9e20870c6007c4c509"></script>
+
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/_sphinx_javascript_frameworks_compat.js"></script>
+    <script src="_static/doctools.js"></script>
+    <script src="_static/clipboard.min.js"></script>
+    <script src="_static/copybutton.js"></script>
+    <script src="_static/scripts/sphinx-book-theme.js"></script>
+    <script>let toggleHintShow = 'Click to show';</script>
+    <script>let toggleHintHide = 'Click to hide';</script>
+    <script>let toggleOpenOnPrint = 'true';</script>
+    <script src="_static/togglebutton.js"></script>
+    <script>var togglebuttonSelector = '.toggle, .admonition.dropdown';</script>
+    <script src="_static/design-tabs.js"></script>
+    <script>const THEBE_JS_URL = "https://unpkg.com/thebe@0.8.2/lib/index.js"; const thebe_selector = ".thebe,.cell"; const thebe_selector_input = "pre"; const thebe_selector_output = ".output, .cell_output"</script>
+    <script async="async" src="_static/sphinx-thebe.js"></script>
+    <script>window.MathJax = {"options": {"processHtmlClass": "tex2jax_process|mathjax_process|math|output_area"}}</script>
+    <script defer="defer" src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-mml-chtml.js"></script>
+    <script>DOCUMENTATION_OPTIONS.pagename = 'bonjour';</script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Algo Prog en 2024" href="cm/0-presentation-2024.html" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <meta name="docsearch:language" content="en"/>
+  </head>
+  
+  
+  <body data-bs-spy="scroll" data-bs-target=".bd-toc-nav" data-offset="180" data-bs-root-margin="0px 0px -60%" data-default-mode="">
+
+  
+  
+  <a id="pst-skip-link" class="skip-link" href="#main-content">Skip to main content</a>
+  
+  <div id="pst-scroll-pixel-helper"></div>
+
+  
+  <button type="button" class="btn rounded-pill" id="pst-back-to-top">
+    <i class="fa-solid fa-arrow-up"></i>
+    Back to top
+  </button>
+
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__primary"
+          id="__primary"/>
+  <label class="overlay overlay-primary" for="__primary"></label>
+  
+  <input type="checkbox"
+          class="sidebar-toggle"
+          name="__secondary"
+          id="__secondary"/>
+  <label class="overlay overlay-secondary" for="__secondary"></label>
+  
+  <div class="search-button__wrapper">
+    <div class="search-button__overlay"></div>
+    <div class="search-button__search-container">
+<form class="bd-search d-flex align-items-center"
+      action="search.html"
+      method="get">
+  <i class="fa-solid fa-magnifying-glass"></i>
+  <input type="search"
+         class="form-control"
+         name="q"
+         id="search-input"
+         placeholder="Search this book..."
+         aria-label="Search this book..."
+         autocomplete="off"
+         autocorrect="off"
+         autocapitalize="off"
+         spellcheck="false"/>
+  <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd>K</kbd></span>
+</form></div>
+  </div>
+
+  <header>
+  
+    <div class="bd-header navbar navbar-expand-lg bd-navbar">
+    </div>
+  
+  </header>
+
+  <div class="bd-container">
+    <div class="bd-container__inner bd-page-width">
+      
+      
+      
+        
+      
+      <div class="bd-sidebar-primary bd-sidebar">
+        
+
+  
+  <div class="sidebar-header-items sidebar-primary__section">
+    
+    
+    
+    
+  </div>
+  
+    <div class="sidebar-primary-items__start sidebar-primary__section">
+        <div class="sidebar-primary-item">
+
+  
+
+<a class="navbar-brand logo" href="#">
+  
+  
+  
+  
+  
+    
+    
+      
+    
+    
+    <img src="_static/logo.png" class="logo__image only-light" alt="Algo-Prog 2024 - Home"/>
+    <script>document.write(`<img src="_static/logo.png" class="logo__image only-dark" alt="Algo-Prog 2024 - Home"/>`);</script>
+  
+  
+</a></div>
+        <div class="sidebar-primary-item">
+
+ <script>
+ document.write(`
+   <button class="btn navbar-btn search-button-field search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass"></i>
+    <span class="search-button__default-text">Search</span>
+    <span class="search-button__kbd-shortcut"><kbd class="kbd-shortcut__modifier">Ctrl</kbd>+<kbd class="kbd-shortcut__modifier">K</kbd></span>
+   </button>
+ `);
+ </script></div>
+        <div class="sidebar-primary-item"><nav class="bd-links bd-docs-nav" aria-label="Main">
+    <div class="bd-toc-item navbar-nav active">
+        
+        <ul class="nav bd-sidenav bd-sidenav__home-link">
+            <li class="toctree-l1 current active">
+                <a class="reference internal" href="#">
+                    Bienvenu en Algo-Prog !
+                </a>
+            </li>
+        </ul>
+        <p aria-level="2" class="caption" role="heading"><span class="caption-text">Présentation</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="cm/0-presentation-2024.html">Algo Prog en 2024</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cm/competences.html">Compétences</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Chapitres</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="cm/1-fonctions.html">1. Fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cm/1b-fonctions-exemple.html">2. Un exemple, plein de fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cm/6-recursivite.html">3. Récursivité</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cm/8-rechercher.html">4. Rechercher</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cm/10-trier.html">5. Trier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cm/5-types_composes.html">6. Les types composés</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cm/3-ES-fichiers.html">7. Entrées-sorties simples avec des fichiers</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cm/9-ES-formats.html">8. Les entrées-sorties (E/S) : formats</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cm/7-fonctions-avancees.html">9. Affectation et appel de fonction – aspects avancés</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Compléments</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="cm/a0-boucles-avancees.html">10. Tableaux et boucles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cm/a1-booleens.html">11. Annexe : les booléens en python (&gt;3.6)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cm/a2-ndarray.html">12. Les ‘ndarray’ : de vrais tableaux en python</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cm/11-modules-utiles.html">13. Modules utiles</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">Leçons</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="lecons/0-prealable-lecons.html">14. Préalable avec les MTU moodle</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecons/1-lecon-fonctions.html">15. Leçon 1 : fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecons/2-lecon-fonctions-recursion.html">16. Leçon 2 : fonctions et récursion (début)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecons/3-lecon-recursion.html">17. Leçon 3 : récursivité (début)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecons/4-lecon-recursion-2.html">18. Leçon 4 : récursivité</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecons/5-lecon-rechercher.html">19. Leçon 5 : rechercher</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecons/6-lecon-trier.html">20. Leçon 6 : trier</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecons/7-lecon-conteneurs-1.html">21. Leçon 7 : types composés (début)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecons/8-lecon-conteneurs-2.html">22. Leçon 8 : types composés (fin)</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecons/9-lecon-es.html">23. Leçon 9 : entrées sorties simples</a></li>
+<li class="toctree-l1"><a class="reference internal" href="lecons/10-lecon-fichier-affectation-revision.html">24. Leçon 10 : fichiers, affectation : révisions, aspects avancés et passage de paramètres</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">TD</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="td/td1.html">25. Feuille 1 : fonctions</a></li>
+<li class="toctree-l1"><a class="reference internal" href="td/td2.html">26. Feuille 2 : récursivité</a></li>
+</ul>
+<p aria-level="2" class="caption" role="heading"><span class="caption-text">(Intervenants) suivi des séances</span></p>
+<ul class="nav bd-sidenav">
+<li class="toctree-l1"><a class="reference internal" href="suivi_seances.html">27. (Intervenant) Suivi des séances</a></li>
+</ul>
+
+    </div>
+</nav></div>
+    </div>
+  
+  
+  <div class="sidebar-primary-items__end sidebar-primary__section">
+  </div>
+  
+  <div id="rtd-footer-container"></div>
+
+
+      </div>
+      
+      <main id="main-content" class="bd-main">
+        
+        
+
+<div class="sbt-scroll-pixel-helper"></div>
+
+          <div class="bd-content">
+            <div class="bd-article-container">
+              
+              <div class="bd-header-article">
+<div class="header-article-items header-article__inner">
+  
+    <div class="header-article-items__start">
+      
+        <div class="header-article-item"><label class="sidebar-toggle primary-toggle btn btn-sm" for="__primary" title="Toggle primary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+  <span class="fa-solid fa-bars"></span>
+</label></div>
+      
+    </div>
+  
+  
+    <div class="header-article-items__end">
+      
+        <div class="header-article-item">
+
+<div class="article-header-buttons">
+
+
+<a href="https://github.com/phillanglois/Algo-Prog-2024/issues/new?title=Issue%20on%20page%20%2Fbonjour.html&body=Your%20issue%20content%20here." target="_blank"
+   class="btn btn-sm btn-source-issues-button"
+   title="Open an issue"
+   data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-lightbulb"></i>
+  </span>
+
+</a>
+
+
+
+
+
+
+<div class="dropdown dropdown-download-buttons">
+  <button class="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false" aria-label="Download this page">
+    <i class="fas fa-download"></i>
+  </button>
+  <ul class="dropdown-menu">
+      
+      
+      
+      <li><a href="_sources/bonjour.md" target="_blank"
+   class="btn btn-sm btn-download-source-button dropdown-item"
+   title="Download source file"
+   data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file"></i>
+  </span>
+<span class="btn__text-container">.md</span>
+</a>
+</li>
+      
+      
+      
+      
+      <li>
+<button onclick="window.print()"
+  class="btn btn-sm btn-download-pdf-button dropdown-item"
+  title="Print to PDF"
+  data-bs-placement="left" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-file-pdf"></i>
+  </span>
+<span class="btn__text-container">.pdf</span>
+</button>
+</li>
+      
+  </ul>
+</div>
+
+
+
+
+<button onclick="toggleFullScreen()"
+  class="btn btn-sm btn-fullscreen-button"
+  title="Fullscreen mode"
+  data-bs-placement="bottom" data-bs-toggle="tooltip"
+>
+  
+
+<span class="btn__icon-container">
+  <i class="fas fa-expand"></i>
+  </span>
+
+</button>
+
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn theme-switch-button" title="light/dark" aria-label="light/dark" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="theme-switch nav-link" data-mode="light"><i class="fa-solid fa-sun fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="dark"><i class="fa-solid fa-moon fa-lg"></i></span>
+    <span class="theme-switch nav-link" data-mode="auto"><i class="fa-solid fa-circle-half-stroke fa-lg"></i></span>
+  </button>
+`);
+</script>
+
+
+<script>
+document.write(`
+  <button class="btn btn-sm navbar-btn search-button search-button__button" title="Search" aria-label="Search" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <i class="fa-solid fa-magnifying-glass fa-lg"></i>
+  </button>
+`);
+</script>
+<label class="sidebar-toggle secondary-toggle btn btn-sm" for="__secondary"title="Toggle secondary sidebar" data-bs-placement="bottom" data-bs-toggle="tooltip">
+    <span class="fa-solid fa-list"></span>
+</label>
+</div></div>
+      
+    </div>
+  
+</div>
+</div>
+              
+              
+
+<div id="jb-print-docs-body" class="onlyprint">
+    <h1>Bienvenu en Algo-Prog !</h1>
+    <!-- Table of contents -->
+    <div id="print-main-content">
+        <div id="jb-print-toc">
+            
+            <div>
+                <h2> Contents </h2>
+            </div>
+            <nav aria-label="Page">
+                <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-3">Semaine 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-4">Semaine 4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-5">Semaine 5</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-6">Semaine 6</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-7">Semaine 7</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-8"><em>Semaine 8</em></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-9">Semaine 9</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-10">Semaine 10</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-11">Semaine 11</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-12">Semaine 12</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-13">Semaine 13</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-14">Semaine 14</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaines-15-et-16"><em>Semaines 15 et 16</em></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-17">Semaine 17</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-18">Semaine 18</a></li>
+</ul>
+            </nav>
+        </div>
+    </div>
+</div>
+
+              
+                
+<div id="searchbox"></div>
+                <article class="bd-article">
+                  
+  <!-- #region -->
+<section class="tex2jax_ignore mathjax_ignore" id="bienvenu-en-algo-prog">
+<span id="ch-bonjour"></span><h1>Bienvenu en Algo-Prog !<a class="headerlink" href="#bienvenu-en-algo-prog" title="Permalink to this heading">#</a></h1>
+<p><strong>Ce support est en évolution tout au long du semestre.</strong></p>
+<p>Mis à jour : Jan 15, 2025, lecture : 3 minutes minimum, PhL.</p>
+<p>Ceci est le premier point d’entrée de l’UE Algo-Prog en complément de l’<a class="reference external" href="https://cours.univ-perp.fr/course/view.php?id=925">espace moodle de cette UE</a>.</p>
+<div class="admonition important">
+<p class="admonition-title">Important</p>
+<p>Rappels des dates importantes</p>
+<p>Démarrages : CM en semaine s3, leçons en s5, TD en s4.</p>
+<p>Vacances en s8, s15-s16</p>
+<ul class="simple">
+<li><p>CC1 (s12) : vendredi 22 mars 2024, 14 heures, durée : 2 heures : TP1 individuel sur machine, en temps limité</p></li>
+<li><p>Leçons (s14) : jeudi 4 avril 2024, 13h15, écrit, 20 minutes</p></li>
+<li><p>CC2 (s14) : jeudi 4 avril 2024, 13h45, écrit, 2 heures</p></li>
+<li><p><strong>CC1 (s22) : TP2 3 heures individuel sur machine, mercredi 29 mai 2024, 9h00</strong></p></li>
+<li><p><strong>CT (s21) : écrit 2 heures, vendredi 24 mai 2024, 9h00</strong></p></li>
+</ul>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<ul class="simple">
+<li><p>Les numéros des semaines sont celles du calendrier.
+(la séance du jeudi 18 janvier 2024 est en semaine 3).</p></li>
+<li><p>les items indiqués d’une (<span class="math notranslate nohighlight">\(\star\)</span>) correspondent aux activités <em>objectif 20</em></p></li>
+</ul>
+</div>
+<section id="semaine-3">
+<h2>Semaine 3<a class="headerlink" href="#semaine-3" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Lire la présentation <a class="reference internal" href="cm/0-presentation-2024.html#ch-intro"><span class="std std-ref">Algo Prog en 2024</span></a></p></li>
+<li><p>S’assurer que son environnement de travail python est conforme à la section 1.7. Vérifier en particulier que <em>jupyter lab</em> ou à défaut <em>jupyter notebook</em> est opérationnel pour du python en version <span class="math notranslate nohighlight">\(\ge\)</span> 3.10.</p></li>
+</ul>
+</section>
+<section id="semaine-4">
+<h2>Semaine 4<a class="headerlink" href="#semaine-4" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Avant le CM de jeudi : lire le chapitre <em>Fonctions</em> en entier</p></li>
+<li><p>Avant la séance de TD : se rafraichir la mémoire en lisant le chapitre <em>Tableaux et boucles</em> en annexe</p></li>
+</ul>
+</section>
+<section id="semaine-5">
+<h2>Semaine 5<a class="headerlink" href="#semaine-5" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Avant la leçon 1 : lire la section <a class="reference external" href="https://phillanglois.github.io/Algo-Prog-2024/lecons/0-prealable-lecons.html">Préalable aux leçons</a></p></li>
+<li><p>Avant le CM de jeudi :</p>
+<ul>
+<li><p>préparer les questions sur le chapitre <em>Fonctions</em></p></li>
+<li><p>lire le chapitre <em>Récursivité</em> jusqu’à <em>section 2.3 inclus</em></p></li>
+</ul>
+</li>
+<li><p>Avant le TD : avancer au maximum sur la feuille 1 selon vos objectifs</p></li>
+</ul>
+</section>
+<section id="semaine-6">
+<h2>Semaine 6<a class="headerlink" href="#semaine-6" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Avant la leçon 2, <em>travailler</em> le chapitre “Un exemple, plein de fonctions”</p></li>
+<li><p>Avant le CM de jeudi :</p>
+<ul>
+<li><p><strong>attention : nouvelle numérotation des chapitres pour identifier plus facilement les sections et sous sections.</strong></p></li>
+<li><p>lire le chapitre <em>Récursivité</em> jusqu’à <em>section 3.3 inclus</em></p></li>
+</ul>
+</li>
+<li><p>Dernière séance de TD sur la feuille 1</p></li>
+</ul>
+</section>
+<section id="semaine-7">
+<h2>Semaine 7<a class="headerlink" href="#semaine-7" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Leçon 3 sur le début du chapitre <em>Récursivité</em></p></li>
+<li><p>Avant le CM de jeudi : lire le chapitre <em>Récursivité</em> en entier</p></li>
+<li><p>TD</p>
+<ul>
+<li><p>Feuille 1 : finir <em>tous</em> les exercices de votre Objectif</p></li>
+<li><p>Feuille 2 :  <em>Récursivité</em></p></li>
+</ul>
+</li>
+</ul>
+</section>
+<section id="semaine-8">
+<h2><em>Semaine 8</em><a class="headerlink" href="#semaine-8" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Vacances d’hiver</p></li>
+</ul>
+</section>
+<section id="semaine-9">
+<h2>Semaine 9<a class="headerlink" href="#semaine-9" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Leçon 4 sur le chapitre <em>Récursivité</em></p></li>
+<li><p>Avant le CM de jeudi : lire le chapitre <em>Rechercher</em> jusqu’à la <em>section 3.3 inclus</em></p></li>
+<li><p>TD :  Feuille 2 <em>Récursivité</em> selon vos objectifs</p></li>
+</ul>
+</section>
+<section id="semaine-10">
+<h2>Semaine 10<a class="headerlink" href="#semaine-10" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Leçon 5 sur les chapitres <em>Récursivité</em> et <em>Rechercher</em></p></li>
+<li><p>Avant le CM de jeudi : lire le chapitre <em>Trier</em> jusqu’à la <em>section 4.4 inclus</em> et en sautant les sections :</p>
+<ul>
+<li><p>4.1.2, 4.1.3 (complexités)</p></li>
+<li><p>4.2.5 (vers la complexité du tri insertion)</p></li>
+<li><p>4.3.8 (vers la complexité du tri rapide)</p></li>
+<li><p>4.4.6 (vers la complexité du tri fusion)</p></li>
+</ul>
+</li>
+<li><p>TD :  Feuille 2 <em>Récursivité</em> selon vos objectifs</p></li>
+</ul>
+</section>
+<section id="semaine-11">
+<h2>Semaine 11<a class="headerlink" href="#semaine-11" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Leçon 6 sur le chapitre <em>Trier</em> (sauf tri fusion)</p></li>
+<li><p>Avant le CM de jeudi : lire le chapitre <em>Types composés</em> jusqu’à la <em>section 6.4 inclus</em>.</p></li>
+<li><p>Premier TP en séance</p></li>
+<li><p>Travail personnel : finir feuille 2 <em>Récursivité</em> selon vos objectifs, bien reprendre le tri fusion en fin du chapitre <em>Trier</em></p></li>
+</ul>
+</section>
+<section id="semaine-12">
+<h2>Semaine 12<a class="headerlink" href="#semaine-12" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Leçon 7 sur le début du chapitre <em>Types composés</em> : <code class="docutils literal notranslate"><span class="pre">tuple</span></code> et <code class="docutils literal notranslate"><span class="pre">list</span></code></p></li>
+<li><p>Avant le CM de jeudi : lire le chapitre <em>Types composés</em> en entier</p></li>
+<li><p>Finir TP1, dépot pour évaluation possible</p></li>
+<li><p>Travail personnel : reprendre les cours et exercices en vue du CC1</p></li>
+<li><p><strong>CC1 du vendredi 22 mars 2024, 14h, durée : 2 heures.</strong></p></li>
+</ul>
+</section>
+<section id="semaine-13">
+<h2>Semaine 13<a class="headerlink" href="#semaine-13" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Leçon 8 sur le chapitre <em>Types composés</em></p></li>
+<li><p>Avant le CM de jeudi : lire les chapitres <em>ES simples avec des fichiers</em> (section <em>Compléments</em> pour Obj. 20) et <em>ES : formats</em> (section 1.1 en s’arrêtant au 1.1.4 exclus).</p></li>
+<li><p>TP de la semaine : TP2 sur les types composés</p></li>
+</ul>
+</section>
+<section id="semaine-14">
+<h2>Semaine 14<a class="headerlink" href="#semaine-14" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Leçon 9 sur les <em>ES simples</em></p></li>
+<li><p>CC2 (s14) : jeudi 4 avril 2024, 13h15, <strong>amphi 2</strong>, écrit, 2 heures</p></li>
+<li><p>TP de la semaine : finir TP2</p></li>
+</ul>
+</section>
+<section id="semaines-15-et-16">
+<h2><em>Semaines 15 et 16</em><a class="headerlink" href="#semaines-15-et-16" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Vacances de printemps</p></li>
+</ul>
+</section>
+<section id="semaine-17">
+<h2>Semaine 17<a class="headerlink" href="#semaine-17" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Avant le CM de jeudi : lire le chapitre <em>Affectation et appel de fonction – aspects avancés</em> (section 3 et 6 pour Objectif 20)</p></li>
+<li><p>TP de la semaine : TP3 (knn)</p></li>
+</ul>
+</section>
+<section id="semaine-18">
+<h2>Semaine 18<a class="headerlink" href="#semaine-18" title="Permalink to this heading">#</a></h2>
+<ul class="simple">
+<li><p>Leçon 10 sur les <em>fichiers</em>, les aspects avancés de l’<em>affectation</em> et des révisions sur l’ensemble du semestre (objectif 10).</p></li>
+<li><p>(<span class="math notranslate nohighlight">\(\star\)</span>) Avant le CM de jeudi : lire la section 4.5 du chapitre <em>Rechercher</em>, la section 5.6 du chapitre <em>Trier</em></p></li>
+<li><p>TP de la semaine : finir TP3 (knn)</p></li>
+</ul>
+<!-- #endregion -->
+</section>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+<div class="toctree-wrapper compound">
+</div>
+</section>
+
+    <script type="text/x-thebe-config">
+    {
+        requestKernel: true,
+        binderOptions: {
+            repo: "binder-examples/jupyter-stacks-datascience",
+            ref: "master",
+        },
+        codeMirrorConfig: {
+            theme: "abcdef",
+            mode: "python"
+        },
+        kernelOptions: {
+            name: "python3",
+            path: "./."
+        },
+        predefinedOutput: true
+    }
+    </script>
+    <script>kernelName = 'python3'</script>
+
+                </article>
+              
+
+              
+              
+              
+              
+                <footer class="prev-next-footer">
+                  
+<div class="prev-next-area">
+    <a class="right-next"
+       href="cm/0-presentation-2024.html"
+       title="next page">
+      <div class="prev-next-info">
+        <p class="prev-next-subtitle">next</p>
+        <p class="prev-next-title">Algo Prog en 2024</p>
+      </div>
+      <i class="fa-solid fa-angle-right"></i>
+    </a>
+</div>
+                </footer>
+              
+            </div>
+            
+            
+              
+                <div class="bd-sidebar-secondary bd-toc"><div class="sidebar-secondary-items sidebar-secondary__inner">
+
+
+  <div class="sidebar-secondary-item">
+  <div class="page-toc tocsection onthispage">
+    <i class="fa-solid fa-list"></i> Contents
+  </div>
+  <nav class="bd-toc-nav page-toc">
+    <ul class="visible nav section-nav flex-column">
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-3">Semaine 3</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-4">Semaine 4</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-5">Semaine 5</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-6">Semaine 6</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-7">Semaine 7</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-8"><em>Semaine 8</em></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-9">Semaine 9</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-10">Semaine 10</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-11">Semaine 11</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-12">Semaine 12</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-13">Semaine 13</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-14">Semaine 14</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaines-15-et-16"><em>Semaines 15 et 16</em></a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-17">Semaine 17</a></li>
+<li class="toc-h2 nav-item toc-entry"><a class="reference internal nav-link" href="#semaine-18">Semaine 18</a></li>
+</ul>
+  </nav></div>
+
+</div></div>
+              
+            
+          </div>
+          <footer class="bd-footer-content">
+            
+<div class="bd-footer-content__inner container">
+  
+  <div class="footer-item">
+    
+<p class="component-author">
+By Ph. Langlois
+</p>
+
+  </div>
+  
+  <div class="footer-item">
+    
+
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+  <div class="footer-item">
+    
+  </div>
+  
+</div>
+          </footer>
+        
+
+      </main>
+    </div>
+  </div>
+  
+  <!-- Scripts loaded after <body> so the DOM is not blocked -->
+  <script src="_static/scripts/bootstrap.js?digest=bd9e20870c6007c4c509"></script>
+<script src="_static/scripts/pydata-sphinx-theme.js?digest=bd9e20870c6007c4c509"></script>
+
+  <footer class="bd-footer">
+  </footer>
+  </body>
+</html>
